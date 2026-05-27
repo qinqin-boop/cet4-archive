@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET-4 核心词汇 4544 词 · 注释速查</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+.vocab-controls { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:18px 0; padding:12px 14px; background:#f8fafc; border-radius:8px; }
+.vocab-controls input { flex:1; min-width:200px; padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; font-size:1rem; }
+.vocab-controls select { padding:10px 14px; border:1px solid #cbd5e1; border-radius:6px; background:white; font-size:0.95rem; }
+.vocab-stats { color:#64748b; font-size:0.88rem; }
+.letter-nav { display:flex; flex-wrap:wrap; gap:4px; margin:10px 0 18px; padding:8px; background:#ecfeff; border-radius:8px; }
+.letter-nav a { display:inline-block; padding:6px 10px; background:white; color:#0891b2; text-decoration:none; border-radius:4px; font-weight:600; font-size:0.9rem; min-width:28px; text-align:center; }
+.letter-nav a:hover { background:#0891b2; color:white; }
+.letter-section { margin:18px 0; }
+.letter-section h3 { background:#0891b2; color:white; padding:8px 14px; border-radius:6px; margin:0 0 10px; }
+.word-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:8px; }
+.word-card { background:white; border:1px solid #e2e8f0; border-radius:8px; padding:10px 14px; cursor:pointer; transition:0.15s; }
+.word-card:hover { border-color:#0891b2; box-shadow:0 2px 8px rgba(8,145,178,0.1); }
+.word-card.expanded { background:#f0fdfa; border-color:#0891b2; grid-column:1/-1; }
+.w-head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; }
+.w-word { font-size:1.15rem; font-weight:700; color:#0f172a; }
+.w-phonetic { color:#64748b; font-family:'Courier New',monospace; font-size:0.92rem; }
+.w-pri { display:inline-block; padding:1px 6px; background:#fef3c7; color:#92400e; border-radius:3px; font-size:0.7rem; }
+.w-def { color:#334155; margin:4px 0 0; font-size:0.95rem; }
+.w-detail { display:none; margin-top:10px; padding-top:10px; border-top:1px dashed #cbd5e1; }
+.word-card.expanded .w-detail { display:block; }
+.w-eg { background:white; padding:8px 12px; border-left:3px solid #0891b2; margin:6px 0; border-radius:4px; }
+.w-eg-en { color:#0f172a; }
+.w-eg-zh { color:#64748b; font-size:0.9rem; margin-top:3px; }
+.w-meta { color:#94a3b8; font-size:0.82rem; margin-top:8px; }
+.loading { padding:40px; text-align:center; color:#64748b; }
+.attribution { margin:30px 0 10px; padding:12px 14px; background:#fffbeb; border-left:4px solid #f59e0b; border-radius:6px; font-size:0.88rem; color:#78350f; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CET-4 核心词汇 · 4544 词</h1>
+  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题答题卡</a></p>
+</header>
+
+<main>
+  <div class="notice">
+    📚 4544 个 CET-4 高频词 · 音标 + 词性 + 中文释义 + 例句 + BNC 词频. 点单词卡展开详情. 顶部搜索/筛选/字母跳转.
+  </div>
+
+  <div class="attribution">
+    📖 <strong>词表来源</strong>: 数据来自 <a href="https://github.com/omnienglish/omnienglish.github.io" target="_blank" rel="noopener">omnienglish</a> (MIT License, Copyright © 2026 OmniEnglish), 我们按 MIT 条款引用. 完整 attribution 见
+    <a href="./ATTRIBUTION.md" target="_blank">ATTRIBUTION.md</a>.
+  </div>
+
+  <div class="vocab-controls">
+    <input id="search" type="search" placeholder="🔍 搜单词 / 中文 / 词性..." oninput="filterVocab()">
+    <select id="priority" onchange="filterVocab()">
+      <option value="">全部优先级</option>
+      <option value="1">⭐ 1 (核心)</option>
+      <option value="2">⭐⭐ 2 (高频)</option>
+      <option value="3">⭐⭐⭐ 3 (扩展)</option>
+    </select>
+    <span class="vocab-stats" id="stats">加载中...</span>
+  </div>
+
+  <div class="letter-nav" id="letter-nav"></div>
+
+  <div id="vocab-list">
+    <div class="loading">⏳ 正在加载 4544 个词条...</div>
+  </div>
+
+  <h2 style="margin-top:40px;">📝 怎么用</h2>
+  <ul>
+    <li><strong>搜索</strong>: 顶部框输 <code>abandon</code> / <code>放弃</code> / <code>vt.</code> 都能搜</li>
+    <li><strong>优先级</strong>: ⭐1 = 必背核心高频, ⭐2/3 = 扩展</li>
+    <li><strong>字母跳转</strong>: 点 A-Z 字母跳到该字母区</li>
+    <li><strong>展开详情</strong>: 点单词卡看例句 + 频次</li>
+    <li><strong>BNC 词频</strong>: 数字越小越常见 (e.g. 217 = 英语真实语料中第 217 高频)</li>
+  </ul>
+</main>
+<footer><p>CET-4 核心词汇 4544 词 · 数据 MIT-License (omnienglish) · 答题卡 + 词汇双站</p></footer>
+
+<script>
+let ALL_WORDS = [];
+let FILTERED = [];
+
+fetch('./vocab.json')
+  .then(r => r.json())
+  .then(data => {
+    ALL_WORDS = data;
+    FILTERED = data;
+    buildLetterNav();
+    render();
+  })
+  .catch(e => {
+    document.getElementById('vocab-list').innerHTML = '<div class="loading">❌ 加载失败: ' + e.message + '</div>';
+  });
+
+function buildLetterNav() {
+  const nav = document.getElementById('letter-nav');
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  nav.innerHTML = '<strong style="padding:6px;">跳转:</strong>' +
+    letters.map(L => `<a href="#sec-${L}">${L}</a>`).join('');
+}
+
+function filterVocab() {
+  const q = document.getElementById('search').value.toLowerCase().trim();
+  const pri = document.getElementById('priority').value;
+  FILTERED = ALL_WORDS.filter(w => {
+    if (pri && String(w.priority) !== pri) return false;
+    if (!q) return true;
+    return (w.word||'').toLowerCase().includes(q) ||
+           (w.def||'').toLowerCase().includes(q) ||
+           (w.phonetic||'').toLowerCase().includes(q);
+  });
+  render();
+}
+
+function render() {
+  const list = document.getElementById('vocab-list');
+  const stats = document.getElementById('stats');
+  stats.textContent = `${FILTERED.length} / ${ALL_WORDS.length} 词`;
+  if (FILTERED.length === 0) {
+    list.innerHTML = '<div class="loading">无匹配词</div>';
+    return;
+  }
+  const byLetter = {};
+  for (const w of FILTERED) {
+    const L = (w.word || '?')[0].toUpperCase();
+    (byLetter[L] = byLetter[L] || []).push(w);
+  }
+  const letters = Object.keys(byLetter).sort();
+  let html = '';
+  for (const L of letters) {
+    const cards = byLetter[L].map(w => {
+      const pri = w.priority ? `<span class="w-pri">⭐${w.priority}</span>` : '';
+      const eg = w.cet4 ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cet4)}</div>${w.cet4zh ? '<div class="w-eg-zh">' + escape(w.cet4zh) + '</div>' : ''}</div>` : '';
+      const cs = w.cs ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cs)}</div>${w.cszh ? '<div class="w-eg-zh">' + escape(w.cszh) + '</div>' : ''}</div>` : '';
+      const bnc = w.bnc ? `<div class="w-meta">BNC 词频排名: ${w.bnc}</div>` : '';
+      return `<div class="word-card" onclick="this.classList.toggle('expanded')">
+        <div class="w-head"><span class="w-word">${escape(w.word)}</span><span class="w-phonetic">${escape(w.phonetic||'')}</span>${pri}</div>
+        <div class="w-def">${escape(w.def||'')}</div>
+        <div class="w-detail">${eg}${cs}${bnc}</div>
+      </div>`;
+    }).join('');
+    html += `<div class="letter-section" id="sec-${L}">
+      <h3>${L} <span style="opacity:0.7;font-weight:400;font-size:0.85em;">(${byLetter[L].length})</span></h3>
+      <div class="word-grid">${cards}</div>
+    </div>`;
+  }
+  list.innerHTML = html;
+}
+
+function escape(s) {
+  if (!s) return '';
+  return String(s).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'})[c]);
+}
+</script>
+</body>
+</html>
