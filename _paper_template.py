@@ -306,6 +306,54 @@ READING = [
         [("A","Default activity"),("B","Rewards rather than defaults"),("C","Replacement for study"),("D","Group activity only")],
         "B", "treating short videos as rewards rather than default activities。"),
      ]},
+    {"title": "Climate Change and Local Action",
+     "passage": "Climate change is often framed as a global emergency that only governments can address, but many communities have begun acting on their own. Coastal towns have raised seawalls and planted mangrove belts. Inland cities have replaced thirsty grass lawns with native plants that need little water. These small steps will not single-handedly slow warming, but they protect local lives and prove that real action is possible. Equally important, visible local projects build the political will needed for larger national agreements. Students often underestimate how much one person can influence policy by joining community planning meetings.",
+     "qs": [
+       ("frame","How is climate change often framed?",
+        [("A","A local problem"),("B","A global emergency only governments can address"),("C","An economic issue"),("D","A myth")],
+        "B", "first sentence。"),
+       ("examples","Examples of local action include:",
+        [("A","Building factories"),("B","Seawalls and mangrove belts"),("C","Mass immigration"),("D","Banning agriculture")],
+        "B", "原文列举。"),
+       ("why-local","Why are local actions politically important?",
+        [("A","They replace national policy"),("B","They build political will for bigger agreements"),("C","They earn money"),("D","They reduce taxes")],
+        "B", "build the political will needed for larger national agreements。"),
+       ("students","What can students do?",
+        [("A","Nothing meaningful"),("B","Influence policy at community planning meetings"),("C","Wait for legislation"),("D","Move abroad")],
+        "B", "joining community planning meetings。"),
+     ]},
+    {"title": "The Future of Books",
+     "passage": "Some predicted that e-books would kill paper books, but the data tells a more interesting story. After early excitement, e-book sales plateaued and paper sales have actually grown in many markets. Readers report that paper books invite slower, more reflective reading, while e-readers excel for travel and instant access. The two formats coexist for different needs. Independent bookstores have rebounded by offering events, curated recommendations, and a community space that online retailers cannot replicate. Paper books, far from dying, have found a renewed value as a quiet alternative to screens.",
+     "qs": [
+       ("prediction","What did some people predict?",
+        [("A","Paper books would dominate"),("B","E-books would kill paper books"),("C","All books would be free"),("D","Reading would end")],
+        "B", "predicted that e-books would kill paper。"),
+       ("reality","What does the data actually show?",
+        [("A","E-books killed paper"),("B","E-book sales plateaued; paper grew"),("C","Both declined"),("D","Both equal")],
+        "B", "After early excitement, e-book sales plateaued。"),
+       ("indies","Why have independent bookstores rebounded?",
+        [("A","Lower prices"),("B","Events + curation + community space"),("C","Government subsidy"),("D","Selling only e-books")],
+        "B", "events, curated recommendations, and a community space。"),
+       ("paper-value","What value of paper books does the author highlight?",
+        [("A","Cheap"),("B","Quiet alternative to screens"),("C","Easier to ship"),("D","Required by schools")],
+        "B", "a quiet alternative to screens。"),
+     ]},
+    {"title": "Smart Cities and Privacy",
+     "passage": "Smart cities promise smoother traffic, cleaner air, and faster emergency response by collecting data from sensors, cameras, and citizens' phones. The trade-off is privacy. When a city knows where every bus, car, and pedestrian is at all times, it also knows where every person travels. Citizens often consent to data collection without understanding what is gathered or how long it is stored. Responsible smart-city design publishes clear data policies, sets short retention windows, and allows residents to opt out of non-essential tracking. Privacy and efficiency are not opposites, but they require careful design choices.",
+     "qs": [
+       ("promise","What do smart cities promise?",
+        [("A","Slower traffic"),("B","Smoother traffic, cleaner air, faster emergency response"),("C","Free housing"),("D","No technology")],
+        "B", "原文首句。"),
+       ("tradeoff","What is the trade-off?",
+        [("A","Money"),("B","Privacy"),("C","Speed"),("D","Education")],
+        "B", "The trade-off is privacy。"),
+       ("consent","What problem with citizen consent does the passage raise?",
+        [("A","Citizens refuse to consent"),("B","Often consent without understanding what is gathered"),("C","Consent forms are too long"),("D","Children can't consent")],
+        "B", "consent without understanding。"),
+       ("responsible","What does responsible smart-city design include?",
+        [("A","More cameras everywhere"),("B","Clear policies, short retention, opt-out"),("C","Mandatory tracking"),("D","No transparency")],
+        "B", "publishes clear data policies, sets short retention windows。"),
+     ]},
 ]
 
 TRANS = [
@@ -339,6 +387,18 @@ TRANS = [
     ("京剧是中国最具代表性的传统戏剧形式之一,已有两百多年历史。它融合了唱、念、做、打四种基本表现手法。",
      "Peking Opera is one of the most iconic traditional Chinese theatrical forms, with more than two hundred years of history. It combines four basic performance techniques: singing, speech, acting, and martial arts.",
      "京剧 Peking Opera。"),
+    ("长城是中国古代规模最大的军事防御工程,东起山海关,西至嘉峪关,全长超过两万公里。它修建于不同朝代,前后历经两千多年。",
+     "The Great Wall is the largest ancient military defense project in China, running from Shanhaiguan in the east to Jiayuguan in the west, with a total length of over twenty thousand kilometers. It was built over more than two thousand years across different dynasties.",
+     "防御工程 defense project / 朝代 dynasties。"),
+    ("端午节是中国传统节日之一,通常在农历五月初五。人们吃粽子、赛龙舟,纪念古代爱国诗人屈原。这个节日已被列入联合国非物质文化遗产。",
+     "The Dragon Boat Festival is a traditional Chinese holiday, usually celebrated on the fifth day of the fifth lunar month. People eat zongzi and race dragon boats to commemorate the ancient patriotic poet Qu Yuan. The festival has been listed by UNESCO as Intangible Cultural Heritage.",
+     "粽子 zongzi / 联合国非物质文化遗产 UNESCO Intangible Cultural Heritage。"),
+    ("过去二十年,中国的高速铁路网迅速扩张,目前已成为全球最大的高铁网络。高铁不仅缩短了城市之间的距离,也改变了数亿人的出行方式。",
+     "Over the past two decades, China's high-speed rail network has expanded rapidly and is now the largest in the world. High-speed rail has not only shortened the distance between cities but also transformed the way hundreds of millions travel.",
+     "高速铁路网 high-speed rail network / 出行方式 way of travel。"),
+    ("共享单车在中国城市迅速普及。用户通过手机扫码即可解锁车辆,骑行后任意停放。这种方式既方便了短距离出行,也减少了汽车带来的污染。",
+     "Shared bikes have rapidly spread across Chinese cities. Users can unlock a bike by scanning a QR code on their phone and park it anywhere after riding. This model has made short-distance travel more convenient while reducing pollution from cars.",
+     "共享单车 shared bikes / 短距离出行 short-distance travel。"),
 ]
 
 WRITE = [
@@ -380,15 +440,25 @@ WRITE = [
      "step 1/2/3 结构。"),
 ]
 
-# === 7 套试卷分配 (扩展自原 5 套) ===
+# === 7 套试卷分配 v2 (每套 5 听 + 2 阅篇 + 2 译 + 2 写 ≈ 17 题) ===
+# 格式: (slug, title, listen_idx[5], reading_idx[2], trans_idx[2], write_idx[2], exam_date)
 PAPERS = [
-    ("paper-2024-03", "2024 年 3 月延期场 · 试卷一",   [0,1],     0, [0,1], [0,1]),
-    ("paper-2024-06", "2024 年 6 月 · 试卷二",         [2,3],     1, [2,3], [2,3]),
-    ("paper-2024-12", "2024 年 12 月 · 试卷三",        [4,5,6],   2, [4,5], [4,5]),
-    ("paper-2025-06", "2025 年 6 月 · 试卷四",         [7,8],     3, [6,7], [6,7]),
-    ("paper-2025-12", "2025 年 12 月 · 试卷五",        [9,10],    4, [8,9], [8,9]),
-    ("paper-2026-06", "2026 年 6 月 · 试卷六",         [11,0],    5, [0,2], [10,11]),
-    ("paper-2026-12", "2026 年 12 月预测 · 试卷七",    [1,2,3],   6, [1,3], [0,4]),
+    ("paper-2024-03", "2024 年 3 月延期场 · 试卷一", [0,1,12,13,14],   [0,7], [0,1,10], [0,1],   "2024-03-?? (延期场)"),
+    ("paper-2024-06", "2024 年 6 月 · 试卷二",       [2,3,15,16,17],   [1,8], [2,3,11], [2,3],   "2024-06-15"),
+    ("paper-2024-12", "2024 年 12 月 · 试卷三",      [4,5,6,18,11],    [2,9], [4,5,12], [4,5],   "2024-12-14"),
+    ("paper-2025-06", "2025 年 6 月 · 试卷四",       [7,8,12,15,17],   [3,7], [6,7,13], [6,7],   "2025-06-14"),
+    ("paper-2025-12", "2025 年 12 月 · 试卷五",      [9,10,13,16,18],  [4,8], [8,9,13], [8,9],   "2025-12-13"),
+    ("paper-2026-06", "2026 年 6 月 · 试卷六",       [11,0,14,17,6],   [5,9], [0,2,13], [10,11], "2026-06-13 (预测)"),
+    ("paper-2026-12", "2026 年 12 月预测 · 试卷七",  [1,2,3,12,16],    [6,8], [1,3,11], [0,4],   "2026-12-12 (预测)"),
+]
+
+# 各套精准的真题原文外链 (引导用户去合规授权源, 不复现原文)
+REAL_PAPER_LINKS = [
+    ("教育部考试中心", "http://cet.neea.edu.cn/"),
+    ("新东方 CET-4 真题", "https://cet4.koolearn.com/"),
+    ("沪江英语 CET4", "https://www.hjenglish.com/cet4/"),
+    ("有道考神", "https://kaoshen.youdao.com/"),
+    ("文都四六级", "https://cet46.wendu.com/"),
 ]
 
 
@@ -463,22 +533,35 @@ def render_write(idx_in_paper, item, qid):
 """
 
 
+def render_real_paper_block(exam_date):
+    """每套页顶部的合规真题原文外链卡片."""
+    links_html = ' '.join([f'<a href="{url}" target="_blank" rel="noopener">{name} ↗</a>' for name, url in REAL_PAPER_LINKS])
+    return f"""
+<div class="real-paper-link">
+  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
+  考试日期 <strong>{exam_date}</strong>, 1-click 直达合规授权源查看真题:<br>
+  {links_html}
+</div>
+"""
+
+
 def main():
     OUT = 'D:/github/cet4-archive'
-    for slug, title, lstn_idx, read_idx, trans_idx, write_idx in PAPERS:
-        # 收集客观题正确答案 → window.ANSWERS
+    for slug, title, lstn_idx, read_idx, trans_idx, write_idx, exam_date in PAPERS:
         answers = {}
         body_parts = []
+        body_parts.append(render_real_paper_block(exam_date))
         body_parts.append('<h2>Section A · Listening</h2>')
         for i, li in enumerate(lstn_idx, 1):
             qid = f"L_{li}"
             answers[qid] = LISTEN[li]['ans']
             body_parts.append(render_listen(i, LISTEN[li], qid))
         body_parts.append('\n<h2>Section B · Reading</h2>')
-        qid_prefix = f"R_{read_idx}"
-        for qid_suffix, _, _, ans, _ in READING[read_idx]['qs']:
-            answers[f"{qid_prefix}_{qid_suffix}"] = ans
-        body_parts.append(render_reading_passage(READING[read_idx], qid_prefix))
+        for ri in read_idx:
+            qid_prefix = f"R_{ri}"
+            for qid_suffix, _, _, ans, _ in READING[ri]['qs']:
+                answers[f"{qid_prefix}_{qid_suffix}"] = ans
+            body_parts.append(render_reading_passage(READING[ri], qid_prefix))
         body_parts.append('\n<h2>Section C · Translation</h2>')
         for i, ti in enumerate(trans_idx, 1):
             body_parts.append(render_trans(i, TRANS[ti], f"T_{ti}"))

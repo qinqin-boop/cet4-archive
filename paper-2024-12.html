@@ -30,7 +30,7 @@ function play(btn) {
 }
 
 // 自动批改
-window.ANSWERS = {"L_4": "C", "L_5": "B", "L_6": "B", "R_2_most-powerful": "C", "R_2_why-anna": "B", "R_2_anna-age": "B", "R_2_trickiest": "B"};
+window.ANSWERS = {"L_4": "C", "L_5": "B", "L_6": "B", "L_18": "B", "L_11": "B", "R_2_most-powerful": "C", "R_2_why-anna": "B", "R_2_anna-age": "B", "R_2_trickiest": "B", "R_9_promise": "B", "R_9_tradeoff": "B", "R_9_consent": "B", "R_9_responsible": "B"};
 function submitPaper() {
   var qs = document.querySelectorAll('.q[data-qid]');
   var correct = 0, total = 0;
@@ -95,6 +95,13 @@ function resetPaper() {
 <main>
 <div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="real-paper-link">
+  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
+  考试日期 <strong>2024-12-14</strong>, 1-click 直达合规授权源查看真题:<br>
+  <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心 ↗</a> <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方 CET-4 真题 ↗</a> <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语 CET4 ↗</a> <a href="https://kaoshen.youdao.com/" target="_blank" rel="noopener">有道考神 ↗</a> <a href="https://cet46.wendu.com/" target="_blank" rel="noopener">文都四六级 ↗</a>
+</div>
+
 <h2>Section A · Listening</h2>
 
 <div class="q" data-qid="L_4">
@@ -141,6 +148,38 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>正确答案: B</strong></p>
 <p><strong>解析:</strong> two to four weeks 直接命中。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_18">
+<span class="qnum">听力 题 4</span>
+<div class="script">
+<div class="script-text">W: My roommate plays music loudly until midnight. I haven't slept well in a week. M: Have you told her directly that it bothers you? W: I dropped a few hints, but she didn't get them. M: Hints don't work. Talk to her plainly when you're both calm — most roommate problems come from indirect communication.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What does the man recommend?</p>
+<div class="opts"><label><input type="radio" name="L_18" value="A"> A. Move out</label> <label><input type="radio" name="L_18" value="B"> B. Talk plainly when both are calm</label> <label><input type="radio" name="L_18" value="C"> C. Send a strongly worded text</label> <label><input type="radio" name="L_18" value="D"> D. Report to the dorm advisor</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Talk to her plainly when you're both calm。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_11">
+<span class="qnum">听力 题 5</span>
+<div class="script">
+<div class="script-text">M: I haven't seen you in the cafeteria all week. W: I've been packing lunch from home to save money. M: How much are you saving? W: About fifty yuan a week. It adds up to over two thousand a year. M: That's a smart move. I might try it.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Why is the woman packing lunch?</p>
+<div class="opts"><label><input type="radio" name="L_11" value="A"> A. She dislikes cafeteria food</label> <label><input type="radio" name="L_11" value="B"> B. To save about 50 yuan per week</label> <label><input type="radio" name="L_11" value="C"> C. She has dietary restrictions</label> <label><input type="radio" name="L_11" value="D"> D. Her schedule changed</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> save money + fifty yuan a week 直接命中。</p>
 </div>
 </div>
 
@@ -193,6 +232,53 @@ function resetPaper() {
 </div>
 </div>
 
+<h3>Passage: Smart Cities and Privacy</h3>
+<div class="script"><div class="script-text">Smart cities promise smoother traffic, cleaner air, and faster emergency response by collecting data from sensors, cameras, and citizens' phones. The trade-off is privacy. When a city knows where every bus, car, and pedestrian is at all times, it also knows where every person travels. Citizens often consent to data collection without understanding what is gathered or how long it is stored. Responsible smart-city design publishes clear data policies, sets short retention windows, and allows residents to opt out of non-essential tracking. Privacy and efficiency are not opposites, but they require careful design choices.</div></div>
+
+<div class="q" data-qid="R_9_promise">
+<span class="qnum">阅读 题 1</span>
+<p><strong>What do smart cities promise?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_promise" value="A"> A. Slower traffic</label> <label><input type="radio" name="R_9_promise" value="B"> B. Smoother traffic, cleaner air, faster emergency response</label> <label><input type="radio" name="R_9_promise" value="C"> C. Free housing</label> <label><input type="radio" name="R_9_promise" value="D"> D. No technology</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 原文首句。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_9_tradeoff">
+<span class="qnum">阅读 题 2</span>
+<p><strong>What is the trade-off?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_tradeoff" value="A"> A. Money</label> <label><input type="radio" name="R_9_tradeoff" value="B"> B. Privacy</label> <label><input type="radio" name="R_9_tradeoff" value="C"> C. Speed</label> <label><input type="radio" name="R_9_tradeoff" value="D"> D. Education</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> The trade-off is privacy。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_9_consent">
+<span class="qnum">阅读 题 3</span>
+<p><strong>What problem with citizen consent does the passage raise?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_consent" value="A"> A. Citizens refuse to consent</label> <label><input type="radio" name="R_9_consent" value="B"> B. Often consent without understanding what is gathered</label> <label><input type="radio" name="R_9_consent" value="C"> C. Consent forms are too long</label> <label><input type="radio" name="R_9_consent" value="D"> D. Children can't consent</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> consent without understanding。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_9_responsible">
+<span class="qnum">阅读 题 4</span>
+<p><strong>What does responsible smart-city design include?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_responsible" value="A"> A. More cameras everywhere</label> <label><input type="radio" name="R_9_responsible" value="B"> B. Clear policies, short retention, opt-out</label> <label><input type="radio" name="R_9_responsible" value="C"> C. Mandatory tracking</label> <label><input type="radio" name="R_9_responsible" value="D"> D. No transparency</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> publishes clear data policies, sets short retention windows。</p>
+</div>
+</div>
+
 
 <h2>Section C · Translation</h2>
 
@@ -216,6 +302,18 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>参考译文:</strong> <em>The Silk Road was an ancient network of trade routes connecting China with Central Asia, West Asia, and Europe. More than a route for goods, it served as a bridge for cultural, religious, and technological exchange.</em></p>
 <p><strong>解析:</strong> 丝绸之路 The Silk Road / 桥梁 served as a bridge for。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_12">
+<span class="qnum">翻译 题 3</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>过去二十年,中国的高速铁路网迅速扩张,目前已成为全球最大的高铁网络。高铁不仅缩短了城市之间的距离,也改变了数亿人的出行方式。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Over the past two decades, China's high-speed rail network has expanded rapidly and is now the largest in the world. High-speed rail has not only shortened the distance between cities but also transformed the way hundreds of millions travel.</em></p>
+<p><strong>解析:</strong> 高速铁路网 high-speed rail network / 出行方式 way of travel。</p>
 </div>
 </div>
 

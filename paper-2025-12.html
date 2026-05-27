@@ -30,7 +30,7 @@ function play(btn) {
 }
 
 // 自动批改
-window.ANSWERS = {"L_9": "C", "L_10": "A", "R_4_why-lifelong": "B", "R_4_access": "B", "R_4_hours": "B", "R_4_obsolete": "B"};
+window.ANSWERS = {"L_9": "C", "L_10": "A", "L_13": "B", "L_16": "B", "L_18": "B", "R_4_why-lifelong": "B", "R_4_access": "B", "R_4_hours": "B", "R_4_obsolete": "B", "R_8_prediction": "B", "R_8_reality": "B", "R_8_indies": "B", "R_8_paper-value": "B"};
 function submitPaper() {
   var qs = document.querySelectorAll('.q[data-qid]');
   var correct = 0, total = 0;
@@ -95,6 +95,13 @@ function resetPaper() {
 <main>
 <div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="real-paper-link">
+  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
+  考试日期 <strong>2025-12-13</strong>, 1-click 直达合规授权源查看真题:<br>
+  <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心 ↗</a> <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方 CET-4 真题 ↗</a> <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语 CET4 ↗</a> <a href="https://kaoshen.youdao.com/" target="_blank" rel="noopener">有道考神 ↗</a> <a href="https://cet46.wendu.com/" target="_blank" rel="noopener">文都四六级 ↗</a>
+</div>
+
 <h2>Section A · Listening</h2>
 
 <div class="q" data-qid="L_9">
@@ -125,6 +132,54 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>正确答案: A</strong></p>
 <p><strong>解析:</strong> A small startup actually + founder explained better。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_13">
+<span class="qnum">听力 题 3</span>
+<div class="script">
+<div class="script-text">M: I got two internship offers — one at a bank, one at a tech startup. Which would you pick? W: Depends on what you want. The bank pays better and looks great on a resume, but the startup gives you real responsibility from day one. M: I think I'd grow faster at the startup. W: Then trust that instinct.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Which internship does the man lean toward?</p>
+<div class="opts"><label><input type="radio" name="L_13" value="A"> A. Bank, for the pay</label> <label><input type="radio" name="L_13" value="B"> B. Startup, for faster growth</label> <label><input type="radio" name="L_13" value="C"> C. Neither</label> <label><input type="radio" name="L_13" value="D"> D. Both part-time</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> I'd grow faster at the startup。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_16">
+<span class="qnum">听力 题 4</span>
+<div class="script">
+<div class="script-text">W: I'm writing my graduate school personal statement and it feels stiff. M: Show, don't tell. Instead of writing 'I am passionate about research', tell the moment a research result actually surprised you. W: That makes sense. Specific stories beat general adjectives. M: Exactly. Admissions officers read thousands of statements that say 'I am passionate'.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What writing advice does the man give?</p>
+<div class="opts"><label><input type="radio" name="L_16" value="A"> A. Use more adjectives</label> <label><input type="radio" name="L_16" value="B"> B. Show through specific stories</label> <label><input type="radio" name="L_16" value="C"> C. Write longer paragraphs</label> <label><input type="radio" name="L_16" value="D"> D. Quote famous scholars</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Show, don't tell + Specific stories beat general adjectives。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_18">
+<span class="qnum">听力 题 5</span>
+<div class="script">
+<div class="script-text">W: My roommate plays music loudly until midnight. I haven't slept well in a week. M: Have you told her directly that it bothers you? W: I dropped a few hints, but she didn't get them. M: Hints don't work. Talk to her plainly when you're both calm — most roommate problems come from indirect communication.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What does the man recommend?</p>
+<div class="opts"><label><input type="radio" name="L_18" value="A"> A. Move out</label> <label><input type="radio" name="L_18" value="B"> B. Talk plainly when both are calm</label> <label><input type="radio" name="L_18" value="C"> C. Send a strongly worded text</label> <label><input type="radio" name="L_18" value="D"> D. Report to the dorm advisor</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Talk to her plainly when you're both calm。</p>
 </div>
 </div>
 
@@ -177,6 +232,53 @@ function resetPaper() {
 </div>
 </div>
 
+<h3>Passage: The Future of Books</h3>
+<div class="script"><div class="script-text">Some predicted that e-books would kill paper books, but the data tells a more interesting story. After early excitement, e-book sales plateaued and paper sales have actually grown in many markets. Readers report that paper books invite slower, more reflective reading, while e-readers excel for travel and instant access. The two formats coexist for different needs. Independent bookstores have rebounded by offering events, curated recommendations, and a community space that online retailers cannot replicate. Paper books, far from dying, have found a renewed value as a quiet alternative to screens.</div></div>
+
+<div class="q" data-qid="R_8_prediction">
+<span class="qnum">阅读 题 1</span>
+<p><strong>What did some people predict?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_prediction" value="A"> A. Paper books would dominate</label> <label><input type="radio" name="R_8_prediction" value="B"> B. E-books would kill paper books</label> <label><input type="radio" name="R_8_prediction" value="C"> C. All books would be free</label> <label><input type="radio" name="R_8_prediction" value="D"> D. Reading would end</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> predicted that e-books would kill paper。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_8_reality">
+<span class="qnum">阅读 题 2</span>
+<p><strong>What does the data actually show?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_reality" value="A"> A. E-books killed paper</label> <label><input type="radio" name="R_8_reality" value="B"> B. E-book sales plateaued; paper grew</label> <label><input type="radio" name="R_8_reality" value="C"> C. Both declined</label> <label><input type="radio" name="R_8_reality" value="D"> D. Both equal</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> After early excitement, e-book sales plateaued。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_8_indies">
+<span class="qnum">阅读 题 3</span>
+<p><strong>Why have independent bookstores rebounded?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_indies" value="A"> A. Lower prices</label> <label><input type="radio" name="R_8_indies" value="B"> B. Events + curation + community space</label> <label><input type="radio" name="R_8_indies" value="C"> C. Government subsidy</label> <label><input type="radio" name="R_8_indies" value="D"> D. Selling only e-books</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> events, curated recommendations, and a community space。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_8_paper-value">
+<span class="qnum">阅读 题 4</span>
+<p><strong>What value of paper books does the author highlight?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_paper-value" value="A"> A. Cheap</label> <label><input type="radio" name="R_8_paper-value" value="B"> B. Quiet alternative to screens</label> <label><input type="radio" name="R_8_paper-value" value="C"> C. Easier to ship</label> <label><input type="radio" name="R_8_paper-value" value="D"> D. Required by schools</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> a quiet alternative to screens。</p>
+</div>
+</div>
+
 
 <h2>Section C · Translation</h2>
 
@@ -200,6 +302,18 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>参考译文:</strong> <em>Peking Opera is one of the most iconic traditional Chinese theatrical forms, with more than two hundred years of history. It combines four basic performance techniques: singing, speech, acting, and martial arts.</em></p>
 <p><strong>解析:</strong> 京剧 Peking Opera。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_13">
+<span class="qnum">翻译 题 3</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>共享单车在中国城市迅速普及。用户通过手机扫码即可解锁车辆,骑行后任意停放。这种方式既方便了短距离出行,也减少了汽车带来的污染。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Shared bikes have rapidly spread across Chinese cities. Users can unlock a bike by scanning a QR code on their phone and park it anywhere after riding. This model has made short-distance travel more convenient while reducing pollution from cars.</em></p>
+<p><strong>解析:</strong> 共享单车 shared bikes / 短距离出行 short-distance travel。</p>
 </div>
 </div>
 

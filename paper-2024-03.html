@@ -30,7 +30,7 @@ function play(btn) {
 }
 
 // 自动批改
-window.ANSWERS = {"L_0": "B", "L_1": "B", "R_0_research-suggests": "C", "R_0_why-paper": "B", "R_0_screen-good-for": "C", "R_0_overall": "B"};
+window.ANSWERS = {"L_0": "B", "L_1": "B", "L_12": "B", "L_13": "B", "L_14": "B", "R_0_research-suggests": "C", "R_0_why-paper": "B", "R_0_screen-good-for": "C", "R_0_overall": "B", "R_7_frame": "B", "R_7_examples": "B", "R_7_why-local": "B", "R_7_students": "B"};
 function submitPaper() {
   var qs = document.querySelectorAll('.q[data-qid]');
   var correct = 0, total = 0;
@@ -95,6 +95,13 @@ function resetPaper() {
 <main>
 <div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="real-paper-link">
+  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
+  考试日期 <strong>2024-03-?? (延期场)</strong>, 1-click 直达合规授权源查看真题:<br>
+  <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心 ↗</a> <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方 CET-4 真题 ↗</a> <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语 CET4 ↗</a> <a href="https://kaoshen.youdao.com/" target="_blank" rel="noopener">有道考神 ↗</a> <a href="https://cet46.wendu.com/" target="_blank" rel="noopener">文都四六级 ↗</a>
+</div>
+
 <h2>Section A · Listening</h2>
 
 <div class="q" data-qid="L_0">
@@ -125,6 +132,54 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>正确答案: B</strong></p>
 <p><strong>解析:</strong> 男士问 join,女士同意。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_12">
+<span class="qnum">听力 题 3</span>
+<div class="script">
+<div class="script-text">W: I lost my bank card on the bus this morning. What should I do first? M: Don't panic. Call the bank's hotline right away to freeze the account so nobody can use the card. W: And then? M: Visit any branch with your ID to apply for a replacement. It usually takes about a week.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What should the woman do FIRST?</p>
+<div class="opts"><label><input type="radio" name="L_12" value="A"> A. Wait one week</label> <label><input type="radio" name="L_12" value="B"> B. Call the bank to freeze the account</label> <label><input type="radio" name="L_12" value="C"> C. Visit a branch immediately</label> <label><input type="radio" name="L_12" value="D"> D. Buy a new card online</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Call the bank's hotline right away to freeze。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_13">
+<span class="qnum">听力 题 4</span>
+<div class="script">
+<div class="script-text">M: I got two internship offers — one at a bank, one at a tech startup. Which would you pick? W: Depends on what you want. The bank pays better and looks great on a resume, but the startup gives you real responsibility from day one. M: I think I'd grow faster at the startup. W: Then trust that instinct.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Which internship does the man lean toward?</p>
+<div class="opts"><label><input type="radio" name="L_13" value="A"> A. Bank, for the pay</label> <label><input type="radio" name="L_13" value="B"> B. Startup, for faster growth</label> <label><input type="radio" name="L_13" value="C"> C. Neither</label> <label><input type="radio" name="L_13" value="D"> D. Both part-time</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> I'd grow faster at the startup。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_14">
+<span class="qnum">听力 题 5</span>
+<div class="script">
+<div class="script-text">W: Are you signing up for the English speech contest? M: I'd love to, but my topic is still vague. W: The deadline is Friday. Pick anything you genuinely care about — judges spot fake enthusiasm immediately. M: Maybe I'll talk about my grandfather's village losing young people. That actually moves me.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What advice does the woman give about the topic?</p>
+<div class="opts"><label><input type="radio" name="L_14" value="A"> A. Pick a popular topic</label> <label><input type="radio" name="L_14" value="B"> B. Choose something you genuinely care about</label> <label><input type="radio" name="L_14" value="C"> C. Memorize a famous speech</label> <label><input type="radio" name="L_14" value="D"> D. Speak about technology</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Pick anything you genuinely care about。</p>
 </div>
 </div>
 
@@ -177,6 +232,53 @@ function resetPaper() {
 </div>
 </div>
 
+<h3>Passage: Climate Change and Local Action</h3>
+<div class="script"><div class="script-text">Climate change is often framed as a global emergency that only governments can address, but many communities have begun acting on their own. Coastal towns have raised seawalls and planted mangrove belts. Inland cities have replaced thirsty grass lawns with native plants that need little water. These small steps will not single-handedly slow warming, but they protect local lives and prove that real action is possible. Equally important, visible local projects build the political will needed for larger national agreements. Students often underestimate how much one person can influence policy by joining community planning meetings.</div></div>
+
+<div class="q" data-qid="R_7_frame">
+<span class="qnum">阅读 题 1</span>
+<p><strong>How is climate change often framed?</strong></p>
+<div class="opts"><label><input type="radio" name="R_7_frame" value="A"> A. A local problem</label> <label><input type="radio" name="R_7_frame" value="B"> B. A global emergency only governments can address</label> <label><input type="radio" name="R_7_frame" value="C"> C. An economic issue</label> <label><input type="radio" name="R_7_frame" value="D"> D. A myth</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> first sentence。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_7_examples">
+<span class="qnum">阅读 题 2</span>
+<p><strong>Examples of local action include:</strong></p>
+<div class="opts"><label><input type="radio" name="R_7_examples" value="A"> A. Building factories</label> <label><input type="radio" name="R_7_examples" value="B"> B. Seawalls and mangrove belts</label> <label><input type="radio" name="R_7_examples" value="C"> C. Mass immigration</label> <label><input type="radio" name="R_7_examples" value="D"> D. Banning agriculture</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 原文列举。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_7_why-local">
+<span class="qnum">阅读 题 3</span>
+<p><strong>Why are local actions politically important?</strong></p>
+<div class="opts"><label><input type="radio" name="R_7_why-local" value="A"> A. They replace national policy</label> <label><input type="radio" name="R_7_why-local" value="B"> B. They build political will for bigger agreements</label> <label><input type="radio" name="R_7_why-local" value="C"> C. They earn money</label> <label><input type="radio" name="R_7_why-local" value="D"> D. They reduce taxes</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> build the political will needed for larger national agreements。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_7_students">
+<span class="qnum">阅读 题 4</span>
+<p><strong>What can students do?</strong></p>
+<div class="opts"><label><input type="radio" name="R_7_students" value="A"> A. Nothing meaningful</label> <label><input type="radio" name="R_7_students" value="B"> B. Influence policy at community planning meetings</label> <label><input type="radio" name="R_7_students" value="C"> C. Wait for legislation</label> <label><input type="radio" name="R_7_students" value="D"> D. Move abroad</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> joining community planning meetings。</p>
+</div>
+</div>
+
 
 <h2>Section C · Translation</h2>
 
@@ -200,6 +302,18 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>参考译文:</strong> <em>Chinese calligraphy is a unique visual art with more than three thousand years of history. It is not merely a way to write Chinese characters but also a means of expressing emotions and cultivating the body and mind.</em></p>
 <p><strong>解析:</strong> 笔锋 brush pressure / 留白 negative space。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_10">
+<span class="qnum">翻译 题 3</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>长城是中国古代规模最大的军事防御工程,东起山海关,西至嘉峪关,全长超过两万公里。它修建于不同朝代,前后历经两千多年。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>The Great Wall is the largest ancient military defense project in China, running from Shanhaiguan in the east to Jiayuguan in the west, with a total length of over twenty thousand kilometers. It was built over more than two thousand years across different dynasties.</em></p>
+<p><strong>解析:</strong> 防御工程 defense project / 朝代 dynasties。</p>
 </div>
 </div>
 

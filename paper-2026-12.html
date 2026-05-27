@@ -30,7 +30,7 @@ function play(btn) {
 }
 
 // 自动批改
-window.ANSWERS = {"L_1": "B", "L_2": "C", "L_3": "B", "R_6_appeal": "B", "R_6_cost": "B", "R_6_solution": "B", "R_6_treat": "B"};
+window.ANSWERS = {"L_1": "B", "L_2": "C", "L_3": "B", "L_12": "B", "L_16": "B", "R_6_appeal": "B", "R_6_cost": "B", "R_6_solution": "B", "R_6_treat": "B", "R_8_prediction": "B", "R_8_reality": "B", "R_8_indies": "B", "R_8_paper-value": "B"};
 function submitPaper() {
   var qs = document.querySelectorAll('.q[data-qid]');
   var correct = 0, total = 0;
@@ -95,6 +95,13 @@ function resetPaper() {
 <main>
 <div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="real-paper-link">
+  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
+  考试日期 <strong>2026-12-12 (预测)</strong>, 1-click 直达合规授权源查看真题:<br>
+  <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心 ↗</a> <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方 CET-4 真题 ↗</a> <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语 CET4 ↗</a> <a href="https://kaoshen.youdao.com/" target="_blank" rel="noopener">有道考神 ↗</a> <a href="https://cet46.wendu.com/" target="_blank" rel="noopener">文都四六级 ↗</a>
+</div>
+
 <h2>Section A · Listening</h2>
 
 <div class="q" data-qid="L_1">
@@ -141,6 +148,38 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>正确答案: B</strong></p>
 <p><strong>解析:</strong> Save your money before you buy anything new。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_12">
+<span class="qnum">听力 题 4</span>
+<div class="script">
+<div class="script-text">W: I lost my bank card on the bus this morning. What should I do first? M: Don't panic. Call the bank's hotline right away to freeze the account so nobody can use the card. W: And then? M: Visit any branch with your ID to apply for a replacement. It usually takes about a week.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What should the woman do FIRST?</p>
+<div class="opts"><label><input type="radio" name="L_12" value="A"> A. Wait one week</label> <label><input type="radio" name="L_12" value="B"> B. Call the bank to freeze the account</label> <label><input type="radio" name="L_12" value="C"> C. Visit a branch immediately</label> <label><input type="radio" name="L_12" value="D"> D. Buy a new card online</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Call the bank's hotline right away to freeze。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_16">
+<span class="qnum">听力 题 5</span>
+<div class="script">
+<div class="script-text">W: I'm writing my graduate school personal statement and it feels stiff. M: Show, don't tell. Instead of writing 'I am passionate about research', tell the moment a research result actually surprised you. W: That makes sense. Specific stories beat general adjectives. M: Exactly. Admissions officers read thousands of statements that say 'I am passionate'.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What writing advice does the man give?</p>
+<div class="opts"><label><input type="radio" name="L_16" value="A"> A. Use more adjectives</label> <label><input type="radio" name="L_16" value="B"> B. Show through specific stories</label> <label><input type="radio" name="L_16" value="C"> C. Write longer paragraphs</label> <label><input type="radio" name="L_16" value="D"> D. Quote famous scholars</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Show, don't tell + Specific stories beat general adjectives。</p>
 </div>
 </div>
 
@@ -193,6 +232,53 @@ function resetPaper() {
 </div>
 </div>
 
+<h3>Passage: The Future of Books</h3>
+<div class="script"><div class="script-text">Some predicted that e-books would kill paper books, but the data tells a more interesting story. After early excitement, e-book sales plateaued and paper sales have actually grown in many markets. Readers report that paper books invite slower, more reflective reading, while e-readers excel for travel and instant access. The two formats coexist for different needs. Independent bookstores have rebounded by offering events, curated recommendations, and a community space that online retailers cannot replicate. Paper books, far from dying, have found a renewed value as a quiet alternative to screens.</div></div>
+
+<div class="q" data-qid="R_8_prediction">
+<span class="qnum">阅读 题 1</span>
+<p><strong>What did some people predict?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_prediction" value="A"> A. Paper books would dominate</label> <label><input type="radio" name="R_8_prediction" value="B"> B. E-books would kill paper books</label> <label><input type="radio" name="R_8_prediction" value="C"> C. All books would be free</label> <label><input type="radio" name="R_8_prediction" value="D"> D. Reading would end</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> predicted that e-books would kill paper。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_8_reality">
+<span class="qnum">阅读 题 2</span>
+<p><strong>What does the data actually show?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_reality" value="A"> A. E-books killed paper</label> <label><input type="radio" name="R_8_reality" value="B"> B. E-book sales plateaued; paper grew</label> <label><input type="radio" name="R_8_reality" value="C"> C. Both declined</label> <label><input type="radio" name="R_8_reality" value="D"> D. Both equal</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> After early excitement, e-book sales plateaued。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_8_indies">
+<span class="qnum">阅读 题 3</span>
+<p><strong>Why have independent bookstores rebounded?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_indies" value="A"> A. Lower prices</label> <label><input type="radio" name="R_8_indies" value="B"> B. Events + curation + community space</label> <label><input type="radio" name="R_8_indies" value="C"> C. Government subsidy</label> <label><input type="radio" name="R_8_indies" value="D"> D. Selling only e-books</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> events, curated recommendations, and a community space。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_8_paper-value">
+<span class="qnum">阅读 题 4</span>
+<p><strong>What value of paper books does the author highlight?</strong></p>
+<div class="opts"><label><input type="radio" name="R_8_paper-value" value="A"> A. Cheap</label> <label><input type="radio" name="R_8_paper-value" value="B"> B. Quiet alternative to screens</label> <label><input type="radio" name="R_8_paper-value" value="C"> C. Easier to ship</label> <label><input type="radio" name="R_8_paper-value" value="D"> D. Required by schools</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> a quiet alternative to screens。</p>
+</div>
+</div>
+
 
 <h2>Section C · Translation</h2>
 
@@ -216,6 +302,18 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>参考译文:</strong> <em>Traditional Chinese Medicine (TCM) is a system of medicine with thousands of years of history. It includes acupuncture, tuina massage, and herbal medicine. TCM emphasizes harmony between humans and nature.</em></p>
 <p><strong>解析:</strong> 针灸 acupuncture / 中草药 herbal medicine。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_11">
+<span class="qnum">翻译 题 3</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>端午节是中国传统节日之一,通常在农历五月初五。人们吃粽子、赛龙舟,纪念古代爱国诗人屈原。这个节日已被列入联合国非物质文化遗产。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>The Dragon Boat Festival is a traditional Chinese holiday, usually celebrated on the fifth day of the fifth lunar month. People eat zongzi and race dragon boats to commemorate the ancient patriotic poet Qu Yuan. The festival has been listed by UNESCO as Intangible Cultural Heritage.</em></p>
+<p><strong>解析:</strong> 粽子 zongzi / 联合国非物质文化遗产 UNESCO Intangible Cultural Heritage。</p>
 </div>
 </div>
 

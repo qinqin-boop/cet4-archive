@@ -30,7 +30,7 @@ function play(btn) {
 }
 
 // 自动批改
-window.ANSWERS = {"L_11": "B", "L_0": "B", "R_5_determine-alertness": "B", "R_5_deep-sleep": "C", "R_5_recommend": "B", "R_5_main-idea": "B"};
+window.ANSWERS = {"L_11": "B", "L_0": "B", "L_14": "B", "L_17": "B", "L_6": "B", "R_5_determine-alertness": "B", "R_5_deep-sleep": "C", "R_5_recommend": "B", "R_5_main-idea": "B", "R_9_promise": "B", "R_9_tradeoff": "B", "R_9_consent": "B", "R_9_responsible": "B"};
 function submitPaper() {
   var qs = document.querySelectorAll('.q[data-qid]');
   var correct = 0, total = 0;
@@ -95,6 +95,13 @@ function resetPaper() {
 <main>
 <div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="real-paper-link">
+  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
+  考试日期 <strong>2026-06-13 (预测)</strong>, 1-click 直达合规授权源查看真题:<br>
+  <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心 ↗</a> <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方 CET-4 真题 ↗</a> <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语 CET4 ↗</a> <a href="https://kaoshen.youdao.com/" target="_blank" rel="noopener">有道考神 ↗</a> <a href="https://cet46.wendu.com/" target="_blank" rel="noopener">文都四六级 ↗</a>
+</div>
+
 <h2>Section A · Listening</h2>
 
 <div class="q" data-qid="L_11">
@@ -125,6 +132,54 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>正确答案: B</strong></p>
 <p><strong>解析:</strong> 男士最后明确 I'll go with data science。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_14">
+<span class="qnum">听力 题 3</span>
+<div class="script">
+<div class="script-text">W: Are you signing up for the English speech contest? M: I'd love to, but my topic is still vague. W: The deadline is Friday. Pick anything you genuinely care about — judges spot fake enthusiasm immediately. M: Maybe I'll talk about my grandfather's village losing young people. That actually moves me.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What advice does the woman give about the topic?</p>
+<div class="opts"><label><input type="radio" name="L_14" value="A"> A. Pick a popular topic</label> <label><input type="radio" name="L_14" value="B"> B. Choose something you genuinely care about</label> <label><input type="radio" name="L_14" value="C"> C. Memorize a famous speech</label> <label><input type="radio" name="L_14" value="D"> D. Speak about technology</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Pick anything you genuinely care about。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_17">
+<span class="qnum">听力 题 4</span>
+<div class="script">
+<div class="script-text">M: I'm thinking of dropping my Tuesday morning class. W: Why? You signed up because the professor's research matches your interest. M: True, but I'm exhausted after staying up reading the assignment. W: The problem isn't the class, it's that you postpone the reading. Move it to Saturday.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What does the woman identify as the real problem?</p>
+<div class="opts"><label><input type="radio" name="L_17" value="A"> A. The class is boring</label> <label><input type="radio" name="L_17" value="B"> B. Postponing the reading to the last night</label> <label><input type="radio" name="L_17" value="C"> C. The professor is too strict</label> <label><input type="radio" name="L_17" value="D"> D. Tuesday morning is too early</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> The problem isn't the class, it's that you postpone the reading。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_6">
+<span class="qnum">听力 题 5</span>
+<div class="script">
+<div class="script-text">W: I read that universities are now offering short, intensive courses during winter breaks. M: Yes, mini-terms. They typically last two to four weeks and focus on one topic. W: Sounds productive but exhausting. M: Some students love it for the focus, others find the pace too fast.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> How long does a typical mini-term last?</p>
+<div class="opts"><label><input type="radio" name="L_6" value="A"> A. One week</label> <label><input type="radio" name="L_6" value="B"> B. Two to four weeks</label> <label><input type="radio" name="L_6" value="C"> C. Six weeks</label> <label><input type="radio" name="L_6" value="D"> D. A full semester</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> two to four weeks 直接命中。</p>
 </div>
 </div>
 
@@ -177,6 +232,53 @@ function resetPaper() {
 </div>
 </div>
 
+<h3>Passage: Smart Cities and Privacy</h3>
+<div class="script"><div class="script-text">Smart cities promise smoother traffic, cleaner air, and faster emergency response by collecting data from sensors, cameras, and citizens' phones. The trade-off is privacy. When a city knows where every bus, car, and pedestrian is at all times, it also knows where every person travels. Citizens often consent to data collection without understanding what is gathered or how long it is stored. Responsible smart-city design publishes clear data policies, sets short retention windows, and allows residents to opt out of non-essential tracking. Privacy and efficiency are not opposites, but they require careful design choices.</div></div>
+
+<div class="q" data-qid="R_9_promise">
+<span class="qnum">阅读 题 1</span>
+<p><strong>What do smart cities promise?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_promise" value="A"> A. Slower traffic</label> <label><input type="radio" name="R_9_promise" value="B"> B. Smoother traffic, cleaner air, faster emergency response</label> <label><input type="radio" name="R_9_promise" value="C"> C. Free housing</label> <label><input type="radio" name="R_9_promise" value="D"> D. No technology</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 原文首句。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_9_tradeoff">
+<span class="qnum">阅读 题 2</span>
+<p><strong>What is the trade-off?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_tradeoff" value="A"> A. Money</label> <label><input type="radio" name="R_9_tradeoff" value="B"> B. Privacy</label> <label><input type="radio" name="R_9_tradeoff" value="C"> C. Speed</label> <label><input type="radio" name="R_9_tradeoff" value="D"> D. Education</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> The trade-off is privacy。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_9_consent">
+<span class="qnum">阅读 题 3</span>
+<p><strong>What problem with citizen consent does the passage raise?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_consent" value="A"> A. Citizens refuse to consent</label> <label><input type="radio" name="R_9_consent" value="B"> B. Often consent without understanding what is gathered</label> <label><input type="radio" name="R_9_consent" value="C"> C. Consent forms are too long</label> <label><input type="radio" name="R_9_consent" value="D"> D. Children can't consent</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> consent without understanding。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_9_responsible">
+<span class="qnum">阅读 题 4</span>
+<p><strong>What does responsible smart-city design include?</strong></p>
+<div class="opts"><label><input type="radio" name="R_9_responsible" value="A"> A. More cameras everywhere</label> <label><input type="radio" name="R_9_responsible" value="B"> B. Clear policies, short retention, opt-out</label> <label><input type="radio" name="R_9_responsible" value="C"> C. Mandatory tracking</label> <label><input type="radio" name="R_9_responsible" value="D"> D. No transparency</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> publishes clear data policies, sets short retention windows。</p>
+</div>
+</div>
+
 
 <h2>Section C · Translation</h2>
 
@@ -200,6 +302,18 @@ function resetPaper() {
 <div class="answer-block" style="display:none;">
 <p><strong>参考译文:</strong> <em>In recent years, China has made remarkable progress in artificial intelligence. From smart voice assistants to self-driving cars, AI is transforming the way people live and work.</em></p>
 <p><strong>解析:</strong> 显著进展 remarkable progress。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_13">
+<span class="qnum">翻译 题 3</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>共享单车在中国城市迅速普及。用户通过手机扫码即可解锁车辆,骑行后任意停放。这种方式既方便了短距离出行,也减少了汽车带来的污染。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Shared bikes have rapidly spread across Chinese cities. Users can unlock a bike by scanning a QR code on their phone and park it anywhere after riding. This model has made short-distance travel more convenient while reducing pollution from cars.</em></p>
+<p><strong>解析:</strong> 共享单车 shared bikes / 短距离出行 short-distance travel。</p>
 </div>
 </div>
 
