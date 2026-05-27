@@ -75,6 +75,12 @@
       <option value="mastered">✅ 已掌握</option>
       <option value="unmastered">⬜ 未掌握</option>
     </select>
+    <select id="sort" onchange="filterVocab()">
+      <option value="alpha">📚 字母排序</option>
+      <option value="bnc">🔥 BNC 频次 (常用优先)</option>
+      <option value="pri">⭐ 优先级</option>
+      <option value="random">🎲 随机 (背单词模式)</option>
+    </select>
     <span class="vocab-stats" id="stats">加载中...</span>
   </div>
 
@@ -238,6 +244,7 @@ function filterVocab() {
   const q = document.getElementById('search').value.toLowerCase().trim();
   const pri = document.getElementById('priority').value;
   const st = document.getElementById('status').value;
+  const sort = document.getElementById('sort').value;
   FILTERED = ALL_WORDS.filter(w => {
     if (pri && String(w.priority) !== pri) return false;
     if (st === 'fav' && !isFav(w.word)) return false;
@@ -248,15 +255,52 @@ function filterVocab() {
            (w.def||'').toLowerCase().includes(q) ||
            (w.phonetic||'').toLowerCase().includes(q);
   });
+  if (sort === 'bnc') {
+    FILTERED = FILTERED.slice().sort((a, b) => (a.bnc||999999) - (b.bnc||999999));
+  } else if (sort === 'pri') {
+    FILTERED = FILTERED.slice().sort((a, b) => (a.priority||9) - (b.priority||9) || (a.word||'').localeCompare(b.word||''));
+  } else if (sort === 'random') {
+    FILTERED = FILTERED.slice().sort(() => Math.random() - 0.5);
+  }
+  // alpha 默认走 byLetter 分组 (在 render 里)
   render();
+}
+
+function cardHtml(w) {
+  const pri = w.priority ? `<span class="w-pri">⭐${w.priority}</span>` : '';
+  const eg = w.cet4 ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cet4)}</div>${w.cet4zh ? '<div class="w-eg-zh">' + escape(w.cet4zh) + '</div>' : ''}</div>` : '';
+  const cs = w.cs ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cs)}</div>${w.cszh ? '<div class="w-eg-zh">' + escape(w.cszh) + '</div>' : ''}</div>` : '';
+  const bnc = w.bnc ? `<div class="w-meta">BNC 词频排名: ${w.bnc}</div>` : '';
+  const favCls = isFav(w.word) ? 'active' : '';
+  const masterCls = isMastered(w.word) ? 'mastered' : '';
+  const favLabel = isFav(w.word) ? '⭐已收' : '☆收藏';
+  const masterLabel = isMastered(w.word) ? '✅已掌握' : '⬜掌握';
+  const actions = `<div class="w-actions" onclick="event.stopPropagation()">
+    <button class="w-btn speak" onclick="speak('${escape(w.word)}');markToday('${escape(w.word)}')">🔊</button>
+    <button class="w-btn ${favCls}" onclick="this.className='w-btn '+(toggleFav('${escape(w.word)}')?'active':'');this.textContent=isFav('${escape(w.word)}')?'⭐已收':'☆收藏';">${favLabel}</button>
+    <button class="w-btn ${masterCls}" onclick="this.className='w-btn '+(toggleMastered('${escape(w.word)}')?'mastered':'');this.textContent=isMastered('${escape(w.word)}')?'✅已掌握':'⬜掌握';">${masterLabel}</button>
+  </div>`;
+  return `<div class="word-card" onclick="this.classList.toggle('expanded');markToday('${escape(w.word)}')">
+    <div class="w-head"><span class="w-word">${escape(w.word)}</span><span class="w-phonetic">${escape(w.phonetic||'')}</span>${pri}${actions}</div>
+    <div class="w-def">${escape(w.def||'')}</div>
+    <div class="w-detail">${eg}${cs}${bnc}</div>
+  </div>`;
 }
 
 function render() {
   const list = document.getElementById('vocab-list');
   const stats = document.getElementById('stats');
+  const sort = document.getElementById('sort') ? document.getElementById('sort').value : 'alpha';
   stats.textContent = `${FILTERED.length} / ${ALL_WORDS.length} 词`;
   if (FILTERED.length === 0) {
     list.innerHTML = '<div class="loading">无匹配词</div>';
+    return;
+  }
+  // 非 alpha 排序: 平铺线性列表, 不分组
+  if (sort !== 'alpha') {
+    const cards = FILTERED.slice(0, 500).map(cardHtml).join('');
+    const truncated = FILTERED.length > 500 ? `<p style="margin:10px 0;color:#64748b;font-size:0.88rem;">显示前 500 词 (共 ${FILTERED.length} 词, 用搜索/筛选缩小范围或用字母排序查看全部)</p>` : '';
+    list.innerHTML = `<div class="word-grid">${cards}</div>${truncated}`;
     return;
   }
   const byLetter = {};
@@ -267,26 +311,7 @@ function render() {
   const letters = Object.keys(byLetter).sort();
   let html = '';
   for (const L of letters) {
-    const cards = byLetter[L].map(w => {
-      const pri = w.priority ? `<span class="w-pri">⭐${w.priority}</span>` : '';
-      const eg = w.cet4 ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cet4)}</div>${w.cet4zh ? '<div class="w-eg-zh">' + escape(w.cet4zh) + '</div>' : ''}</div>` : '';
-      const cs = w.cs ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cs)}</div>${w.cszh ? '<div class="w-eg-zh">' + escape(w.cszh) + '</div>' : ''}</div>` : '';
-      const bnc = w.bnc ? `<div class="w-meta">BNC 词频排名: ${w.bnc}</div>` : '';
-      const favCls = isFav(w.word) ? 'active' : '';
-      const masterCls = isMastered(w.word) ? 'mastered' : '';
-      const favLabel = isFav(w.word) ? '⭐已收' : '☆收藏';
-      const masterLabel = isMastered(w.word) ? '✅已掌握' : '⬜掌握';
-      const actions = `<div class="w-actions" onclick="event.stopPropagation()">
-        <button class="w-btn speak" onclick="speak('${escape(w.word)}');markToday('${escape(w.word)}')">🔊</button>
-        <button class="w-btn ${favCls}" onclick="this.className='w-btn '+(toggleFav('${escape(w.word)}')?'active':'');this.textContent=isFav('${escape(w.word)}')?'⭐已收':'☆收藏';">${favLabel}</button>
-        <button class="w-btn ${masterCls}" onclick="this.className='w-btn '+(toggleMastered('${escape(w.word)}')?'mastered':'');this.textContent=isMastered('${escape(w.word)}')?'✅已掌握':'⬜掌握';">${masterLabel}</button>
-      </div>`;
-      return `<div class="word-card" onclick="this.classList.toggle('expanded');markToday('${escape(w.word)}')">
-        <div class="w-head"><span class="w-word">${escape(w.word)}</span><span class="w-phonetic">${escape(w.phonetic||'')}</span>${pri}${actions}</div>
-        <div class="w-def">${escape(w.def||'')}</div>
-        <div class="w-detail">${eg}${cs}${bnc}</div>
-      </div>`;
-    }).join('');
+    const cards = byLetter[L].map(cardHtml).join('');
     html += `<div class="letter-section" id="sec-${L}">
       <h3>${L} <span style="opacity:0.7;font-weight:400;font-size:0.85em;">(${byLetter[L].length})</span></h3>
       <div class="word-grid">${cards}</div>
