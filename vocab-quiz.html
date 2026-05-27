@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET-4 词汇测试 · Anki 风格</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+.quiz-container { max-width:600px; margin:30px auto; padding:0 16px; }
+.quiz-card { background:white; border:2px solid #cbd5e1; border-radius:16px; padding:50px 30px; min-height:280px; text-align:center; box-shadow:0 4px 14px rgba(0,0,0,0.05); position:relative; transition:0.2s; }
+.quiz-card .progress-label { position:absolute; top:12px; right:16px; font-size:0.85rem; color:#64748b; }
+.quiz-word { font-size:2.4rem; font-weight:700; color:#0f172a; margin:30px 0 10px; }
+.quiz-phonetic { color:#64748b; font-family:'Courier New',monospace; font-size:1.1rem; }
+.quiz-def { display:none; padding:20px; margin-top:20px; background:#f0fdfa; border-radius:8px; }
+.quiz-def.show { display:block; }
+.quiz-def .def-text { font-size:1.15rem; color:#0f766e; font-weight:600; }
+.quiz-def .eg { margin-top:10px; font-size:0.95rem; color:#334155; font-style:italic; }
+.quiz-actions { display:flex; gap:10px; margin:24px 0; flex-wrap:wrap; }
+.quiz-actions button { flex:1; min-width:120px; padding:14px; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; transition:0.15s; }
+.btn-show { background:#0891b2; color:white; }
+.btn-show:hover { background:#0e7490; }
+.btn-know { background:#22c55e; color:white; }
+.btn-know:hover { background:#16a34a; }
+.btn-skip { background:#94a3b8; color:white; }
+.btn-skip:hover { background:#64748b; }
+.btn-forget { background:#ef4444; color:white; }
+.btn-forget:hover { background:#dc2626; }
+.btn-speak { background:#a855f7; color:white; }
+.btn-speak:hover { background:#9333ea; }
+.quiz-meta { margin:16px 0; padding:14px 18px; background:#f0fdf4; border-radius:8px; display:flex; gap:12px; flex-wrap:wrap; font-size:0.92rem; align-items:center; }
+.quiz-meta .stat { background:white; padding:4px 12px; border-radius:12px; color:#0f766e; font-weight:600; }
+.quiz-meta select, .quiz-meta button { background:white; border:1px solid #cbd5e1; padding:6px 10px; border-radius:6px; cursor:pointer; }
+.quiz-empty { padding:60px 20px; text-align:center; color:#64748b; font-size:1.1rem; }
+.session-end { padding:40px 20px; text-align:center; }
+.session-end h2 { color:#0891b2; }
+.session-end .summary { background:white; padding:20px; border-radius:10px; margin:20px 0; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎴 CET-4 词汇测试</h1>
+  <p class="sub"><a href="./vocab.html" style="color:#fff;text-decoration:underline;">← 回 vocab 列表</a> · <a href="./index.html" style="color:#fff;text-decoration:underline;">回首页</a></p>
+</header>
+
+<main class="quiz-container">
+<div class="quiz-meta">
+  <span class="stat">📊 第 <span id="m-cur">0</span>/<span id="m-total">0</span> 题</span>
+  <span class="stat">✅ 会: <span id="m-know">0</span></span>
+  <span class="stat">❌ 不会: <span id="m-forget">0</span></span>
+  <span style="margin-left:auto;display:flex;gap:6px;">
+    <select id="pool" onchange="restart()">
+      <option value="all">全部 4544 词</option>
+      <option value="pri1" selected>⭐1 核心 1162 词</option>
+      <option value="pri2">⭐2 高频 3028 词</option>
+      <option value="fav">⭐ 收藏</option>
+      <option value="unmastered">⬜ 未掌握</option>
+    </select>
+    <select id="dir">
+      <option value="en-to-zh" selected>英 → 中</option>
+      <option value="zh-to-en">中 → 英</option>
+    </select>
+    <button onclick="restart()">🔄 重开</button>
+  </span>
+</div>
+
+<div id="quiz-area">
+  <div class="quiz-empty">⏳ 加载词表中...</div>
+</div>
+</main>
+
+<script>
+let ALL_WORDS = [];
+let POOL = [];
+let CURRENT_IDX = 0;
+let STATS = { know: 0, forget: 0, skip: 0 };
+let SESSION_SIZE = 50;
+
+const LS = {
+  get fav() { return JSON.parse(localStorage.getItem('cet4_fav') || '[]'); },
+  get mastered() { return JSON.parse(localStorage.getItem('cet4_mastered') || '[]'); },
+  set mastered(v) { localStorage.setItem('cet4_mastered', JSON.stringify(v)); },
+};
+function addMastered(w) {
+  const cur = LS.mastered;
+  if (!cur.includes(w)) { cur.push(w); LS.mastered = cur; }
+}
+
+fetch('./vocab.json').then(r => r.json()).then(data => {
+  ALL_WORDS = data;
+  restart();
+}).catch(e => {
+  document.getElementById('quiz-area').innerHTML = '<div class="quiz-empty">❌ 加载失败: ' + e.message + '</div>';
+});
+
+function buildPool() {
+  const which = document.getElementById('pool').value;
+  let pool = ALL_WORDS.slice();
+  if (which === 'pri1') pool = pool.filter(w => w.priority === 1);
+  else if (which === 'pri2') pool = pool.filter(w => w.priority === 2);
+  else if (which === 'fav') {
+    const fav = new Set(LS.fav);
+    pool = pool.filter(w => fav.has(w.word));
+  } else if (which === 'unmastered') {
+    const m = new Set(LS.mastered);
+    pool = pool.filter(w => !m.has(w.word));
+  }
+  // shuffle
+  pool.sort(() => Math.random() - 0.5);
+  POOL = pool.slice(0, SESSION_SIZE);
+}
+
+function restart() {
+  buildPool();
+  CURRENT_IDX = 0;
+  STATS = { know: 0, forget: 0, skip: 0 };
+  document.getElementById('m-total').textContent = POOL.length;
+  render();
+}
+
+function render() {
+  const area = document.getElementById('quiz-area');
+  if (POOL.length === 0) {
+    area.innerHTML = '<div class="quiz-empty">⚠ 词池为空, 换一个池子试试.</div>';
+    return;
+  }
+  if (CURRENT_IDX >= POOL.length) {
+    area.innerHTML = `
+      <div class="session-end">
+        <h2>🎉 本轮完成 (${POOL.length} 词)</h2>
+        <div class="summary">
+          <p>✅ 会的: <strong>${STATS.know}</strong></p>
+          <p>❌ 不会: <strong>${STATS.forget}</strong></p>
+          <p>⏭ 跳过: <strong>${STATS.skip}</strong></p>
+          <p style="margin-top:16px;color:#64748b;font-size:0.9rem;">"会"的已自动标已掌握 ✅. 下次只看未掌握用 "⬜ 未掌握" 池子.</p>
+        </div>
+        <button class="btn-show" onclick="restart()" style="padding:12px 32px;border:none;border-radius:8px;color:white;font-size:1rem;cursor:pointer;">🔄 再来一轮</button>
+      </div>`;
+    return;
+  }
+  const w = POOL[CURRENT_IDX];
+  const dir = document.getElementById('dir').value;
+  document.getElementById('m-cur').textContent = CURRENT_IDX + 1;
+  document.getElementById('m-know').textContent = STATS.know;
+  document.getElementById('m-forget').textContent = STATS.forget;
+
+  const front = dir === 'en-to-zh' ? `
+    <div class="quiz-word">${escape(w.word)}</div>
+    <div class="quiz-phonetic">${escape(w.phonetic||'')}</div>
+  ` : `
+    <div class="quiz-word" style="font-size:1.6rem;">${escape((w.def||'').split('；')[0])}</div>
+    <div class="quiz-phonetic">${escape(w.phonetic||'')}</div>
+  `;
+  const back = dir === 'en-to-zh' ? `
+    <div class="def-text">${escape(w.def||'')}</div>
+    ${w.cet4 ? `<div class="eg">"${escape(w.cet4)}" — ${escape(w.cet4zh||'')}</div>` : ''}
+  ` : `
+    <div class="def-text">${escape(w.word)}</div>
+    ${w.cet4 ? `<div class="eg">"${escape(w.cet4)}" — ${escape(w.cet4zh||'')}</div>` : ''}
+  `;
+
+  area.innerHTML = `
+    <div class="quiz-card" id="card">
+      <div class="progress-label">⭐${w.priority||'-'} · BNC ${w.bnc||'-'}</div>
+      ${front}
+      <div class="quiz-def" id="def-area">${back}</div>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn-show" onclick="showAns()">👀 显示答案</button>
+      <button class="btn-speak" onclick="speak('${escape(w.word)}')">🔊 朗读</button>
+    </div>
+    <div class="quiz-actions">
+      <button class="btn-know" onclick="markKnow('${escape(w.word)}')">✅ 会 (掌握)</button>
+      <button class="btn-forget" onclick="markForget()">❌ 不会</button>
+      <button class="btn-skip" onclick="markSkip()">⏭ 跳过</button>
+    </div>
+  `;
+}
+
+function showAns() { document.getElementById('def-area').classList.add('show'); }
+function markKnow(w) { addMastered(w); STATS.know++; CURRENT_IDX++; render(); }
+function markForget() { STATS.forget++; CURRENT_IDX++; render(); }
+function markSkip() { STATS.skip++; CURRENT_IDX++; render(); }
+function speak(text) {
+  if (!('speechSynthesis' in window)) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US'; u.rate = 0.9;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+function escape(s) {
+  if (!s) return '';
+  return String(s).replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'})[c]);
+}
+
+document.addEventListener('keydown', (e) => {
+  if (CURRENT_IDX >= POOL.length || POOL.length === 0) return;
+  const w = POOL[CURRENT_IDX];
+  if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); showAns(); }
+  else if (e.key === '1' || e.key === 'k') { markKnow(w.word); }
+  else if (e.key === '2' || e.key === 'f') { markForget(); }
+  else if (e.key === '3' || e.key === 's') { markSkip(); }
+});
+</script>
+</body>
+</html>
