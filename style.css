@@ -117,6 +117,68 @@ details.ans > *:not(summary) { margin-top: 8px; color: #422006; }
 }
 .toggle-all:hover { background: rgba(255,255,255,0.15); }
 
+/* 作答系统 */
+.opts { display: flex; flex-direction: column; gap: 6px; margin: 10px 0; }
+.opts label {
+  display: block; padding: 8px 12px;
+  border: 1px solid #d1d5db; border-radius: 6px;
+  cursor: pointer; transition: all 0.15s;
+  font-size: 0.95rem;
+}
+.opts label:hover { background: #f0fdfa; border-color: #16a085; }
+.opts input[type="radio"] { margin-right: 8px; cursor: pointer; }
+.opts input[type="radio"]:checked + label,
+.opts label:has(input[type="radio"]:checked) {
+  background: #ccfbf1; border-color: #16a085; font-weight: 600;
+}
+
+textarea {
+  width: 100%; min-height: 80px;
+  padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 6px;
+  font-family: inherit; font-size: 0.95rem; line-height: 1.6;
+  resize: vertical;
+}
+textarea:focus { outline: none; border-color: #16a085; box-shadow: 0 0 0 3px rgba(22,160,133,0.15); }
+
+.q.correct { border-left-color: #10b981; background: #ecfdf5; }
+.q.wrong { border-left-color: #ef4444; background: #fef2f2; }
+.q.submitted { border-left-color: #6366f1; background: #eef2ff; }
+
+.feedback { margin-top: 8px; padding: 8px 12px; border-radius: 4px; font-size: 0.92rem; }
+.feedback .ok { color: #047857; font-weight: 600; }
+.feedback .ng { color: #b91c1c; font-weight: 600; }
+
+.answer-block {
+  margin-top: 12px; padding: 12px 14px;
+  background: #fffaf0; border: 1px solid #fbbf24; border-radius: 6px;
+  font-size: 0.92rem;
+}
+.answer-block > * { color: #422006; }
+
+.action-bar {
+  position: sticky; bottom: 0;
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(8px);
+  padding: 14px 0; margin-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  display: flex; gap: 10px; justify-content: center;
+}
+.btn-submit, .btn-reset {
+  border: none; padding: 10px 24px; border-radius: 24px;
+  font-size: 0.95rem; font-weight: 600; cursor: pointer;
+  font-family: inherit;
+}
+.btn-submit { background: #16a085; color: #fff; }
+.btn-submit:hover { background: #138a72; }
+.btn-reset { background: #e5e7eb; color: #475569; }
+.btn-reset:hover { background: #d1d5db; }
+
+.score-bar {
+  background: #fffbeb; border: 2px solid #f59e0b;
+  padding: 14px 18px; border-radius: 8px;
+  font-size: 1.0rem; color: #78350f;
+  margin-bottom: 18px;
+}
+
 .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-top: 20px; }
 .cat-card {
   background: #fff; padding: 20px; border-radius: 8px; border-left: 4px solid #16a085;

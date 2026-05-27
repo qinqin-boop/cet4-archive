@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 年 6 月 · 试卷六 · CET-4 原创仿真试卷</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+// TTS 朗读
+var currentUtter = null;
+var currentBtn = null;
+function play(btn) {
+  var txt = btn.parentElement.querySelector('.script-text').textContent;
+  if (currentUtter) {
+    speechSynthesis.cancel();
+    if (currentBtn) currentBtn.textContent = '🔊 播放朗读';
+    var same = (currentBtn === btn);
+    currentUtter = null; currentBtn = null;
+    if (same) return;
+  }
+  var u = new SpeechSynthesisUtterance(txt);
+  u.lang = 'en-US'; u.rate = 0.92;
+  var vs = speechSynthesis.getVoices();
+  var ev = vs.find(function(v){return v.lang.startsWith('en');});
+  if (ev) u.voice = ev;
+  u.onend = function(){ if (currentBtn) currentBtn.textContent = '🔊 播放朗读'; currentUtter = null; currentBtn = null; };
+  speechSynthesis.speak(u);
+  currentUtter = u; currentBtn = btn;
+  btn.textContent = '⏸ 停止';
+}
+
+// 自动批改
+window.ANSWERS = {"L_11": "B", "L_0": "B", "R_5_determine-alertness": "B", "R_5_deep-sleep": "C", "R_5_recommend": "B", "R_5_main-idea": "B"};
+function submitPaper() {
+  var qs = document.querySelectorAll('.q[data-qid]');
+  var correct = 0, total = 0;
+  qs.forEach(function(qEl){
+    var qid = qEl.getAttribute('data-qid');
+    var correctAns = window.ANSWERS[qid];
+    if (correctAns === undefined) return;
+    total++;
+    var selected = qEl.querySelector('input[type="radio"]:checked');
+    var userAns = selected ? selected.value : '(未作答)';
+    var isCorrect = (userAns === correctAns);
+    if (isCorrect) correct++;
+    qEl.classList.remove('correct','wrong');
+    qEl.classList.add(isCorrect ? 'correct' : 'wrong');
+    var feedback = qEl.querySelector('.feedback');
+    if (feedback) {
+      feedback.style.display = 'block';
+      feedback.innerHTML = isCorrect
+        ? '<span class="ok">✓ 答对了!</span>'
+        : '<span class="ng">✗ 答错. 你选了 <b>'+userAns+'</b>, 正确答案 <b>'+correctAns+'</b></span>';
+    }
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+  });
+  // 主观题(翻译/写作) - 用户写完后展开标准答案对比
+  document.querySelectorAll('.q.subjective').forEach(function(qEl){
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+    qEl.classList.add('submitted');
+  });
+  // 总分
+  var bar = document.getElementById('score-bar');
+  if (bar) {
+    bar.style.display = 'block';
+    var pct = total > 0 ? Math.round(correct/total*100) : 0;
+    bar.innerHTML = '<strong>客观题得分:</strong> ' + correct + ' / ' + total + ' (' + pct + '%)  &nbsp;|&nbsp;  主观题答案已展开供对比';
+  }
+  // 滚到顶
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function resetPaper() {
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){ r.checked = false; });
+  document.querySelectorAll('textarea').forEach(function(t){ t.value = ''; });
+  document.querySelectorAll('.q').forEach(function(q){ q.classList.remove('correct','wrong','submitted'); });
+  document.querySelectorAll('.feedback').forEach(function(f){ f.style.display='none'; f.innerHTML=''; });
+  document.querySelectorAll('.answer-block').forEach(function(a){ a.style.display='none'; });
+  var bar = document.getElementById('score-bar');
+  if (bar) bar.style.display = 'none';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>📄 2026 年 6 月 · 试卷六</h1>
+  <p class="sub">CET-4 原创仿真试卷 · 作答 → 批改 → 看解析</p>
+  <nav>
+    <a href="./index.html">← 试卷列表</a>
+  </nav>
+</header>
+<main>
+<div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+<h2>Section A · Listening</h2>
+
+<div class="q" data-qid="L_11">
+<span class="qnum">听力 题 1</span>
+<div class="script">
+<div class="script-text">M: I haven't seen you in the cafeteria all week. W: I've been packing lunch from home to save money. M: How much are you saving? W: About fifty yuan a week. It adds up to over two thousand a year. M: That's a smart move. I might try it.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Why is the woman packing lunch?</p>
+<div class="opts"><label><input type="radio" name="L_11" value="A"> A. She dislikes cafeteria food</label> <label><input type="radio" name="L_11" value="B"> B. To save about 50 yuan per week</label> <label><input type="radio" name="L_11" value="C"> C. She has dietary restrictions</label> <label><input type="radio" name="L_11" value="D"> D. Her schedule changed</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> save money + fifty yuan a week 直接命中。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_0">
+<span class="qnum">听力 题 2</span>
+<div class="script">
+<div class="script-text">W: Have you decided which elective course to take next semester? M: I'm torn between Modern Art History and Introduction to Data Science. W: Why not pick the one that helps your future career? M: That makes sense. I'll go with data science then.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Which course will the man choose?</p>
+<div class="opts"><label><input type="radio" name="L_0" value="A"> A. Modern Art History</label> <label><input type="radio" name="L_0" value="B"> B. Introduction to Data Science</label> <label><input type="radio" name="L_0" value="C"> C. Neither</label> <label><input type="radio" name="L_0" value="D"> D. Both</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 男士最后明确 I'll go with data science。</p>
+</div>
+</div>
+
+
+<h2>Section B · Reading</h2>
+<h3>Passage: Sleep Quality vs Quantity</h3>
+<div class="script"><div class="script-text">For decades the popular advice was simply to get eight hours of sleep. Recent research suggests sleep quality matters as much as quantity. Two people sleeping the same hours may wake with very different alertness depending on how much deep sleep and REM sleep they completed. Deep sleep, when the body repairs tissue and consolidates memories, makes up roughly twenty percent of a healthy cycle. A sleep cycle disturbed by noise, alcohol, or late screens loses deep sleep first. Researchers recommend keeping the bedroom between 18 and 20 Celsius, avoiding caffeine after noon, and dimming screens an hour before bed.</div></div>
+
+<div class="q" data-qid="R_5_determine-alertness">
+<span class="qnum">阅读 题 1</span>
+<p><strong>According to the passage, what determines morning alertness?</strong></p>
+<div class="opts"><label><input type="radio" name="R_5_determine-alertness" value="A"> A. Total hours slept</label> <label><input type="radio" name="R_5_determine-alertness" value="B"> B. Quality of sleep cycles</label> <label><input type="radio" name="R_5_determine-alertness" value="C"> C. Age</label> <label><input type="radio" name="R_5_determine-alertness" value="D"> D. Daytime naps</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> quality matters as much as quantity。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_5_deep-sleep">
+<span class="qnum">阅读 题 2</span>
+<p><strong>Deep sleep is associated with all EXCEPT:</strong></p>
+<div class="opts"><label><input type="radio" name="R_5_deep-sleep" value="A"> A. Tissue repair</label> <label><input type="radio" name="R_5_deep-sleep" value="B"> B. Memory consolidation</label> <label><input type="radio" name="R_5_deep-sleep" value="C"> C. Rapid eye movement</label> <label><input type="radio" name="R_5_deep-sleep" value="D"> D. ~20% of cycle</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: C</strong></p>
+<p><strong>解析:</strong> REM ≠ deep sleep。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_5_recommend">
+<span class="qnum">阅读 题 3</span>
+<p><strong>What is recommended for sleep quality?</strong></p>
+<div class="opts"><label><input type="radio" name="R_5_recommend" value="A"> A. Sleep 9 hours</label> <label><input type="radio" name="R_5_recommend" value="B"> B. Keep room 18-20C and avoid afternoon caffeine</label> <label><input type="radio" name="R_5_recommend" value="C"> C. Sleep with light on</label> <label><input type="radio" name="R_5_recommend" value="D"> D. Pull all-nighters</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 原文直接列出。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_5_main-idea">
+<span class="qnum">阅读 题 4</span>
+<p><strong>Main idea?</strong></p>
+<div class="opts"><label><input type="radio" name="R_5_main-idea" value="A"> A. 8 hours necessary for all</label> <label><input type="radio" name="R_5_main-idea" value="B"> B. Quality matters as much as quantity</label> <label><input type="radio" name="R_5_main-idea" value="C"> C. Students need 9+ hours</label> <label><input type="radio" name="R_5_main-idea" value="D"> D. REM is the only important stage</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 主旨。</p>
+</div>
+</div>
+
+
+<h2>Section C · Translation</h2>
+
+<div class="q subjective" data-qid="T_0">
+<span class="qnum">翻译 题 1</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>春节是中国最重要的传统节日,通常在公历一月底或二月初到来。家人无论身在何处都会回到家中,共享团圆饭、贴春联、放鞭炮。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>The Spring Festival is the most important traditional Chinese holiday, typically falling in late January or early February. Wherever family members may be, they return home to share a reunion dinner, paste spring couplets, and set off firecrackers.</em></p>
+<p><strong>解析:</strong> 春联 spring couplets / 鞭炮 firecrackers。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_2">
+<span class="qnum">翻译 题 2</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>近年来,中国在人工智能领域取得了显著进展。从智能语音助手到自动驾驶汽车,人工智能正在改变人们的生活和工作方式。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>In recent years, China has made remarkable progress in artificial intelligence. From smart voice assistants to self-driving cars, AI is transforming the way people live and work.</em></p>
+<p><strong>解析:</strong> 显著进展 remarkable progress。</p>
+</div>
+</div>
+
+
+<h2>Section D · Writing</h2>
+
+<div class="q subjective" data-qid="W_10">
+<span class="qnum">写作 题 1</span>
+<p><strong>Write an essay (120-180 words) on "The Choice Between Big Cities and Smaller Cities".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>For young graduates the choice between a megacity and a smaller city is defining. Big cities offer rich opportunities and the energy of fast-paced life but bring brutal housing costs. Smaller cities offer affordable living, family ties, and slower pace. The right answer depends on personal priorities. A cutting-edge career may demand a top-tier city; family time and lower stress may flourish in a second-tier city where a comfortable home is within reach.</em></p>
+<p><strong>解析:</strong> 选择类。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="W_11">
+<span class="qnum">写作 题 2</span>
+<p><strong>Write an essay (120-180 words) on "How to Develop Critical Thinking Skills".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>The ability to evaluate what one reads has become more valuable than the ability to memorize it. Critical thinking is not a natural talent but a habit grown through deliberate practice. First, question sources: who wrote this, what evidence is offered. Second, consider opposing viewpoints honestly. Third, be willing to change one's own mind when better evidence appears. Without these habits even the most educated person becomes vulnerable to clever propaganda.</em></p>
+<p><strong>解析:</strong> step 1/2/3 结构。</p>
+</div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
+</main>
+<footer><p>CET-4 原创仿真试卷 · 2026 年 6 月 · 试卷六</p></footer>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2024 年 3 月延期场 · 试卷一 · CET-4 原创仿真试卷</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+// TTS 朗读
+var currentUtter = null;
+var currentBtn = null;
+function play(btn) {
+  var txt = btn.parentElement.querySelector('.script-text').textContent;
+  if (currentUtter) {
+    speechSynthesis.cancel();
+    if (currentBtn) currentBtn.textContent = '🔊 播放朗读';
+    var same = (currentBtn === btn);
+    currentUtter = null; currentBtn = null;
+    if (same) return;
+  }
+  var u = new SpeechSynthesisUtterance(txt);
+  u.lang = 'en-US'; u.rate = 0.92;
+  var vs = speechSynthesis.getVoices();
+  var ev = vs.find(function(v){return v.lang.startsWith('en');});
+  if (ev) u.voice = ev;
+  u.onend = function(){ if (currentBtn) currentBtn.textContent = '🔊 播放朗读'; currentUtter = null; currentBtn = null; };
+  speechSynthesis.speak(u);
+  currentUtter = u; currentBtn = btn;
+  btn.textContent = '⏸ 停止';
+}
+
+// 自动批改
+window.ANSWERS = {"L_0": "B", "L_1": "B", "R_0_research-suggests": "C", "R_0_why-paper": "B", "R_0_screen-good-for": "C", "R_0_overall": "B"};
+function submitPaper() {
+  var qs = document.querySelectorAll('.q[data-qid]');
+  var correct = 0, total = 0;
+  qs.forEach(function(qEl){
+    var qid = qEl.getAttribute('data-qid');
+    var correctAns = window.ANSWERS[qid];
+    if (correctAns === undefined) return;
+    total++;
+    var selected = qEl.querySelector('input[type="radio"]:checked');
+    var userAns = selected ? selected.value : '(未作答)';
+    var isCorrect = (userAns === correctAns);
+    if (isCorrect) correct++;
+    qEl.classList.remove('correct','wrong');
+    qEl.classList.add(isCorrect ? 'correct' : 'wrong');
+    var feedback = qEl.querySelector('.feedback');
+    if (feedback) {
+      feedback.style.display = 'block';
+      feedback.innerHTML = isCorrect
+        ? '<span class="ok">✓ 答对了!</span>'
+        : '<span class="ng">✗ 答错. 你选了 <b>'+userAns+'</b>, 正确答案 <b>'+correctAns+'</b></span>';
+    }
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+  });
+  // 主观题(翻译/写作) - 用户写完后展开标准答案对比
+  document.querySelectorAll('.q.subjective').forEach(function(qEl){
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+    qEl.classList.add('submitted');
+  });
+  // 总分
+  var bar = document.getElementById('score-bar');
+  if (bar) {
+    bar.style.display = 'block';
+    var pct = total > 0 ? Math.round(correct/total*100) : 0;
+    bar.innerHTML = '<strong>客观题得分:</strong> ' + correct + ' / ' + total + ' (' + pct + '%)  &nbsp;|&nbsp;  主观题答案已展开供对比';
+  }
+  // 滚到顶
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function resetPaper() {
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){ r.checked = false; });
+  document.querySelectorAll('textarea').forEach(function(t){ t.value = ''; });
+  document.querySelectorAll('.q').forEach(function(q){ q.classList.remove('correct','wrong','submitted'); });
+  document.querySelectorAll('.feedback').forEach(function(f){ f.style.display='none'; f.innerHTML=''; });
+  document.querySelectorAll('.answer-block').forEach(function(a){ a.style.display='none'; });
+  var bar = document.getElementById('score-bar');
+  if (bar) bar.style.display = 'none';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>📄 2024 年 3 月延期场 · 试卷一</h1>
+  <p class="sub">CET-4 原创仿真试卷 · 作答 → 批改 → 看解析</p>
+  <nav>
+    <a href="./index.html">← 试卷列表</a>
+  </nav>
+</header>
+<main>
+<div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+<h2>Section A · Listening</h2>
+
+<div class="q" data-qid="L_0">
+<span class="qnum">听力 题 1</span>
+<div class="script">
+<div class="script-text">W: Have you decided which elective course to take next semester? M: I'm torn between Modern Art History and Introduction to Data Science. W: Why not pick the one that helps your future career? M: That makes sense. I'll go with data science then.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Which course will the man choose?</p>
+<div class="opts"><label><input type="radio" name="L_0" value="A"> A. Modern Art History</label> <label><input type="radio" name="L_0" value="B"> B. Introduction to Data Science</label> <label><input type="radio" name="L_0" value="C"> C. Neither</label> <label><input type="radio" name="L_0" value="D"> D. Both</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 男士最后明确 I'll go with data science。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_1">
+<span class="qnum">听力 题 2</span>
+<div class="script">
+<div class="script-text">M: I noticed you've been jogging every morning recently. W: Yes, I started a fitness plan three weeks ago. I want to run a half-marathon in October. M: That's impressive. Mind if I join you tomorrow morning? W: Not at all. Meet me at the park gate at six.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What will the two speakers do tomorrow morning?</p>
+<div class="opts"><label><input type="radio" name="L_1" value="A"> A. Watch a marathon</label> <label><input type="radio" name="L_1" value="B"> B. Jog together</label> <label><input type="radio" name="L_1" value="C"> C. Have breakfast</label> <label><input type="radio" name="L_1" value="D"> D. Visit a park</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 男士问 join,女士同意。</p>
+</div>
+</div>
+
+
+<h2>Section B · Reading</h2>
+<h3>Passage: Reading on Paper vs Screen</h3>
+<div class="script"><div class="script-text">A growing body of research suggests that the medium we read in shapes how deeply we understand. When students read long passages on paper, they tend to recall main arguments and supporting details with greater accuracy than when they read on a screen. Paper offers spatial cues — a reader remembers that a key idea appeared near the top of the left page — that screens lack. Scrolling encourages skimming, while turning pages encourages reflection. Screen reading is not without merits: searchability and digital annotation make it superior for research. The best approach matches medium to purpose: deep comprehension demands paper; fact lookup favors a tablet.</div></div>
+
+<div class="q" data-qid="R_0_research-suggests">
+<span class="qnum">阅读 题 1</span>
+<p><strong>What does research suggest about reading?</strong></p>
+<div class="opts"><label><input type="radio" name="R_0_research-suggests" value="A"> A. Paper is always better</label> <label><input type="radio" name="R_0_research-suggests" value="B"> B. Screen reading recalls more</label> <label><input type="radio" name="R_0_research-suggests" value="C"> C. Paper produces better recall of arguments</label> <label><input type="radio" name="R_0_research-suggests" value="D"> D. No difference</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: C</strong></p>
+<p><strong>解析:</strong> 首句直接给结论。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_0_why-paper">
+<span class="qnum">阅读 题 2</span>
+<p><strong>Why does paper assist comprehension?</strong></p>
+<div class="opts"><label><input type="radio" name="R_0_why-paper" value="A"> A. Cheaper</label> <label><input type="radio" name="R_0_why-paper" value="B"> B. Spatial cues + page-turning reflection</label> <label><input type="radio" name="R_0_why-paper" value="C"> C. Higher resolution</label> <label><input type="radio" name="R_0_why-paper" value="D"> D. Easier to carry</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 原文两个原因。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_0_screen-good-for">
+<span class="qnum">阅读 题 3</span>
+<p><strong>For which task is screen reading well-suited?</strong></p>
+<div class="opts"><label><input type="radio" name="R_0_screen-good-for" value="A"> A. Reading a novel</label> <label><input type="radio" name="R_0_screen-good-for" value="B"> B. Memorizing poetry</label> <label><input type="radio" name="R_0_screen-good-for" value="C"> C. Fact lookup</label> <label><input type="radio" name="R_0_screen-good-for" value="D"> D. Long-term retention</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: C</strong></p>
+<p><strong>解析:</strong> fact lookup favors a tablet。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_0_overall">
+<span class="qnum">阅读 题 4</span>
+<p><strong>Author's overall view?</strong></p>
+<div class="opts"><label><input type="radio" name="R_0_overall" value="A"> A. Stop using tablets</label> <label><input type="radio" name="R_0_overall" value="B"> B. Match medium to purpose</label> <label><input type="radio" name="R_0_overall" value="C"> C. Screens are obsolete</label> <label><input type="radio" name="R_0_overall" value="D"> D. Always read on paper</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> match the medium to the reading purpose。</p>
+</div>
+</div>
+
+
+<h2>Section C · Translation</h2>
+
+<div class="q subjective" data-qid="T_0">
+<span class="qnum">翻译 题 1</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>春节是中国最重要的传统节日,通常在公历一月底或二月初到来。家人无论身在何处都会回到家中,共享团圆饭、贴春联、放鞭炮。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>The Spring Festival is the most important traditional Chinese holiday, typically falling in late January or early February. Wherever family members may be, they return home to share a reunion dinner, paste spring couplets, and set off firecrackers.</em></p>
+<p><strong>解析:</strong> 春联 spring couplets / 鞭炮 firecrackers。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_1">
+<span class="qnum">翻译 题 2</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>中国书法是一种独特的视觉艺术,有三千多年的历史。它不仅是书写汉字的方式,也是表达情感、修养身心的途径。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Chinese calligraphy is a unique visual art with more than three thousand years of history. It is not merely a way to write Chinese characters but also a means of expressing emotions and cultivating the body and mind.</em></p>
+<p><strong>解析:</strong> 笔锋 brush pressure / 留白 negative space。</p>
+</div>
+</div>
+
+
+<h2>Section D · Writing</h2>
+
+<div class="q subjective" data-qid="W_0">
+<span class="qnum">写作 题 1</span>
+<p><strong>Write an essay (120-180 words) on "The Importance of Reading in University Life".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>In an era flooded with short videos, reading remains an irreplaceable habit. First, books cultivate deep thinking, training us to follow long structured arguments rather than scattered snippets. Second, beyond textbooks, students should explore biographies, popular science, and classic novels to broaden their worldview. Finally, a daily reading habit can be built by allocating thirty minutes before sleep. In short, reading is not a luxury but the quietest, most cost-effective investment a student can make.</em></p>
+<p><strong>解析:</strong> 三段式套路。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="W_1">
+<span class="qnum">写作 题 2</span>
+<p><strong>Write an essay (120-180 words) on "The Influence of Short Videos on College Students".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>Short-video apps have captured the attention of nearly every college student. Their appeal is easy to understand: bite-sized clips offer instant entertainment. However, the cost is real - shrinking attention spans and interrupted study sessions. The solution is not to abandon them entirely but to use them with discipline: setting daily limits, deleting apps during exam weeks, and treating them as rewards rather than defaults.</em></p>
+<p><strong>解析:</strong> 现象-原因-对策。</p>
+</div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
+</main>
+<footer><p>CET-4 原创仿真试卷 · 2024 年 3 月延期场 · 试卷一</p></footer>
+</body>
+</html>

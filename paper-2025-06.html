@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 年 6 月 · 试卷四 · CET-4 原创仿真试卷</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+// TTS 朗读
+var currentUtter = null;
+var currentBtn = null;
+function play(btn) {
+  var txt = btn.parentElement.querySelector('.script-text').textContent;
+  if (currentUtter) {
+    speechSynthesis.cancel();
+    if (currentBtn) currentBtn.textContent = '🔊 播放朗读';
+    var same = (currentBtn === btn);
+    currentUtter = null; currentBtn = null;
+    if (same) return;
+  }
+  var u = new SpeechSynthesisUtterance(txt);
+  u.lang = 'en-US'; u.rate = 0.92;
+  var vs = speechSynthesis.getVoices();
+  var ev = vs.find(function(v){return v.lang.startsWith('en');});
+  if (ev) u.voice = ev;
+  u.onend = function(){ if (currentBtn) currentBtn.textContent = '🔊 播放朗读'; currentUtter = null; currentBtn = null; };
+  speechSynthesis.speak(u);
+  currentUtter = u; currentBtn = btn;
+  btn.textContent = '⏸ 停止';
+}
+
+// 自动批改
+window.ANSWERS = {"L_7": "B", "L_8": "B", "R_3_how-different": "B", "R_3_entire-jobs": "B", "R_3_thrive-skills": "B", "R_3_tone": "B"};
+function submitPaper() {
+  var qs = document.querySelectorAll('.q[data-qid]');
+  var correct = 0, total = 0;
+  qs.forEach(function(qEl){
+    var qid = qEl.getAttribute('data-qid');
+    var correctAns = window.ANSWERS[qid];
+    if (correctAns === undefined) return;
+    total++;
+    var selected = qEl.querySelector('input[type="radio"]:checked');
+    var userAns = selected ? selected.value : '(未作答)';
+    var isCorrect = (userAns === correctAns);
+    if (isCorrect) correct++;
+    qEl.classList.remove('correct','wrong');
+    qEl.classList.add(isCorrect ? 'correct' : 'wrong');
+    var feedback = qEl.querySelector('.feedback');
+    if (feedback) {
+      feedback.style.display = 'block';
+      feedback.innerHTML = isCorrect
+        ? '<span class="ok">✓ 答对了!</span>'
+        : '<span class="ng">✗ 答错. 你选了 <b>'+userAns+'</b>, 正确答案 <b>'+correctAns+'</b></span>';
+    }
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+  });
+  // 主观题(翻译/写作) - 用户写完后展开标准答案对比
+  document.querySelectorAll('.q.subjective').forEach(function(qEl){
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+    qEl.classList.add('submitted');
+  });
+  // 总分
+  var bar = document.getElementById('score-bar');
+  if (bar) {
+    bar.style.display = 'block';
+    var pct = total > 0 ? Math.round(correct/total*100) : 0;
+    bar.innerHTML = '<strong>客观题得分:</strong> ' + correct + ' / ' + total + ' (' + pct + '%)  &nbsp;|&nbsp;  主观题答案已展开供对比';
+  }
+  // 滚到顶
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function resetPaper() {
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){ r.checked = false; });
+  document.querySelectorAll('textarea').forEach(function(t){ t.value = ''; });
+  document.querySelectorAll('.q').forEach(function(q){ q.classList.remove('correct','wrong','submitted'); });
+  document.querySelectorAll('.feedback').forEach(function(f){ f.style.display='none'; f.innerHTML=''; });
+  document.querySelectorAll('.answer-block').forEach(function(a){ a.style.display='none'; });
+  var bar = document.getElementById('score-bar');
+  if (bar) bar.style.display = 'none';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>📄 2025 年 6 月 · 试卷四</h1>
+  <p class="sub">CET-4 原创仿真试卷 · 作答 → 批改 → 看解析</p>
+  <nav>
+    <a href="./index.html">← 试卷列表</a>
+  </nav>
+</header>
+<main>
+<div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+<h2>Section A · Listening</h2>
+
+<div class="q" data-qid="L_7">
+<span class="qnum">听力 题 1</span>
+<div class="script">
+<div class="script-text">M: I'm thinking of moving from the city to a smaller town after graduation. W: Won't that limit your job opportunities? M: Maybe, but housing is so much cheaper, and I value my free time more than a top salary. W: Different priorities, that's fair.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> Why is the man considering moving?</p>
+<div class="opts"><label><input type="radio" name="L_7" value="A"> A. To find more jobs</label> <label><input type="radio" name="L_7" value="B"> B. For cheaper housing and free time</label> <label><input type="radio" name="L_7" value="C"> C. To be near family</label> <label><input type="radio" name="L_7" value="D"> D. For better weather</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> housing is so much cheaper + value my free time。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_8">
+<span class="qnum">听力 题 2</span>
+<div class="script">
+<div class="script-text">W: My phone battery dies before noon every day. M: How old is it? W: Three years. The screen is fine, but the battery just doesn't hold a charge. M: You could replace just the battery at a repair shop for much less than buying a new phone.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What does the man recommend?</p>
+<div class="opts"><label><input type="radio" name="L_8" value="A"> A. Buying a new phone</label> <label><input type="radio" name="L_8" value="B"> B. Replacing just the battery</label> <label><input type="radio" name="L_8" value="C"> C. Carrying a power bank</label> <label><input type="radio" name="L_8" value="D"> D. Sending to manufacturer</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> replace just the battery at a repair shop。</p>
+</div>
+</div>
+
+
+<h2>Section B · Reading</h2>
+<h3>Passage: AI and Job Markets</h3>
+<div class="script"><div class="script-text">The rapid advance of artificial intelligence is transforming the job market faster than earlier waves of automation. Unlike mechanical robots that replaced manual labor, modern AI can draft emails, summarize legal documents, and write computer code, threatening white-collar work once considered safe. However, AI tends to take over narrow sub-tasks rather than entire jobs. A copywriter may still be needed for creative direction even as AI generates first drafts. Workers most likely to thrive combine technical literacy with soft skills — communication, empathy, creative problem-solving.</div></div>
+
+<div class="q" data-qid="R_3_how-different">
+<span class="qnum">阅读 题 1</span>
+<p><strong>How is modern AI different from earlier automation?</strong></p>
+<div class="opts"><label><input type="radio" name="R_3_how-different" value="A"> A. Replaces manual labor only</label> <label><input type="radio" name="R_3_how-different" value="B"> B. Threatens white-collar work too</label> <label><input type="radio" name="R_3_how-different" value="C"> C. Slower</label> <label><input type="radio" name="R_3_how-different" value="D"> D. Only affects students</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 原文对比说明。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_3_entire-jobs">
+<span class="qnum">阅读 题 2</span>
+<p><strong>Will AI eliminate entire jobs?</strong></p>
+<div class="opts"><label><input type="radio" name="R_3_entire-jobs" value="A"> A. Yes, all routine jobs</label> <label><input type="radio" name="R_3_entire-jobs" value="B"> B. Mostly takes over sub-tasks, jobs redesigned</label> <label><input type="radio" name="R_3_entire-jobs" value="C"> C. No effect</label> <label><input type="radio" name="R_3_entire-jobs" value="D"> D. Only manual jobs</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> narrow sub-tasks rather than entire jobs。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_3_thrive-skills">
+<span class="qnum">阅读 题 3</span>
+<p><strong>Skills that help workers thrive?</strong></p>
+<div class="opts"><label><input type="radio" name="R_3_thrive-skills" value="A"> A. Only coding</label> <label><input type="radio" name="R_3_thrive-skills" value="B"> B. Technical literacy + soft skills</label> <label><input type="radio" name="R_3_thrive-skills" value="C"> C. Only management</label> <label><input type="radio" name="R_3_thrive-skills" value="D"> D. Only languages</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> combine technical literacy with soft skills。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_3_tone">
+<span class="qnum">阅读 题 4</span>
+<p><strong>Author's overall tone?</strong></p>
+<div class="opts"><label><input type="radio" name="R_3_tone" value="A"> A. Entirely pessimistic</label> <label><input type="radio" name="R_3_tone" value="B"> B. Nuanced - risks + opportunities</label> <label><input type="radio" name="R_3_tone" value="C"> C. Entirely optimistic</label> <label><input type="radio" name="R_3_tone" value="D"> D. Indifferent</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 承认 threats 也指 redesigned。</p>
+</div>
+</div>
+
+
+<h2>Section C · Translation</h2>
+
+<div class="q subjective" data-qid="T_6">
+<span class="qnum">翻译 题 1</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>过去三十年,中国的城市化进程加快,数亿人从农村迁入城市。这种大规模的人口流动既带来了经济增长,也带来了挑战。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Over the past three decades, China's urbanization has accelerated, with hundreds of millions moving from rural areas to cities. This large-scale movement has brought both economic growth and challenges.</em></p>
+<p><strong>解析:</strong> 城市化 urbanization。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_7">
+<span class="qnum">翻译 题 2</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>中国的茶文化源远流长。无论是日常待客还是商务洽谈,泡一壶好茶都是表达尊重的方式。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Chinese tea culture has a long history. Whether welcoming guests in daily life or negotiating in business settings, brewing a good pot of tea is a way to show respect.</em></p>
+<p><strong>解析:</strong> 茶文化 tea culture。</p>
+</div>
+</div>
+
+
+<h2>Section D · Writing</h2>
+
+<div class="q subjective" data-qid="W_6">
+<span class="qnum">写作 题 1</span>
+<p><strong>Write an essay (120-180 words) on "Why Lifelong Learning Matters More Than Ever".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>The skills that earn a comfortable salary today may be obsolete in a decade. Automation and shifting job markets mean a diploma is no longer a lifetime ticket. Lifelong learning has moved from a nice-to-have to an essential survival skill. Free online courses make expert content accessible at almost no cost. Setting aside five hours a week for deliberate study keeps one relevant, curious, and confident over decades of change.</em></p>
+<p><strong>解析:</strong> obsolete / survival skill。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="W_7">
+<span class="qnum">写作 题 2</span>
+<p><strong>Write an essay (120-180 words) on "The Pros and Cons of Online Education".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>Online education democratizes access: a student in a small town can attend lectures from a top professor halfway around the world. Flexibility lets learners study at their own pace. However, online learning has limits. Without classroom structure, many students struggle with self-discipline. Spontaneous discussions and the social side of campus life are difficult to replicate on a screen. The best approach is hybrid - combining online flexibility with some in-person interaction.</em></p>
+<p><strong>解析:</strong> Pros/cons 折中。</p>
+</div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
+</main>
+<footer><p>CET-4 原创仿真试卷 · 2025 年 6 月 · 试卷四</p></footer>
+</body>
+</html>

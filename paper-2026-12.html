@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 年 12 月预测 · 试卷七 · CET-4 原创仿真试卷</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+// TTS 朗读
+var currentUtter = null;
+var currentBtn = null;
+function play(btn) {
+  var txt = btn.parentElement.querySelector('.script-text').textContent;
+  if (currentUtter) {
+    speechSynthesis.cancel();
+    if (currentBtn) currentBtn.textContent = '🔊 播放朗读';
+    var same = (currentBtn === btn);
+    currentUtter = null; currentBtn = null;
+    if (same) return;
+  }
+  var u = new SpeechSynthesisUtterance(txt);
+  u.lang = 'en-US'; u.rate = 0.92;
+  var vs = speechSynthesis.getVoices();
+  var ev = vs.find(function(v){return v.lang.startsWith('en');});
+  if (ev) u.voice = ev;
+  u.onend = function(){ if (currentBtn) currentBtn.textContent = '🔊 播放朗读'; currentUtter = null; currentBtn = null; };
+  speechSynthesis.speak(u);
+  currentUtter = u; currentBtn = btn;
+  btn.textContent = '⏸ 停止';
+}
+
+// 自动批改
+window.ANSWERS = {"L_1": "B", "L_2": "C", "L_3": "B", "R_6_appeal": "B", "R_6_cost": "B", "R_6_solution": "B", "R_6_treat": "B"};
+function submitPaper() {
+  var qs = document.querySelectorAll('.q[data-qid]');
+  var correct = 0, total = 0;
+  qs.forEach(function(qEl){
+    var qid = qEl.getAttribute('data-qid');
+    var correctAns = window.ANSWERS[qid];
+    if (correctAns === undefined) return;
+    total++;
+    var selected = qEl.querySelector('input[type="radio"]:checked');
+    var userAns = selected ? selected.value : '(未作答)';
+    var isCorrect = (userAns === correctAns);
+    if (isCorrect) correct++;
+    qEl.classList.remove('correct','wrong');
+    qEl.classList.add(isCorrect ? 'correct' : 'wrong');
+    var feedback = qEl.querySelector('.feedback');
+    if (feedback) {
+      feedback.style.display = 'block';
+      feedback.innerHTML = isCorrect
+        ? '<span class="ok">✓ 答对了!</span>'
+        : '<span class="ng">✗ 答错. 你选了 <b>'+userAns+'</b>, 正确答案 <b>'+correctAns+'</b></span>';
+    }
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+  });
+  // 主观题(翻译/写作) - 用户写完后展开标准答案对比
+  document.querySelectorAll('.q.subjective').forEach(function(qEl){
+    var ans = qEl.querySelector('.answer-block');
+    if (ans) ans.style.display = 'block';
+    qEl.classList.add('submitted');
+  });
+  // 总分
+  var bar = document.getElementById('score-bar');
+  if (bar) {
+    bar.style.display = 'block';
+    var pct = total > 0 ? Math.round(correct/total*100) : 0;
+    bar.innerHTML = '<strong>客观题得分:</strong> ' + correct + ' / ' + total + ' (' + pct + '%)  &nbsp;|&nbsp;  主观题答案已展开供对比';
+  }
+  // 滚到顶
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function resetPaper() {
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){ r.checked = false; });
+  document.querySelectorAll('textarea').forEach(function(t){ t.value = ''; });
+  document.querySelectorAll('.q').forEach(function(q){ q.classList.remove('correct','wrong','submitted'); });
+  document.querySelectorAll('.feedback').forEach(function(f){ f.style.display='none'; f.innerHTML=''; });
+  document.querySelectorAll('.answer-block').forEach(function(a){ a.style.display='none'; });
+  var bar = document.getElementById('score-bar');
+  if (bar) bar.style.display = 'none';
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>📄 2026 年 12 月预测 · 试卷七</h1>
+  <p class="sub">CET-4 原创仿真试卷 · 作答 → 批改 → 看解析</p>
+  <nav>
+    <a href="./index.html">← 试卷列表</a>
+  </nav>
+</header>
+<main>
+<div class="notice">本卷所有题目均为站长原创仿真练习,<strong>不复现教育部考试中心真题原文</strong>。先作答 → 点底部「提交批改」→ 系统自动判分 + 显示标准答案与解析。</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+<h2>Section A · Listening</h2>
+
+<div class="q" data-qid="L_1">
+<span class="qnum">听力 题 1</span>
+<div class="script">
+<div class="script-text">M: I noticed you've been jogging every morning recently. W: Yes, I started a fitness plan three weeks ago. I want to run a half-marathon in October. M: That's impressive. Mind if I join you tomorrow morning? W: Not at all. Meet me at the park gate at six.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What will the two speakers do tomorrow morning?</p>
+<div class="opts"><label><input type="radio" name="L_1" value="A"> A. Watch a marathon</label> <label><input type="radio" name="L_1" value="B"> B. Jog together</label> <label><input type="radio" name="L_1" value="C"> C. Have breakfast</label> <label><input type="radio" name="L_1" value="D"> D. Visit a park</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> 男士问 join,女士同意。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_2">
+<span class="qnum">听力 题 2</span>
+<div class="script">
+<div class="script-text">W: The library will be renovated starting next month. Where are we supposed to study? M: I heard the old gymnasium will be temporarily converted into a study area. W: Really? That's a long walk from the dorm. M: They'll run a shuttle bus every twenty minutes.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> How will students travel to the temporary study area?</p>
+<div class="opts"><label><input type="radio" name="L_2" value="A"> A. On foot</label> <label><input type="radio" name="L_2" value="B"> B. By bicycle</label> <label><input type="radio" name="L_2" value="C"> C. By shuttle bus</label> <label><input type="radio" name="L_2" value="D"> D. By taxi</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: C</strong></p>
+<p><strong>解析:</strong> shuttle bus every twenty minutes。</p>
+</div>
+</div>
+
+
+<div class="q" data-qid="L_3">
+<span class="qnum">听力 题 3</span>
+<div class="script">
+<div class="script-text">M: My laptop has been running really slow lately. I'm thinking of buying a new one. W: Have you tried clearing the cache and uninstalling unused apps first? M: Not yet. Do you think that will make a real difference? W: It often does. Save your money before you buy anything new.</div>
+<button class="play-btn" onclick="play(this)">🔊 播放朗读</button>
+</div>
+<p><strong>Q:</strong> What does the woman suggest the man do?</p>
+<div class="opts"><label><input type="radio" name="L_3" value="A"> A. Buy a new laptop</label> <label><input type="radio" name="L_3" value="B"> B. Try maintenance first</label> <label><input type="radio" name="L_3" value="C"> C. Borrow her laptop</label> <label><input type="radio" name="L_3" value="D"> D. Visit a repair shop</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> Save your money before you buy anything new。</p>
+</div>
+</div>
+
+
+<h2>Section B · Reading</h2>
+<h3>Passage: Short-Video Habits</h3>
+<div class="script"><div class="script-text">Short-video apps have captured the attention of nearly every college student. The appeal is easy to understand: bite-sized clips offer instant entertainment, while algorithms make each video feel personally relevant. However, the cost is real. Many students find their attention spans shrinking and study sessions interrupted every few minutes. The solution is not to abandon short videos entirely but to use them with discipline — setting daily time limits, deleting apps during exam weeks, and treating short videos as rewards rather than default activities.</div></div>
+
+<div class="q" data-qid="R_6_appeal">
+<span class="qnum">阅读 题 1</span>
+<p><strong>Why do short videos attract students?</strong></p>
+<div class="opts"><label><input type="radio" name="R_6_appeal" value="A"> A. They are educational</label> <label><input type="radio" name="R_6_appeal" value="B"> B. Bite-sized clips + algorithm relevance</label> <label><input type="radio" name="R_6_appeal" value="C"> C. They are free</label> <label><input type="radio" name="R_6_appeal" value="D"> D. Teachers recommend them</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> bite-sized + algorithm。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_6_cost">
+<span class="qnum">阅读 题 2</span>
+<p><strong>What negative effect is mentioned?</strong></p>
+<div class="opts"><label><input type="radio" name="R_6_cost" value="A"> A. Hurt eyesight</label> <label><input type="radio" name="R_6_cost" value="B"> B. Shrinking attention spans</label> <label><input type="radio" name="R_6_cost" value="C"> C. Loss of sleep</label> <label><input type="radio" name="R_6_cost" value="D"> D. Lower grades automatically</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> attention spans shrinking。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_6_solution">
+<span class="qnum">阅读 题 3</span>
+<p><strong>Author's suggested solution?</strong></p>
+<div class="opts"><label><input type="radio" name="R_6_solution" value="A"> A. Abandon completely</label> <label><input type="radio" name="R_6_solution" value="B"> B. Use with discipline - limits + rewards</label> <label><input type="radio" name="R_6_solution" value="C"> C. Use unlimited</label> <label><input type="radio" name="R_6_solution" value="D"> D. Block at university level</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> use them with discipline。</p>
+</div>
+</div>
+
+<div class="q" data-qid="R_6_treat">
+<span class="qnum">阅读 题 4</span>
+<p><strong>How should short videos be treated?</strong></p>
+<div class="opts"><label><input type="radio" name="R_6_treat" value="A"> A. Default activity</label> <label><input type="radio" name="R_6_treat" value="B"> B. Rewards rather than defaults</label> <label><input type="radio" name="R_6_treat" value="C"> C. Replacement for study</label> <label><input type="radio" name="R_6_treat" value="D"> D. Group activity only</label></div>
+<div class="feedback" style="display:none;"></div>
+<div class="answer-block" style="display:none;">
+<p><strong>正确答案: B</strong></p>
+<p><strong>解析:</strong> treating short videos as rewards rather than default activities。</p>
+</div>
+</div>
+
+
+<h2>Section C · Translation</h2>
+
+<div class="q subjective" data-qid="T_1">
+<span class="qnum">翻译 题 1</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>中国书法是一种独特的视觉艺术,有三千多年的历史。它不仅是书写汉字的方式,也是表达情感、修养身心的途径。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Chinese calligraphy is a unique visual art with more than three thousand years of history. It is not merely a way to write Chinese characters but also a means of expressing emotions and cultivating the body and mind.</em></p>
+<p><strong>解析:</strong> 笔锋 brush pressure / 留白 negative space。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="T_3">
+<span class="qnum">翻译 题 2</span>
+<p><strong>请将下列中文译成英文:</strong></p>
+<p>中医是中国传统医学,有数千年的历史。它包括针灸、推拿、中草药等多种治疗方法。中医强调人与自然的和谐。</p>
+<textarea rows="5" placeholder="请在此输入你的英文翻译..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考译文:</strong> <em>Traditional Chinese Medicine (TCM) is a system of medicine with thousands of years of history. It includes acupuncture, tuina massage, and herbal medicine. TCM emphasizes harmony between humans and nature.</em></p>
+<p><strong>解析:</strong> 针灸 acupuncture / 中草药 herbal medicine。</p>
+</div>
+</div>
+
+
+<h2>Section D · Writing</h2>
+
+<div class="q subjective" data-qid="W_0">
+<span class="qnum">写作 题 1</span>
+<p><strong>Write an essay (120-180 words) on "The Importance of Reading in University Life".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>In an era flooded with short videos, reading remains an irreplaceable habit. First, books cultivate deep thinking, training us to follow long structured arguments rather than scattered snippets. Second, beyond textbooks, students should explore biographies, popular science, and classic novels to broaden their worldview. Finally, a daily reading habit can be built by allocating thirty minutes before sleep. In short, reading is not a luxury but the quietest, most cost-effective investment a student can make.</em></p>
+<p><strong>解析:</strong> 三段式套路。</p>
+</div>
+</div>
+
+
+<div class="q subjective" data-qid="W_4">
+<span class="qnum">写作 题 2</span>
+<p><strong>Write an essay (120-180 words) on "Should Universities Limit AI Tools in Writing Assignments?".</strong></p>
+<textarea rows="8" placeholder="请在此输入你的作文 (120-180 词)..."></textarea>
+<div class="answer-block" style="display:none;">
+<p><strong>参考范文:</strong> <em>AI writing tools have forced universities to ask: how much help is too much? Banning AI altogether seems unrealistic; the technology is already part of professional life. Yet unrestricted use risks producing graduates who cannot write a single original sentence under pressure. A reasonable middle path distinguishes between core writing courses where AI should be off-limits, and editing or research stages where AI can speed routine work.</em></p>
+<p><strong>解析:</strong> 中间立场。</p>
+</div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
+</main>
+<footer><p>CET-4 原创仿真试卷 · 2026 年 12 月预测 · 试卷七</p></footer>
+</body>
+</html>
