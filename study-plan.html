@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET-4 备考计划 · 4/8 周</title>
+<link rel="stylesheet" href="./style.css">
+<style>
+.plan-toggle { display:flex; gap:8px; margin:16px 0; }
+.plan-toggle button { padding:10px 24px; background:white; border:2px solid #0891b2; color:#0891b2; border-radius:6px; cursor:pointer; font-size:1rem; font-weight:600; transition:0.15s; }
+.plan-toggle button.active { background:#0891b2; color:white; }
+.week-card { background:white; border:1px solid #e2e8f0; border-radius:10px; margin:12px 0; padding:14px 18px; }
+.week-card.current { border-color:#0891b2; box-shadow:0 4px 14px rgba(8,145,178,0.15); }
+.week-head { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; }
+.week-name { font-size:1.18rem; font-weight:700; color:#0f172a; }
+.week-goal { color:#0891b2; font-size:0.92rem; }
+.day-table { width:100%; border-collapse:collapse; margin:10px 0; font-size:0.92rem; }
+.day-table th { background:#f8fafc; padding:8px 10px; text-align:left; color:#475569; font-weight:600; border-bottom:2px solid #e2e8f0; }
+.day-table td { padding:8px 10px; border-bottom:1px solid #f1f5f9; vertical-align:top; }
+.day-table td:first-child { width:60px; font-weight:600; color:#0891b2; }
+.tag { display:inline-block; padding:2px 7px; border-radius:3px; font-size:0.78rem; font-weight:600; margin-right:4px; }
+.tag.vocab { background:#dbeafe; color:#1e40af; }
+.tag.read { background:#dcfce7; color:#166534; }
+.tag.listen { background:#fef3c7; color:#92400e; }
+.tag.write { background:#fce7f3; color:#9f1239; }
+.tag.test { background:#e0e7ff; color:#3730a3; }
+.tip { background:#fef9e1; border-left:4px solid #f59e0b; padding:10px 14px; border-radius:6px; margin:14px 0; font-size:0.92rem; color:#78350f; }
+.hidden { display:none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>CET-4 备考计划</h1>
+  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题答题卡</a></p>
+</header>
+
+<main>
+  <div class="notice">
+    📅 给大学生用的 CET-4 自学计划 — 含每周目标 + 每日清单 + 配套工具入口. 不抄机构课表, 原创建议. 8 周稳健 / 4 周冲刺二选一.
+  </div>
+
+  <div class="plan-toggle">
+    <button id="btn-8w" class="active" onclick="showPlan('8w')">🐢 8 周稳健 (每天 1-1.5h)</button>
+    <button id="btn-4w" onclick="showPlan('4w')">🐇 4 周冲刺 (每天 2-3h)</button>
+  </div>
+
+  <!-- 8 周稳健 -->
+  <div id="plan-8w">
+    <h2>🐢 8 周稳健计划</h2>
+    <div class="tip">💡 适合: 距离考试 2 个月以上 / 想稳过 425 分及格线. 每天 1-1.5 小时即可.</div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 1 周 · 摸底 + 起点</span><span class="week-goal">目标: 知道自己当前在哪</span></div>
+      <table class="day-table">
+        <tr><td>周一</td><td><span class="tag test">测试</span>做 2024-06-1 套, 提交批改看分数 <a href="./paper-2024-06-1.html">→ 进答题卡</a></td></tr>
+        <tr><td>周二</td><td><span class="tag vocab">词汇</span>过 <a href="./vocab.html">4544 词速查</a> ⭐1 优先级 (1162 词), 收藏不认识的</td></tr>
+        <tr><td>周三</td><td><span class="tag vocab">词汇</span>过 ⭐1 后半 + 整理"今日新看 200" 个</td></tr>
+        <tr><td>周四</td><td><span class="tag read">阅读</span>做 1 篇仔细阅读 (找外链真题), 不计时摸底</td></tr>
+        <tr><td>周五</td><td><span class="tag listen">听力</span>做 1 段长对话, 不懂的反复听 3 遍</td></tr>
+        <tr><td>周末</td><td><span class="tag write">写作</span>写 1 篇议论文 + <span class="tag test">测试</span>做 2023-06-1 看进步</td></tr>
+      </table>
+    </div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 2-3 周 · 词汇打底</span><span class="week-goal">目标: ⭐1 词全过一遍 + 收藏生词</span></div>
+      <ul style="font-size:0.92rem;">
+        <li>每天 100 词 (15-20 min) — 用 vocab.html 进度条跟踪</li>
+        <li>遇到生词点收藏 ☆, 周末复习收藏列表</li>
+        <li>掌握的点 ✅, 配合 "未掌握" 筛选刷剩下的</li>
+        <li>朗读 🔊 利用 Web Speech 跟读, 强化记忆</li>
+      </ul>
+    </div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 4-5 周 · 阅读 + 听力专项</span><span class="week-goal">目标: 阅读速度 / 听力反应</span></div>
+      <table class="day-table">
+        <tr><td>每天</td><td><span class="tag read">阅读</span>1 篇仔细阅读 + 1 篇长篇匹配 (各 8-10 min)</td></tr>
+        <tr><td>每天</td><td><span class="tag listen">听力</span>1 段听力 (长对话或新闻), 控制 5-10 min</td></tr>
+        <tr><td>周末</td><td><span class="tag test">测试</span>做整套真题 (2023-12 系列), 严格按 130 min 时长</td></tr>
+      </table>
+    </div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 6-7 周 · 翻译 + 写作模板</span><span class="week-goal">目标: 主观题不丢分</span></div>
+      <ul style="font-size:0.92rem;">
+        <li>翻译: 每天 1 段 (140 字左右), 自译 → 看外链官方答案对照 → 摘抄好句式</li>
+        <li>写作: 议论文万能模板 (开篇/分论 1-3/结尾), 自己写 3 个版本</li>
+        <li>积累 20 个高频替换词 (e.g. very → exceedingly, important → crucial)</li>
+      </ul>
+    </div>
+
+    <div class="week-card current">
+      <div class="week-head"><span class="week-name">第 8 周 · 全真模拟</span><span class="week-goal">目标: 进考场前的状态</span></div>
+      <table class="day-table">
+        <tr><td>周一</td><td><span class="tag test">模考</span>2024-12-1 整套, 严格 130 min, 自批改</td></tr>
+        <tr><td>周三</td><td><span class="tag test">模考</span>2024-12-2 整套</td></tr>
+        <tr><td>周五</td><td><span class="tag test">模考</span>2024-12-3 整套, 三套对比看哪里弱</td></tr>
+        <tr><td>周末</td><td>复习收藏的生词 + 写一篇全文范文 + 早睡</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 4 周冲刺 -->
+  <div id="plan-4w" class="hidden">
+    <h2>🐇 4 周冲刺计划</h2>
+    <div class="tip">⚠ 适合: 距离考试不到 1 个月 / 平时英语基础尚可. 每天 2-3 小时, 强度高.</div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 1 周 · 摸底 + 词汇集中爆破</span><span class="week-goal">目标: 一周过完 ⭐1 + ⭐2</span></div>
+      <ul style="font-size:0.92rem;">
+        <li>每天 ⭐1 + ⭐2 词 600 词 (~1 小时朗读+扫读)</li>
+        <li>做 1 套真题 (~ 1.5h) 找弱项</li>
+        <li>不抠细节, 求广度</li>
+      </ul>
+    </div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 2 周 · 题型集中训练</span><span class="week-goal">目标: 各题型熟悉套路</span></div>
+      <table class="day-table">
+        <tr><td>周一</td><td><span class="tag listen">听力</span>专项 2h: 2-3 段长对话 + 听力新闻</td></tr>
+        <tr><td>周二</td><td><span class="tag read">阅读</span>专项 2h: 4-6 篇阅读理解</td></tr>
+        <tr><td>周三</td><td><span class="tag write">翻译</span>+写作专项 2h: 3 段汉译英 + 2 篇范文背诵</td></tr>
+        <tr><td>周四</td><td><span class="tag vocab">词汇</span>复盘收藏 + 易错</td></tr>
+        <tr><td>周末</td><td><span class="tag test">模考</span>整套 + 错题分析</td></tr>
+      </table>
+    </div>
+
+    <div class="week-card">
+      <div class="week-head"><span class="week-name">第 3 周 · 全真模考</span><span class="week-goal">目标: 训练时间感</span></div>
+      <ul style="font-size:0.92rem;">
+        <li>隔天一套真题 (e.g. 2023-12, 2024-06, 2024-12)</li>
+        <li>严格按 130 min 不超时</li>
+        <li>错题归类 (词汇盲点 / 长难句 / 写作思路) 集中针对补</li>
+      </ul>
+    </div>
+
+    <div class="week-card current">
+      <div class="week-head"><span class="week-name">第 4 周 · 调状态</span><span class="week-goal">目标: 考前峰值</span></div>
+      <table class="day-table">
+        <tr><td>前 3 天</td><td>最后冲刺: 2 套整套真题</td></tr>
+        <tr><td>考前 2 天</td><td>不做新题. 复习收藏生词 + 写作模板 + 早睡</td></tr>
+        <tr><td>考前 1 天</td><td>带身份证 + 准考证 + 2B + 橡皮 + 黑色签字笔. 别熬夜</td></tr>
+        <tr><td>考试当天</td><td>提前 30 min 到考场. 听力先听一遍 → 写作 → 阅读 → 翻译</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <h2 style="margin-top:30px;">📌 通用建议 (两种计划都管用)</h2>
+  <ul style="font-size:0.95rem;">
+    <li><strong>每天必做</strong>: 15 min 词汇 (用 <a href="./vocab.html">vocab.html</a> 朗读 + 进度跟踪)</li>
+    <li><strong>错题本</strong>: 答题卡批改后, 错题 word/中文都收藏到 vocab 列表的 ⭐ 收藏</li>
+    <li><strong>真题外链</strong>: 通过答题卡内 5 个外链 (koolearn/沪江/有道/文都/官网) 找完整真题原文</li>
+    <li><strong>不抠</strong>: 单词卡的小细节 (词源/俚语) 跳过, 抓 80% 的核心释义 + 词性 + 高频搭配</li>
+    <li><strong>听力倍速</strong>: 训练时可用 1.25x 听, 考场是 1.0x 会感觉慢</li>
+    <li><strong>写作分</strong>: 议论文得分点 ① 论点清楚 ② 论据具体 ③ 3 段式 ④ 关联词 (firstly/moreover/in conclusion)</li>
+    <li><strong>翻译分</strong>: 不强求文采, 主语 + 谓语 + 宾语清楚, 时态/单复数对就 OK</li>
+  </ul>
+
+  <h2 style="margin-top:30px;">⏰ 考前心理学</h2>
+  <div class="tip">
+    紧张是正常的 — CET-4 是合格性考试不是选拔性考试, 425 分及格线对应客观题 60% 左右. 单词扎实 + 真题刷过 3-5 套 + 写作有模板, 大概率过. 别给自己加戏.
+  </div>
+</main>
+<footer><p>CET-4 备考计划 · 不抄机构 · 用 vocab + 19 套答题卡 + 外链真题 组合工具</p></footer>
+
+<script>
+function showPlan(p) {
+  document.getElementById('plan-8w').classList.toggle('hidden', p !== '8w');
+  document.getElementById('plan-4w').classList.toggle('hidden', p !== '4w');
+  document.getElementById('btn-8w').classList.toggle('active', p === '8w');
+  document.getElementById('btn-4w').classList.toggle('active', p === '4w');
+}
+</script>
+</body>
+</html>
