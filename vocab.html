@@ -32,6 +32,17 @@
 .w-meta { color:#94a3b8; font-size:0.82rem; margin-top:8px; }
 .loading { padding:40px; text-align:center; color:#64748b; }
 .attribution { margin:30px 0 10px; padding:12px 14px; background:#fffbeb; border-left:4px solid #f59e0b; border-radius:6px; font-size:0.88rem; color:#78350f; }
+.progress-bar { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0; padding:10px 14px; background:linear-gradient(135deg,#ecfeff,#f0fdfa); border-radius:8px; font-size:0.92rem; }
+.progress-bar .pill { padding:4px 10px; background:white; border-radius:12px; color:#0891b2; font-weight:600; }
+.progress-bar .pill.mastered { color:#16a34a; }
+.progress-bar .pill.fav { color:#dc2626; }
+.progress-bar .pill.today { color:#7c3aed; }
+.w-actions { display:flex; gap:6px; margin-left:auto; }
+.w-btn { background:transparent; border:1px solid #cbd5e1; border-radius:4px; padding:3px 8px; cursor:pointer; font-size:0.85rem; color:#64748b; transition:0.15s; }
+.w-btn:hover { background:#0891b2; color:white; border-color:#0891b2; }
+.w-btn.active { background:#fef3c7; color:#dc2626; border-color:#fbbf24; }
+.w-btn.mastered { background:#dcfce7; color:#16a34a; border-color:#86efac; }
+.w-btn.speak { font-size:1rem; }
 </style>
 </head>
 <body>
@@ -58,7 +69,21 @@
       <option value="2">⭐⭐ 2 (高频)</option>
       <option value="3">⭐⭐⭐ 3 (扩展)</option>
     </select>
+    <select id="status" onchange="filterVocab()">
+      <option value="">全部状态</option>
+      <option value="fav">⭐ 收藏</option>
+      <option value="mastered">✅ 已掌握</option>
+      <option value="unmastered">⬜ 未掌握</option>
+    </select>
     <span class="vocab-stats" id="stats">加载中...</span>
+  </div>
+
+  <div class="progress-bar" id="progress-bar">
+    <span class="pill">📚 总: <span id="p-total">-</span></span>
+    <span class="pill mastered">✅ 已掌握: <span id="p-mastered">0</span></span>
+    <span class="pill fav">⭐ 收藏: <span id="p-fav">0</span></span>
+    <span class="pill today">📅 今日新看: <span id="p-today">0</span></span>
+    <button class="w-btn" onclick="resetToday()" style="margin-left:auto;font-size:0.8rem;">重置今日</button>
   </div>
 
   <div class="letter-nav" id="letter-nav"></div>
@@ -71,8 +96,13 @@
   <ul>
     <li><strong>搜索</strong>: 顶部框输 <code>abandon</code> / <code>放弃</code> / <code>vt.</code> 都能搜</li>
     <li><strong>优先级</strong>: ⭐1 = 必背核心高频, ⭐2/3 = 扩展</li>
+    <li><strong>状态筛选</strong>: 只看 ⭐收藏 / ✅已掌握 / ⬜未掌握</li>
     <li><strong>字母跳转</strong>: 点 A-Z 字母跳到该字母区</li>
     <li><strong>展开详情</strong>: 点单词卡看例句 + 频次</li>
+    <li><strong>🔊 朗读</strong>: 浏览器 Web Speech API, en-US 语音</li>
+    <li><strong>☆ 收藏</strong>: 标记生词, 本地 localStorage 保存 (不上传)</li>
+    <li><strong>⬜ 掌握</strong>: 标记已会, 配合 unmastered 筛选刷剩下的</li>
+    <li><strong>📅 今日新看</strong>: 自动统计你今天点开过的单词数, 跟踪学习量</li>
     <li><strong>BNC 词频</strong>: 数字越小越常见 (e.g. 217 = 英语真实语料中第 217 高频)</li>
   </ul>
 </main>
@@ -81,12 +111,63 @@
 <script>
 let ALL_WORDS = [];
 let FILTERED = [];
+// 本地状态: localStorage 持久化
+const LS = {
+  get fav() { return JSON.parse(localStorage.getItem('cet4_fav') || '[]'); },
+  set fav(v) { localStorage.setItem('cet4_fav', JSON.stringify(v)); },
+  get mastered() { return JSON.parse(localStorage.getItem('cet4_mastered') || '[]'); },
+  set mastered(v) { localStorage.setItem('cet4_mastered', JSON.stringify(v)); },
+  get todayKey() { return 'cet4_today_' + new Date().toISOString().slice(0,10); },
+  get today() { return JSON.parse(localStorage.getItem(this.todayKey) || '[]'); },
+  set today(v) { localStorage.setItem(this.todayKey, JSON.stringify(v)); },
+};
+function isFav(w) { return LS.fav.includes(w); }
+function isMastered(w) { return LS.mastered.includes(w); }
+function toggleFav(w) {
+  const cur = LS.fav;
+  const i = cur.indexOf(w);
+  if (i >= 0) cur.splice(i, 1); else cur.push(w);
+  LS.fav = cur;
+  refreshProgress();
+  return cur.includes(w);
+}
+function toggleMastered(w) {
+  const cur = LS.mastered;
+  const i = cur.indexOf(w);
+  if (i >= 0) cur.splice(i, 1); else cur.push(w);
+  LS.mastered = cur;
+  refreshProgress();
+  return cur.includes(w);
+}
+function markToday(w) {
+  const cur = LS.today;
+  if (!cur.includes(w)) { cur.push(w); LS.today = cur; refreshProgress(); }
+}
+function resetToday() {
+  LS.today = [];
+  refreshProgress();
+}
+function speak(text) {
+  if (!('speechSynthesis' in window)) { alert('浏览器不支持语音合成'); return; }
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-US';
+  u.rate = 0.9;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+function refreshProgress() {
+  document.getElementById('p-mastered').textContent = LS.mastered.length;
+  document.getElementById('p-fav').textContent = LS.fav.length;
+  document.getElementById('p-today').textContent = LS.today.length;
+}
 
 fetch('./vocab.json')
   .then(r => r.json())
   .then(data => {
     ALL_WORDS = data;
     FILTERED = data;
+    document.getElementById('p-total').textContent = data.length;
+    refreshProgress();
     buildLetterNav();
     render();
   })
@@ -104,8 +185,12 @@ function buildLetterNav() {
 function filterVocab() {
   const q = document.getElementById('search').value.toLowerCase().trim();
   const pri = document.getElementById('priority').value;
+  const st = document.getElementById('status').value;
   FILTERED = ALL_WORDS.filter(w => {
     if (pri && String(w.priority) !== pri) return false;
+    if (st === 'fav' && !isFav(w.word)) return false;
+    if (st === 'mastered' && !isMastered(w.word)) return false;
+    if (st === 'unmastered' && isMastered(w.word)) return false;
     if (!q) return true;
     return (w.word||'').toLowerCase().includes(q) ||
            (w.def||'').toLowerCase().includes(q) ||
@@ -135,8 +220,17 @@ function render() {
       const eg = w.cet4 ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cet4)}</div>${w.cet4zh ? '<div class="w-eg-zh">' + escape(w.cet4zh) + '</div>' : ''}</div>` : '';
       const cs = w.cs ? `<div class="w-eg"><div class="w-eg-en">${escape(w.cs)}</div>${w.cszh ? '<div class="w-eg-zh">' + escape(w.cszh) + '</div>' : ''}</div>` : '';
       const bnc = w.bnc ? `<div class="w-meta">BNC 词频排名: ${w.bnc}</div>` : '';
-      return `<div class="word-card" onclick="this.classList.toggle('expanded')">
-        <div class="w-head"><span class="w-word">${escape(w.word)}</span><span class="w-phonetic">${escape(w.phonetic||'')}</span>${pri}</div>
+      const favCls = isFav(w.word) ? 'active' : '';
+      const masterCls = isMastered(w.word) ? 'mastered' : '';
+      const favLabel = isFav(w.word) ? '⭐已收' : '☆收藏';
+      const masterLabel = isMastered(w.word) ? '✅已掌握' : '⬜掌握';
+      const actions = `<div class="w-actions" onclick="event.stopPropagation()">
+        <button class="w-btn speak" onclick="speak('${escape(w.word)}');markToday('${escape(w.word)}')">🔊</button>
+        <button class="w-btn ${favCls}" onclick="this.className='w-btn '+(toggleFav('${escape(w.word)}')?'active':'');this.textContent=isFav('${escape(w.word)}')?'⭐已收':'☆收藏';">${favLabel}</button>
+        <button class="w-btn ${masterCls}" onclick="this.className='w-btn '+(toggleMastered('${escape(w.word)}')?'mastered':'');this.textContent=isMastered('${escape(w.word)}')?'✅已掌握':'⬜掌握';">${masterLabel}</button>
+      </div>`;
+      return `<div class="word-card" onclick="this.classList.toggle('expanded');markToday('${escape(w.word)}')">
+        <div class="w-head"><span class="w-word">${escape(w.word)}</span><span class="w-phonetic">${escape(w.phonetic||'')}</span>${pri}${actions}</div>
         <div class="w-def">${escape(w.def||'')}</div>
         <div class="w-detail">${eg}${cs}${bnc}</div>
       </div>`;
