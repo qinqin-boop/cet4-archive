@@ -16,6 +16,31 @@
     ⚠ <strong>本站不复现真题原文</strong> (听力对话/阅读文章/翻译段落 版权归教育部考试中心 + 出版社). 本站是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷 / 通过下方合规外链查看). 做完在答题卡填涂 → 提交 → 自动批改.
   </div>
 
+  <div id="my-progress" style="margin:18px 0;padding:14px 18px;background:linear-gradient(135deg,#dbeafe,#ecfeff);border-radius:10px;display:none;">
+    <h3 style="margin:0 0 8px;color:#1e40af;font-size:1.05rem;">📊 我的学习进度</h3>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:0.92rem;">
+      <span style="padding:4px 12px;background:white;border-radius:14px;font-weight:600;color:#1e40af;">📚 词汇掌握: <span id="p-mastered">0</span>/4544</span>
+      <span style="padding:4px 12px;background:white;border-radius:14px;font-weight:600;color:#dc2626;">⭐ 收藏生词: <span id="p-fav">0</span></span>
+      <span style="padding:4px 12px;background:white;border-radius:14px;font-weight:600;color:#7c3aed;">📅 今日新看: <span id="p-today">0</span></span>
+    </div>
+  </div>
+  <script>
+  (function(){
+    try {
+      const fav = JSON.parse(localStorage.getItem('cet4_fav') || '[]').length;
+      const mastered = JSON.parse(localStorage.getItem('cet4_mastered') || '[]').length;
+      const todayKey = 'cet4_today_' + new Date().toISOString().slice(0,10);
+      const today = JSON.parse(localStorage.getItem(todayKey) || '[]').length;
+      if (fav || mastered || today) {
+        document.getElementById('my-progress').style.display = 'block';
+        document.getElementById('p-mastered').textContent = mastered;
+        document.getElementById('p-fav').textContent = fav;
+        document.getElementById('p-today').textContent = today;
+      }
+    } catch(e) {}
+  })();
+  </script>
+
   <h2>📖 核心工具</h2>
   <div class="cat-grid">
     <a class="cat-card" href="./vocab.html" style="background:linear-gradient(135deg,#0891b2,#06b6d4);color:white;">
