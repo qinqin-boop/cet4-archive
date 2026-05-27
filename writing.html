@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>写作题库 · CET-4</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+function toggleAll() {
+  var btn = document.getElementById('toggle-all-btn');
+  var ds = document.querySelectorAll('details.ans');
+  var anyClosed = Array.from(ds).some(function(d){ return !d.open; });
+  ds.forEach(function(d){ d.open = anyClosed; });
+  btn.textContent = anyClosed ? '🔽 全部收起' : '📖 全部展开';
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>📝 写作题库</h1>
+  <p class="sub">12 道原创命题 + 三段式万能模板 + 参考范文</p>
+  <nav>
+    <a href="./index.html">← 首页</a>
+    <button id="toggle-all-btn" class="toggle-all" onclick="toggleAll()">📖 全部展开</button>
+  </nav>
+</header>
+<main>
+<div class="notice">所有命题与范文均为站长原创,<strong>不复现真题</strong>。</div>
+
+<h2>三段式万能模板(背熟即用)</h2>
+
+<div class="q">
+<span class="qnum">模板</span>
+<p><strong>第一段(2-3 句)</strong> — 现象引入 + 主题句</p>
+<ul>
+<li>Nowadays, X has become an increasingly common phenomenon among college students.</li>
+<li>With the rapid development of [technology / urbanization / globalization], the issue of X has drawn growing attention.</li>
+</ul>
+<p><strong>第二段(4-6 句)</strong> — 3 个分论点 + 例子</p>
+<ul>
+<li>First, ... Second, ... Third (or finally), ...</li>
+<li>For example, ... / Take ... as an example, ...</li>
+</ul>
+<p><strong>第三段(2-3 句)</strong> — 总结 + 升华</p>
+<ul>
+<li>In conclusion, only by [taking concrete steps / acting wisely] can we [reap the benefits / minimize the harm] of X.</li>
+<li>All in all, X is a double-edged sword. The key lies in balance and responsibility.</li>
+</ul>
+</div>
+
+<h2>原创命题 12 道</h2>
+
+<div class="q">
+<span class="qnum">题 1</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"The Importance of Reading in University Life"</em>. Include why reading matters, what to read, and how to build a habit.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>In an era flooded with short videos and instant entertainment, reading remains an irreplaceable habit for university students. First, books cultivate deep thinking, training us to follow long, structured arguments rather than scattered snippets of information. Second, beyond textbooks, students should explore biographies, popular science, and classic novels to broaden their worldview. Finally, a daily reading habit can be built by allocating just thirty minutes before sleep and keeping a simple notebook of impressions. In short, reading is not a luxury but the quietest, most cost-effective investment a student can make in themselves.</em></p>
+<p><strong>解析:</strong> 三段式经典套路。注意时态(present simple)+ 过渡词(First / Second / Finally / In short)。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 2</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"The Influence of Short Videos on College Students"</em>. Discuss attraction, negative effects, and responsible use.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>Short-video apps have captured the attention of nearly every college student. Their appeal is easy to understand: bite-sized clips offer instant entertainment, while algorithms make sure each video feels personally relevant. However, the cost is real. Many students find their attention spans shrinking and their study sessions interrupted every few minutes. The solution is not to abandon short videos entirely but to use them with discipline. Setting a daily time limit, deleting the app during exam weeks, and treating short videos as a reward rather than a default activity can preserve their fun without letting them dominate one's life.</em></p>
+<p><strong>解析:</strong> 议论文典型"现象 + 原因 + 对策"结构。短语 attention spans / time limit / reward rather than default。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 3</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"Balancing Study and Leisure in College Life"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>College life is short — only four years — yet students often fail to balance study and leisure. Too much study leads to burnout and dwindling motivation. Too much leisure damages GPA and erodes future opportunities. The signs of imbalance are unmistakable: pulling consecutive all-nighters before deadlines, or going a whole week without entering the library. A practical strategy is to schedule one fixed "non-work day" per week dedicated to hobbies, friends, and rest, and to protect a few hours of deep-work time each weekday with phone notifications off. Real balance is not equal time on each side but a sustainable rhythm one can maintain for years.</em></p>
+<p><strong>解析:</strong> 中性话题"平衡类",承认两边都问题 + 给出具体方法。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 4</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"Why Volunteer Work Matters to Young People"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>Volunteer work teaches young people what no classroom can. While lectures explain theories, volunteering puts students face to face with strangers whose lives differ from their own — elderly residents, struggling families, children with disabilities. From these encounters grow empathy, organizational skills, and the quiet confidence of having made a real difference. A simple example: a campus program where students teach elderly community members how to make video calls on smartphones. The students learn patience and clear communication; the elders gain a window into their grandchildren's lives. Volunteering does not require sacrificing one's academic work. Even one Saturday morning per month can shape one's character for years.</em></p>
+<p><strong>解析:</strong> 价值类话题,关键是给具体例子(不抽象空喊)。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 5</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"Should Universities Limit AI Tools in Writing Assignments?"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>The arrival of powerful AI writing tools has forced universities to ask a difficult question: how much help is too much? Banning AI altogether seems unrealistic; the technology is already part of the professional world graduates will enter. Yet allowing unrestricted use risks producing graduates who cannot write a single original sentence under pressure. A reasonable middle path distinguishes between core writing courses, where AI should be off-limits to build foundational skill, and editing or research stages, where AI can speed up routine work. The goal of education is not to police technology but to teach students when and how to use it wisely.</em></p>
+<p><strong>解析:</strong> 争议话题选"中间立场 + 具体分界",体现 critical thinking。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 6</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"The Role of Sports in University Life"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>University life is often imagined as endless lectures and library hours, but regular sports may matter just as much. Physical activity improves not only fitness but also concentration and mood, both of which directly support academic performance. Joining a basketball team or running club also expands one's social circle far beyond the classroom, creating friendships that often outlast graduation. The simplest entry is the lowest barrier one: a thirty-minute jog three times a week, a campus yoga class, or weekend hiking with friends. Sports are not a distraction from study — they are an investment that pays off in every other part of life.</em></p>
+<p><strong>解析:</strong> 健康类常考,可强调 "investment that pays off"。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 7</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"Why Lifelong Learning Matters More Than Ever"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>The skills that earn a comfortable salary today may be obsolete in a decade. Automation, artificial intelligence, and shifting job markets mean that the diploma a student receives at twenty-two is no longer a lifetime ticket. Lifelong learning has therefore moved from a nice-to-have to an essential survival skill. Fortunately, learning is more accessible than ever: free online courses, podcasts, and communities of practice offer expert content at almost no cost. The challenge is no longer access but discipline. Setting aside five hours a week for deliberate study — a new programming language, a foreign tongue, or a fresh field of reading — keeps one relevant, curious, and confident over decades of change.</em></p>
+<p><strong>解析:</strong> 21 世纪核心话题,关键词 obsolete / survival skill / nice-to-have to essential。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 8</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"The Pros and Cons of Online Education"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>Online education has reshaped how millions of students learn. On the positive side, it democratizes access: a student in a small town can attend lectures from a top professor halfway around the world, often at little or no cost. Flexibility is another advantage; learners can pause, rewind, and study at the time of day that suits them best. However, online learning also has limits. Without the structure of in-person classes, many students struggle with self-discipline. Spontaneous discussions, lab work, and the social side of campus life are difficult to replicate on a screen. The best approach combines online flexibility with at least some in-person interaction — a hybrid model that captures the benefits of both.</em></p>
+<p><strong>解析:</strong> Pros/cons 双面型作文,最后给折中方案。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 9</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"Travel and Personal Growth"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>Travel does more than fill a photo album. Stepping outside one's daily routine forces a person to navigate new languages, foods, and customs — each small challenge a quiet lesson in flexibility and humility. A first solo trip in particular sharpens decision-making: one must read maps, manage money, and recover from inevitable mistakes without anyone to fall back on. Even short trips broaden perspective. After living for a week in a city built around walking and public transit, a student may rethink her own dependence on cars. After eating with a local family abroad, she may question what "ordinary food" means. Travel is not escape from real life but training for it.</em></p>
+<p><strong>解析:</strong> 强调 travel 的成长意义,具体例子(solo trip / 异地饮食)避免空洞。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 10</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"The Importance of Mental Health Awareness on Campus"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>Behind the busy schedules of university students, mental health problems are quietly common. Pressure from grades, future employment, family expectations, and social comparison can accumulate into anxiety or depression long before anyone notices. Universities have a clear responsibility to act. Visible, easy-to-access counseling services, peer-support groups, and workshops on stress management should be a routine part of campus life, not crisis-only resources. Just as importantly, students themselves can build small habits — adequate sleep, regular exercise, honest conversations with trusted friends — that prevent problems from growing. Asking for help should be treated as a sign of strength, not weakness. A campus that openly cares for mental health raises stronger, kinder people.</em></p>
+<p><strong>解析:</strong> 心理健康话题,注意敏感词处理(用 "common" 不用 "epidemic")。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 11</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"The Choice Between Big Cities and Smaller Cities for Young Graduates"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>For young graduates in China, the decision between a megacity and a smaller city has become a defining choice. Big cities offer rich job opportunities, diverse industries, and the energy of fast-paced life. Yet they also bring brutal housing costs, long commutes, and constant pressure. Smaller cities, in contrast, often provide a more affordable life, closer family ties, and a slower pace that supports hobbies and rest. The right answer depends on personal priorities. A graduate aiming for cutting-edge technology or finance careers may need the resources of a top-tier city. One who values family time and lower stress may flourish in a second- or third-tier city where a comfortable home is actually within reach. Neither choice is inferior; both can lead to a fulfilling life.</em></p>
+<p><strong>解析:</strong> 选择类作文,先列两边优劣,最后说"depends on priorities"避免偏激。</p>
+</details>
+</div>
+
+<div class="q">
+<span class="qnum">题 12</span>
+<p><strong>题目:</strong> Write an essay (120-180 words) on <em>"How to Develop Critical Thinking Skills"</em>.</p>
+<details class="ans"><summary>📖 参考范文 / 解析</summary>
+<p><em>In a world flooded with information, the ability to evaluate what one reads has become more valuable than the ability to memorize it. Critical thinking is not a natural talent but a habit that grows through deliberate practice. The first step is to question sources: who wrote this, what evidence is offered, and what might have been left out? The second is to consider opposing viewpoints honestly, even when they make us uncomfortable. The third is to be willing to change one's own mind when better evidence appears. None of these comes easily. They require slowing down, accepting uncertainty, and tolerating the small embarrassment of saying "I was wrong." Yet without these habits, even the most educated person becomes vulnerable to clever propaganda and shallow trends.</em></p>
+<p><strong>解析:</strong> 关于思维能力的作文,结构 step 1 / step 2 / step 3 + reflection。</p>
+</details>
+</div>
+
+</main>
+<footer><p>CET-4 题库 · 写作 · 原创练习</p></footer>
+</body>
+</html>
