@@ -46,9 +46,17 @@ def external_search_links(label):
     ]
 
 
-def gen_answer_card_html(slug, label):
+def gen_answer_card_html(slug, label, prev_slug=None, prev_label=None, next_slug=None, next_label=None):
     """生成单套答题卡页面: 30 客观 ABCD + 翻译 textarea + 写作 textarea + 自动批改"""
     ext_links = external_search_links(label)
+    prev_link = (
+        f'<a href="./paper-{prev_slug}.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← {prev_label}</a>'
+        if prev_slug else '<span style="flex:1;text-align:center;color:#cbd5e1;">← 已是第一套</span>'
+    )
+    next_link = (
+        f'<a href="./paper-{next_slug}.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">{next_label} →</a>'
+        if next_slug else '<span style="flex:1;text-align:center;color:#cbd5e1;">已是最后一套 →</span>'
+    )
     ext_cards_html = '\n'.join(
         f'  <a class="ext-card" href="{url}" target="_blank" rel="noopener">{name}</a>'
         for name, url in ext_links
@@ -100,6 +108,12 @@ def gen_answer_card_html(slug, label):
   <h1>{label} 答题卡</h1>
   <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
 </header>
+
+<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
+  {prev_link}
+  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
+  {next_link}
+</div>
 
 <main>
 <div class="notice legal">
@@ -202,9 +216,11 @@ function submitPaper() {{
 
 
 def main():
-    for slug, year, month, set_no, label in PAPERS:
+    for i, (slug, year, month, set_no, label) in enumerate(PAPERS):
+        prev_slug, prev_label = (PAPERS[i-1][0], PAPERS[i-1][4]) if i > 0 else (None, None)
+        next_slug, next_label = (PAPERS[i+1][0], PAPERS[i+1][4]) if i < len(PAPERS)-1 else (None, None)
         fpath = ROOT / f'paper-{slug}.html'
-        fpath.write_text(gen_answer_card_html(slug, label), encoding='utf-8')
+        fpath.write_text(gen_answer_card_html(slug, label, prev_slug, prev_label, next_slug, next_label), encoding='utf-8')
         print(f'  + paper-{slug}.html  ({label})')
     print(f'\nDONE: {len(PAPERS)} answer-card pages generated')
 
