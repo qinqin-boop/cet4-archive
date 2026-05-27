@@ -76,6 +76,7 @@ def gen_answer_card_html(slug, label, prev_slug=None, prev_label=None, next_slug
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{label} 答题卡 · CET-4 题库</title>
 <link rel="stylesheet" href="./style.css">
 <style>
