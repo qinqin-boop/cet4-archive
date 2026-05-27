@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解题方法论 · CET-4 Archive</title>
+<link rel="stylesheet" href="./style.css">
+<script>
+function toggleAllAnswers() {
+  var btn = document.getElementById('ans-toggle-all');
+  var allDetails = document.querySelectorAll('details.box-answer');
+  var anyClosed = Array.from(allDetails).some(function(d){ return !d.open; });
+  allDetails.forEach(function(d){ d.open = anyClosed; });
+  btn.textContent = anyClosed ? '🔽 全部收起答案' : '📖 全部展开答案';
+}
+</script>
+</head>
+<body>
+<header>
+  <h1>CET-4 Archive</h1>
+  <p class="tagline">解题方法论</p>
+  <nav>
+    <a href="./index.html">← 首页</a>
+    <button id="ans-toggle-all" onclick="toggleAllAnswers()" style="background:transparent;border:1px solid rgba(255,216,156,0.4);color:#ffd89c;padding:4px 14px;border-radius:4px;font-size:0.85rem;cursor:pointer;font-family:inherit;margin-left:8px;">📖 全部展开答案</button>
+  </nav>
+</header>
+<div class="layout">
+<aside class="toc-sidebar"><h3>本页目录</h3><ul><li><a class="h2" href="#part-15-30-min">写作 Part(15%,30 min)</a></li><li><a class="h2" href="#part-35-25-min">听力 Part(35%,25 min)</a></li><li><a class="h2" href="#part-35-40-min-3-25">阅读 Part(35%,40 min,3 篇 25 题)</a></li><li><a class="h2" href="#part-15-30-min">翻译 Part(15%,30 min,中译英)</a></li></ul></aside>
+<main class="textbook">
+<h1 id="">解题方法论</h1>
+<blockquote>站长原创的 CET-4 应试技巧总结。</blockquote>
+<h2 id="part-15-30-min">写作 Part(15%,30 min)</h2>
+<div class="box-def">
+<p>
+<strong>三段式黄金结构</strong>:
+</p>
+<ol>
+<li><strong>第一段</strong>(2-3 句):现象引入 + 主题句(本文要论证 / 描述什么)</li>
+<li><strong>第二段</strong>(主体,4-6 句):3 个分论点 + 例子 / 数据</li>
+<li><strong>第三段</strong>(2-3 句):总结 + 升华</li>
+</ol>
+</div>
+<div class="box-intuition">
+<p>
+<strong>万能开头模板</strong>:
+</p>
+<ul>
+<li><em>Nowadays, X has become an increasingly common phenomenon, attracting attention from students, parents, and society at large.</em></li>
+<li><em>With the rapid development of [technology / globalization / urbanization], the issue of X has come to the forefront of public discussion.</em></li>
+<li><em>Few topics generate as much debate among today's university students as X.</em></li>
+</ul>
+<p>
+<strong>万能结尾模板</strong>:
+</p>
+<ul>
+<li><em>In conclusion, the impact of X is profound, and only by [acting wisely / taking concrete steps / collaborating] can we [reap its benefits / minimize its harm].</em></li>
+<li><em>All in all, X is a double-edged sword. The key lies in [thoughtful balance / individual responsibility].</em></li>
+</ul>
+</div>
+<div class="box-pitfall">
+<p>
+<strong>易扣分点</strong>:
+</p>
+<ul>
+<li>主谓不一致(China <strong>is</strong> / Universities <strong>are</strong>)</li>
+<li>时态混用(论述用 present simple,举例用 past 也可,但要前后统一)</li>
+<li>中式英语:"open the light"→ turn on the light;"learn knowledge" → acquire knowledge / study</li>
+<li>拼写错误每个 -0.5 分,认真检查</li>
+</ul>
+</div>
+<h2 id="part-35-25-min">听力 Part(35%,25 min)</h2>
+<div class="box-intuition">
+<p>
+<strong>短对话</strong> 通常考第二个人的态度/建议(关键词:should / had better / why not / I think it's better to)。
+</p>
+<p>
+<strong>长对话</strong> 主旨题在第一句,细节题在数字 / 时间 / 价格 / 地点。
+</p>
+<p>
+<strong>听写短文</strong> 抓信号词:firstly / secondly / however / therefore。
+</p>
+</div>
+<div class="box-example">
+<p>
+<strong>听力速记符号</strong>(自创但通用):
+</p>
+<p>
+| 符号 | 含义 |
+| --- | --- |
+| ↑ ↓ | 增加 / 减少 |
+| ∵ ∴ | 因为 / 所以 |
+| → | 导致 / 变成 |
+| ≈ | 大约 |
+| @ | 在某地 |
+| # | 编号 / 数量 |
+| $ | 价格 |
+</p>
+<details class="box-answer"><summary>📖 点击查看答案 / 解析</summary>
+<p>这套符号每天练 15 min 听写,2 周后速度可翻倍。</p>
+</details>
+</div>
+<h2 id="part-35-40-min-3-25">阅读 Part(35%,40 min,3 篇 25 题)</h2>
+<div class="box-intuition">
+<p>
+<strong>题型 1 选词填空</strong>(10 题):先识别词性(noun / verb / adj / adv),再判段落上下文。
+</p>
+<p>
+<strong>题型 2 长篇匹配</strong>(10 题):用关键词扫描,匹中即标记句子位置,<strong>不要通读全文</strong>。
+</p>
+<p>
+<strong>题型 3 仔细阅读</strong>(2 篇 × 5 题):先看题目,带着问题回原文定位,扫描而非阅读。
+</p>
+</div>
+<div class="box-pitfall">
+<p>
+<strong>陷阱</strong>:
+</p>
+<ul>
+<li>题目用同义替换(如选项 "increase" 原文 "rise")— 同义优先选</li>
+<li>极端词慎选(always / never / completely)</li>
+<li>文章未提及的事不要根据常识推断 — 选"未提及"或最接近原文的</li>
+</ul>
+</div>
+<h2 id="part-15-30-min">翻译 Part(15%,30 min,中译英)</h2>
+<div class="box-intuition">
+<p>
+<strong>四步法</strong>:
+</p>
+<ol>
+<li><strong>通读划分</strong>:把中文段落断成 3-5 个英文句子</li>
+<li><strong>抓主谓</strong>:每个中文句的核心动词→英文谓语</li>
+<li><strong>填修饰</strong>:形容词 / 副词 / 定语 / 状语</li>
+<li><strong>检查时态</strong>:历史用一般过去时,现在仍存的用一般现在时,2016 年某事件用一般过去时</li>
+</ol>
+</div>
+<div class="box-example">
+<p>
+<strong>例题</strong>:把"中国是一个有着五千年文明史的国家。" 翻成英文。
+</p>
+<details class="box-answer"><summary>📖 点击查看答案 / 解析</summary>
+<p><em>China is a country with a civilization spanning five thousand years.</em></p>
+<p>主谓 China is a country;修饰用 with + 名词短语;avoid 死译"有 ... 的"用 with / featuring / boasting。</p>
+</details>
+</div>
+<div class="box-pitfall">
+<p>
+<strong>翻译易错</strong>:
+</p>
+<ul>
+<li>不要逐字翻译:中文 "众所周知" → not "it is known by everyone" but "It is widely known / acknowledged that ..."</li>
+<li>文化词处理:拼音 + 括号英文释义(if first appearance);后续可用拼音</li>
+<li>数字:5,000 加千分位逗号;中文"亿"→ 100 million(注意 billion = 10 亿)</li>
+</ul>
+</div>
+<h2 id="">时间分配</h2>
+<div class="box-intuition">
+<p>
+130 min 推荐分配:
+</p>
+<ul>
+<li>写作 30 min(严格,先打草稿再写)</li>
+<li>听力 25 min(跟录音走,无法控制)</li>
+<li>阅读 40 min(选词 10 / 匹配 12 / 仔细阅读 18)</li>
+<li>翻译 30 min(打草稿 5 + 写 20 + 检查 5)</li>
+<li>余 5 min:检查全卷,确认涂卡完成</li>
+</ul>
+</div>
+</main>
+</div>
+<footer>
+  <p>本站所有题目均为站长原创的仿真练习,**不复现教育部考试中心真题**。真题请购买官方授权出版物。</p>
+</footer>
+</body>
+</html>
