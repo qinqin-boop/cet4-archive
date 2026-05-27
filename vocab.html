@@ -83,7 +83,11 @@
     <span class="pill mastered">✅ 已掌握: <span id="p-mastered">0</span></span>
     <span class="pill fav">⭐ 收藏: <span id="p-fav">0</span></span>
     <span class="pill today">📅 今日新看: <span id="p-today">0</span></span>
-    <button class="w-btn" onclick="resetToday()" style="margin-left:auto;font-size:0.8rem;">重置今日</button>
+    <span style="margin-left:auto;display:flex;gap:6px;">
+      <button class="w-btn" onclick="exportProgress()" style="font-size:0.8rem;">💾 备份</button>
+      <button class="w-btn" onclick="importProgress()" style="font-size:0.8rem;">📤 导入</button>
+      <button class="w-btn" onclick="resetToday()" style="font-size:0.8rem;">重置今日</button>
+    </span>
   </div>
 
   <div class="letter-nav" id="letter-nav"></div>
@@ -159,6 +163,54 @@ function refreshProgress() {
   document.getElementById('p-mastered').textContent = LS.mastered.length;
   document.getElementById('p-fav').textContent = LS.fav.length;
   document.getElementById('p-today').textContent = LS.today.length;
+}
+function exportProgress() {
+  const data = {
+    fav: LS.fav,
+    mastered: LS.mastered,
+    exportTime: new Date().toISOString(),
+    version: 'cet4-vocab-v2',
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `cet4-vocab-backup-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function importProgress() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'application/json';
+  input.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (data.version !== 'cet4-vocab-v2') {
+          if (!confirm('备份版本不匹配, 继续导入吗?')) return;
+        }
+        const merge = confirm('合并 (取并集) 还是替换 (清空当前再导入)? 确定=合并, 取消=替换');
+        if (merge) {
+          LS.fav = [...new Set([...LS.fav, ...(data.fav||[])])];
+          LS.mastered = [...new Set([...LS.mastered, ...(data.mastered||[])])];
+        } else {
+          LS.fav = data.fav || [];
+          LS.mastered = data.mastered || [];
+        }
+        refreshProgress();
+        render();
+        alert(`✅ 导入成功. ⭐${LS.fav.length} / ✅${LS.mastered.length}`);
+      } catch (err) {
+        alert('❌ 导入失败: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
 }
 
 fetch('./vocab.json')
