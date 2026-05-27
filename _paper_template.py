@@ -440,26 +440,53 @@ WRITE = [
      "step 1/2/3 结构。"),
 ]
 
-# === 7 套试卷分配 v2 (每套 5 听 + 2 阅篇 + 2 译 + 2 写 ≈ 17 题) ===
-# 格式: (slug, title, listen_idx[5], reading_idx[2], trans_idx[2], write_idx[2], exam_date)
+# === 7 套试卷分配 v3 (每套 5 听 + 2 阅篇 + 2 译 + 2 写 ≈ 17 题) ===
+# 格式: (slug, title, listen[5], reading[2], trans[2], write[2], exam_date, real_links_key)
 PAPERS = [
-    ("paper-2024-03", "2024 年 3 月延期场 · 试卷一", [0,1,12,13,14],   [0,7], [0,1,10], [0,1],   "2024-03-?? (延期场)"),
-    ("paper-2024-06", "2024 年 6 月 · 试卷二",       [2,3,15,16,17],   [1,8], [2,3,11], [2,3],   "2024-06-15"),
-    ("paper-2024-12", "2024 年 12 月 · 试卷三",      [4,5,6,18,11],    [2,9], [4,5,12], [4,5],   "2024-12-14"),
-    ("paper-2025-06", "2025 年 6 月 · 试卷四",       [7,8,12,15,17],   [3,7], [6,7,13], [6,7],   "2025-06-14"),
-    ("paper-2025-12", "2025 年 12 月 · 试卷五",      [9,10,13,16,18],  [4,8], [8,9,13], [8,9],   "2025-12-13"),
-    ("paper-2026-06", "2026 年 6 月 · 试卷六",       [11,0,14,17,6],   [5,9], [0,2,13], [10,11], "2026-06-13 (预测)"),
-    ("paper-2026-12", "2026 年 12 月预测 · 试卷七",  [1,2,3,12,16],    [6,8], [1,3,11], [0,4],   "2026-12-12 (预测)"),
+    ("paper-2024-03", "2024 年 3 月仿真练习 · 试卷一", [0,1,12,13,14],   [0,7], [0,1,10], [0,1],   "2024 年无 3 月场次, 本卷纯仿真",                "no-real-paper"),
+    ("paper-2024-06", "2024 年 6 月 · 试卷二",         [2,3,15,16,17],   [1,8], [2,3,11], [2,3],   "2024-06-15 (真题已发布)",                       "2024-06"),
+    ("paper-2024-12", "2024 年 12 月 · 试卷三",        [4,5,6,18,11],    [2,9], [4,5,12], [4,5],   "2024-12-14 (真题已发布)",                       "2024-12"),
+    ("paper-2025-06", "2025 年 6 月 · 试卷四",         [7,8,12,15,17],   [3,7], [6,7,13], [6,7],   "2025-06-14 (真题已发布)",                       "2025-06"),
+    ("paper-2025-12", "2025 年 12 月 · 试卷五",        [9,10,13,16,18],  [4,8], [8,9,13], [8,9],   "2025-12-13 (真题已发布)",                       "2025-12"),
+    ("paper-2026-06", "2026 年 6 月 · 试卷六",         [11,0,14,17,6],   [5,9], [0,2,13], [10,11], "2026-06-13 (预计未考, 临考前看历年)",            "future"),
+    ("paper-2026-12", "2026 年 12 月预测 · 试卷七",    [1,2,3,12,16],    [6,8], [1,3,11], [0,4],   "2026-12-12 (预计未考, 临考前看历年)",            "future"),
 ]
 
-# 各套精准的真题原文外链 (引导用户去合规授权源, 不复现原文)
-REAL_PAPER_LINKS = [
+# 精准真题外链 (合规导流到新东方/搜索结果获得的精准 URL)
+# 通用兜底链 (全部 paper 都显示):
+COMMON_LINKS = [
     ("教育部考试中心", "http://cet.neea.edu.cn/"),
-    ("新东方 CET-4 真题", "https://cet4.koolearn.com/"),
+    ("新东方 CET-4 真题区", "https://cet4.koolearn.com/zhenti/"),
     ("沪江英语 CET4", "https://www.hjenglish.com/cet4/"),
     ("有道考神", "https://kaoshen.youdao.com/"),
-    ("文都四六级", "https://cet46.wendu.com/"),
 ]
+# 按场次的精准 URL (经 WebSearch 2026-05-27 抓: 新东方 cet4.koolearn.com)
+EXACT_LINKS = {
+    "2024-06": [
+        ("📘 2024.6 完整版第一套", "https://cet4.koolearn.com/20240611/906227.html"),
+        ("🎧 2024.6 听力原文+答案", "https://cet4.koolearn.com/20240615/906230.html"),
+        ("📝 2024.6 翻译三套汇总",  "https://cet4.koolearn.com/20240615/906281.html"),
+    ],
+    "2024-12": [
+        ("📘 2024.12 完整版第一套", "https://cet4.koolearn.com/20250415/919558.html"),
+        ("📘 2024.12 完整版第二套", "https://cet4.koolearn.com/20250415/919559.html"),
+        ("📘 2024.12 完整版第三套", "https://cet4.koolearn.com/20241204/913517.html"),
+        ("📝 2024.12 翻译第一套",   "https://cet4.koolearn.com/20241214/914190.html"),
+    ],
+    "2025-06": [
+        ("📘 2025.6 完整版第一套",   "https://cet4.koolearn.com/20250609/922218.html"),
+        ("🎧 2025.6 听力原文+答案",  "https://cet4.koolearn.com/20250614/922236.html"),
+        ("📖 2025.6 长篇阅读第一套", "https://cet4.koolearn.com/20250614/922243.html"),
+        ("📖 2025.6 仔细阅读第一套", "https://cet4.koolearn.com/20250614/922244.html"),
+        ("📝 2025.6 翻译三套汇总",   "https://cet4.koolearn.com/20250614/922221.html"),
+    ],
+    "2025-12": [
+        ("📘 2025.12 完整版第一套",  "https://cet4.koolearn.com/20251213/930093.html"),
+        ("🎧 2025.12 听力原文+答案", "https://cet4.koolearn.com/20251213/930046.html"),
+    ],
+    "future": [],  # 未考场次, 只显示通用入口
+    "no-real-paper": [],  # 不存在的场次, 显式说明
+}
 
 
 def render_listen(idx_in_paper, item, qid):
@@ -533,24 +560,31 @@ def render_write(idx_in_paper, item, qid):
 """
 
 
-def render_real_paper_block(exam_date):
-    """每套页顶部的合规真题原文外链卡片."""
-    links_html = ' '.join([f'<a href="{url}" target="_blank" rel="noopener">{name} ↗</a>' for name, url in REAL_PAPER_LINKS])
-    return f"""
-<div class="real-paper-link">
-  <strong>📘 想看本场真题原文?</strong> 真题(听对话/阅文章/翻译段) 版权归教育部考试中心+出版社, 本站不复现.
-  考试日期 <strong>{exam_date}</strong>, 1-click 直达合规授权源查看真题:<br>
-  {links_html}
-</div>
-"""
+def render_real_paper_block(exam_date, real_key):
+    """每套页顶部的合规真题原文外链卡片. exact 链 + 通用兜底链."""
+    exact = EXACT_LINKS.get(real_key, [])
+    if real_key == "no-real-paper":
+        intro = "<strong>⚠ 注意</strong>: 本场次为<strong>仿真练习套</strong>(2024 年实际无 3 月四级场). 历年真题入口:"
+    elif real_key == "future":
+        intro = f"<strong>📘 临考准备</strong> · 考试日期 <strong>{exam_date}</strong> · 此场未考, 用本卷预练 + 看历年真题:"
+    else:
+        intro = f"<strong>📘 本场真题原文</strong> · 考试日期 <strong>{exam_date}</strong> · 真题版权归教育部+出版社, 本站不复现. 1-click 直达新东方授权源:"
+    exact_html = ' '.join([f'<a href="{url}" target="_blank" rel="noopener" class="exact-link">{name}</a>' for name, url in exact])
+    common_html = ' '.join([f'<a href="{url}" target="_blank" rel="noopener">{name} ↗</a>' for name, url in COMMON_LINKS])
+    parts = [f'<div class="real-paper-link">{intro}<br>']
+    if exact_html:
+        parts.append(f'<div class="exact-row">{exact_html}</div>')
+    parts.append(f'<div class="common-row" style="margin-top:8px;font-size:0.86rem;opacity:0.85;">通用入口: {common_html}</div>')
+    parts.append('</div>')
+    return '\n'.join(parts)
 
 
 def main():
     OUT = 'D:/github/cet4-archive'
-    for slug, title, lstn_idx, read_idx, trans_idx, write_idx, exam_date in PAPERS:
+    for slug, title, lstn_idx, read_idx, trans_idx, write_idx, exam_date, real_key in PAPERS:
         answers = {}
         body_parts = []
-        body_parts.append(render_real_paper_block(exam_date))
+        body_parts.append(render_real_paper_block(exam_date, real_key))
         body_parts.append('<h2>Section A · Listening</h2>')
         for i, li in enumerate(lstn_idx, 1):
             qid = f"L_{li}"

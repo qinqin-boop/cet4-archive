@@ -220,3 +220,10 @@ footer {
   border: 1px solid #f59e0b; font-size: 0.85rem;
 }
 .real-paper-link a:hover { background: #fef3c7; }
+.real-paper-link a.exact-link {
+  background: #fff7ed; border-color: #ea580c; color: #9a3412;
+  font-weight: 600;
+}
+.real-paper-link a.exact-link:hover { background: #ffedd5; }
+.real-paper-link .exact-row { margin-top: 8px; }
+.real-paper-link .common-row { margin-top: 8px; font-size: 0.86rem; opacity: 0.85; }
