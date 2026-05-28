@@ -1,174 +1,509 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2025年6月 第1套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2025年6月 第1套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2024-12-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2024年12月 第3套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2025-06-2.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2025年6月 第2套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2025年6月 第1套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2025年6月英语四级真题(第1套) · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2025年6月英语四级真题(第1套)</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A) By slapping some butter on it.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="B"> B. By enhancing its nourishment.</label>
+<label><input type="radio" name="Q1" value="C"> C. By growing it in South Dakota.</label>
+<label><input type="radio" name="Q1" value="D"> D. By cooking it in vegetable oil.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A)To introduce their corn to tourists.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="B"> B. To attend an honorary ceremony.</label>
+<label><input type="radio" name="Q2" value="C"> C. To share experience with other corn growers.</label>
+<label><input type="radio" name="Q2" value="D"> D. To exhibit their corn at the state's Corn Palace. Questions 3 and 4 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A)Stole mail several times.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="B"> B. Forged postal keys illegally.</label>
+<label><input type="radio" name="Q3" value="C"> C. Attacked postmen on multiple occasions.</label>
+<label><input type="radio" name="Q3" value="D"> D. Broke a number of postal collection boxes!</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A) A sentence for life.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="B"> B. Loss of all their possessions.</label>
+<label><input type="radio" name="Q4" value="C"> C. Twenty-three years' hard labor.</label>
+<label><input type="radio" name="Q4" value="D"> D. Up to fifteen years in prison. Questions 5 to 7 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A)It escapes regulation and misleads' consumers.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="B"> B. It ignores economically feasible recycling options.</label>
+<label><input type="radio" name="Q5" value="C"> C. It creates waste and severely impacts the environment.</label>
+<label><input type="radio" name="Q5" value="D"> D. It produces clothes affordable only to a tiny minority. 2025年6月大学英语四级考试真题（第1套）－1</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A) To cut consumers' expenses in buying quality clothes.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="B"> B. To enable the whole fast-fashion industry to be sustainable.</label>
+<label><input type="radio" name="Q6" value="C"> C. To incentivize manufacturers to be more consumer-friendly.</label>
+<label><input type="radio" name="Q6" value="D"> D. To urge manufacturers and consumers to reduce waste.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A)Recognizing the impact on consumers.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="B"> B. Identifying the source of the problem.</label>
+<label><input type="radio" name="Q7" value="C"> C. Abandoning the current business model.</label>
+<label><input type="radio" name="Q7" value="D"> D. Establishing powerful regulatory bodies. Section B Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conwersation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B) , C) and</label>
+<label><input type="radio" name="Q7" value="D"> D. . Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 8 to 11 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A) The city's rush-hour traffic is intolerable.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="B"> B. She cannot avoid rush-hour traffic.</label>
+<label><input type="radio" name="Q8" value="C"> C. The local government is inefficient.</label>
+<label><input type="radio" name="Q8" value="D"> D. The city is too big to move around easily.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A) Upgrading subway carriages.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. Increasing the number of bus routes.</label>
+<label><input type="radio" name="Q9" value="C"> C. Air conditioning the city's subway.</label>
+<label><input type="radio" name="Q9" value="D"> D. Learning from other big cities.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A)He suffers from rush-hour crowding too.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="B"> B. He is fortunate to live very near to work.</label>
+<label><input type="radio" name="Q10" value="C"> C. He takes a half-hour bus ride to work.</label>
+<label><input type="radio" name="Q10" value="D"> D. He is going to move closer to his office.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A) Recommend to her a good house near his office.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. Send her his housing agent's telephone number.</label>
+<label><input type="radio" name="Q11" value="C"> C. Tell her exactly what kind of property to look for.</label>
+<label><input type="radio" name="Q11" value="D"> D. Make sure the agent finds something good for her. Questions 12 to 15 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A) He was remembered for the scar on his cheek.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="B"> B. He received a heart operation a few days ago.</label>
+<label><input type="radio" name="Q12" value="C"> C. He used to wear a sad face in school.</label>
+<label><input type="radio" name="Q12" value="D"> D. He had some plastic surgery done.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A) The man's deep sympathy for Johnny.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. The man's use of the expression "fixed. "</label>
+<label><input type="radio" name="Q13" value="C"> C. The man's covering up of what happened.</label>
+<label><input type="radio" name="Q13" value="D"> D. The man's good memory of his childhood.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A)It gave him a noticeable smartness.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="B"> B. It made him appear even more manly.</label>
+<label><input type="radio" name="Q14" value="C"> C. It seemed to give him a certain uniqueness.</label>
+<label><input type="radio" name="Q14" value="D"> D. It seemed to make up for his physical defects.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A) Liberal.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="B"> B. Hostile.</label>
+<label><input type="radio" name="Q15" value="C"> C. Indifferent.</label>
+<label><input type="radio" name="Q15" value="D"> D. Critical. 2025年6月大学英语四级考试真题（第1套）2 Section C Directions: In this section you will hear three passages. At the end of each passage, you will hear three or question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet I with a single line through the centre. Questions 16 to 18 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A) Through deliberation.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="B"> B. Through evolution.</label>
+<label><input type="radio" name="Q16" value="C"> C. Through invention.</label>
+<label><input type="radio" name="Q16" value="D"> D. Through collaboration.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A) With people imitating sounds around them.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="B"> B. With people interacting with animals close by.</label>
+<label><input type="radio" name="Q17" value="C"> C. With people showing each other things nearby.</label>
+<label><input type="radio" name="Q17" value="D"> D. With people trying to string sounds together.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A) Making sounds can free one's hands for doing other things.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="B"> B. Making sounds proves markedly easier than sign languages.</label>
+<label><input type="radio" name="Q18" value="C"> C. Making sounds enables one to express their ideas more explicitly.</label>
+<label><input type="radio" name="Q18" value="D"> D. Making sounds helps one communicate with people they can't see Questions 19 to 21 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A) Well disciplined.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="B"> B. Quite confident.</label>
+<label><input type="radio" name="Q19" value="C"> C. Somewhat selfish.</label>
+<label><input type="radio" name="Q19" value="D"> D. Highly intelligent.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A) When they wanted to have a competitive team member.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="B"> B. When they were looking for a cooperative workmate.</label>
+<label><input type="radio" name="Q20" value="C"> C. When they found collaboration essential to them.</label>
+<label><input type="radio" name="Q20" value="D"> D. When they were seeking someone to help them.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A) Avoid frightening competitors.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="B"> B. Make clear their social goal.</label>
+<label><input type="radio" name="Q21" value="C"> C. Adopt persuasive strategies.</label>
+<label><input type="radio" name="Q21" value="D"> D. Consider the consequences. Questions 22 to 25 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A) Much evidence of humans capturing animals.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. More images of animals than humans.</label>
+<label><input type="radio" name="Q22" value="C"> C. Fewer images of buildings than animals.</label>
+<label><input type="radio" name="Q22" value="D"> D. Little proof of human fascination with animals.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A)They were open to the public.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. They were primarily native.</label>
+<label><input type="radio" name="Q23" value="C"> C. They were kept by royalty.</label>
+<label><input type="radio" name="Q23" value="D"> D. They. were hardly injured.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A) To enable the public to watch animals close by.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. To introduce to Egyptians animals from Punt.</label>
+<label><input type="radio" name="Q24" value="C"> C. To protect the endangered animals.</label>
+<label><input type="radio" name="Q24" value="D"> D. To show off her riches and power. 2025年6月大学英语四级考试真题（第1套）－3</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A)It was part of the royal estate.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. It was a shelter for wild animals.</label>
+<label><input type="radio" name="Q25" value="C"> C. It was the kingdom's best-equipped zoo.</label>
+<label><input type="radio" name="Q25" value="D"> D. It was the first public exhibit of animals. Part I Reading Comprehension (40 minutes) Section A Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the banh is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once. Psychologists have long been interested in how we construct our identities and the sorts of strategies that we use to present ourselves in society. New findings suggest that the kinds of  26_ and strategic self- presentation behaviour we see in adults appear at a much younger age than  27 _ known. Research shows that a child's awareness of social standing comes from adults. Like grown-ups, kids want to be  28_ by those they admire. Interactive experiences may provide opportunities for children to learn about what  29. a desirable reputation and the kinds of strategies that are effective for  30 good reputation in their social environment. Five-year-olds aren't just aware of their reputations , they also behave strategically to alter their outward image. They will  31 their behaviour in order to appear moral or socially good in the eyes of key observers. While we know that adults use a large variety of attributes to manage and create impressions , we don't yet know whether children  32. and use the fact that different attributes are valuable at different times to different 33... It's important for us to further consider where in this process children succeed in controlling their reputation and where they  34.</label>
+<label><input type="radio" name="Q25" value="A"> A. question to think about is, “ What happens even earlier than age five?" Children don't just show up to the first day of kindergarten and have the idea of reputation pop  35_ into existence. The logical question to ask is, “ What happens even earlier?"</label>
+<label><input type="radio" name="Q25" value="A"> A. accepted</label>
+<label><input type="radio" name="Q25" value="B"> B. audiences</label>
+<label><input type="radio" name="Q25" value="C"> C. building</label>
+<label><input type="radio" name="Q25" value="D"> D. complex E) constitutes F) deputies G) previously H) revolving I) samples J) selected K) solemn L) struggle M) suddenly N) understand</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q0">
+<span class="qnum">题 0</span>
+<p>vary Section B Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. Getting young minds into design [ AJRecently, a leading design federation in the UK warned that the UK could face a creative skills 2025年6月大学英语四级考试真题（第1套）4 shortage, after the latest figures revealed a drop of almost 10 percent in students studying Design and Technology. These figures showed that the number of pupils that sat exams in Design and Technology fell 10 percent from 204,788 to 185,279 last year. [ BJ Chief executive John Kampfner of the Creative Industries Federation thinks that this drop in figures has worrying implications for the skills pipeline in Britain's hugely successful arts and creative industries. He said, “We already have skilis shortages in many jobs such as animation(动画制作) and special effects. " He added: “Engineering, which requires a similar mix of creative and technical skills, also has recruitment problems." [ CJ Many other designers and architects have expressed concern over the future supply of home-grown talent for UK firms, and industry bodies have pointed out that there has been a lack of roots-level support. However, if these designers had visited the Design Museum shop in London earlier this year their fears may have been eased. With & 10 to spend, they could have bought a fascinating children's toy called Dazzle Racer.An automotive cylinder(圆柱体），it included a wind-up，elastic（有弹性的)-band- powered mechanism, minimal parts, all 100 percent recycled, and lots of stickers. It was good fun, simple, eye-catching, and very original. [ D] Well, you'd expect the Design Museum to commission and make some interesting items, but this one was different. Designed by a group of six Year 9 and Year 10 boys from Finchley Catholic High School, the toy was the winning entry in the museum's 2015 Design Ventura competition, which brings the business of design to life for students aged 13 to 16 by challenging them to develop a new creative, sustainable, and commercially feasible product for the Design Museum shop and attracts hundreds of entries nationwide. design technology curriculum leader. “ Then when I changed schools four years ago, I introduced it here because it helps to develop so many skills. " lunch breaks and after school before selecting the group with the most innovative idea. Each participating school may submit just one proposal. " It's the taking part and doing the work which is [G] Catherine Ritman Smith, head of learning at the Design Museum, is expecting around 10, 000 " We started Design Ventura with around 800 young people in 2010 and it has grown steadily since,' she says. " Teachers like it because the skills are all transferable and it helps to validate the value of design as a subject," she explains, telling me that nearly 600 schools have taken part so far. [ HJSo how does the competition work? A single-word theme is announced in the summer. This year it is materials that could sell for & 10 in the Design Museum shop. Participating schools then register by November and eventually submit their design idea. Along the way there is training and support for teachers and tutoring for students from designers. An additional bonus is when the winners see their design on sale in the spring of the following year. 2025年6月大学英语四级考试真题（第1套）－5 [I]Hourican and his pupils have happy memories of spending a whole day at the museum, having been selected as one of 10 shortlisted schools to present their idea to a panel of judges, including designer Jasper Conran. Then they worked with the Kin Design Studio in Shoreditch, met designers at their school, and attended a lunch with Deutsche Bank employees. The students helped to make decisions and there were plenty of discussions-they changed the product's name, for example. [J]" One of the really useful things about this competition," says Hourican, “is that there's a commercial element because the product is going on sale for real and the boys had to leam about budgeting and own cloth kit called Dove Bunting and a threefold, wallet-sized travel game with goals at each end, called Badoiing. [KJIt costs the schools nothing to participate in Design Ventura; the professional designers provide their services for free. Among them are architect Asif Khan, a Design Museum trustee who has worked as designer-in-residence at the museum, helping emerging architects. He has recently been commissioned to design the new Museum of London building in Smithfield. [L] Another is television presenter and interior designer Naomi Cleaver, who is one of the competition's judges. "I'm very keen to encourage young people," she says, observing that design brings together other subjects such as literature, art, history, geography, and science. “" Now that design education is limited in the curriculum, I'm all in favour of competitions such as Design Ventura, which helps to bring the standard curriculum to life," says Cleaver. “ And the judging day is terrific fun. Some of these students are very imaginative. One group presented their idea in the form of a puppet show and we see some marvelous demonstration models. I'm always impressed by the levels of confidence and the support the students get from their teachers. " [ MjRitman Smith adds: " Design technology has become a tricky subject to make a case for, and we've heard of departments closing in some schools. We find that if pupils take part in Design Ventura in Year Nine it can be the trigger which leads them to opt for it at General Certificate of Secondary Education, so we are helping to keep alive something which is crucial to industry and entrepreneurship."</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>During the course of preparing for Design Ventura, teachers receive training and support while students get tutoring from designers.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>A visit to the Design Museum shop in London can reduce the designers' fears about the future supply of talents educated in Britain.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>One of Design Ventura's judges says the competition adds vigour to the standard curriculum in schools.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Participation of ninth graders in Design Ventura can motivate them to choose design technology as their subject.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Design Ventura is welcomed by teachers because it helps to prove the worth of design as a school subject. 2025年6月大学英语四级考试真题（第1套）－6</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>The schools don't have to pay anything to take part in the Design Ventura competition.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>Participants in Design Ventura are challenged to create sustainable and marketable products.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>Students benefit from Design Ventura because they can learn about budgeting and marketing in addition to game design.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>According to an officer of the Creative Industries Federation, there is difficulty now in recruiting engineers in the UK. Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. New research suggests that pandas may be at risk of dying out because they are too comfortable. Experts say too much happiness can stop the bears from searching for new mates. Environmentalists have long believed that building roads or homes near the bears may threaten their survival by “"reducing or fragmenting their natural habitats," The Times reported. But the new research suggests that a "modest degree of discomfort and fragmentation" may actually help preserve panda populations. The research was conducted by scientists from Michigan State University. It concluded that pandas fail to wander off in search of new mates if they find their habitat too comfortable, resulting in a lack of vital genetic diversity. For their study--outlined in a paper in the journal Conservation Biology--the team looked at genetic diversity and spread among a Chinese panda population. The ideal level of perfectly livable habitat was found to be only 80% of an area, with the remainder either too harsh or too affected by human activity. The experts concluded that pandas should ideally "be happy enough to thrive, but not so content that they don't want to move around and find new mates" Their conclusions about what The Guardian described as this “" sweet spot" are in line with the so- called Goldilocks principle: that there can be just the right amount of something. The concept has been applied to a wide range of disciplines, from developmental psychology to economics and engineering. Claudio Sillero, a professor of conservation biology at Oxford University, told the newspaper that the new findings could have implications beyond panda conservation. " Most large animals that eat meat live in increasingly fragmented landscapes ," said Sillero, who was not involved in the research. “ It may well be that the messy nature of their relationship with human efforts induces more animals to scatter or travel further, and might result in greater genetic connectivity and enhanced population persistence. " The most recent count of pandas found that there were more than 1,800 left in the wild, putting them on the list of vulnerable, but not endangered, species. 2025年6月大学英语四级考试真题（第1套）7</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What do we learn from new research about pandas?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. They are losing habitat due to the building of roads and houses.</label>
+<label><input type="radio" name="Q46" value="B"> B. They have stopped seeking new mates for reproduction.</label>
+<label><input type="radio" name="Q46" value="D"> D. They may cease to exist as a result of enjoying too good a life.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What can we conclude from the new research by scientists at Michigan State University?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. Environmentalists' long-time belief regarding panda conservation may be misleading.</label>
+<label><input type="radio" name="Q47" value="B"> B. Housing development near pandas' homes may threaten their survival.</label>
+<label><input type="radio" name="Q47" value="C"> C. Pandas' natural habitats are becoming less suitable for reproduction.</label>
+<label><input type="radio" name="Q47" value="D"> D. The increased panda population is attributed to the fragmentation of their habitat.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What is the experts' conclusion regarding pandas?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. It is urgent to provide an ideal habitat for them to thrive.</label>
+<label><input type="radio" name="Q48" value="B"> B. It is very important to preserve their genetic diversity.</label>
+<label><input type="radio" name="Q48" value="C"> C. Their chances of finding new mates have a lot to do with their habitat.</label>
+<label><input type="radio" name="Q48" value="D"> D. Their environment for survival has been continuously worsening</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What can we infer from the passage about the Goldilocks principle?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. It needs to be confirmed by more studies on pandas.</label>
+<label><input type="radio" name="Q49" value="C"> C. It has implications for future panda research.</label>
+<label><input type="radio" name="Q49" value="D"> D. It can be used to locate the right spot for pandas.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What can the new findings do according to Professor Sillero?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Help discover new ways for the conservation of pandas.</label>
+<label><input type="radio" name="Q50" value="B"> B. Help remove pandas from the list of endangered species.</label>
+<label><input type="radio" name="Q50" value="C"> C. Shed light on the conservation of most large meat-eating animals.</label>
+<label><input type="radio" name="Q50" value="D"> D. Show the complexity of interactions between humans and animals. Passage Two Questions 51 to 55 are based on the following passage. With those born with natural talents, it feels as if they excel without really trying. But what about those of us who don't have natural talent? We've been told all our lives that if you work hard, you too can succeed. But with the release of Angela Duckworth's Grit, we are given a new key to success. “ As much as talent counts, effort counts twice,' says Duckworth in Grit. She introduces a new concept that talent may be overrated, and if you want real success, what you need is grit, the perfect combination of passion and persistence. Even if you have natural talent, it's nothing without grit. Duckworth says grit is the difference between success and failure. A person who has grit is more likely to succeed than a person who does not. When we think about attaining success--whether it's landing that job or learning that new skill--our thoughts are immediately burdened by all the things we must first learn. and you must be perfect at all of them. Grit is different because it tells us that perfection isn't the goal. Grit lifts the unreasonable expectations off our shoulders. Grit tells us that the door is open wider than 2025年6月大学英语四级考试真题（第1套）－8 aren't good at? The real workings of grit are to have sustainable passion and continue to try. Effort means more than your natural ability. Even if you haven't mastered a skill, grit tells you that you can still succeed if you can transform your passion into action. In a way, Duckworth is giving new hope to people who have shut the doors on their dreams. She is saying it is possible that you can accomplish anything. If at first you fail, then try' one more time with grit.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What does the passage say about people born with natural talents?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. They seem to outdo others without hard work.</label>
+<label><input type="radio" name="Q51" value="B"> B. They appear to know all the secrets to success.</label>
+<label><input type="radio" name="Q51" value="C"> C. They feel it only too logical to succeed.</label>
+<label><input type="radio" name="Q51" value="D"> D. They are bound to excel effortlessly.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What does Duckworth say about talent?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. It is a new concept much too overrated.</label>
+<label><input type="radio" name="Q52" value="B"> B. It proves necessary for big achievements.</label>
+<label><input type="radio" name="Q52" value="C"> C. It plays a lesser role in one's success.</label>
+<label><input type="radio" name="Q52" value="D"> D. It is a guarantee for real success in life.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What does the passage say about people thinking of attaining success?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. They are puzzled how to present their best to the employer.</label>
+<label><input type="radio" name="Q53" value="B"> B. They are burdened by their expectation of perfection.</label>
+<label><input type="radio" name="Q53" value="C"> C. They will try hard to land a job that fits their skills best.</label>
+<label><input type="radio" name="Q53" value="D"> D. They will find themselves lacking in all the skills they need.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>How does the author think grit can be helpful to us?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. It allows us to know what we are good at.</label>
+<label><input type="radio" name="Q54" value="B"> B. It opens our eyes to new opportunities.</label>
+<label><input type="radio" name="Q54" value="C"> C. It focuses our attention on what we do.</label>
+<label><input type="radio" name="Q54" value="D"> D. It lets us reconsider the goals to achieve.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What message does Duckworth try to convey in her book Grit?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. We should perfect ourselves to ensure success.</label>
+<label><input type="radio" name="Q55" value="B"> B. We should stay persistent even in face of failures.</label>
+<label><input type="radio" name="Q55" value="C"> C. We can never master a skill without constant practice.</label>
+<label><input type="radio" name="Q55" value="D"> D. We can never expect to reach our goals without passion. Part IV Translation (30 minutes) Directions : For this part , you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 被誉为“杂交水稻（hybrid rice）之父”的袁隆平和他的科研团队克服重重困难,研发出了一种超 级杂交水稻。这项技术获得了举世公认的巨大成功。通过这项技术的应用，水稻抗旱抗病能力更 强，能适应不同的气候和土壤条件，产量可提高20~30%。超级杂交水稻营养丰富，口感更佳。目 前，这项技术已经在许多国家得到广泛应用，为全球粮食安全做出了重大贡献。 2025年6月大学英语四级考试真题（第1套）－9</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

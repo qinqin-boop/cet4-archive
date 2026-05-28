@@ -1,174 +1,492 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2024年6月 第2套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2024年6月 第2套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2024-06-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2024年6月 第1套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2024-06-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2024年6月 第3套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2024年6月 第2套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2024年06月大学英语四级考试真题（第2套） · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2024年06月大学英语四级考试真题（第2套）</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A) It hit a bird shortly after takeoff.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="B"> B. Its crew members went on strike.</label>
+<label><input type="radio" name="Q1" value="C"> C. It narrowly escaped a plane crash when turning around.</label>
+<label><input type="radio" name="Q1" value="D"> D. Its captain got slightly injured during the forced landing.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A) Panic.           C) Relieved.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="B"> B. Nervous.         D) Contented. Questions 3 and 4 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A) He is now kept in a secure area.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="B"> B. He has escaped the zoo once again.</label>
+<label><input type="radio" name="Q3" value="C"> C. He has been caught a second time.</label>
+<label><input type="radio" name="Q3" value="D"> D. He finally disappeared six days ago.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A) Squeezed.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="B"> B. Threatened.</label>
+<label><input type="radio" name="Q4" value="C"> C. Disappointed.</label>
+<label><input type="radio" name="Q4" value="D"> D. Frustrated. Questions 5 to 7 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A) It is condemned as a crazy idea.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="B"> B. It is enriching the city’s night life.</label>
+<label><input type="radio" name="Q5" value="C"> C. It is questioned by local residents.</label>
+<label><input type="radio" name="Q5" value="D"> D. It is giving rise to safety concerns.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A) Avoid entering one-way streets.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="B"> B. Ensure the safety of pedestrians.</label>
+<label><input type="radio" name="Q6" value="C"> C. Follow all the traffic rules drivers do.</label>
+<label><input type="radio" name="Q6" value="D"> D. Give way to automobiles at all times.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A) To ease the city’s busy traffic.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="B"> B. To bring new life into the city.</label>
+<label><input type="radio" name="Q7" value="C"> C. To add a new means of transport.</label>
+<label><input type="radio" name="Q7" value="D"> D. To reduce the city’s air pollution. Section B Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A），B），C)and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 8 to 11 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A) Take it seriously.      C) Make it sound scary.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="B"> B. Discuss it regularly.    D) Talk about it openly.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A) By shopping around for the best deals.    C) By citing concrete examples.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. By making abstract sums relevant.        D) By visiting discount stores.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A) Paying their kids to help with housework.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="B"> B. Setting kids a good example by sharing chores.</label>
+<label><input type="radio" name="Q10" value="C"> C. Giving kids pocket money according to their needs.</label>
+<label><input type="radio" name="Q10" value="D"> D. Urging kids to deposit some of their gift money.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A) The importance of cutting down family expenses.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. The need to learn important lessons from her elders.</label>
+<label><input type="radio" name="Q11" value="C"> C. The delight in seeing their savings grow.</label>
+<label><input type="radio" name="Q11" value="D"> D. The necessity of saving into a pension. Questions 12 to 15 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A) He is a successful businessman.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="B"> B. He reviews books on political affairs.</label>
+<label><input type="radio" name="Q12" value="C"> C. He has published a new bestseller.</label>
+<label><input type="radio" name="Q12" value="D"> D. He has worked in several banks.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A) The man’s ideas about education.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. The man’s academic background.</label>
+<label><input type="radio" name="Q13" value="C"> C. The man’s attempts at drawing public attention.</label>
+<label><input type="radio" name="Q13" value="D"> D. The man’s proposals to solve economic problems.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A) To reduce students’ financial burden.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="B"> B. To motivate all students to be successful.</label>
+<label><input type="radio" name="Q14" value="C"> C. To give students incentive to excel in economics.</label>
+<label><input type="radio" name="Q14" value="D"> D. To provide remedies for students’ poor performance.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A) Improving school budgeting.         C) Seeking donations.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="B"> B. Increasing tuition fees.              D) Raising taxes. Section C Directions: In this section, you will hear three passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 16 to 18 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A) To show his sympathy towards people always being busy.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="B"> B. To prevent people from complaining about being “busy”.</label>
+<label><input type="radio" name="Q16" value="C"> C. To call on busy people to take care of themselves.</label>
+<label><input type="radio" name="Q16" value="D"> D. To help busy people to sort out their priorities.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A) Avoid saying we are busy.     C) Describe our schedule in detail.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="B"> B. Reflect on their true purpose.   D) Respond as most busy people do.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A) To show their achievements resulted from great efforts.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="B"> B. To prove they stand out as accomplished professionals.</label>
+<label><input type="radio" name="Q18" value="C"> C. To cover up their failure to achieve some purpose.</label>
+<label><input type="radio" name="Q18" value="D"> D. To tell others a complete lie about their inability. Questions 19 to 21 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A) They will help one reduce fear.    C) They will be less challenging after a time.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="B"> B. They should become so popular.   D) They should cover so many different types.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A) To break one’s ultimate limits.    C) To avoid dangerous mistakes.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="B"> B. To stop being extremely afraid.    D) To enjoy the sports to the full.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A) By allowing our motivation to be at an all-time high.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="B"> B. By stopping us hurting the same muscles repeatedly.</label>
+<label><input type="radio" name="Q21" value="C"> C. By burning as many as 300 calories per hour.</label>
+<label><input type="radio" name="Q21" value="D"> D. By enabling us to get an all-over workout. Questions 22 to 25 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A) It is natural.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. It is instrumental.</label>
+<label><input type="radio" name="Q22" value="C"> C. It is personal.</label>
+<label><input type="radio" name="Q22" value="D"> D. It is vital.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A) To guard against being perceived negatively.  C) To conceal personality preferences.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. To prevent themselves from being isolated.   D) To maintain workplace harmony.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A) It helps to enhance team spirit.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. It stimulates innovative ideas.</label>
+<label><input type="radio" name="Q24" value="C"> C. It helps to resolve problems.</label>
+<label><input type="radio" name="Q24" value="D"> D. It facilitates policy-making.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A) An innovative mind.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. Corporate culture.</label>
+<label><input type="radio" name="Q25" value="C"> C. Mutual trust.</label>
+<label><input type="radio" name="Q25" value="D"> D. A healthy mentality. Part III                   Reading Comprehension                 (40 minutes) Section A Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once．</label>
+<label><input type="radio" name="Q25" value="A"> A. team of researchers led by Priyanka Joshi examined the degree to which men and women relied on “communicative abstraction” to verbally convey their ideas and emotions. Communicative abstraction, according to the researchers, reflects the tendency of people to use “abstract speech that focuses on the broader picture and   26   purpose of action rather than concrete speech focusing on details and the means of   27   action.” Interestingly, they found that men were far more likely to speak in the abstract than were women. To arrive at this   28   , the researchers examined the linguistic (语言的) patterns of men and women in over 600,000 blog posts written on websites. To do this, the researchers computed abstractness ratings for   29   40,000 commonly used words in the English language. Words considered to be concrete could be easily visualized, such as “table” or “chair”. Words that were more   30   to visualize, for example, “justice” or “morality” were considered to be more abstract. They found that men used   31   more abstract language in their blog posts. What is the   32   of this effect? The researchers suggest that power differences between the genders— that is, men having more power in society—might be a key determinant (决定因素). For instance, in a follow-up study conducted with a sample of 300 students, the researchers   33   power dynamics in an interpersonal setting to see if this would influence communicative abstraction. They found that participants in a high-power interviewer role were more likely to give abstract descriptions of behaviors than were participants in a low-power interviewee role. This suggests that communicating more abstractly does not reflect a   34 tendency of men or women but rather   35   within specific contexts. Section B Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. How to better work towards long-term goals</label>
+<label><input type="radio" name="Q25" value="A"> A. approximately               F) fixed                   K) refraining</label>
+<label><input type="radio" name="Q25" value="B"> B. attaining                    G) ignored                L) signals</label>
+<label><input type="radio" name="Q25" value="C"> C. conclusion                  H) legally                 M) significantly</label>
+<label><input type="radio" name="Q25" value="D"> D. difficult                    I) manipulated              N) source E) emerges                    J) recommended             O) ultimate</label>
+<label><input type="radio" name="Q25" value="A"> A. Hal Hershfield, a psychologist at the UCLA Anderson School of Management, wanted to know why people weren’t saving for retirement. Across the board, people are living longer. Logically, they’ll need more money to live comfortably in their post-work years. And yet, savings rates in the U.S. have gone down in recent decades, not up.</label>
+<label><input type="radio" name="Q25" value="B"> B. To help explain this seemingly irrational behavior, Hershfield and his team scanned the brains of study participants while asking them to what degree various traits (特征)—like “honorable” or “funny”—applied to their current self, their future self, a current other, or a future other. As participants answered, Hershfield’s team recorded which parts of their brains lit up. Unsurprisingly, people’s brains were most active when thinking about their current selves and least active when thinking about a current other. But the team found that participants’ brain activity while considering their future selves more closely resembled their brain activity while thinking about a current other rather than the current self.</label>
+<label><input type="radio" name="Q25" value="C"> C. Put in practical terms, when thinking of yourself in a month or a year or a decade, your brain registers that person in ways similar to how it would register Taylor Swift or the mailman. Understood in that way, saving for retirement is the equivalent of giving money away to someone else entirely.</label>
+<label><input type="radio" name="Q25" value="D"> D. In light of Hershfield’s study, one simple question arises: Is it possible to make our present selves give a damn about our future selves? The answers are anything but simple. E) Seen through the lens of the present self versus the future self, our self-defeating actions— like choosing to watch television rather than go to the gym—suddenly make perfect sense. We get to enjoy the very concrete, immediate benefits of our actions while someone else (namely, our future selves) suffers the hypothetical(假设的), far-off consequences. As a result, the decisions we make for our present selves often look very different from our decisions for our future selves. We believe that tomorrow will be different. We believe that we will be different tomorrow; but in doing so, we prioritize our current mood over the consequences of our inaction for the future self. F) Understanding our procrastination (拖延) through the lens of the present and future selves, we’re left with three possible solutions: The first is to force your future self to do whatever your present self doesn’t want to do. The second is to convince your present self that your future self is, in fact, still you. If the central problem is that we think of our future selves as other people, it follows that trying to identify more closely with our future selves will encourage us to make better long-term decisions. G) In a follow-up study, Hershfield wanted to explore ways to bridge the disconnect between the present and future selves and encourage people to save more for retirement. He and his team took photos of study participants, and then used image processing to visually age their faces. Participants were then placed in a virtual reality setting where they could look into a mirror and see their aged selves looking back at them. Participants who saw their aged selves said they would save 30% more of their salary for retirement than the control group. H) Whatever your long-term goals may be—getting in better shape, launching your own business, writing a book—thinking about your deadline in terms of days rather than months or years can help you wrap your mind around how close the future really is. I) The third solution is to forget about your future self and use your present self’s love of instant gratification (满足感) to your advantage. While the two tactics (手段) above can be effective in making better long-term choices, in the end, you’re still struggling against human nature. Our brains are hard-wired for instant gratification. Instead of fighting your present self’s need for immediate rewards, why not use it to your advantage? When most of us set goals, we focus on long-term results we want to see—e.g., losing weight, getting a promotion, retiring in comfort, etc. While those visions of our future selves can be inspiring, when it comes to actually doing the day-to-day work, it may be more effective to reframe activities in terms of their immediate, or at least very near-term, rewards. J) Take writing this article, for instance. It’s easy for me to imagine how amazing it will feel at the end of the workday to have this article done. This isn’t just my opinion. Research partners Kaitlin Woolley of Cornell University and Ayelet Fishbach of the University of Chicago have made a career out of studying the differences between the goals that people achieve and the ones that fall to the wayside. K) “In one study, we asked people online about the goals they set at the beginning of the year. Most people set goals to achieve delayed, long-term benefits, such as career advancement, debt repayment, or improved health. We asked these individuals how enjoyable it was to pursue their goal, as well as how important their goal was. We also asked whether they were still working on their goals two months after setting them. We found that enjoyment predicted people’s goal persistence two months after setting the goal far more than how important they rated their goal to be,” Woolley said. L) This pattern held true across a wide variety of goals from exercising to studying to eating healthier foods. For example, people ate 50% more of a healthy food when directed to focus on the good taste rather than the long-term health benefits. Other studies have shown a greater uptake of exercise in people who were told to think of the enjoyment of doing the exercise now rather than future health gains. M) These findings suggest that when it comes to achieving your goals, enjoying the process itself is more important than wanting the long-term benefits. In other words, present self trumps (战胜) future self. Who says instant gratification has to be a bad thing? By all means, set ambitious long-term goals for your future self, but when it comes to actually following through day-to-day, make sure your present self knows what’s in it for her too.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>Our brains are genetically determined to satisfy immediate desires.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Taken in a practical way, saving for post-work years is like giving money away to others.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>Research found that, as regards achievement of one’s goals, it is important to focus more on enjoying the process than the long-term benefits.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>Regarding our future selves as still being ourselves will help us make better long-term decisions.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Savings rates in America have dropped in recent decades even though people’s life expectancy has increased.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Researchers found that enjoyment rather than importance enabled people to persist in their goals.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>When making decisions, we give priority to our current frame of mind without thinking much of the consequences.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>People ate more of a healthy food when they focused on its good taste instead of its long- term benefits.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>As was expected, when people thought of their present selves, their brains were observed to become more active.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>Researchers found that participants who saw the images of their aged selves would save more for their later years than those who didn’t. Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. People often wonder why some entrepreneurs have greater success than others. Is it habits, connections, luck, work ethic or any other behavior? I believe the key to success is willpower. Willpower is the ability to control yourself. It is a strong determination that allows you to do something difficult. It is a behavior we are born with more than one we learn; however, it is possible to not only learn it, but also strengthen it with constant exercise. Willpower is just like a muscle; to keep it strong you need to constantly exercise it. People with a great amount of willpower have the discipline to develop positive, successful habits. Even with an incredible amount of talent, without the discipline and motivation to create positive habits, it can be difficult to achieve success. Willpower and habits go hand in hand. It is critical to create good habits and take the actions necessary to stick to those habits day in and day out for greater success. Almost half of our daily actions are part of our habits and not decisions, so once the correct habits are in place, you will automatically perform those tasks on a day-today basis. The best way to create and stick to a habit is to have strong motivation. It’s easier to change your habits to lose weight if you have a health issue and you want to be around longer for your kids, or if your business is something you’re passionate about. Having a valuable outcome associated with a habit will help you stick to that habit permanently. The art of self-control is one that most successful individuals have mastered. Self-control enables you to avoid behaviors that don’t contribute to your success and adopt those that do. Because there is a delayed satisfaction associated with self-control, it can be easy to get off track. However, if you work on sticking to those small positive habits one day at a time, it becomes easier to stay strong and achieve that delayed reward. Once a reward is achieved, it is much easier to continue sticking to your habits.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What does the author say we need to do to strengthen our willpower?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. Keep it under control. C) Learn from entrepreneurs.</label>
+<label><input type="radio" name="Q46" value="B"> B. Apply it continuously. D) Aim at success determinedly.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>How are almost half of our daily actions performed according to the passage?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. Out of habit.         C) Like muscle building.</label>
+<label><input type="radio" name="Q47" value="B"> B. With determination.   D) By self-discipline.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What will help people stick to doing something constructive automatically?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. Practising it on a day-to-day basis. C) Possessing a reasonable amount of talent.</label>
+<label><input type="radio" name="Q48" value="B"> B. Associating it with improving health. D) Foreseeing the desired outcome it will yield.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>How does the art of self-control help us succeed?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. By allowing us to remain clear-headed permanently.</label>
+<label><input type="radio" name="Q49" value="B"> B. By enabling us to alter our behaviors constantly.</label>
+<label><input type="radio" name="Q49" value="C"> C. By enabling us to take positive actions.</label>
+<label><input type="radio" name="Q49" value="D"> D. By allowing us to avoid taking risks.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>Why can it be difficult for us to maintain self-control?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Most of us are not in the habit of exercising self-control.</label>
+<label><input type="radio" name="Q50" value="B"> B. We may not get immediate rewards from self-control.</label>
+<label><input type="radio" name="Q50" value="C"> C. Self-control tends to be associated with pains.</label>
+<label><input type="radio" name="Q50" value="D"> D. Self-control only brings about small benefits. Passage Two Questions 51 to 55 are based on the following passage. Today, most scientific research is funded by government grants, companies doing research and development, and non-profit foundations. As a society, we reap the rewards from this science, but we also help pay for it. You indirectly support science through taxes you pay, products and services you purchase, and donations you make. Funding for science has changed with the times. Historically, science has been largely supported through private patronage (资助), church sponsorship, or simply paying for the research yourself. Today, researchers are likely to be funded by a mix of grants from various government agencies, institutions, and foundations. Other research is funded by private companies. Such corporate sponsorship is widespread in some fields. Almost 75% of U.S. clinical trials in medicine are paid for by private companies. And, of course, some researchers today still fund small-scale studies out of their own pockets. Most of us can’t afford to do nuclear research as a private hobby, but birdwatchers, rock collectors, and others can do real research on a limited budget. In a perfect world, money wouldn’t matter—all scientific studies would be completely objective. But in the real world, funding may introduce biases. Drug research sponsored by the pharmaceutical ( 制药的) industry is more likely to end up favoring the drug under consideration than studies sponsored by government grants or charitable organizations. Similarly, nutrition research sponsored by the food industry is more likely to end up favoring the food under consideration than independently funded research. So what should we make of all this? Should we ignore any research funded by companies or special interest groups? Certainly not. These groups provide invaluable funding for scientific research. Furthermore, science has many safeguards in place to catch instances of bias that affect research outcomes. Ultimately, misleading results will be corrected as science proceeds; however, this process takes time. Meanwhile, it pays to examine studies funded by industry or special interest groups with extra care. Are the results consistent with other independently funded studies? What do other scientists have to say about this research? A little examination can go a long way towards identifying bias associated with the funding source.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What does the passage mainly discuss regarding scientific research?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. Its foundation.</label>
+<label><input type="radio" name="Q51" value="B"> B. Its rewards.</label>
+<label><input type="radio" name="Q51" value="C"> C. Its prospect.</label>
+<label><input type="radio" name="Q51" value="D"> D. Its funding.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What do we learn from the passage about researchers like birdwatchers and rock collectors?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. They have little access to government funding.</label>
+<label><input type="radio" name="Q52" value="B"> B. They can do research with limited resources.</label>
+<label><input type="radio" name="Q52" value="C"> C. They can do amateur work in their own fields.</label>
+<label><input type="radio" name="Q52" value="D"> D. They have no means for large-scale research.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What would scientific studies look like in a perfect world according to the author?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. They would be totally unbiased.</label>
+<label><input type="radio" name="Q53" value="B"> B. They would be independently funded.</label>
+<label><input type="radio" name="Q53" value="C"> C. They would be responsibly conducted.</label>
+<label><input type="radio" name="Q53" value="D"> D. They would be strictly supervised.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>What does the author say about companies and special interest groups?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. They try hard to pull down the safeguards for research.</label>
+<label><input type="radio" name="Q54" value="B"> B. They make extra efforts to research their own products.</label>
+<label><input type="radio" name="Q54" value="C"> C. They provide valuable resources for scientific research.</label>
+<label><input type="radio" name="Q54" value="D"> D. They reap the most benefits from scientific research.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What does the author think of research funded by industry or special interest groups?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. Its recommendations should be examined for feasibility.</label>
+<label><input type="radio" name="Q55" value="B"> B. Its misleading results should be corrected in time.</label>
+<label><input type="radio" name="Q55" value="C"> C. Its validity should be checked with additional care.</label>
+<label><input type="radio" name="Q55" value="D"> D. Its hidden biases should be identified independently. Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 农历（the lunar calendar）起源于数千年前的中国，根据太阳和月亮的运行规律制定。 长期以来，农历在农业生产和人们日常生活中发挥着重要作用。古人依据农历记录日期、安 排农活，以便最有效地利用自然资源和气候条件，提高农作物的产量和质量。中国的春节、 中秋节等传统节日的日期都基于农历。农历是中国传统文化的重要组成部分，当今依然广为 使用。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

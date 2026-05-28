@@ -1,174 +1,255 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2024年12月 第3套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2024年12月 第3套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2024-12-2.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2024年12月 第2套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2025-06-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2025年6月 第1套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2024年12月 第3套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2024年12月英语四级真题(第3套) · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2024年12月英语四级真题(第3套)</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>Acquisition  of  new  knowledge  may  not  guarantee  the  progress  that  you  aim  to  make.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Your  current  situation  in  life  is  built  on  the  beliefs  and  habits  you  have  been  practicing  daily.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>Knowing  the  best  way  to  learn  a  foreign  language  will  not  enable  you  to  speak  it  without  actual  practice.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>People  may  find  it  demanding  to  create  a  goal  which  will  take  a  long  time  to  achieve.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Learning  and  practicing  seem  to  be  very  much  alike,  but  the  two  processes  can  lead  to  quite  different outcomes.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Absorbing  new  information  is  helpful  in  making  better  decisions  prior  to  action.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>Sometimes  we  may  feel  like  we  are  making  progress  by  doing  some  research  or  making  preparations,  but actually  we  are  staying  at  the  starting  point.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>We  are  inclined  to  think  that  a  lack  of  knowledge  prevents  us  from  advancing  to  a  better  future.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>Learning  can  benefit  you  by  itself,  but  only  practice  can  turn  what  you  learn  into  meaningful  contributions.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>Practice  involves  repeating  a  process  intentionally  to  attain  a  particular  objective. 4 https://zhenti.burningvocabulary.cn Section  C Directions:  There  are  2  passages  in  this  section.  Each  passage  is  followed  by  some  questions  or  unfinished statements.  For  each  of  them  there  are  four  choices  marked  A),  B),  C)  and  D).  You  should  decide  on  the  best choice  and  mark  the  corresponding  letter  on  Answer  Sheet  2  with  a  single  line  through  the  centre. Passage  One Questions  46  to  50  are  based  on  the  following  passage. Research  in  human-vehicle  interaction  has  shown  even  systems  designed  to  automate  driving  are  far from  being  error-proof.  Recent  evidence  points  to  drivers’  limited  understanding  of  what  these  systems  can and  cannot  do  as  a  contributing  factor  to  system  misuse.  A  recent  study  tackles  the  issue  of  over-trusting drivers  and  the  resulting  system  misuse  from  a  legal  viewpoint.  It  looks  at  what  the  manufacturers  of  self- driving  cars  should  legally  do  to  ensure  that  drivers  understand  how  to  use  the  vehicles  appropriately. One  solution  suggested  in  the  study  involves  requiring  buyers  to  sign  end-user  license  agreements (EULAs),  similar  to  the  terms  and  conditions  that  require  agreement  when  using  new  software  products.  But this  is  far  from  ideal.  The  agreement  may  not  provide  enough  information  to  the  driver,  leading  to  confusion about  the  nature  of  the  requests  for  agreement  and  their  implications.  Further,  most  end  users  don’t  read EULAs.  A  2017  study  shows  91  percent  of  people  agree  to  them  without  reading.  Among  young  people,  97 percent  agree  without  reviewing  the  terms. The  issue  is  that,  unlike  using  a  smartphone  app,  operating  a  car  has  serious  safety  risks,  whether  the driver  is  human  or  software.  And  human  drivers  need  to  consent  to  take  responsibility  for  the  outcomes  of  the software  and  hardware. “Warning  fatigue”  and  distracted  driving  are  also  causes  for  concern.  For  example,  a  driver,  annoyed after  receiving  continuous  warnings,  could  decide  to  just  ignore  the  message.  Or,  if  the  message  is  presented while  the  vehicle  is  in  motion,  it  could  represent  a  distraction.  Given  these  limitations  and  concerns,  even  if this  mode  of  obtaining  consent  is  to  move  forward,  it  likely  won’t  fully  protect  automakers  from  their  legal liability  should  the  system  malfunction  (发生故障)  or  an  accident  occur. Driver  training  for  self-driving  vehicles  can  help  ensure  that  drivers  fully  understand  system  capabilities and  limitations.  This  needs  to  occur  beyond  the  vehicle  purchase.  Recent  evidence  shows  even  relying  on  the information  provided  by  the  seller  is  not  going  to  answer  many  questions.  All  of  this  considered,  the  road forward  for  self-driving  cars  is  not  going  to  be  a  smooth  ride  after  all.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What  do  we  learn  from  research  in  human-vehicle  interaction?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. Automatic  driving  systems  are  by  no  means  immune  to  errors.</label>
+<label><input type="radio" name="Q46" value="B"> B. Driverless  vehicles  are  likely  to  be  misused  by  some  people.</label>
+<label><input type="radio" name="Q46" value="C"> C. Self-driving  car  manufacturers  are  not  aware  of  the  legal  matters  involved.</label>
+<label><input type="radio" name="Q46" value="D"> D. There  is  a  long  way  to  go  before  humans  can  interact  with  driverless  vehicles.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What  is  the  problem  with  requiring  buyers  to  sign  end-user  license  agreements?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. End  users,  young  and  old  alike,  find  the  terms  complex  to  interpret.</label>
+<label><input type="radio" name="Q47" value="B"> B. Most  end  users  sign  them  without  bothering  to  read  the  terms.</label>
+<label><input type="radio" name="Q47" value="C"> C. Many  people  are  often  confused  by  the  wording  of  the  terms.</label>
+<label><input type="radio" name="Q47" value="D"> D. Most  end  users  do  not  understand  the  terms  after  reading  them  through. 5 https://zhenti.burningvocabulary.cn</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What  would  drivers  do  when  they  suffer  from  “warning  fatigue”?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. Waste  no  time  keeping  the  car  moving.</label>
+<label><input type="radio" name="Q48" value="B"> B. Rest  a  while  to  avoid  fatigue  driving.</label>
+<label><input type="radio" name="Q48" value="C"> C. Take  no  action  despite  repeated  warnings.</label>
+<label><input type="radio" name="Q48" value="D"> D. Take  note  of  the  message  though  fatigued.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What  does  the  author  think  of  continuing  to  ask  buyers  to  sign  end-user  license  agreements?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. It  will  probably  not  guarantee  the  safety  of  drivers  in  case  of  accidents.</label>
+<label><input type="radio" name="Q49" value="B"> B. It  likely  won’t  ensure  that  the  automatic  driving  system  functions  properly.</label>
+<label><input type="radio" name="Q49" value="C"> C. It  likely  won’t  fully  protect  automakers  against  accusations  of  deliberate  cheating.</label>
+<label><input type="radio" name="Q49" value="D"> D. It  will  probably  not  provide  manufacturers  adequate  protection  from  legal  responsibilities.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What  should  be  done  to  help  drivers  fully  understand  system  capabilities  and  limitations?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Training  them  to  be  experts  in  vehicle  automation.</label>
+<label><input type="radio" name="Q50" value="B"> B. Familiarizing  them  with  the  systems  through  training.</label>
+<label><input type="radio" name="Q50" value="C"> C. Broadening  their  knowledge  of  accident-prevention  mechanisms.</label>
+<label><input type="radio" name="Q50" value="D"> D. Facilitating  their  access  to  the  information  provided  by  the  seller. Passage  Two Questions  51  to  55  are  based  on  the  following  passage. Do  you  ever  blend  up  a  protein  drink  for  breakfast,  or  grab  a  protein  bar  following  an  afternoon  workout? If  so,  you  are  likely  among  the  millions  of  people  in  search  of  more  protein-rich  diets. Protein-enriched  products  are  found  everywhere.  But  contrary  to  all  the  publicity  that  everyone  needs more  protein,  most  Americans  get  twice  as  much  as  they  need. Many  of  us  living  in  the  most  developed  countries  are  buying  into  a  myth  of  protein  deficiency  created by  food  companies  and  self-identified  health  experts.  Global  retail  sales  of  protein  supplement  products reached  an  astonishing  U.S.  $18.9  billion  in  2020. But  are  we  really  in  need  of  more  protein?  Physicians  in  the  U.S.  have  never  actually  examined  a  patient with  protein  deficiency  because  simply  by  eating  an  adequate  number  of  daily  calories  we  are  also  most  likely getting  enough  protein. In  fact,  Americans  currently  consume  almost  twice  the  National  Academy  of  Medicine’s  recommended daily  intake  of  protein  although  the  most  desirable  protein  intake  may  vary  depending  on  age  and  activity level. For  example,  if  you’re  a  dedicated  athlete  you  might  need  to  consume  higher  quantities  of  protein. Generally,  though,  a  140-pound  person  should  not  exceed  120  grams  of  protein  per  day,  particularly  because  a high  protein  diet  can  strain  kidney  and  liver  function  and  increase  risks  of  developing  heart  disease  and  cancer. While  fats  and  sugar  have  taken  the  beating  in  turns  since  over  a  century  ago,  protein  has  managed  to remain  our  red-hot  favorite. In  the  1970s  through  the  1990s,  protein  products  remained  visible  but  moved  back  somewhat  with  the dietary  spotlight  firmly  fixed  on  low-calorie,  low-fat,  sugar-free  snack  foods  and  beverages  following  the publication  of  studies  linking  sugar  and  saturated  (饱和的)  fat  consumption  to  heart  disease. Later  research  in  2003,  however,  suggested  high-protein  diets  could  aid  in  weight  loss,  and  protein quickly  regained  its  former  nutrient-superstar  status. 6 https://zhenti.burningvocabulary.cn Now  most  people  living  in  high-income  nations  are  consuming  enough  protein.  When  we  replace  meals with  a  protein  bar  or  drink,  we  also  risk  missing  out  on  the  rich  sources  of  antioxidants  (抗氧化剂),  vitamins and  many  other  benefits  of  real  food.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What  do  we  learn  about  publicity  over  protein  in  America?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. It  has  helped  to  create  the  myth  of  protein  deficiency.</label>
+<label><input type="radio" name="Q51" value="B"> B. It  has  helped  Americans  in  search  of  protein-rich  diets.</label>
+<label><input type="radio" name="Q51" value="C"> C. It  has  raised  a  lot  of  health  concerns  among  the  public.</label>
+<label><input type="radio" name="Q51" value="D"> D. It  has  been  funded  by  food  companies  and  health  experts.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>Why  have  physicians  in  the  U.S.  never  actually  examined  a  patient  with  protein  deficiency?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. Americans  can  purchase  many  kinds  of  protein-rich  foods  everywhere.</label>
+<label><input type="radio" name="Q52" value="B"> B. Americans  can  absorb  the  number  of  calories  recommended  by  food  experts.</label>
+<label><input type="radio" name="Q52" value="C"> C. Americans  can  get  sufficient  protein  just  by  eating  adequate  foods  daily.</label>
+<label><input type="radio" name="Q52" value="D"> D. Americans  can  rely  on  food  supplements  to  prevent  protein  deficiency.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What  should  people  take  into  consideration  in  deciding  on  the  most  preferable  protein  intake?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. How  healthy  they  are  and  what  food  they  eat.</label>
+<label><input type="radio" name="Q53" value="B"> B. How  old  they  are  and  what  activities  they  do.</label>
+<label><input type="radio" name="Q53" value="C"> C. How  much  protein  they  consume  and  what  their  body  weight  is.</label>
+<label><input type="radio" name="Q53" value="D"> D. How  serious  their  protein  deficiency  is  and  what  remedies  they  use.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>What  foods  have  been  largely  out  of  favor  for  more  than  a  century?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. Sugar-free  snacks.</label>
+<label><input type="radio" name="Q54" value="B"> B. Protein-rich  foods.</label>
+<label><input type="radio" name="Q54" value="C"> C. Both  red  and  white  meats.</label>
+<label><input type="radio" name="Q54" value="D"> D. Sugary  and  fatty  foods.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What  does  the  author  imply  people  in  developed  countries  should  do  to  keep  healthy?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. Enjoy  natural  food.</label>
+<label><input type="radio" name="Q55" value="B"> B. Eat  vegetarian  diets.</label>
+<label><input type="radio" name="Q55" value="C"> C. Consume  enough  protein  daily.</label>
+<label><input type="radio" name="Q55" value="D"> D. Replace  meals  with  protein  bars. Part  IV                                                                                                                        Translation                                                                                                              (30  minutes) Directions:  For  this  part,  you  are  allowed  30  minutes  to  translate  a  passage  from  Chinese  into  English.  You should  write  your  answer  on  Answer  Sheet  2. 近年来，中国新能源汽车产业发展迅速。目前，中国新能源汽车年产量已高达近千万辆，占全球市 场份额超过60%，出口量不断创出新高。中国政府通过加大资金投入和政策引导，鼓励新能源汽车企 业进行技术创新，不断提高产品在市场上的竞争力。中国新能源汽车产业的发展不仅有力推动了国内 经济发展，也为全球新能源利用和环境保护做出了积极贡献。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

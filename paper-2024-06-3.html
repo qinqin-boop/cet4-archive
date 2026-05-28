@@ -1,174 +1,256 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2024年6月 第3套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2024年6月 第3套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2024-06-2.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2024年6月 第2套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2024-12-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2024年12月 第1套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2024%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2024年6月 第3套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2024年06月大学英语四级考试真题（第3套） · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2024年06月大学英语四级考试真题（第3套）</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>There is opposition to the practice of giving children assignments to take home before extreme weather forces a school closure.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>New policies adopted by many US schools require students to do online learning at home in case of a school closure.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>According to some research, extreme hot weather negatively affects students’ performance.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>There is a time-honoured tradition in the US for school kids to stay at home on “snow days”.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Debates on social media show some parents are opposed to ending the “snow day” tradition.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>In more northern regions of the US, school is less likely to be affected by snowy weather.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>Research indicates absences from school with permission do not cause as many problems as those without permission.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>There is objection to e-learning days owing to fear that students with no access to the Internet at home will suffer.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>In a pilot programme, students are given electronic devices to do assignments when schools are closed.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>A long-standing debate is going on over the impact of school absences on students’ academic performance. Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. It may sound surprising, but you don’t have to be interested in fashion, or even in history, to enjoy Dress Codes: How the Laws of Fashion Made History. I happen to be interested in both, and ended up enjoying the book for completely different reasons. Richard Thompson Ford is a law professor, and you probably won’t forget that for even one page. His carefully reasoned arguments, packed with examples, sound almost like reading a court opinion, only maybe wordier. You will probably never think of fashion as a trifle again. Ford’s thesis is that the best way to understand what particular fashions meant in any given era is to look at the restrictions placed on them. Through this lens, he shows us that the first laws passed in the 1200s to ensure that only the nobility were allowed to wear certain fabrics, colors and ornaments reflected the rise of the middle class, who were now able to imitate some of these fashions. The status of the upper classes was threatened; fashion was a tool to preserve it. Ford takes the reader through the evolution of fashion while examining the underlying motivations of status, sex, power, and personality, which, he assumes, influenced all innovations in fashion in the past and which continue to influence us today. His writing is more than a little dense—dense with research, clauses, and precise adjectives and nouns. But there’s also humor and enough interesting episodes to make the writing appealing. No one is spared his sharp analysis: not the easy targets of 19th century women’s crippling (伤害身体的） fashions nor the modern uniforms of Silicon Valley T-shirts. But the greatest strength of this book (on fashion!) is its intellectual profoundness. Ford asks us to question unconscious beliefs, to realize that we almost never do so, to understand that the simplest choices are charged with meaning, and yet that meaning can and does change all the time. Consider the fact that a 1918 catalog insisted that boys and girls be dressed in the appropriate color. We believe our thinking today is evolved; Ford shows us it’s not.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What does the author think of the book Dress Codes: How the Laws of Fashion Made History?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. It is read by people for entirely different reasons.</label>
+<label><input type="radio" name="Q46" value="B"> B. It is meant for those interested in fashion history.</label>
+<label><input type="radio" name="Q46" value="C"> C. It makes enjoyable as well as informative reading.</label>
+<label><input type="radio" name="Q46" value="D"> D. It converts fashion into something for deliberation.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>How can people best understand a particular fashion in an era, according to Ford?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. By examining the restraints imposed on it.</label>
+<label><input type="radio" name="Q47" value="B"> B. By looking at what the nobility were wearing.</label>
+<label><input type="radio" name="Q47" value="C"> C. By glancing at its fabrics, colors and ornaments.</label>
+<label><input type="radio" name="Q47" value="D"> D. By doing a survey of the upper and middle classes.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What was the aim of the first laws passed regarding fashion in the 1200s?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. To facilitate the rise of the middle class.</label>
+<label><input type="radio" name="Q48" value="B"> B. To loosen restrictions on dress codes.</label>
+<label><input type="radio" name="Q48" value="C"> C. To help initiate some novel fashions.</label>
+<label><input type="radio" name="Q48" value="D"> D. To preserve the status of the nobles.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What does the author think of Ford’s writing?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. It uses comparison and contrast in describing fashions of different eras.</label>
+<label><input type="radio" name="Q49" value="B"> B. It makes heavy reading but is not lacking in humor or appeal.</label>
+<label><input type="radio" name="Q49" value="C"> C. It is filled with interesting episodes to spare readers intolerable boredom.</label>
+<label><input type="radio" name="Q49" value="D"> D. It is characteristic of academics in presenting arguments.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What does the author say is the greatest strength of Ford’s book?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Plentiful information.</label>
+<label><input type="radio" name="Q50" value="B"> B. Meaningful choices.</label>
+<label><input type="radio" name="Q50" value="C"> C. Evolved thinking.</label>
+<label><input type="radio" name="Q50" value="D"> D. Intellectual depth. Passage Two Questions 51 to 55 are based on the following passage. The art of persuasion means convincing others to agree with your point of view or to follow your course of action. For some of us, persuasion is an instinctive quality and the power of influencing comes naturally. For the rest of us, persuasion skills can be learned and developed over time. Employers place a great value on employees with persuasion skills because they can impact several aspects of job performance. Besides, teamwork and leadership rely heavily on the power of persuasion to get things done. Without persuasion skills, employees may not be as committed to or convinced of the importance of an organization’s vision and long-term mission. Effective use of persuasion skills will not only help get your coworkers excited about your ideas, it’ll also help you motivate them to achieve a common goal. In order to learn the art of persuasion at the workplace, you need to understand how to handle conflicts and reach agreements. Good communication is the first step in effective persuasion, but logic and reasoning are just as important. Before you can get somebody on- board with your goal, you should help them understand why they should pursue it. Using visual aids to back up your ideas can help communicate your ideas better and make compelling arguments so your listeners will come to a logical choice and become fully committed to your ideas and plans. Successful persuasion skills are based on your ability to have positive interactions and maintain meaningful relationships with people. In order to sustain those relationships, you must be able to work in their best interests as well. Your coworkers are more likely to agree with you when they succeed alongside you. The more they achieve and the greater progress they make, the more they trust your judgement and strength. We persuade and get persuaded every day—we’re either convincing or being convinced.</label>
+<label><input type="radio" name="Q50" value="A"> A. vast majority of people prefer collaboration and teamwork over traditional organizational structures; no one likes to be told what to do or to be pushed around. Therefore, organizations and leaders should adopt powerful persuasion skills to bring about necessary changes.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What does the author say about the ability to be persuasive in the first paragraph?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. People may either be born with it or be able to cultivate it.</label>
+<label><input type="radio" name="Q51" value="B"> B. It proves crucial in making others follow one’s course of action.</label>
+<label><input type="radio" name="Q51" value="C"> C. It refers to the natural and instinctive power of influencing one’s coworkers.</label>
+<label><input type="radio" name="Q51" value="D"> D. People may view it as both a means to convince others and an art of communication.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>Why are persuasion skills greatly valued in the workplace?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. They enable employees to be convinced of their long-term gains.</label>
+<label><input type="radio" name="Q52" value="B"> B. They enable employees to trust their leaders unconditionally.</label>
+<label><input type="radio" name="Q52" value="C"> C. They help motivate coworkers to strive for a common goal.</label>
+<label><input type="radio" name="Q52" value="D"> D. They help an organization to broaden its vision effectively.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What should people do to learn the art of persuasion at the workplace?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. Acquire effective communication skills.</label>
+<label><input type="radio" name="Q53" value="B"> B. Avoid getting involved in conflicts with others.</label>
+<label><input type="radio" name="Q53" value="C"> C. Understand the reason for pursuing their goals.</label>
+<label><input type="radio" name="Q53" value="D"> D. Commit themselves fully to their ideas and plans.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>When are you more likely to succeed in persuading your coworkers?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. When they are convinced you work in their interests while sacrificing your own.</label>
+<label><input type="radio" name="Q54" value="B"> B. When they become aware of the potential strength of the judgements you make.</label>
+<label><input type="radio" name="Q54" value="C"> C. When they become aware of the meaningful relationships you keep with them.</label>
+<label><input type="radio" name="Q54" value="D"> D. When they are convinced they will make achievements together with you.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>Why are organizations and leaders advised to adopt powerful persuasion skills to bring about necessary changes?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. To convince employees of the value of collaboration.</label>
+<label><input type="radio" name="Q55" value="B"> B. To allow for the preferences of most people of today.</label>
+<label><input type="radio" name="Q55" value="C"> C. To improve on traditional organizational structures.</label>
+<label><input type="radio" name="Q55" value="D"> D. To adapt to employees’ ever-changing working styles. Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 汉语中的“福”字（the character fu）表示幸福和好运，是中国传统文化中最常用的吉祥 （auspicious）符号之一。人们通常将一个大大的福字写在红纸上，寓意期盼家庭幸福、社 会安定、国家昌盛。春节贴福字是民间由来已久的习俗。为了欢庆春节，家家户户都会将福 字贴在门上或墙上，表达对幸福生活的向往、对美好未来的期待。人们有时还将福字倒过来 贴，表示幸福已到、好运已到。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

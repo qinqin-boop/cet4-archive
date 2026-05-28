@@ -1,174 +1,255 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2022年6月 第2套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2022年6月 第2套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2022-06-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2022年6月 第1套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2022-06-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2022年6月 第3套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2022年6月 第2套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2022年6月第2套 · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2022年6月第2套</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>Fraudsters often steal villa-booking information from authentic holiday websites.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Fraudsters keep changing their bank accounts to avoid being tracked.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>It is suggested that people not going on the holiday might help detect website frauds.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>More and more British holidaymakers find the seaside villas they booked online actually nonexistent.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>By checking an agent9s name online before booking a villa, holidaymakers can avoid falling into traps.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Fraudsters are difficult to identify, according to an online safety expert.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>Holidaymakers have been alerted to the frequent occurrence of online villa-booking frauds.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>It is holidaymakers that can protect themselves from falling victim to frauds.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>Holidaymakers are advised not to make payments by bank transfer.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>Fraudsters advertise their villas at reasonable prices so as not to be suspected. Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. Social media can be a powerful communication tool for employees, helping them to collaborate, share ideas and solve problems. Research has shown that 82% of employees think social media can improve work relationships and 60% believe it can support decision-making processes. These beliefs contribute to a majority of workers connecting with colleagues on social media, even during work hours. Employers typically worry that social media is a productivity killer; more than half of U.S. employers reportedly block access to social media at work. In my research with 277 employees of a healthcare organization I found these concerns to be misguided. Social media doesn't reduce productivity nearly as much as it kills employee retention. In the first part of the study I surveyed the employees about why and how they used platforms like Facebook, Twitter, or Linkedln. Respondents were then asked about their work behaviors, including whether they felt motivated in their jobs and showed initiative at work. I found employees who engage in online social interactions with co-workers through social media blogs tend to be more motivated and come up with innovative ideas. But when 英语四级真题第2 套第4 页共7 页 employees interact with individuals outside the organization, they are less motivated and show less initiative. In the second part of the study I found 76% of employees using social media for work took an interest in other organizations they found on social media. When I examined how respondents expressed openness to new careers and employers, I found that they engaged in some key activities including researching new organizations and making new work connections. These findings present a dilemma for managers: employees using social media at work are more engaged and more productive, but they are also more likely to leave your company. Managers should implement solutions that neutralize the retention risk caused by social media. They can create social media groups in which employees will be more likely to collaborate and less likely to share withdrawal intentions or discussions about external job opportunities. Managers can also use social media to directly reduce turnover (跳槽) intentions, by recognizing employees9 accomplishments and giving visibility to employees9 success stories.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What does previous research about social media reveal?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. Most employees think positively of it.</label>
+<label><input type="radio" name="Q46" value="B"> B. It improves employees9 work efficiency.</label>
+<label><input type="radio" name="Q46" value="C"> C. It enables employees to form connections.</label>
+<label><input type="radio" name="Q46" value="D"> D. Employees spend much of their work time on it.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What did the author's own research find about social media?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. It influences employees9 work negatively.</label>
+<label><input type="radio" name="Q47" value="B"> B. It does much harm to employee loyalty.</label>
+<label><input type="radio" name="Q47" value="C"> C. It kills employees9 motivation for work.</label>
+<label><input type="radio" name="Q47" value="D"> D. It affects employers9 decision-making.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What did the author find in his study about the effect of online social interactions?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. It differs from employee to employee.</label>
+<label><input type="radio" name="Q48" value="B"> B. It tends to vary with the platform used.</label>
+<label><input type="radio" name="Q48" value="C"> C. It has much to do with whom employees interact with.</label>
+<label><input type="radio" name="Q48" value="D"> D. It is hard to measure when employees interact with outsiders.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What problem was found with employees using social media for work?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. They seldom expressed their inner thoughts.</label>
+<label><input type="radio" name="Q49" value="B"> B. Most of them explored new job opportunities.</label>
+<label><input type="radio" name="Q49" value="C"> C. They were reluctant to collaborate with others.</label>
+<label><input type="radio" name="Q49" value="D"> D. Many of them ended with lower productivity.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What does the author suggest managers do to neutralize the retention risk?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Give promotions to employees for their accomplishments. 2021年12月英语四级真题第2 套第5 页共7 页</label>
+<label><input type="radio" name="Q50" value="B"> B. Create opportunities for employees to share success stories.</label>
+<label><input type="radio" name="Q50" value="C"> C. Acknowledge employees9 achievements through social media.</label>
+<label><input type="radio" name="Q50" value="D"> D. Encourage employees to increase their visibility on social media. Passage Two Questions 51 to 55 are based on the following passage. In the coming era of budget cuts to education, distance learning could become the norm. The temptation for those in charge of education budgets to trade teachers for technology could be so strong that they ignore the disadvantages of distance learning. School facilities are expensive to build and maintain, and teachers are expensive to employ. Online classes do not require buildings and each class can host hundreds of people simultaneously, resulting in greater savings, thus increasing the temptation of distance education for those concerned more about budgets than learning. But moving away from a traditional classroom in which a living, breathing human being teaches and interacts with students daily would be a disaster. Physically attending school has hidden benefits: getting up every morning, interacting with peers, and building relationships with teachers are essential skills to cultivate in young people. Moreover, schools should be more than simple institutions of traditional learning. They are now places that provide meals. They are places where students receive counseling and other support. Those policy-makers are often fascinated by the latest technology in education and its potential to “transform“ education overnight. But online education does not allow a teacher to keep a struggling student after class and offer help. Educational videos may deliver academic content, but they are unable to make eye contact or assess a student's level of engagement. Distance education will never match the personal teaching in a traditional classroom. In their first 18 years of life, American children spend only 9% of their time in school. Yet teachers are expected to prepare them to be responsible citizens, cultivate their social skills, encourage successful time management, and enhance their capacity to flourish in an increasingly harsh labor market. Given these expectations, schools should not become permanently “remote”. The power of the classroom is rooted in the humanity of the people gathered in the same place, at the same time. Personal teaching is about teachers showing students a higher path, and about young people going through the process together. Technology, no matter how advanced, should simply be a tool of a good teacher.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What mainly accounts for the possibility that distance learning could become the norm?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. Advances in education technology.</label>
+<label><input type="radio" name="Q51" value="B"> B. Shrinking financial resources.</label>
+<label><input type="radio" name="Q51" value="C"> C. Shortage of school facilities.</label>
+<label><input type="radio" name="Q51" value="D"> D. Lack of qualified teachers. 2021年12月英语四级真题第2 套第6 页共7 页</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What does the author say is one possible benefit of students attending school physically?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. Developing the habit of getting up early.</label>
+<label><input type="radio" name="Q52" value="B"> B. Eating nutritionally well-balanced meals.</label>
+<label><input type="radio" name="Q52" value="C"> C. Growing into living and breathing human beings.</label>
+<label><input type="radio" name="Q52" value="D"> D. Cultivating relationships with peers and teachers.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What does the author think of the latest technology in education?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. It may have potential disadvantages.</label>
+<label><input type="radio" name="Q53" value="B"> B. It may render many teachers jobless.</label>
+<label><input type="radio" name="Q53" value="C"> C. It may add to students5 financial burden.</label>
+<label><input type="radio" name="Q53" value="D"> D. It may revolutionize classroom teaching.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>What does the author say teachers are expected to do?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. Enhance students9 leadership capacity.</label>
+<label><input type="radio" name="Q54" value="B"> B. Elevate students to managerial positions.</label>
+<label><input type="radio" name="Q54" value="C"> C. Enable students to adapt to the changes in life.</label>
+<label><input type="radio" name="Q54" value="D"> D. Prepare students to be competitive in the future.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>Why couldn't technology replace a good teacher?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. It lacks humanity.</label>
+<label><input type="radio" name="Q55" value="B"> B. It is still immature.</label>
+<label><input type="radio" name="Q55" value="C"> C. It cannot track students9 growth.</label>
+<label><input type="radio" name="Q55" value="D"> D. It cannot cater to personal needs. Part IV Translation (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 从前有个人养了一群羊。一天早上他准备出去放羊，发现少了一只。他仔细一看，看到 羊栏(sheepfold)上有个窟窿。显然，夜间有狼钻进羊圈叼走了羊。 邻居劝他修羊栏，可是他不听。 第二天，他发现狼又通过窟窿叼走一只羊。他想起邻居的话，就赶快堵上窟窿，把羊栏补 好。此后，他的羊再也没有被狼叼走。 故事告诉我们:出了问题及时补救，可以防止蒙受更大损失。 2021年12月英语四级真题第2 套第7 页共7 页</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

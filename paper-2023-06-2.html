@@ -1,174 +1,511 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2023年6月 第2套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2023年6月 第2套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2023-06-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2023年6月 第1套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2023-06-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2023年6月 第3套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2023%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2023%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2023%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2023%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2023年6月 第2套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2023.06英语四级真题第2套 · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2023.06英语四级真题第2套</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A) A man was bitten by a snake.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="C"> C. A man kept a 4-foot snake as a pet.</label>
+<label><input type="radio" name="Q1" value="B"> B. A man was taken to a hospital.</label>
+<label><input type="radio" name="Q1" value="D"> D. A man fell off his toilet seat.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A) Where the snake had been taken.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="C"> C. How the snake was captured.</label>
+<label><input type="radio" name="Q2" value="B"> B. Whether the snake was infected.</label>
+<label><input type="radio" name="Q2" value="D"> D. Who owned the snake. Questions 3 and 4 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A) Taking her trash out in fancy dresses.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="C"> C. Sharing her photos with famous movie stars.</label>
+<label><input type="radio" name="Q3" value="B"> B. Amusing herself by going to ball parties.</label>
+<label><input type="radio" name="Q3" value="D"> D. Posting her daughter's photos on social media.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A) To make herself popular.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="C"> C. To please her daughter.</label>
+<label><input type="radio" name="Q4" value="B"> B. To amuse people.</label>
+<label><input type="radio" name="Q4" value="D"> D. To record her achievements. Questions 5 to 7 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A) Eat as much as they want for $10.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="C"> C. Have a meal even if they have no money.</label>
+<label><input type="radio" name="Q5" value="B"> B. Have a chance of winning a $ 100 prize.</label>
+<label><input type="radio" name="Q5" value="D"> D. Get a free meal after answering some questions.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A) It was brought up by two staffers.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="C"> C. It originated from a donation to her staff.</label>
+<label><input type="radio" name="Q6" value="B"> B. It helped to popularize her restaurant.</label>
+<label><input type="radio" name="Q6" value="D"> D. It was suggested by some of her customers.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A) Fifty customers have offered donations.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="C"> C. Many people have come to eat at the restaurant.</label>
+<label><input type="radio" name="Q7" value="B"> B. More people have been giving than taking.</label>
+<label><input type="radio" name="Q7" value="D"> D. Most staffers have received messages of kindness. Section B Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversations and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the center. Questions 8 to 11 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A) He is a psychologist.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="C"> C. He is a host for a TV program.</label>
+<label><input type="radio" name="Q8" value="B"> B. He is a famous writer.</label>
+<label><input type="radio" name="Q8" value="D"> D. He is a primary school teacher.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A) Why social media accounts vanish without a trace.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. Why parents raise their children in different ways.</label>
+<label><input type="radio" name="Q9" value="C"> C. Why people fail to respond to emails promptly. 2023 年6 月四级真题第2 套  第2 页，共8 页</label>
+<label><input type="radio" name="Q9" value="D"> D. Why friends break off contact all of a sudden.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A) They simply shut themselves down.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="C"> C. They scream to get their parents back.</label>
+<label><input type="radio" name="Q10" value="B"> B. They avoid showing their emotions.</label>
+<label><input type="radio" name="Q10" value="D"> D. They attempt to ignore the whole situation.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A) They may regard any difference as the end of a relationship.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. They are on better terms with friends and romantic partners.</label>
+<label><input type="radio" name="Q11" value="C"> C. They try to express their feelings and thoughts effectively.</label>
+<label><input type="radio" name="Q11" value="D"> D. They attach more value to their relationships with others. Questions 12 to 15 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A) Their price.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="C"> C. Their quality.</label>
+<label><input type="radio" name="Q12" value="B"> B. Their color.</label>
+<label><input type="radio" name="Q12" value="D"> D. Their design.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A) Jeans are a typical American garment.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. . America makes the best-known brands of jeans.</label>
+<label><input type="radio" name="Q13" value="C"> C. America has the best weaving tools in the world.</label>
+<label><input type="radio" name="Q13" value="D"> D. Jeans are available in a greater variety in America.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A) They are artificial.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="C"> C. They are unique.</label>
+<label><input type="radio" name="Q14" value="B"> B. They are natural.</label>
+<label><input type="radio" name="Q14" value="D"> D. They are special.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A) They are for casual wearing.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="C"> C. They are much too pricey.</label>
+<label><input type="radio" name="Q15" value="B"> B. They are popular with boys.</label>
+<label><input type="radio" name="Q15" value="D"> D. They are worth the price. Section C Directions: In this section, you will hear three passages. At the end of each passage, you will hear three or four questions. Both the passages and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D).  Then mark the corresponding letter on Answer Sheet 1 with a single line through the center. Questions 16 to 18 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A) He desires more in life.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="C"> C. He feels as inspired as other audience members.</label>
+<label><input type="radio" name="Q16" value="B"> B. He wants to see it again.</label>
+<label><input type="radio" name="Q16" value="D"> D. He longs to become a superstar himself.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A) It is rather unrealistic.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="C"> C. It is somewhat complicated.</label>
+<label><input type="radio" name="Q17" value="B"> B. It is extremely artistic.</label>
+<label><input type="radio" name="Q17" value="D"> D. It is relatively predictable.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A) They are biased against women.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="C"> C. They are full of shootings.</label>
+<label><input type="radio" name="Q18" value="B"> B. They are basically misleading.</label>
+<label><input type="radio" name="Q18" value="D"> D. They are too simple. Questions 19 to 21 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A) It can highlight leadership.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="C"> C. It is a means to inspire creative thinking.</label>
+<label><input type="radio" name="Q19" value="B"> B. It can help connect people.</label>
+<label><input type="radio" name="Q19" value="D"> D. It is an intuitive way to solidify friendship.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A) Allow them to recite data points.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="C"> C. Enable them to remember the main idea.</label>
+<label><input type="radio" name="Q20" value="B"> B. Make them more open to learning.</label>
+<label><input type="radio" name="Q20" value="D"> D. Stimulate them to engage in discussions.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A) Inspire listeners' imagination.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="C"> C. Convey fundamental values.</label>
+<label><input type="radio" name="Q21" value="B"> B. Enrich their own experience.</label>
+<label><input type="radio" name="Q21" value="D"> D. Explain insightful ideas. Questions 22 to 25 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A) Immigrants outnumber U.S.-born Americans.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. Immigrants have been contributing to the U.S.</label>
+<label><input type="radio" name="Q22" value="C"> C. Another wave of immigrants is hitting the U.S.</label>
+<label><input type="radio" name="Q22" value="D"> D. The number of immigrants to the U.S. is declining.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A) More of them expect their children to succeed in business.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. They have fewer chances to be hired by U.S. companies. 2023 年6 月四级真题第2 套  第3 页，共8 页</label>
+<label><input type="radio" name="Q23" value="C"> C. They have founded most Fortune 500 companies.</label>
+<label><input type="radio" name="Q23" value="D"> D. More of them are successful business people.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A) They have higher installment loan debt than native-born Americans.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. Nineteen percent of them borrow money from friends and family.</label>
+<label><input type="radio" name="Q24" value="C"> C. Their level of debt is lower than that of native-born Americans.</label>
+<label><input type="radio" name="Q24" value="D"> D. Thirty-four percent of them use credit for their daily purchases.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A) Keep their traditional values and old habits. C) Borrow money from financial institutions.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. Find employment in competitive businesses. D) Collaborate with native-born Americans. Part III Reading Comprehension (40 minutes) Section A Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once. Morocco is responding to increasing energy demands by setting up one of the largest solar plants in the world. The Noor solar power station is ___26___ in the city of Ouarzazate and, once completed, will generate 580 million watts of electricity. The World Bank estimates it will serve 1.1 million people. It's ___27___ to be completed soon. Morocco's current energy comes ___28___ from imports. The nation hopes to get 50 percent of its energy from renewable sources by 2030. With demand for energy ___29___ at an annual rate of 7 percent, the new solar plant could be a ___30___ part of that goal. "This makes Morocco a big ___31___ in the field of solar energy in the Arab region and the African continent. It could also be a forerunner for many other countries in the world that ___32___ on foreign imports of energy," said Ali Hajji, a solar energy specialist and engineering professor. Experts believe that the Middle East and North Africa have huge ___33___ for solar energy projects. This is partly because of adequate sunlight and partly because technology has become more ___34___ in the region. "The last few years have seen a realization of ___35___ how competitive solar technologies can be," said Michael Taylor, a senior analyst at the International Renewable Energy Agency.</label>
+<label><input type="radio" name="Q25" value="A"> A. affordable I) mostly</label>
+<label><input type="radio" name="Q25" value="B"> B. ancestor J) operating</label>
+<label><input type="radio" name="Q25" value="C"> C. crucial K) perhaps</label>
+<label><input type="radio" name="Q25" value="D"> D. depend L) pioneer E) initial M) potential F) insist N) rising G) just O) scheduled H) located 2023 年6 月四级真题第2 套  第4 页，共8 页 Section B Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by making the corresponding letter on Answer Sheet 2. New Formula One Chief Hopes to Grab Americans' Attention</label>
+<label><input type="radio" name="Q25" value="A"> A. For the past four decades, the leader of Formula One car racing, one of the biggest annual sporting series in the world, was Bernie Ecclestone, a former motorcycle parts dealer who built it into an international presence essentially on his own.</label>
+<label><input type="radio" name="Q25" value="B"> B. A skilled backroom operator who speaks without a filter, Ecclestone said often that in his opinion, the sport was at its best when he was allowed to act as "a dictator.”</label>
+<label><input type="radio" name="Q25" value="C"> C. Yet now the dictator is gone. After an American company, Liberty Media, acquired the Formula One competition recently, Chase Carey—a former executive with Fox Broadcasting Company and DirecTV who by his own admission is not a fierce racing fan—was named to replace Ecclestone and to try to renovate the organization's management, reach and ambition.</label>
+<label><input type="radio" name="Q25" value="D"> D. Among the goals, Carey said in an interview on Tuesday, is one that just about every global sport seems interested in chasing: increasing interest in the United States. "People have said we're going to "Americanize' it," Carey said. "And we're not going to do that totally. But realistically, there are some elements of Americanization that the sport could use." E) While Formula One commands enormous audiences throughout much of the world, many American sports fans know it as that other motorsport, the one that is not Nascar (纳斯卡车赛). Formula One teams race far more technologically advanced vehicles around tracks all over the world-in magnificent events in places like Malaysia, Monaco, Singapore and the United Arab Emirates, and on tradition-rich tracks like Silverstone in England and Monza in Italy too. F) The series has an annual race in Austin, Texas. But within "a few years," Carey said, he plans to bring another to a destination American city, like New York, Los Angeles, Miami or Las Vegas. Carey's ambitious plan is two-fold: first, change the business model of Formula One, which he said was a "one-man show" under Ecclestone that had a largely narrow vision when it came to negotiating partnership deals; and second, alter the way fans experience the sport, both in person and remotely, so that connections between the audience and people within the series are easier to make. G) Increased digital access for fans, a more behind-the-scenes experience for broadcast viewers and innovation in areas like virtual reality-what is it like to speed around a track inside a Ferrari?-are among the possibilities. "The sport has clearly been underserved," Carey said. "It doesn't do anything digitally. There's no marketing. It doesn't tell any stories. The goal in this is to make the fans connect to the live experience as much as possible, and the tools you have to do that, we're not using at all." H) The larger question, though, is a familiar one: Is there room for Formula One in the ever-crowded sports landscape of the United States? Opinions vary, particularly because viewing habits among consumers continue to evolve. John Bloom, a professor at Shippensburg University who has studied American sports history, said the biggest challenge for any sport trying to increase its presence in the United States was framing itself in a way that had lasting appeal. "Sports generally become popular in some way because they establish a narrative," Bloom said. "When I think of motorsports in the U.S., what we all 2023 年6 月四级真题第2 套  第5 页，共8 页 think of is Nascar, and the narrative of Nascar is sort of rural, white, working-class Americans, mostly in the South, connecting with the atmosphere of those races. That's the narrative. When I think of the narrative of Formula One, it's a very different kind of audience." I) That difference, Carey said, is significant. While some might immediately link Formula One to Nascar in terms of American growth, Carey said Formula One's brand research had indicated there was very little crossover; rather, Formula One fans generally cite other so-called elite events, like Wimbledon or the Ryder Cup, as competitions they enjoy. "Other than they're both cars, the Nascar fan base is a very different fan base," Carey said. "It's a very regional fan base. Formula One is a global, famous brand of stars. These are machines that shock and awe you." J) Carey's background is in deal making and innovation. At Fox Broadcasting Company, he was a top advisor for years, known for his skill in helping to lead the launch of the company into sports, as well as the start of Fox News Channel. After going to DirecTV, he positioned the satellite provider as a mainstream option in millions of households. K) Now, after Liberty Media paid $4.4 billion to acquire Formula One, he is charged with making the investment pay off. "I think they can build Formula One in the U.S.," said Patrick Crakes, an executive at In Vivo Media Group who spent 25 years at Fox Broadcasting Company before leaving in 2016 as a senior manager at Fox Sports. "People don't work on their cars anymore. They don't want that connection anymore. It's about technology and pushing the limits. It's about speed, danger and risk. And Formula One has that more than any other racing series." L) That is what hooked Carey, and he said he thought his experience was not unusual. He recalled attending Formula One's Monaco race last year and being overwhelmed by the ceremony leading up to the event, the way the race charmed the city for days ahead of the start. In his mind, it felt like a Super Bowl （超 级碗橄榄球赛). M) Then, on race day, he watched as the cars rocketed out of a tunnel and went screaming toward a tight turn with the city's harbor and the Mediterranean Sea in the background framing the scene. He was fascinated. "You can't help but be awed," he said, "and I think that feeling can be translated to the viewer." N) He added: "The broader sport is a little too inward-looking, and we need to be more open. In some ways, I'm glad to be coming from the outside. The guys who are in the sport forever are sitting there saying: 'We can't do that. We can't do that because it's never been done that way.""</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>Chase Carey believes greater use should be made of digital technology to make Formula One more accessible to its fans.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Chase Carey was deeply impressed by the ceremony preceding last year's Monaco race.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>One of Chase Carey's goals is to make Formula One more appealing to Americans.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>A former motorbike parts dealer led Formula One for the past forty years.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Chase Carey thought the audience of Formula One could be made to share his feeling about the race.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Chase Carey used to serve as a top advisor for a major broadcasting company.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>Chase Carey intends to make connections easier between the audience and the Formula One racers.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>The new leader of Formula One admitted he was not super interested in car racing.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>People's opinions differ as to whether Formula One can be promoted in the U.S.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>Compared with other racing series, Formula One focuses more on speed and involves more danger. 2023 年6 月四级真题第2 套  第6 页，共8 页 Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A),B),C)and D).You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. Supermarkets have long been suffering as one of the thinnest-margined businesses in existence and one of the least-looked-forward-to places to work or visit. For more than a decade, they have been under attack from e-commerce giants, blamed for making Americans fat, and accused of contributing to climate change. Supermarkets can technically be defined as giants housing 15,000 to 60,000 different products. The revolutionary idea of a self-service grocery, where people could hunt and gather food from aisles rather than asking a clerk to fetch items from behind a counter, first came about in America. There is some debate about which was the very first, but over the years a consensus has built around King Kullen Supermarket, founded in New York in 1930. For some 300 years, Americans had fed themselves from small stores and public markets. Shopping for food involved mud, noisy chickens, clouds of flies, nasty smells, bargaining, and getting short-changed. The supermarket imitated the Fordist factory, with its emphasis on efficiency and standardization, and reimagined it as a place to buy food. Supermarkets may not feel cutting-edge now, but they were a revolution in distribution at the time. They were such strange marvels that, on her first official state visit to the United States in 1957, Queen Elizabeth II insisted on an impromptu (即兴的)tour of a suburban-Maryland Giant Food. The typical supermarket layout has barely changed over the past 90 years. Most stores open with flowers, fruit and vegetables at the front as a breath of freshness to arouse our appetite. Meanwhile, they keep the milk, eggs, and other daily basics all the way back so you'll travel through as much of the store as possible, and be tempted along the way. In the early days, as the supermarket multiplied, so did our suspicion of it. We have long feared that this "revolution in distribution" uses corporate black magic on our appetite. The book The Hidden Persuaders, published in 1957, warned that supermarkets were putting women in a "hypnoidal trance (催眠恍惚状态)," causing them to wander aisles bumping into boxes and "picking things off shelves at random."</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What problem have supermarkets been facing?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. They are actually on the way to bankruptcy.</label>
+<label><input type="radio" name="Q46" value="C"> C. They are forced to use e-commerce strategies.</label>
+<label><input type="radio" name="Q46" value="B"> B. They have been losing customers and profits.</label>
+<label><input type="radio" name="Q46" value="D"> D. They have difficulty adapting to climate change.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What does the passage say about the idea of a self-service grocery?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. It was put forward by King Kullen.</label>
+<label><input type="radio" name="Q47" value="C"> C. It has been under constant debate.</label>
+<label><input type="radio" name="Q47" value="B"> B. It originated in the United States.</label>
+<label><input type="radio" name="Q47" value="D"> D. It proves revolutionary even today.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What did supermarkets do by adopting the Fordist factory approach?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. They modernized traditional groceries in many ways.</label>
+<label><input type="radio" name="Q48" value="B"> B. They introduced cutting-edge layout of their stores.</label>
+<label><input type="radio" name="Q48" value="C"> C. They improved the quality of the food they sold. 2023 年6 月四级真题第2 套  第7 页，共8 页</label>
+<label><input type="radio" name="Q48" value="D"> D. They revolutionized the distribution of goods.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What is the typical supermarket layout intended to do?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. Arouse customers' appetite to buy flowers, fruit and vegetables.</label>
+<label><input type="radio" name="Q49" value="B"> B. Provide customers easy access to items they want to buy.</label>
+<label><input type="radio" name="Q49" value="C"> C. Induce customers to make more unplanned purchases.</label>
+<label><input type="radio" name="Q49" value="D"> D. Enable customers to have a more enjoyable shopping experience.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What have people long feared about supermarkets?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. They use tricky strategies to promote their business.</label>
+<label><input type="radio" name="Q50" value="B"> B. They are going to replace the local groceries entirely.</label>
+<label><input type="radio" name="Q50" value="C"> C. They apply corporate black magic to the goods on display.</label>
+<label><input type="radio" name="Q50" value="D"> D. They take advantage of the weaknesses of women shoppers. Passage Two Questions 51 to 55 are based on the following passage. The traditional school year, with three months of vacation every summer, was first implemented when America was an agricultural society and the summer months were needed for farm work. Since then, we've completely changed as a nation. Students no longer spend summers farming, but they aren't in school, either. The average American student receives 13 weeks off from school each calendar year-with about 11 of those during the summer. Few other countries have more than seven weeks off in a school calendar. With the U.S. lagging behind other countries in academics, it's time to consider year-round schooling. One benefit of this change is that students will not fall victim to the "summer slide," or the well-documented phenomenon where students forget some of the knowledge they have acquired when too much time is taken off from school. Decades of research shows that it can take from 8 to 13 weeks at the beginning of every school year for students to get back to where they were before the summer holiday. But year-round schooling isn't just about academics. Teachers and students experience a closer relationship in year-round schools than they do in traditional schools and, in the absence of any long-term break, students do not feel detached from the school environment. These closer bonds and greater attachment pay off. Research shows that students in year-round schools are more self-confident and feel more positive about their schooling experience. But don't kids need time to relax? Some childhood development experts believe that time off from school is vital to healthy development as kids are not designed to spend so much of their time inside classrooms and the summer break provides a perfect opportunity to get outside. The problem with this argument is that most children aren't playing outside or even spending time with other kids. While some children visit summer camps, most stay at home, watching TV or playing games on electronic devices, which hardly benefits them. The U.S. has changed from a farming economy to a knowledge- and innovation-based economy, so it makes sense for the school year to change as well.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>Why did America's traditional school year have a three-month summer vacation?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. Students needed to help with farm work.</label>
+<label><input type="radio" name="Q51" value="B"> B. Students needed time to learn necessary farming skills. 2023 年6 月四级真题第2 套  第8 页，共8 页</label>
+<label><input type="radio" name="Q51" value="C"> C. The agricultural society then attached less importance to academics.</label>
+<label><input type="radio" name="Q51" value="D"> D. America lagged behind other countries in making a scientific school calendar.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What benefit will year-round schooling bring students in addition to improving their learning?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. It will help them get back to where their lessons started.</label>
+<label><input type="radio" name="Q52" value="B"> B. It will enable them to absorb what they have learned.</label>
+<label><input type="radio" name="Q52" value="C"> C. It will familiarize them with the school environment.</label>
+<label><input type="radio" name="Q52" value="D"> D. It will strengthen their relationship with teachers.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What do some childhood development experts believe about the long summer vacation?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. It meets students' need to study on their own.</label>
+<label><input type="radio" name="Q53" value="B"> B. It enables students to learn about the outside world.</label>
+<label><input type="radio" name="Q53" value="C"> C. It satisfies students' desire to stay longer at home.</label>
+<label><input type="radio" name="Q53" value="D"> D. It contributes to students' healthy growth.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>What is the argument against the experts' idea of a long summer vacation?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. It does little good to most students.</label>
+<label><input type="radio" name="Q54" value="B"> B. It benefits few students playing outside.</label>
+<label><input type="radio" name="Q54" value="C"> C. It leads students to neglect their studies.</label>
+<label><input type="radio" name="Q54" value="D"> D. It makes students addicted to computer games.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What does the author think of the traditional school year in the U.S. today?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. Well-grounded.</label>
+<label><input type="radio" name="Q55" value="C"> C. Outdated.</label>
+<label><input type="radio" name="Q55" value="B"> B. Culture-bound.</label>
+<label><input type="radio" name="Q55" value="D"> D. Welcomed. Part IV   Translation (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 改革开放40 多年以来,中国政府对高等教育越来越重视,高等教育已经进入稳步发展阶段。 高校学生总数已接近4,700 万人,位居世界第一。随着我国经济的快速发展,人民生活水平不断提 高,越来越多的人渴望接受高等教育。我国高校的数量和学科专业持续增加,招生人数逐年上升, 教学质量也在不断改进,为更多年轻人创造了接受高等教育的机会。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

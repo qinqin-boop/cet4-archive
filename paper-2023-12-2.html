@@ -1,174 +1,507 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2023年12月 第2套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2023年12月 第2套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2023-12-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2023年12月 第1套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2023-12-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2023年12月 第3套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2023%E5%B9%B412%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2023%E5%B9%B412%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2023%E5%B9%B412%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2023%E5%B9%B412%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2023年12月 第2套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2023年12月（第2套） · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2023年12月（第2套）</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A) He noticed the driver was too young to drive.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="B"> B. He found there was no one sitting at the wheel.</label>
+<label><input type="radio" name="Q1" value="C"> C. He thought something must be wrong with the driver.</label>
+<label><input type="radio" name="Q1" value="D"> D. He saw the driver changing lanes much too frequently.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A) Buy a sports car.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="B"> B. Drive across town.</label>
+<label><input type="radio" name="Q2" value="C"> C. Leave California.</label>
+<label><input type="radio" name="Q2" value="D"> D. Visit his sister. Questions 3 and 4 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A) How they change the way we shop.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="B"> B. How they alter human skeletons.</label>
+<label><input type="radio" name="Q3" value="C"> C. How they cause increased headaches.</label>
+<label><input type="radio" name="Q3" value="D"> D. How they affect our communication.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A) It loosens.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="B"> B. It brightens.</label>
+<label><input type="radio" name="Q4" value="C"> C. It hardens.</label>
+<label><input type="radio" name="Q4" value="D"> D. It softens. Questions 5 to 7 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A) Create Internet pages for him.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="B"> B. Ask a local pet shop to adopt him.</label>
+<label><input type="radio" name="Q5" value="C"> C. Name an orange tree after him.</label>
+<label><input type="radio" name="Q5" value="D"> D. Hold a birthday party for him.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A) He is a bold and aggressive pet.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="B"> B. He pays regular visits to village shops.</label>
+<label><input type="radio" name="Q6" value="C"> C. He once bit a doctor’s receptionist.</label>
+<label><input type="radio" name="Q6" value="D"> D. He likes to sit on the hairdresser’s chair.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A) He is fond of luxury cat food.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="B"> B. He likes to stay in villagers’ houses.</label>
+<label><input type="radio" name="Q7" value="C"> C. He knows everybody in the village.</label>
+<label><input type="radio" name="Q7" value="D"> D. He often seeks food around her pub. Section B Directions: In this section, you will hear two long conversations. At the end of each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A），B），C)and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 8 to 11 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A) Who to order the food.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="B"> B. Whether to have sandwiches.</label>
+<label><input type="radio" name="Q8" value="C"> C. When to go for their meal.</label>
+<label><input type="radio" name="Q8" value="D"> D. Where to have their lunch.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A) In the shopping center nearby.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. In the expensive Italian style diner.</label>
+<label><input type="radio" name="Q9" value="C"> C. At the Sandwich Place on Camden Street.</label>
+<label><input type="radio" name="Q9" value="D"> D. At the American restaurant they frequent.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A) There is to be a conference call.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="B"> B. She has to meet with her boss then.</label>
+<label><input type="radio" name="Q10" value="C"> C. There will be crowds of people waiting for her.</label>
+<label><input type="radio" name="Q10" value="D"> D. She will have a photo taken with Brigette Clark.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A) She doesn’t deem homemade soup tasty.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. She doesn’t think his wife cooks well.</label>
+<label><input type="radio" name="Q11" value="C"> C. She feels Jeremy would rather dine out.</label>
+<label><input type="radio" name="Q11" value="D"> D. She has found the soup smells terrible. Questions 12 to 15 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A) A landlady.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="B"> B. A waitress.</label>
+<label><input type="radio" name="Q12" value="C"> C. A receptionist.</label>
+<label><input type="radio" name="Q12" value="D"> D. A saleswoman.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A) He was involved in a terrible car accident last April.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. He has much difficulty getting up and down stairs.</label>
+<label><input type="radio" name="Q13" value="C"> C. He is expected to undergo a knee operation.</label>
+<label><input type="radio" name="Q13" value="D"> D. He prefers to stay next door to the children.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A) To please his parents-in-law.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="B"> B. To find the best trip for his kids.</label>
+<label><input type="radio" name="Q14" value="C"> C. To satisfy his curiosity.</label>
+<label><input type="radio" name="Q14" value="D"> D. To compare prices.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A) Visit a local art gallery.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="B"> B. Go on a boat trip.</label>
+<label><input type="radio" name="Q15" value="C"> C. Take some photos of the islands.</label>
+<label><input type="radio" name="Q15" value="D"> D. Try her hand-made clothing. Section C Directions: In this section, you will hear three passages. At the end of each passage, you will hear three or four questions. Both the passage and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 16 to 18 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A) They are more intelligent than many of us.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="B"> B. They have already become our new friends.</label>
+<label><input type="radio" name="Q16" value="C"> C. They have begun to affect our social behavior.</label>
+<label><input type="radio" name="Q16" value="D"> D. They play increasingly more important roles.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A) Whether it might have any effect on the way we negotiate.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="B"> B. Whether it might actually outperform human negotiators.</label>
+<label><input type="radio" name="Q17" value="C"> C. Whether it can facilitate business transactions.</label>
+<label><input type="radio" name="Q17" value="D"> D. Whether it can speed up legal procedures.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A) Choose to be tough.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="B"> B. Sympathize with their opponent.</label>
+<label><input type="radio" name="Q18" value="C"> C. Use deceptive strategies.</label>
+<label><input type="radio" name="Q18" value="D"> D. Appear to be pleasant. Questions 19 to 21 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A) They were perceived differently by some academics.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="B"> B. They still existed six months after the course ended.</label>
+<label><input type="radio" name="Q19" value="C"> C. They varied greatly among the course participants.</label>
+<label><input type="radio" name="Q19" value="D"> D. They were only measurable within seven weeks.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A) They can be easily seen among participants in a healthy weight range.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="B"> B. They should be attributed to participants’ change in diet behaviors.</label>
+<label><input type="radio" name="Q20" value="C"> C. They are linked to cooking confidence and cooking satisfaction.</label>
+<label><input type="radio" name="Q20" value="D"> D. They actually result from eating more fruits and vegetables.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A) Gender.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="B"> B. Confidence.</label>
+<label><input type="radio" name="Q21" value="C"> C. Health.</label>
+<label><input type="radio" name="Q21" value="D"> D. Practice. Questions 22 to 25 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A) It keeps others away.      C) It remains visible.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. It causes discomfort.       D) It varies in size.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A) It makes us feel uncomfortable.          C) It brings the acquaintance closer to us.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. It renders the acquaintance a stranger.      D) It causes the bubble around us to vanish.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A) In personal space.               C) Within a distance of 18 inches.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. In social space.                 D) Over 2 feet away from one another.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A) When we begin to feel fear.         C) When we are 3 or 4 years old.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. When we develop a sense of space.   D) When we enter our teens. Part III                   Reading Comprehension                 (40 minutes) Section A Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list of choices given in a word bank following the passage. Read the passage through carefully before making your choices. Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any of the words in the bank more than once．</label>
+<label><input type="radio" name="Q25" value="A"> A. number of studies have looked at how family life can affect productivity and satisfaction in the workplace. However, there has been   26    little research on the influence of leisure activities. So Ciara Kelly and colleagues recruited 129 hobbyists to look at how the time spent on their hobbies   27    their work life. The researchers found that when participants spent longer than   28    on their leisure activity, their belief in their ability to perform their job was strengthened. But this was only the 29    when they had a serious hobby that was dissimilar to their job, or when their hobby was similar to their work but they only did it   30    . When their hobby was both serious and similar to their job, then spending more time on it actually decreased their work   31   . Why might that be? To maintain a serious hobby, people need to invest significant psychological resources, say the authors—so if the activity has the same kinds of demands as their work, they may be left   32    and unable to perform well at their job. But if their hobby is quite different from their career, it may not   33    in the same way but instead help them develop other knowledge and skills that can   34    their confidence at work. “Consider a scientist who is a keen rock climber,” says Kelly. “Since climbing is so far   35    from their day-to-day work activities, they can still recover from the demands of their job with plenty of resources.” Section B</label>
+<label><input type="radio" name="Q25" value="A"> A. boost            F) exhausted                 K) relative</label>
+<label><input type="radio" name="Q25" value="B"> B. case             G) faculty                   L) removed</label>
+<label><input type="radio" name="Q25" value="C"> C. casually          H) interfere                  M) scratch</label>
+<label><input type="radio" name="Q25" value="D"> D. efficiency         I) normal                   N) shaped E) estate             J) prevalent                 O) surprisingly Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one of the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. More fathers are taking paternity leave, but mothers are still doing all the work</label>
+<label><input type="radio" name="Q25" value="A"> A. Attitudes towards paternity leave (陪产假) have drastically changed in America in the last five years as more fathers feel comfortable taking extended time off, but gender bias persists when it comes to career prospects and the home, according to a new study of working parents.</label>
+<label><input type="radio" name="Q25" value="B"> B. Research by the Boston College Center for Work & Family, which surveyed new parents at four large US companies who were qualified for taking at least six weeks paid parental leave, found that 81% of the 1,240 employees surveyed said the notion of fathers taking leave has become more acceptable.</label>
+<label><input type="radio" name="Q25" value="C"> C. Of those surveyed, 62% of fathers took the maximum amount of time off compared to 93% of mothers, and around three-quarters of workers said their employer was equally supportive of mothers and fathers taking parental leave and over half said leave policies had made workplace culture better.</label>
+<label><input type="radio" name="Q25" value="D"> D. The US is one of only three countries in the world not to offer statutory (法定的) paid leave, but increasingly states and companies are starting to take up the issue. So far, eight states and the District of Columbia have their own paid family leave laws. E) Brad Harrington, executive director of the center and lead author of the study, estimates only 20% to 30% of companies in the US offer paid parental leave. He feels the research findings reflect an obvious change in corporate attitudes to new fathers taking time off. F) “We did a study on paternity leave five years ago. Compared with those findings, these numbers were shocking to me. I did not expect 80% of people to say the organisation finds dads taking this leave acceptable and three-quarters to say it’s equally supportive of women and men taking leave,” Harrington said. G) The previous study found that nearly three-quarters of fathers saw two to four weeks as an appropriate duration for paternity leave and 76% said they would prefer not to take all their time off at once. H) Since then, there have been a number of legal cases against companies involving paternity leave—including cases against JPMorgan Chase and Estée Lauder—which have helped put pressure on companies to make their parental leave policies gender neutral. I) However, the study also shows how traditional gender roles endure both at work, where more women than men reported changes in their perceived career potential, and at home— even among workers who claim to have a strong desire for equality. J) The vast majority of men, 97%, said one of the top reasons to take leave was to share caregiving with their partner. But when they were asked about how caregiving and household tasks were divided, their answers painted a different picture. While about 75% of employees said both genders should give the same amount of care, the majority of men and nearly half of women admitted that in reality the female actually did most of it. A tiny fraction, 2%, of men said they did more of the childcare. K) Men and women’s experiences of the return to work following parental leave were also considerably different. Of the women surveyed, 32% reported a downturn in their job satisfaction, while 14% said it increased. In comparison, 17% of men said their job satisfaction went down and 20% said it went up. Meanwhile, more women reported an increase in their responsibilities and manager expectations after childbirth. Half of the women said they used flexible work arrangements after becoming a parent, while just 27% of men did. Similar percentages of men and women said they enjoyed their careers and that it gave them a sense of achievement, while around half of women and 44% of men said it was a key part of their identity. L) On the subject of career advancement, 59% of women and 49% of men said leave could be limiting and both genders said they feared it would have an impact on their progress long- term. But on opportunity for promotion, more than double the number of women, 30% compared with 15% of men, believed their chances to be lower after becoming a parent. Despite progress, the struggle for women to reach the highest positions of power is demonstrated in this year’s Fortune 500 list, which featured a record 33 female CEOs, but this still represents a tiny fraction of the total. M) Harrington said culture change depends on companies putting more focus on men and their responsibilities. “By that I mean companies need to give men paternity leave and encourage men to take time off to be with their kids early on in the kids’ life. They also need to recognise that men have to make significant adjustments when they become parents. Companies cannot do all these things to enhance women’s advancement and then turn around and say, ‘Oh, but we don’t expect the men to take over for the women at home.’” N) In May, the American Civil Liberties Union (ACLU) and Outten & Golden LLP announced a historic classaction $5m settlement with JPMorgan Chase on behalf of male employees who claim they were illegally denied access to paid parental leave. Derek Rotondo, 35, filed the discrimination charge against his company after he was allegedly told by his HR department that mothers were considered primary caregivers. Thus, they were allowed to take 16 weeks of paid parental leave. Fathers, however, could take just two weeks. O) The father of two from Columbus, Ohio, who still works at the company as an associate and investigator, said he has witnessed a “domino effect (多米诺效应)” across companies since the settlement, but that there is still substantial progress to be made towards changing attitudes towards paternity leave. P) “I do think there’s still some way to go...there’s still going to be sort of the unstated expectation for new dads to essentially come right back to work, but I think the research is showing that’s starting to change.” He said equal parental leave is an essential component to creating gender equality in the workplace. “The old standard of women staying home, having babies and cooking doesn’t apply and hasn’t applied for a long time.”</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>In the absence of Federal legislation, some states in the US have passed laws concerning paid family leave.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Most fathers admitted that even during their paternity leave they actually did much less childcare than the mother.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>According to one father, equal parental leave is indispensable to achieving gender equality in the workplace.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>One survey indicated there is now less objection to paternity leave.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Compared to five years ago, according to one researcher, many more people said their organisation gave the same support to men and women taking parental leave.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>One study finds that even workers who claim to desire gender equality stick to traditional gender roles both at work and at home.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>The majority of workers surveyed said parental leave policies had improved workplace culture.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>In spite of progress, the number of women in top positions of big companies remains extremely small.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>According to one estimate, less than one third of companies in the US provide paid parental leave.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>A number of lawsuits have pressured companies to formulate gender neutral policies on parental leave. Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. Having a rival can keep you committed to achieving your goals and enhance your overall performance. But before you go out and find an entrepreneur to outcompete, it’s important to understand and avoid the traps that often come with rivalry. After all, competitive rivalry can also hinder effective decision-making and increase your willingness to take risks, behaviors that can ultimately hurt your venture’s success. Finding someone you’re committed to outcompeting can be a great way to stay focused on your goals and push your venture to the next level. But when you’re intently focused on outperforming your rivals, you may begin to develop a “win-at-all-costs” mentality that causes you to ignore how you achieve success. One group of researchers, for example, examined the link between rivalry and unethical behavior. They found that when people compete against their rivals, they are more willing to behave unethically to win. But such behavior may stain your reputation and strain relationships important to your success. One way to avoid this trap is to stop and reflect on what’s important. While outperforming your rivals may provide short-term benefits, the loss of your integrity will have long-term consequences. One reason having a rival can enhance your venture’s performance is that it creates a level of excitement that drives you to work harder. But this eagerness to win may also hurt your venture’s success, particularly when it causes you to make impulsive, insensible decisions. But it’s possible to avoid such costly mistakes by making a habit of engaging in critical thinking, such as considering opposing viewpoints and conducting cost-benefit analyses, especially for those decisions that are complex and can determine the future of your venture. The sense of eagerness that comes with having a rival can not only cause you to make poorer decisions, but it can also lead you to take greater risks that put your venture in peril. One way you can overcome the risk-inducing effects of rivalry that stand to endanger your venture’s success is to remain attentive to your emotional state and actively monitor how such feelings are affecting your decision-making.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>How can competitive rivalry benefit entrepreneurs according to the passage?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. By enabling them to outcompete other entrepreneurs.</label>
+<label><input type="radio" name="Q46" value="B"> B. By enabling them to make their venture a success.</label>
+<label><input type="radio" name="Q46" value="C"> C. By helping them to reach long-term goals.</label>
+<label><input type="radio" name="Q46" value="D"> D. By helping them to stay goal-oriented.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What is one of the traps entrepreneurs may often fall into when competing with rivals?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. They may adopt strategies that are bound to ruin their venture.</label>
+<label><input type="radio" name="Q47" value="B"> B. They may resort to unethical means to outperform their rivals.</label>
+<label><input type="radio" name="Q47" value="C"> C. They may be too eager to succeed while ignoring the huge labor cost.</label>
+<label><input type="radio" name="Q47" value="D"> D. They may be intently focused on winning at the current market level.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What are entrepreneurs advised to do to avoid traps that often accompany rivalry?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. Deliberate on what really matters.</label>
+<label><input type="radio" name="Q48" value="B"> B. Prioritize reaping immediate benefits.</label>
+<label><input type="radio" name="Q48" value="C"> C. Estimate the long-term consequences.</label>
+<label><input type="radio" name="Q48" value="D"> D. Reflect on what successes are achievable.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>How can entrepreneurs avoid making impulsive and insensible decisions?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. By engaging themselves in critical reasoning.</label>
+<label><input type="radio" name="Q49" value="B"> B. By developing a habit of keeping their integrity.</label>
+<label><input type="radio" name="Q49" value="C"> C. By criticizing themselves for previous poor performances.</label>
+<label><input type="radio" name="Q49" value="D"> D. By refraining from being too excited about their successes.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>How can entrepreneurs overcome the risk-inducing effects of rivalry?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. By paying close attention to their current performance.</label>
+<label><input type="radio" name="Q50" value="B"> B. By taking steps that stand to endanger their rivals’ success.</label>
+<label><input type="radio" name="Q50" value="C"> C. By monitoring how their decision-making impacts their mentality.</label>
+<label><input type="radio" name="Q50" value="D"> D. By keeping their emotions in check to avoid making poor decisions. Passage Two Questions 51 to 55 are based on the following passage.</label>
+<label><input type="radio" name="Q50" value="A"> A. multitasker is one who can perform two or more tasks effectively at the same time, which—apart from the obvious differences—is similar to what a computer does. The concept does indeed come from the realms of technology, where it is used to refer to an operating system that can execute multiple tasks at the same time. However, the question is: can a person really be a multitasker? For most scientists, the answer is no. So much so that, according to experts in neuroscience (神经系统科学), our brains do not handle multitasking situations well. As soon as two tasks require our attention, productivity suffers. What we call multitasking, therefore, is in reality the ability to move more or less quickly from one task to another. This requires two essential conditions: that one of the tasks needs to be automatic, like walking or eating, and that they both need different mental processes. Answering the phone and writing at the same time, for example. However, on the other side of the coin there are people who maintain that it is possible to be, or at least seem to be, multitasking. A recent study concluded that regardless of whether people are actually handling several tasks or not, the mere fact that they perceive this activity as multitasking has a positive effect on their performance. The business perspective offers a different view: multitasking is understood as the ability to adapt to all types of environment within a company and effectively undertake different activities within a set time frame. Indeed, many companies look for people who are skilled in multitasking to improve their productivity. From this different perspective, you can not only be multitasking but this ability can also be taught: something that is easier in fluid organisations, which favour flexibility in their working practices. The benefits of multitasking are clear. Being quicker and more efficient increases our performance and the number of tasks completed. But having to pay attention to several things at once means that the powers of concentration are reduced and that can lead to more mistakes.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What does a “multitasker” originally refer to?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. An operating system capable of doing several tasks at once.</label>
+<label><input type="radio" name="Q51" value="B"> B. A skilled worker executing more than one task at the same time.</label>
+<label><input type="radio" name="Q51" value="C"> C. A sophisticated technology doing several tasks effectively at once.</label>
+<label><input type="radio" name="Q51" value="D"> D. An efficient person able to perform multiple tasks at the same time.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>Why can’t people really be multitaskers according to neuroscientists?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. They are not sufficiently exposed to multitasking situations.</label>
+<label><input type="radio" name="Q52" value="B"> B. They are not comparable to mechanical operating systems.</label>
+<label><input type="radio" name="Q52" value="C"> C. Their brains do not allow them to multitask.</label>
+<label><input type="radio" name="Q52" value="D"> D. Their attention span cannot be expanded.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What do we learn from the conclusion of a recent study on multitasking?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. People make greater achievements by maintaining whatever they are doing is multitasking.</label>
+<label><input type="radio" name="Q53" value="B"> B. People’s performance benefits from the perception of what they are doing as multitasking.</label>
+<label><input type="radio" name="Q53" value="C"> C. People’s active mental processes exert a positive effect on their multitasking.</label>
+<label><input type="radio" name="Q53" value="D"> D. People can improve their capabilities by handling multitasking situations.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>How does the business world view multitasking?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. It is a rare skill often found in fluid organisations.</label>
+<label><input type="radio" name="Q54" value="B"> B. It is an adaptable capability required of all workers.</label>
+<label><input type="radio" name="Q54" value="C"> C. It is an essential quality many employees lack.</label>
+<label><input type="radio" name="Q54" value="D"> D. It is a desirable ability that can be developed.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What does the author imply we should do if we have to focus on some task and do it well?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. Work in a flexible way.</label>
+<label><input type="radio" name="Q55" value="B"> B. Learn from mistakes.</label>
+<label><input type="radio" name="Q55" value="C"> C. Avoid multitasking.</label>
+<label><input type="radio" name="Q55" value="D"> D. Increase efficiency. Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 改革开放以来，中国人的饮食（diet）发生了显著变化。过去由于经济落后，食品 种类有限、数量不足，人们仅仅满足于吃得饱。如今中国经济快速发展，食品不仅更加 丰富多样，质量也大幅提高。随着生活水平不断提升，人们对饮食的要求越来越高，更 加注重吃得营养健康。因此，目前市场上推出的低脂、低糖、有机食品受到人们的普遍 欢迎。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

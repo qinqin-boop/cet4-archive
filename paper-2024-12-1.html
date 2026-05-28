@@ -1,174 +1,514 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2024年12月 第1套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2024年12月 第1套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2024-06-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2024年6月 第3套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2024-12-2.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2024年12月 第2套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2024%E5%B9%B412%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2024年12月 第1套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2024年12月英语四级真题(第1套) · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2024年12月英语四级真题(第1套)</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A.  She  is  making  a  special  effort  to  be  recognized.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="B"> B. She  has  been  living  in  Fayetteville  for  25  years.</label>
+<label><input type="radio" name="Q1" value="C"> C. She  has  been  driving  a  school  bus  ever  since  2009.</label>
+<label><input type="radio" name="Q1" value="D"> D. She  is  the  longest-serving  bus  driver  in  Fayetteville.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A.  The  importance  of  their  service  to  the  city.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="B"> B. The  number  of  riders  they  serve  in  the  city.</label>
+<label><input type="radio" name="Q2" value="C"> C. The  new  proclamation  issued  early  this  week.</label>
+<label><input type="radio" name="Q2" value="D"> D. The  significance  of  the  event  to  take  place  March  18. Questions  3  and  4  are  based  on  the  news  report  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A.  Budgeted  $56.7  million  for  the  coming  school  year.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="B"> B. Requested  to  raise  teachers’  salaries  by  3  percent.</label>
+<label><input type="radio" name="Q3" value="C"> C. Proposed  a  spending  increase  by  5.99  percent.</label>
+<label><input type="radio" name="Q3" value="D"> D. Kept  raising  funds  for  at  least  8  budget  cycles.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A.  Decrease  in  salaries  for  school  administrators.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="B"> B. Reduction  in  federal  and  state  funding.</label>
+<label><input type="radio" name="Q4" value="C"> C. Firing  of  less  qualified  faculty  members.</label>
+<label><input type="radio" name="Q4" value="D"> D. Closing  down  of  some  less  competitive  schools. Questions  5  to  7  are  based  on  the  news  report  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A.  They  often  take  place  in  the  Scottish  highlands.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="B"> B. They  usually  happen  in  the  middle  of  the  night.</label>
+<label><input type="radio" name="Q5" value="C"> C. Their  damage  can  be  as  serious  as  that  of  bombs.</label>
+<label><input type="radio" name="Q5" value="D"> D. Their  loud  claps  can  be  confused  with  explosions.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A.  They  sent  out  a  message  to  calm  them  down.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="B"> B. They  promised  to  stop  the  construction  work.</label>
+<label><input type="radio" name="Q6" value="C"> C. They  told  them  the  military  exercise  was  over.</label>
+<label><input type="radio" name="Q6" value="D"> D. They  set  off  to  inspect  the  site  of  the  plane  crash.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A.  Keep  warm.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="B"> B. Take  caution.</label>
+<label><input type="radio" name="Q7" value="C"> C. Avoid  driving.</label>
+<label><input type="radio" name="Q7" value="D"> D. Use  rail  service. 2 https://zhenti.burningvocabulary.cn Section  B Directions:  In  this  section,  you  will  hear  two  long  conversations.  At  the  end  of  each  conversation,  you  will  hear four  questions.  Both  the  conversation  and  the  questions  will  be  spoken  only  once.  After  you  hear  a  question,  you must  choose  the  best  answer  from  the  four  choices  marked  A),  B),  C)  and  D).  Then  mark  the  corresponding  letter on  Answer  Sheet  1  with  a  single  line  through  the  centre. Questions  8  to  11  are  based  on  the  conversation  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A.  Why  the  man  is  so  anxious  to  buy  a  new  phone.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="B"> B. How  the  man  could  possibly  afford  a  new  phone.</label>
+<label><input type="radio" name="Q8" value="C"> C. How  the  man  got  into  the  habit  of  being  wasteful.</label>
+<label><input type="radio" name="Q8" value="D"> D. Why  the  man  is  so  fond  of  using  his  credit  card.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A.  It  is  not  in  fashion  any  more.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. It  goes  out  of  order  frequently.</label>
+<label><input type="radio" name="Q9" value="C"> C. It  is  not  as  fancy  as  his  colleagues’.</label>
+<label><input type="radio" name="Q9" value="D"> D. It  lacks  functions  office  work  requires.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A.  It  enables  him  to  buy  a  new  phone  at  a  more  favorable  price.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="B"> B. It  is  a  special  offer  to  recent  college  graduates  working  in  offices.</label>
+<label><input type="radio" name="Q10" value="C"> C. It  is  available  to  office  workers  who  have  a  good  enough  credit  score.</label>
+<label><input type="radio" name="Q10" value="D"> D. It  allows  him  to  borrow  money  without  paying  interest  for  six  months.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A.  She  borrowed  money  to  pay  her  debt.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. She  developed  a  habit  of  overspending.</label>
+<label><input type="radio" name="Q11" value="C"> C. She  enjoys  buying  a  lot  of  fancy  things.</label>
+<label><input type="radio" name="Q11" value="D"> D. She  regrets  ignoring  the  woman’s  advice. Questions  12  to  15  are  based  on  the  conversation  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A.  Blog  writing  and  natural  resources  saving.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="B"> B. Joint  efforts  to  improve  the  local  community.</label>
+<label><input type="radio" name="Q12" value="C"> C. Audience  participation  in  The  Morning  Show.</label>
+<label><input type="radio" name="Q12" value="D"> D. Home  ownership  and  environmental  protection.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A.  Not  a  realistic  size  for  families.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. Not  welcomed  by  most  Americans.</label>
+<label><input type="radio" name="Q13" value="C"> C. Only  fit  for  families  of  four  or  less.</label>
+<label><input type="radio" name="Q13" value="D"> D. Only  suitable  for  renting  to  the  poor.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A.  It  should  be  changed.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="B"> B. It  isn’t  easy  to  realize.</label>
+<label><input type="radio" name="Q14" value="C"> C. It  will  come  true  sooner  or  later.</label>
+<label><input type="radio" name="Q14" value="D"> D. It  doesn’t  appeal  to  average  families.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A.  They  help  to  lower  housing  prices.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="B"> B. They  help  to  save  up  for  larger  houses.</label>
+<label><input type="radio" name="Q15" value="C"> C. They  are  a  good  choice  for  many  people.</label>
+<label><input type="radio" name="Q15" value="D"> D. They  are  vital  to  reducing  waste  worldwide. Section  C Directions:  In  this  section,  you  will  hear  three  passages.  At  the  end  of  each  passage,  you  will  hear  three  or  four questions.  Both  the  passage  and  the  questions  will  be  spoken  only  once.  After  you  hear  a  question,  you  must choose  the  best  answer  from  the  four  choices  marked  A),  B),  C)  and  D).  Then  mark  the  corresponding  letter  on Answer  Sheet  1  with  a  single  line  through  the  centre. Questions  16  to  18  are  based  on  the  passage  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A.  Play  outdoors  and  enjoy  themselves.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="B"> B. Beat  challenges  and  take  risks.</label>
+<label><input type="radio" name="Q16" value="C"> C. Take  care  of  their  well-being.</label>
+<label><input type="radio" name="Q16" value="D"> D. Grow  up  strong  and  healthy.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A.  Enable  them  to  develop  their  motor  skills.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="B"> B. Help  them  to  conceal  their  frustration.</label>
+<label><input type="radio" name="Q17" value="C"> C. Reduce  their  stress  and  depression.</label>
+<label><input type="radio" name="Q17" value="D"> D. Prevent  them  from  feeling  lonely.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A.  It  begins  early.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="B"> B. It  proves  demanding.</label>
+<label><input type="radio" name="Q18" value="C"> C. It  calls  for  lifelong  efforts.</label>
+<label><input type="radio" name="Q18" value="D"> D. It  lies  in  nature  experiences. 3 https://zhenti.burningvocabulary.cn Questions  19  to  21  are  based  on  the  passage  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A.  When  companies  share  their  information  online.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="B"> B. When  their  job  search  criteria  are  met  fully.</label>
+<label><input type="radio" name="Q19" value="C"> C. When  companies  embrace  greater  diversity.</label>
+<label><input type="radio" name="Q19" value="D"> D. When  they  find  job  postings  visually  attractive.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A.  Emails  in  the  normal  format.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="B"> B. Major  companies  in  one  location.</label>
+<label><input type="radio" name="Q20" value="C"> C. All  companies  in  the  same  sector.</label>
+<label><input type="radio" name="Q20" value="D"> D. Various  aspects  of  a  company’s  workforce.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A.  Job  security.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="B"> B. Potential  pay  raises.</label>
+<label><input type="radio" name="Q21" value="C"> C. Minimum  base  salary.</label>
+<label><input type="radio" name="Q21" value="D"> D. Information  about  diversity. Questions  22  to  25  are  based  on  the  passage  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A.  Positive.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. Original.</label>
+<label><input type="radio" name="Q22" value="C"> C. Important.</label>
+<label><input type="radio" name="Q22" value="D"> D. Surprising.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A.  Dogs  match  their  behavior  with  kids  as  much  as  with  adults.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. Kids  and  adults  alike  find  in  dogs  a  source  of  attachment.</label>
+<label><input type="radio" name="Q23" value="C"> C. Kids’  attitude  to  dogs  is  influenced  by  adults.</label>
+<label><input type="radio" name="Q23" value="D"> D. Dogs  can  help  kids  in  many  ways.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A.  Dogs  pay  much  attention  to  the  kids  they  live  with.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. Dogs  view  both  adults  and  kids  as  social  companions.</label>
+<label><input type="radio" name="Q24" value="C"> C. Kids  differ  from  adults  in  their  behavior  towards  dogs.</label>
+<label><input type="radio" name="Q24" value="D"> D. Kids  need  to  be  aware  of  the  risks  in  playing  with  dogs.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A.  Understanding  dogs.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. Training  dogs.</label>
+<label><input type="radio" name="Q25" value="C"> C. Taking  care  of  dogs.</label>
+<label><input type="radio" name="Q25" value="D"> D. Associating  with  dogs. Part   III                                                                                                    Reading    Comprehension                                                                                 (40  minutes) Section  A Directions:  In  this  section,  there  is  a  passage  with  ten  blanks.  You  are  required  to  select  one  word  for  each  blank from  a  list  of  choices  given  in  a  word  bank  following  the  passage.  Read  the  passage  through  carefully  before making  your  choices.  Each  choice  in  the  bank  is  identified  by  a  letter.  Please  mark  the  corresponding  letter  for each  item  on  Answer  Sheet  2  with  a  single  line  through  the  centre.  You  may  not  use  any  of  the  words  in  the  bank more  than  once. Scientists  have  known  that  depriving  adult  mice  of  vision  can  increase  the  sensitivity  of  individual neurons  (神经元)  in  the  part  of  the  brain  devoted  to  hearing.  New  research  from  biologists  at  the  University of  Maryland    26 that  sight  deprivation  also  changes  the  way  brain  cells    27 with  one  another,  shifting the  mice’s  sensitivity  to  different  frequencies. “This  study    28 what  we  are  learning  about  how  manipulating  vision  can  have  a    29 effect  on  the ability  of  an  animal  to  hear  long  after  the  window  for  auditory  (听觉的)  learning  was  thought  to  have    30  ,” said  Patrick  Kanold,  senior  author  of  the  study. It  was  once  thought  that  the  sensory  regions  of  the  brain  were  not    31 after  a  critical  period  in childhood.  This  is  why  children  learn  languages  much  more    32 than  adults.  Kanold’s  earlier  research disproved  this  idea  by  showing  that  depriving  adult  mice  of  vision  for  a  short  period  increased  the  sensitivity of  individual  neurons  in  the  auditory  cortex  (皮质),  which  is  devoted  to  hearing. Young  brains  wire  themselves  according  to  the  sounds  they  hear  frequently,  assigning  areas  of  the auditory  cortex  to    33 frequencies  based  on  what  they  are  used  to  hearing.  The  researchers  found  that,  in 4 https://zhenti.burningvocabulary.cn adult  mice,  a  week  in  the  dark  also  changed  the    34 of  space  to  different  frequencies. “We  don’t  know  why  we  are  seeing  these  patterns,”  Kanold  said.  “We    35 that  it  may  have  to  do with  what  the  mice  are  paying  attention  to  while  they  are  in  the  dark.”</label>
+<label><input type="radio" name="Q25" value="A"> A. adaptable</label>
+<label><input type="radio" name="Q25" value="B"> B. closed</label>
+<label><input type="radio" name="Q25" value="C"> C. distribution</label>
+<label><input type="radio" name="Q25" value="D"> D. interact E. narration F. neutral G. permanently H. prescribes I. readily J. registered K. reinforces L. revealed M. significant N. specific O. speculate Section  B Directions:  In  this  section,  you  are  going  to  read  a  passage  with  ten  statements  attached  to  it.  Each  statement contains  information  given  in  one  of  the  paragraphs.  Identify  the  paragraph  from  which  the  information  is  derived. You  may  choose  a  paragraph  more  than  once.  Each  paragraph  is  marked  with  a  letter.  Answer  the  questions  by marking  the  corresponding  letter  on  Answer  Sheet  2. Why  it’s  wrong  to  look  at  work-life  balance  as  an  achievement</label>
+<label><input type="radio" name="Q25" value="A"> A. Few  topics  have  been  so  endlessly  analysed  as  work-life  balance.  The  quest  to  attain  this  mysterious  state has  dominated  discussion  around  careers  for  years  —  especially  for  working  parents.  The  concept  is  often presented  as  something  to  achieve,  or  a  goal  to  reach.  And  once  you’ve  reached  it,  congratulations:  you’ve made  it;  you’re  a  successful  human  being  of  the  21st  century.</label>
+<label><input type="radio" name="Q25" value="B"> B. But  the  problem  is  that  we  often  tell  ourselves:  “I’m  going  to  put  in  eight  hours’  worth  of  work,  and  then I’m  going  to  put  in  eight  hours’  worth  of  ‘me  time’,  which  will  include  my  family,  my  hobbies,  my workout,  my  everything,”  says  Anat  Lechner,  clinical  associate  professor  of  management  at  New  York University.  “I  don’t  think  it’s  such  a  simple  formula.”</label>
+<label><input type="radio" name="Q25" value="C"> C. And,  according  to  new  findings,  it  may  not  be.  Some  researchers  are  now  encouraging  us  to  stop  thinking about  work-life  balance  as  an  achievement  that  you  either  hit  or  don’t.  Instead,  they  suggest  it  may  be more  of  a  lifelong  process  —  a  continuous,  never-ending  exercise  that  requires  self-awareness  and  timely adjustments.  Researchers  Ioana  Lupu  and  Mayra  Ruiz-Castro  argue  that  work-life  balance  is  “a  cycle,  not an  achievement”.  In  their  2020  study,  the  researchers  interviewed  nearly  80  employees  at  two  London- based  firms  —  an  equal  number  of  men  and  women  between  the  ages  of  30  and  50,  all  with  at  least  one dependent  child  —  who  worked  in  middle  or  senior  management  roles.</label>
+<label><input type="radio" name="Q25" value="D"> D. Although  it  sounds  like  the  respondents  had  a  lot  in  common,  here’s  what  separated  them:  about  30%  of the  men  and  50%  of  the  women  reported  resisting  working  long  hours.  The  other  respondents,  meanwhile, all  worked  long  hours  because  they  thought  that’s  what  successful  professionals  should  do. E. Lupu  and  Ruiz-Castro  looked  at  those  who  rejected  the  long  hours  and  they  found  that  those  workers actually  had  strikingly  similar  strategies  for  maintaining  their  work-life  balance.  They  had  a  tendency  to reflect  and  question  assumptions  in  the  name  of  self-awareness  and  regularly  took  steps  to  adjust  the things  standing  in  their  way  to  work-life  balance. F. Lupu  and  Ruiz-Castro  identified  five  steps  that  the  respondents  in  the  study  who  had  better  work-life balance  used  in  their  jobs.  First,  they  paused  and  reconsidered  beliefs  such  as  “I’m  a  professional,  so  I should  work,  work,  work”,  and  asked  themselves  questions  like,  “What’s  currently  causing  me  stress?” Second,  after  identifying  the  cause,  they  zeroed  in  on  their  resultant  emotions.  Did  they  feel  angry,  sad, energised?  Third,  they  reprioritised,  asking  “Is  working  long  hours  really  worth  cutting  back  on  family time?”,  for  example.  Fourth,  they  considered  their  alternatives:  is  there  anything  at  work  that  could  be 5 https://zhenti.burningvocabulary.cn changed  to  accommodate  these  new  priorities?  And  finally,  they  implemented  changes,  like  asking  their supervisor  for  greater  flexibility,  or  deciding  not  to  take  on  every  project  that  comes  their  way. G. This  five-step  process  is  something  anyone  can  adopt.  Going  through  the  steps,  and  constantly  checking  in with  yourself,  can  help  you  shift  and  adapt  your  professional  life  to  something  that  will  better  harmonise with  your  personal  one.  “Awareness  of  your  emotional  state  is  essential  in  order  to  determine  the  changes you  want  to  make  in  your  work  and  in  your  life,”  says  Lupu. H. New  York  University’s  Lechner  agrees  that  finding  that  balance  is  an  ongoing  pursuit.  It’s  not  simply about  dividing  up  the  hours  in  your  day  between  work,  the  gym,  kids  and  chores.  If  the  underlying emotional  sources  of  stress  are  still  there,  then  the  time  you  actually  spend  at  home  may  not  be  enjoyable. “We  come  home  and  even  though  physically  we  are  there,  mentally  we  still  may  be  processing  things  that happened  at  work.  We’re  not  present,”  she  says.  What  we  call  “work-life  balance”  is  actually  just  a substitute  to  having  a  sense  of  fulfillment  and  contentment. I. Of  course,  finding  that  balance  probably  shouldn’t  be  something  you  have  to  do  by  yourself.  Research  by Erin  Kelly,  professor  of  work  and  organisation  studies  at  MIT,  shows  companies  and  managers  can  play  a key  role  in  creating  a  better  environment  for  workers.  For  her  book  Overload:  How  Good  Jobs  Went  Bad and  What  to  Do  about  It,  she  and  co-author  Phyllis  Moen  split  more  than  1,000  employees  at  a  Fortune 500  company  into  two  groups,  one  that  worked  under  a  management  redesign  and  one  that  continued working  within  the  existing  management  structure. J. Under  the  management  redesign,  many  steps  were  taken  to  ensure  better  work-life  balance  and  prevent burnout  (精疲力竭).  Managers  were  regularly  reminded  to  explicitly  support  their  employees.  Workers were  allowed  to  make  changes,  like  cancelling  9  am  meetings.  All  of  this  was  done  in  the  name  of increasing  job  satisfaction  and  giving  workers  greater  flexibility,  and  to  assure  workers  that  it  was something  management  was  committed  to.  Unsurprisingly,  Kelly  and  Moen  found  that  employees  in  the redesign  group  reported  less  stress  and  less  burnout.  They  were  less  likely  to  quit  their  jobs;  indeed,  over the  next  four  years,  they  were  40%  less  likely  to  quit  than  those  who  kept  working  under  the  old  policies. K. “Work-life  balance  is  understood  to  be  an  individual’s  response,  so  people  think  ‘it’s  up  to  me  to  manage the  craziness  of  my  work  life’  ”,  says  Kelly.  But  organisations  need  to  examine  the  demands  they’re placing  on  employees.  “The  root  problem  is  not  how  the  two  pieces  of  work  and  life  come  together.  It’s that  we  have  unrealistic  expectations  of  what  we’re  asked  to  do  on  the  work  side.”  If  your  workplace  isn’t an  environment  where  work-life  balance  is  possible  in  the  first  place,  any  effort  you  attempt  to  make toward  it  on  a  personal  level  will  be  in  vain. L. That’s  a  conversation  that  appears  to  be  gathering  pace.  The  new  prevalence  of  remote  and  flexible working  models  will  likely  all  play  important  roles  in  how  we  balance  our  professional  and  personal  lives. And  if  it  seems  like  finding  that  perfect  balance  remains  difficult  to  achieve,  the  experts  say  that  keeping some  perspective  can  help.  For  millions  of  people,  work  is  about  being  able  to  put  food  on  the  table. Talking  about  work-life  balance  “is  a  very  privileged  conversation”,  says  Lechner.  “If  we’re  reflecting, maybe  we  should  also  reflect  on  that.”</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>According  to  a  management  expert,  work-life  balance  is  not  as  simple  as  giving  equal  amounts  of  time  to work  and  personal  life.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Research  found  that  those  who  are  given  greater  flexibility  at  work  are  less  stressed  and  more  likely  to stay  in  their  jobs. 6 https://zhenti.burningvocabulary.cn</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>Workers  who  rejected  working  long  hours  tended  to  make  regular  adjustments  in  order  to  achieve  work- life  balance.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>Talking  about  work-life  balance  is  said  to  be  a  privilege  reserved  for  the  better-off,  not  for  those  who barely  make  a  living.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Knowing  one’s  emotional  state  is  of  utmost  importance  in  deciding  what  changes  to  make  for  a  better work-life  balance.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>More  female  professionals  reported  being  reluctant  to  work  overtime  than  their  male  counterparts.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>Without  organisational  support  any  personal  effort  to  maintain  work-life  balance  will  be  unsuccessful.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>The  question  of  how  to  achieve  work-life  balance  has  long  been  the  main  subject  of  discussion  among workers.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>You  may  not  actually  experience  emotional  wellbeing  at  home  if  you  remain  occupied  with  what happened  at  work.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>Some  researchers  suggest  that  work-life  balance  is  not  a  goal  to  achieve,  but  a  process  for  life  to  be adjusted  promptly. Section  C Directions:  There  are  2  passages  in  this  section.  Each  passage  is  followed  by  some  questions  or  unfinished statements.  For  each  of  them  there  are  four  choices  marked  A),  B),  C)  and  D).  You  should  decide  on  the  best choice  and  mark  the  corresponding  letter  on  Answer  Sheet  2  with  a  single  line  through  the  centre. Passage  One Questions  46  to  50  are  based  on  the  following  passage. As  a  university  student,  I’ve  come  to  realise  just  how  little  I  know  about  money.  I’ve  come  to  the  brutal realisation  that  Australia’s  youth  are  being  done  a  great  disservice  by  not  receiving  any  consistent  financial education. Diving  headfirst  into  the  crash  course  of  starting  university,  I’ve  quickly  tried  to  get  myself  up  to  speed with  the  financial  terms  of  the  modern  era  to  help  manage  my  personal  finances. I’ve  read  some  financial  education  books,  done  some  online  learning,  and  have  spoken  to  my  nearest  and dearest  for  their  pearls  of  financial  wisdom. There  are  undoubtedly  hundreds  of  great  resources  out  there  for  those  wishing  to  improve  their  financial literacy,  but  while  I  was  researching,  I  still  kept  wishing  that  I  didn’t  have  to  play  catch-up  with  the  money world.  I  felt  that  I  was  sailing  the  financial  seas  with  no  skills  and  no  life  jacket! However,  after  talking  to  my  friends  who  felt  the  same,  I  quickly  realised  that  it  wasn’t  my  ignorance  but the  lack  of  financial  education  in  our  schooling  system  that  is  leaving  high  schoolers  seriously  behind  in  the modern  world  of  money. Let’s  compare  a  theoretical  financial  education  subject  to  the  standard  compulsory  English  class.  On average,  English  may  not  be  the  most  popular  subject,  but  it’s  consistently  on  the  schedule  throughout  high school,  with  all  students  graduating  fluent  in  English.</p>
+<div class="opts"><label><input type="radio" name="Q45" value="A"> A. financial  education  subject  should  do  just  the  same.  It  shouldn’t  be  just  a  one-day  event  but  a  course integrated  throughout  the  whole  of  high  school  that  would  allow  students  to  gradually  expand  their  financial literacy,  and  would  prevent  the  need  for  a  ‘catch  up’  phase  once  we’re  out  on  our  own  after  graduation. In  the  same  way  that  learning  a  language  or  new  skills  takes  time,  building  financial  skills  requires practice  and  years  to  gradually  accumulate  bits  and  pieces  of  knowledge. 7 https://zhenti.burningvocabulary.cn Giving  young  people  the  opportunity  to  become  familiar  with  the  world  of  money  would  provide  them with  a  great  advantage  to  enter  adulthood  with  confidence  and  security  so  that  they  are  able  to  manage  their own  money  and  look  after  themselves.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What  has  the  author  come  to  realise  since  entering  university?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. He  needs  a  crash  course  on  financial  terms.</label>
+<label><input type="radio" name="Q46" value="B"> B. He  is  very  much  lacking  in  financial  literacy.</label>
+<label><input type="radio" name="Q46" value="C"> C. It  requires  consistent  education  to  be  financially  independent.</label>
+<label><input type="radio" name="Q46" value="D"> D. It  is  unrealistic  to  give  all  Australian  youth  a  financial  education.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>How  did  the  author  feel  in  today’s  money  world?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. Badly  equipped  to  survive.</label>
+<label><input type="radio" name="Q47" value="B"> B. Ignorant  of  financial  literature.</label>
+<label><input type="radio" name="Q47" value="C"> C. Barely  capable  of  moving  ahead.</label>
+<label><input type="radio" name="Q47" value="D"> D. Overwhelmed  by  the  resources  online.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What  did  the  author  realise  after  talking  to  his  friends?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. They  were  as  keen  as  he  was  on  financial  matters.</label>
+<label><input type="radio" name="Q48" value="B"> B. The  schooling  system  was  to  blame  for  his  trouble.</label>
+<label><input type="radio" name="Q48" value="C"> C. High  schoolers  knew  nothing  about  the  modern  financial  world.</label>
+<label><input type="radio" name="Q48" value="D"> D. Financial  courses  were  as  unpopular  as  compulsory  English  classes.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What  is  the  author’s  idea  of  a  financial  education  course?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. It  should  foresee  students’  needs  after  graduation.</label>
+<label><input type="radio" name="Q49" value="B"> B. It  should  provide  students  with  some  basic  knowledge.</label>
+<label><input type="radio" name="Q49" value="C"> C. It  should  be  taught  the  same  way  as  English  is  taught.</label>
+<label><input type="radio" name="Q49" value="D"> D. It  should  be  integrated  into  high  school  education.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What  would  financial  literacy  do  to  young  people?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Allow  them  to  enter  adulthood  with  financial  security.</label>
+<label><input type="radio" name="Q50" value="B"> B. Enable  them  to  look  after  themselves  without  worrying  about  money.</label>
+<label><input type="radio" name="Q50" value="C"> C. Render  them  confident  and  secure  in  terms  of  money  management.</label>
+<label><input type="radio" name="Q50" value="D"> D. Help  them  become  familiar  with  the  world  of  money. Passage  Two Questions  51  to  55  are  based  on  the  following  passage. Chocolates  save  us  from  many  things,  especially  emotional  distress.  They  comfort  us  in  times  of  trouble, calming  down  a  racing  heart  by  channelling  happy  calories  inside  us.  We  all  have  faith  in  chocolates  to delight  us  in  an  instant! Recently,  chocolate  lovers  were  heartbroken  as  scientists  claimed  that  they  can  become  extinct  by  2050! But  hey,  we  have  some  happy  news  for  you.  Scientists  can  still  help  save  chocolates  from  dying  out!  If  you are  not  aware  as  to  why  scientists  made  the  statement  about  the  death  of  this  wonderful  thing,  let  us  tell  you the  facts.  Chocolate  trees,  whose  seeds  are  used  to  make  chocolate,  grow  in  the  tropical  plant  world  and require  very  specific  weather  conditions  to  prosper. Now,  fifty  percent  of  the  world’s  cocoa  (可可)  beans  come  from  two  countries  in  West  Africa:  Côte d’Ivoire  and  Ghana.  Scientists  believe  that  both  of  these  countries  will  experience  a  3.8  ℉  temperature increase  by  2050  due  to  global  warming,  endangering  the  cacao  (可可树)  farms  in  the  rainforests.  These farms  will  then  have  to  be  shifted  to  cooler  mountainous  areas,  which  are  the  natural  habitat  of  wildlife.  This will  lead  to  some  tough  decisions:  whether  to  grow  chocolate  or  save  wildlife. Unfortunately,  the  crisis  of  global  warming  has  already  had  a  serious  negative  impact  on  cacao  farms’ 8 https://zhenti.burningvocabulary.cn yields,  leading  to  the  prices  of  chocolates  skyrocketing. Scientists,  however,  are  trying  to  find  a  long-term  and  eco-friendly  solution  to  this  problem!  They  are trying  to  modify  the  species  with  a  gene-editing  technology,  which  will  transform  the  seedlings  into  a  species that  survives  even  in  a  drier  and  warmer  climate. According  to  a  report  by  The  Business  Insider,  in  the  University  of  California’s  new  bio-sciences building,  tiny  green  cacao  seedlings  are  lined  up  in  refrigerated  greenhouses  for  a  new  experiment  by  using  a technology  called  CRISPR.  By  manipulating  the  DNA  of  plants,  this  technology  is  already  being  used  across the  world  to  make  plants  tougher  and  cheaper.  Similarly,  in  this  unconventional  experiment,  scientists  will make  tiny,  precise  changes  to  the  DNA  of  the  seedlings  to  make  the  cocoa  crops  survive  in  warmer  and  drier climates.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What  do  people  believe  chocolates  can  do?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. Cheer  them  up  instantly.</label>
+<label><input type="radio" name="Q51" value="B"> B. Create  happy  calories.</label>
+<label><input type="radio" name="Q51" value="C"> C. Conceal  emotional  distress.</label>
+<label><input type="radio" name="Q51" value="D"> D. Relieve  them  of  heart  trouble.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What  was  scientists’  recent  assertion  about  chocolates?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. They  could  become  a  rare  treat  in  the  near  future.</label>
+<label><input type="radio" name="Q52" value="B"> B. They  could  calm  people  down  a  bit  in  times  of  crisis.</label>
+<label><input type="radio" name="Q52" value="C"> C. They  could  prevent  people  from  getting  heartbroken.</label>
+<label><input type="radio" name="Q52" value="D"> D. They  could  become  unavailable  in  less  than  30  years.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What  would  happen  if  the  cacao  farms  were  shifted  to  cooler  mountainous  areas?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. The  natural  habitat  of  wildlife  there  would  be  ruined.</label>
+<label><input type="radio" name="Q53" value="B"> B. The  cacao  farmers  would  have  a  tough  time  to  adapt.</label>
+<label><input type="radio" name="Q53" value="C"> C. The  rainforests  would  be  shrinking  dramatically.</label>
+<label><input type="radio" name="Q53" value="D"> D. The  quality  of  cocoa  beans  would  suffer  greatly.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>What  do  we  learn  about  the  cacao  farms  in  the  crisis  of  global  warming?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. They  try  to  seek  help  from  gene-editing  scientists.</label>
+<label><input type="radio" name="Q54" value="B"> B. They  decide  to  move  to  cooler  mountainous  areas.</label>
+<label><input type="radio" name="Q54" value="C"> C. They  have  suffered  a  lot  due  to  a  decrease  in  produce.</label>
+<label><input type="radio" name="Q54" value="D"> D. They  have  benefited  by  raising  prices  of  cocoa  beans.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What  are  scientists  trying  to  do  in  the  University  of  California’s  new  bio-sciences  building?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. Build  rows  of  refrigerated  greenhouses  for  research  on  cacao  seedlings.</label>
+<label><input type="radio" name="Q55" value="B"> B. Gene-edit  cacao  seedlings  for  them  to  withstand  a  drier,  warmer  climate.</label>
+<label><input type="radio" name="Q55" value="C"> C. Produce  chocolates  with  the  latest  gene-editing  technology.</label>
+<label><input type="radio" name="Q55" value="D"> D. Transplant  the  genes  of  tougher  plants  to  cacao  seedlings. Part   IV                                                                                                                    Translation                                                                                                                 (30  minutes) Directions:  For  this  part,  you  are  allowed  30  minutes  to  translate  a  passage  from  Chinese  into  English.  You should  write  your  answer  on  Answer  Sheet  2. 中国政府十分重视环境保护。近年来，中国在减少空气、水和土壤污染上取得了显著成效。为了不 断改善人们的生活环境，中国采取了一系列有效措施，包括大力发展清洁能源，改善公共交通，推广共 享单车，实施垃圾分类。通过这些措施，中国的城市和农村正在绿起来、美起来。中国还积极参与国际 合作，为全球环境保护做出了重要贡献。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

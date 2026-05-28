@@ -1,174 +1,522 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2022年6月 第1套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2022年6月 第1套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <span style="flex:1;text-align:center;color:#cbd5e1;">← 已是第一套</span>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2022-06-2.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2022年6月 第2套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2022%E5%B9%B46%E6%9C%88%20%E7%AC%AC1%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2022年6月 第1套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2022年6月四级真题第1套 · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2022年6月四级真题第1套</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A) It studied the effects of exercise on sleep.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="B"> B. Its participants came from various walks of life.</label>
+<label><input type="radio" name="Q1" value="C"> C. Its findings confirmed those of previous studies.</label>
+<label><input type="radio" name="Q1" value="D"> D. It ran for as long as some thirty years.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A) Eating more vegetables instead of meats.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="B"> B. Drinking water instead of beverages with added sugar.</label>
+<label><input type="radio" name="Q2" value="C"> C. Consuming more energy drinks and sports drinks.</label>
+<label><input type="radio" name="Q2" value="D"> D. Forming the habit of exercising regularly. Questions 3 and 4 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A) He asked them about his lost paintings.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="B"> B. He knew the owner of two missing paintings.</label>
+<label><input type="radio" name="Q3" value="C"> C. He left his paintings at a highway rest stop.</label>
+<label><input type="radio" name="Q3" value="D"> D. He found two 17th-century oil paintings.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A) They are imitations.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="C"> C. They were stolen by an Italian boy.</label>
+<label><input type="radio" name="Q4" value="B"> B. They are originals.</label>
+<label><input type="radio" name="Q4" value="D"> D. They came from the same artist. Questions 5 to 7 are based on the news report you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A) Look after her grandfather.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="C"> C. Save her sick grandmother.</label>
+<label><input type="radio" name="Q5" value="B"> B. Leave the remote cold region.</label>
+<label><input type="radio" name="Q5" value="D"> D. Flee from the threat of bears.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A) She has to face a criminal charge.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="B"> B. She was found lying motionless in the snow.</label>
+<label><input type="radio" name="Q6" value="C"> C. She searched for her daughter in freezing cold. 2022年6 月英语四级真题第1 套第1 页共1 0 页</label>
+<label><input type="radio" name="Q6" value="D"> D. She works in childcare services.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A) She was found in a forest after three days.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="B"> B. She lay totally unconscious for three days.</label>
+<label><input type="radio" name="Q7" value="C"> C. She suffered from the effects of severe cold.</label>
+<label><input type="radio" name="Q7" value="D"> D. She was finally rescued by her relatives. Section B Directions: In this section, you will hear two long conversations. At the end o f each conversation, you will hear four questions. Both the conversation and the questions will be spoken only once. After you hear a question, you must choose the best answer from the four choices marked A), B), C) and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 8 to 11 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A) She shows a real passion for taking photos.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="B"> B. She has just returned from her hometown.</label>
+<label><input type="radio" name="Q8" value="C"> C. She comes from the city of Cape Town.</label>
+<label><input type="radio" name="Q8" value="D"> D. She has a truly amazing appearance.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A) It is as famous as Cape Town.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. It has a flat surface at the top.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A) She has British ancestors.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="B"> B. She is of mixed blood.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A) It is an extremely violent sport.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. It is becoming a national sport.</label>
+<label><input type="radio" name="Q11" value="C"> C. It is green and free from pollution.</label>
+<label><input type="radio" name="Q11" value="D"> D. It was named by European settlers.</label>
+<label><input type="radio" name="Q11" value="C"> C. She grew up in India.</label>
+<label><input type="radio" name="Q11" value="D"> D. She speaks several languages.</label>
+<label><input type="radio" name="Q11" value="C"> C. It is originated in New Zealand.</label>
+<label><input type="radio" name="Q11" value="D"> D. It is more popular than football. Questions 12 to 15 are based on the conversation you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A) Prepare a study guide.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="B"> B. Consult his advisors.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A) His worksheets are terribly messy.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. He finds the workload too heavy.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A) A visual learner.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="B"> B. An emotional learner.</label>
+<label><input type="radio" name="Q14" value="C"> C. Go over his notes regularly.</label>
+<label><input type="radio" name="Q14" value="D"> D. Take stress-relief sessions.</label>
+<label><input type="radio" name="Q14" value="C"> C. His study folder is badly disorganized.</label>
+<label><input type="radio" name="Q14" value="D"> D. He has difficulty taking notes quickly.</label>
+<label><input type="radio" name="Q14" value="C"> C. An organized learner.</label>
+<label><input type="radio" name="Q14" value="D"> D. A logical learner.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A) Arrange them using color and pictures.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="B"> B. Restructure them in a logical way.</label>
+<label><input type="radio" name="Q15" value="C"> C. Commit them to memory after class.</label>
+<label><input type="radio" name="Q15" value="D"> D. Organize them into a well-connected story. Section C Directions: In this section, you will hear three passages At the end o f each passage, you will hear three or four questions.Both the passage and the questions will be spoken only once. 2022年6 月英语四级真题第1套第2 页共10页 After you hear a question,you must choose the best answer from the four choices marked A), B),</label>
+<label><input type="radio" name="Q15" value="C"> C. and D). Then mark the corresponding letter on Answer Sheet 1 with a single line through the centre. Questions 16 to 18 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A) It is mainly based on a society's religion.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="B"> B. It is interpreted differently in different times.</label>
+<label><input type="radio" name="Q16" value="C"> C. It is a code of conduct based on laws and ethics.</label>
+<label><input type="radio" name="Q16" value="D"> D. It is a moral principle to guide people's behavior.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A) It may lead to misunderstanding despite good intentions.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="B"> B. It assumes that human beings are all good-natured.</label>
+<label><input type="radio" name="Q17" value="C"> C. It may sometimes produce undesirable outcomes.</label>
+<label><input type="radio" name="Q17" value="D"> D. It fails to consider the complexity of human relationships.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A) The golden rule is often in conflict with certain laws and ethical principles.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="B"> B. The golden rule must sometimes give way to more important principles.</label>
+<label><input type="radio" name="Q18" value="C"> C. Failure to follow the golden rule may lead to violation of laws and ethics.</label>
+<label><input type="radio" name="Q18" value="D"> D. Observing the golden rule is the first step to becoming a responsible citizen. Questions 19 to 21 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A) Many of them find it rather difficult to manage.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="B"> B. They have not seen as much diversity as desired.</label>
+<label><input type="radio" name="Q19" value="C"> C. Many of them have an increasingly diversified staff.</label>
+<label><input type="radio" name="Q19" value="D"> D. They have not quite grasped the concept of diversity.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A) Initiatives to achieve diversity in large corporations.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="B"> B. Advantages and disadvantages of a diversified team.</label>
+<label><input type="radio" name="Q20" value="C"> C. People's attitudes towards diversity at the workplace.</label>
+<label><input type="radio" name="Q20" value="D"> D. Innovative ideas and solutions resulting from diversity.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A) People prefer to work with team members similar to themselves.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="B"> B. Employers attach great importance to their corporations9 diversity.</label>
+<label><input type="radio" name="Q21" value="C"> C. Employers differ, from employees in their perspectives on diversity.</label>
+<label><input type="radio" name="Q21" value="D"> D. Doubts about the practicability of diversity are gradually disappearing. Questions 22 to 25 are based on the passage you have just heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A) Choosing the best time for signing a business contract.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. Changing one's form of communication from time to time.</label>
+<label><input type="radio" name="Q22" value="C"> C. Laying equal stress on written and spoken communication.</label>
+<label><input type="radio" name="Q22" value="D"> D. Using different forms of communication appropriately.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A) They are regarded as seriously binding.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. They are seldom honored by business partners. 2022年6 月英语四级真题第1 套第3 页共1 0 页</label>
+<label><input type="radio" name="Q23" value="C"> C. They are taken as memos of understanding.</label>
+<label><input type="radio" name="Q23" value="D"> D. They are to be confirmed in written form.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A) It has reached the highest level of evolution.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. It places a high value on written contracts.</label>
+<label><input type="radio" name="Q24" value="C"> C. It regards written contracts as unalterable.</label>
+<label><input type="radio" name="Q24" value="D"> D. It has seen a decline in verbal agreements.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A) Its details cannot be renegotiated.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. It has to be carried out to the letter.</label>
+<label><input type="radio" name="Q25" value="C"> C. It strengthens business partnerships.</label>
+<label><input type="radio" name="Q25" value="D"> D. Its terms may not be strictly binding. Part III Reading Comprehension (40 minutes) Section A Directions: In this section, there is a passage with ten blanks. You are required to select one word for each blank from a list o f choices given in a word bank following the passage. Read the passage through carefully before making your choices, Each choice in the bank is identified by a letter. Please mark the corresponding letter for each item on Answer Sheet 2 with a single line through the centre. You may not use any o f the words in the bank more than once. Questions 26 to 35 are based on the following passage. You might think of your teeth as tools, like built-in knives and forks, but if they are mere tools, why do they feel pain and wouldn't it be better if they could just 26 under any condition? In spite of our 27 discomfort, it turns out there9s a good reason our teeth are so sensitive. Tooth pain is a 28 mechanism that ensures when a tooth is being damaged we'll notice and do something about it. If we eat something too hot or too cold, or if the tooth is worn down enough where the tissue 29 is exposed, all of those things cause pain, and then the pain causes the person not to use that tooth to try to protect it a little bit more. So it's really a protective mechanism more than anything else. If teeth didn't feel pain, we might 30 to use them in situations that damage them, and for humans, damaging 31 teeth is a problem because, unlike crocodiles, we can't 32 them. Teeth have three layers, only one of which-the innermost layer of the tooth-can hurt, as that layer of the tooth 33 both blood vessels and nerves. Pain is the only feeling to which the nerves in that layer respond. Whereas people with tooth sensitivity may complain, for example, of tooth pain 34 by heat or cold, the nerves in the inner layer don't sense temperature. Rather, they feel pain, which may be 35 with, say, drinking something very cold. 2022年6 月英语四级真题第1 套第4 页共1 0 页</label>
+<label><input type="radio" name="Q25" value="A"> A. adult I) emotional</label>
+<label><input type="radio" name="Q25" value="B"> B. associated J) implies</label>
+<label><input type="radio" name="Q25" value="C"> C. chew K) mammal</label>
+<label><input type="radio" name="Q25" value="D"> D. contains L)replace E) continue M) swallow F) defense N) triggered G) dental</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q0">
+<span class="qnum">题 0</span>
+<p>underneath H) downward Section B Directions: In this section, you are going to read a passage with ten statements attached to it. Each statement contains information given in one o f the paragraphs. Identify the paragraph from which the information is derived. You may choose a paragraph more than once. Each paragraph is marked with a letter. Answer the questions by marking the corresponding letter on Answer Sheet 2. How to determine if a company is a good fit for you</p>
+<div class="opts"><label><input type="radio" name="Q0" value="A"> A. On paper, the job seemed perfect for me: The position was completely in line with my degree, the duties and responsibilities were compatible with my interests, and the office maintained a well-stocked kitchen that would satisfy my every snack desire.</label>
+<label><input type="radio" name="Q0" value="B"> B. Sounds like my dream job, right? There was only one small problem: I simply didn't get along with the company culture. They favored a more rigid, closed-door, corporate atmosphere, while I would have preferred something more collaborative and open. They were complete clock watchers, while I would have liked a more flexible schedule. To put it plainly, we just weren't on the same page.</label>
+<label><input type="radio" name="Q0" value="C"> C. When it comes to looking for a new job, you already know that a big part of the interview process involves the company evaluating whether or not you're a good fit for their open role. But, it's important to keep in mind that the employer isn't the only one who needs to identify a good match- you should be looking for that same exact thing. Company culture can have a big impact on how you feel about your work, so you want to make sure you sign an offer letter with an organization you're truly excited about.</label>
+<label><input type="radio" name="Q0" value="D"> D. However, figuring out what a company is like before you actually work there can be a bit of a challenge. Luckily, there are a few things you can do to determine whether or not a company is a good fit for you- before you ever sign your name on that dotted line. E) First of all, know what you want. It?s hard to make any decisions when you don't really know what you're looking for. So before you can determine whether you and a specific company would be compatible together, it's important to have a solid handle on what exactly you want from your employer. Many of us have an easier time identifying the things that we absolutely don't want. If those are the only things you can think of, don't 2022年6 月英语四级真题第1 套第5 页共1 0 页 worry! That's still a good place to start. F) Start by writing down the things you didn't like about previous employers, as well as the parts you really valued. There 9s no wrong answer here一so from big things to small details, write them all down on your list. This will help you immediately identify what you're looking for in an organization, as well as the things you're trying to stay far, far away from. G) Make sure to do your research. Now comes the part when you put on your detective hat and do a little digging. The Internet will be your best friend when you're trying to familiarize yourself with a company's culture before ever walking through their office doors. And where exactly should you look for these culture clues? Start with the most obvious place first: the company's website. Read through their copy and blog. Do they use formal, direct language? Or is it casual, conversational, and maybe even a little humorous? This can be a big indicator of what sort of atmosphere the company is trying to cultivate. H) Next, turn your attention toward their social media outlets. Are they sharing photos of their team's Thursday afternoon barbeque or Halloween costume contest? Or are their social media accounts strictly reserved for company-related announcements and product launches? I) An industry review website like Glassdoor is another spot to check in order to find some insider information about what you can expect about a company. However, remember to take the reviews you read with a grain of salt-many of them are written by scorned (被啬口视的)employees. J) Finally, you can never fail with personal connections. Send a quick message to a current or previous company employee on Linkedln or by email and ask if they would be willing to have a quick conversation with you about the organization in general. If you get a yes to your request for a chat, you'll be armed with some pretty powerful and helpful information heading into your interview! K) Learn more by asking questions. You know that part at the end of a job interview when the hiring manager asks if you have any questions, and you just stare across the table blankly with your mouth hanging open? That's the perfect opportunity to speak up and get your burning company culture questions answered! So yes, you can definitely ask your interviewer about what it's like to work for that particular organization. Simple questions like, “What three words would you use to describe the culture here?” or “What's your favorite part about working for this company?can reveal a lot about what it's really like behind closed doors. L) Prioritize your values. What does my dream company culture look like? Well, I could come and go as I please, as long as I was getting the work done. My boss would genuinely listen to and value all of my ideas arid suggestions. My co-workers would all be friendly with one another, without ever falling into the office gossip trap. The kitchen would have endless options of pizza and cookies. Oh, and they'd give me two months of paid vacation with a very generous salary. 2022年6 月英语四级置题第1 套第6 页共1 0 M) What are my chances of finding all of those things with one employer? Slim to none— believe me, I've looked. This is why it's so important to know which aspects of a company's culture you value most. Is it an open communication style or a flexible schedule? Focus on the top spots on your priority list, and ensure a potential employer at least checks those boxes. Unfortunately, this is reality, you can't have everything you want but a few are certainly achievable. N) When you're hunting for a new job, you already know that the employer is trying to decide whether or not you're a good fit for the position. But you should also look at the process through a similar lens. You may not be the one conducting the actual interview, but you're still trying to determine whether or not the company is a good fit for you. O) Keep these tips in mind to figure out whether you and a potential employer are a perfect match or just a recipe (方案)for disaster. After all, it's a good thing to know before actually accepting an offer.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>Clues about the culture of a company can be found on its website.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>It can be difficult to know the real situation in a company until you become part of it.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>It is impossible for a job applicant to have every expectation met.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>Simply by reading its description, the author found the job offered ideal.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Job applicants are advised to make a written list of their likes and dislikes in their previous employment.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>At the end of an interview, a job applicant should seize the opportunity to get answers to their urgent questions.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>To begin with, job applicants should be clear what they expect from their future employer.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>Job applicants should read with a critical eye what is written about a company on the website.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>Job satisfaction has a lot to do with company culture.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>A chat with an insider of a company can give job applicants very useful information when they prepare for an interview. Section C Directions: There are 2 passages in this section. Each passage is followed by some questions or unfinished statements. For each of them there are four choices marked A), B), C) and D). You should decide on the best choice and mark the corresponding letter on Answer Sheet 2 with a single line through the centre. Passage One Questions 46 to 50 are based on the following passage. Online classes began to be popularized just a few decades ago. They are advertised as a way for adults to finish their education and students to learn the material at their own pace 一it is far more compatible for people with busy schedules. 2022年6 月英语四级真题第1 套第7 页共1 0 页 But after being enrolled in an online course last fall semester, I came to realize online classes were merely a means to fulfil course requirements. First of all, students lack the desire to learn, and they simply complete their assignments to receive credit for a passing grade rather than genuinely engage with the course material. As online courses tend to have more than 100 students, most of the assignments are short and simple. They are not designed for students to interact with the material in depth but designed to be graded easily to accommodate such a large number of students. Perhaps the biggest disadvantage of taking an online class is the absence of face-to-face interaction between the teacher and their students. Live sessions are infrequent and are often scheduled during the middle of the day when students have to attend other classes or work. The office hours of the professor may also be during inconvenient times for many students as well. Most interaction with the professor has to be through email which is often impersonal. It is nearly impossible for students to build a relationship with their professor. There is also little interaction amongst students. It can be harder for students to create study groups and form relationships with their peers. Online classes also require either a computer or laptop and a reliable internet connection. Not all students have access to these types of resources, whether it is for financial or other reasons, and some students can be put at a disadvantage. Offering online classes certainly helps students who would otherwise not be able to attend classroom sessions. However, they fail to provide a genuine education with an emphasis on convenience rather than critical thinking. We need restructured online classes in which students can have a learning experience that will actually provide quality education.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What does the author say about students enrolled in online classes?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. They can access course materials easily.</label>
+<label><input type="radio" name="Q46" value="B"> B. They are unmotivated to learn.</label>
+<label><input type="radio" name="Q46" value="C"> C. They can learn at their own pace.</label>
+<label><input type="radio" name="Q46" value="D"> D. They rarely fulfil the course requirements.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What does the author think of online course assignments?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. They are made convenient to mark.</label>
+<label><input type="radio" name="Q47" value="B"> B. They are meant to facilitate interaction.</label>
+<label><input type="radio" name="Q47" value="C"> C. They are based on easily accessible material.</label>
+<label><input type="radio" name="Q47" value="D"> D. They are given to accommodate students9 needs.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What does the author say is one disadvantage of online classes?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. They are frequently scheduled at irregular times.</label>
+<label><input type="radio" name="Q48" value="B"> B. They make professors9 offices much less accessible.</label>
+<label><input type="radio" name="Q48" value="C"> C. They tend to increase professors? burden of responding to students9 emails.</label>
+<label><input type="radio" name="Q48" value="D"> D. They provide little chance for students to build relationships with each other. 2022年6 月英语四级真题第1 套第8 页共1 0 页</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What problem may arise if classes go online?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. More students may find it easy to be absent from them.</label>
+<label><input type="radio" name="Q49" value="B"> B. Teachers will worry about poor internet connections.</label>
+<label><input type="radio" name="Q49" value="C"> C. Some students may have difficulty attending them.</label>
+<label><input type="radio" name="Q49" value="D"> D. Schools with limited resources will be at a disadvantage.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What does the author think constitutes a key part of genuine education?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Acquisition of useful knowledge.</label>
+<label><input type="radio" name="Q50" value="B"> B. Training of real-life skills on campus.</label>
+<label><input type="radio" name="Q50" value="C"> C. Development of students9 personalities.</label>
+<label><input type="radio" name="Q50" value="D"> D. Cultivation of analytical thinking ability. Passage Two Questions 51 to 55 are based on the following passage. In the age of the internet, there9s no such thing as a private debate. But is that bad for science? Some scientists have had concerns. When debates in any sector move beyond the halls of universities and government agencies, there 9s potential for information to be used incorrectly, leading to public confusion; yet, open debate can also promote communication between the scientific community and the public. Recent open debates on scientific research, health, and policy have aroused greater public attention and encouraged more diverse voices. If this trend spurs scientists to agree more quickly about the best solutions to our problems-and at the same time helps the public observe the process of scientific discourse more clearly- then this is good for everyone, including scientists.</label>
+<label><input type="radio" name="Q50" value="A"> A. recent debate published in The New York Times discussed the question of how quickly medicine should be developed and produced. Issues such as safety of the product and perception of the public were examined and considered. But some experts worried that such public speculation might lead people to believe that disagreement about the details meant a lack of adequate scientific consensus over the safety and efficiency of modern-day medicine. The anxiety seems misplaced. Gone are the days of going to a conference and debating scientific issues, and that's good because those gatherings were not diverse enough and excluded many important voices. These days, the public can access debates about science regardless of where they take place. For many scientists, public debate is a new frontier and it may feel like a place with few restraints or rules? but rather than avoiding such conversations, let the debates be transparent and vigorous, wherever they are held. If the public is to understand that science is an honorably self-correcting process, the idea that science is a fixed set of facts in a textbook needs to be dismissed. With the validity of science coming under attack, there9s a need for scientific debates to be perceived as open and true to life. Let everyone see the noisy, messy deliberations that advance science and lead to decisions that benefit us all. 2022年6 月英语四级真题第1 套第9 页共1 0 页</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What does the author think open debate can do?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. Help the public to better understand science.</label>
+<label><input type="radio" name="Q51" value="B"> B. Clear up confusion in the scientific community.</label>
+<label><input type="radio" name="Q51" value="C"> C. Settle disputes between universities and government agencies.</label>
+<label><input type="radio" name="Q51" value="D"> D. Prevent information from being used incorrectly by the public.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>Why did a recent debate published in The New York Times arouse concerns among experts?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. It might hinder the progress in medical research.</label>
+<label><input type="radio" name="Q52" value="B"> B. It might breed public distrust in modem medicine.</label>
+<label><input type="radio" name="Q52" value="C"> C. It might add to the difficulty of getting research funds.</label>
+<label><input type="radio" name="Q52" value="D"> D. It might prevent medical scientists reaching consensus.、</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>Why does the author say some experts' anxiety seems misplaced?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. Debating scientific issues at a conference is now old-fashioned.</label>
+<label><input type="radio" name="Q53" value="B"> B. Diverse topics can be debated by both scientists and the public.</label>
+<label><input type="radio" name="Q53" value="C"> C. Debates about science are accessible to the public anyway.</label>
+<label><input type="radio" name="Q53" value="D"> D. Scientists can voice their opinions whatever way they like.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>What does the author suggest scientists do about public debate?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. Have more discussions about it.</label>
+<label><input type="radio" name="Q54" value="B"> B. Embrace it with open arms.</label>
+<label><input type="radio" name="Q54" value="C"> C. Formulate new rules for it.</label>
+<label><input type="radio" name="Q54" value="D"> D. Restrain it to a rational degree.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What does the author say about science in the last paragraph?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. It is transmitted through textbooks.</label>
+<label><input type="radio" name="Q55" value="B"> B. It is what proves valid and true to life.</label>
+<label><input type="radio" name="Q55" value="C"> C. It is a dynamic and self-improving process.</label>
+<label><input type="radio" name="Q55" value="D"> D. It is a collection of facts and established rules. Part IV Translation (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 从前有个农夫嫌他种的禾苗长得慢，就到地里把禾苗一株株地拔高了一点。回家后他对 家人说：“今天可真把我累坏了！但我总算让禾苗一下子长高了。“他儿子到地里去一看，禾 苗都已死光了。 现在有些家长急于让孩子成功，往往步那个农夫的后尘，搞得孩子苦不堪言，却不见孩 子学业长进。这样的家长是否该对这个问题有所醒悟，让孩子自然成长呢？。 2022年6 月英语四级真题第1 套第1 0 页共1 0 页</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

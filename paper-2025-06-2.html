@@ -1,174 +1,514 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2025年6月 第2套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2025年6月 第2套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2025-06-1.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2025年6月 第1套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <a href="./paper-2025-06-3.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">2025年6月 第3套 →</a>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC2%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2025年6月 第2套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2025年6月英语四级真题(第2套) · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2025年6月英语四级真题(第2套)</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q1">
+<span class="qnum">题 1</span>
+<p>A.  They  are  young  teenagers  from  Atlanta.</p>
+<div class="opts"><label><input type="radio" name="Q1" value="B"> B. They  won  this  year’s  7  Mile  Bridge  Run.</label>
+<label><input type="radio" name="Q1" value="C"> C. They  completed  the  race  in  less  than  40  minutes.</label>
+<label><input type="radio" name="Q1" value="D"> D. They  are  both  students  at  Marathon  High  School.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q2">
+<span class="qnum">题 2</span>
+<p>A.  It  drew  competitors  from  more  than  40  countries.</p>
+<div class="opts"><label><input type="radio" name="Q2" value="B"> B. It  is  watched  live  online  by  fans  all  over  the  world.</label>
+<label><input type="radio" name="Q2" value="C"> C. It  closed  the  city  of  Big  Pine  Key  to  traffic  for  three  hours.</label>
+<label><input type="radio" name="Q2" value="D"> D. It  is  one  of  the  most  popular  running  events  in  the  southeastern  U.S. Questions  3  and  4  are  based  on  the  news  report  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q3">
+<span class="qnum">题 3</span>
+<p>A.  He  was  once  a  full-time  ambassador.</p>
+<div class="opts"><label><input type="radio" name="Q3" value="B"> B. He  was  soon  to  retire  from  the  army.</label>
+<label><input type="radio" name="Q3" value="C"> C. He  became  an  astronaut  in  2015.</label>
+<label><input type="radio" name="Q3" value="D"> D. He  used  to  be  a  helicopter  pilot.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q4">
+<span class="qnum">题 4</span>
+<p>A.  It  has  been  unbelievably  exciting  and  rewarding.</p>
+<div class="opts"><label><input type="radio" name="Q4" value="B"> B. It  has  been  extraordinarily  tough  and  demanding.</label>
+<label><input type="radio" name="Q4" value="C"> C. It  has  contributed  a  great  deal  to  human  flights  to  space.</label>
+<label><input type="radio" name="Q4" value="D"> D. It  has  given  him  exceptional  privilege  as  an  ambassador. Questions  5  to  7  are  based  on  the  news  report  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q5">
+<span class="qnum">题 5</span>
+<p>A.  They  are  known  for  their  loyalty  to  their  owners.</p>
+<div class="opts"><label><input type="radio" name="Q5" value="B"> B. They  are  brought  in  by  the  store’s  customers.</label>
+<label><input type="radio" name="Q5" value="C"> C. They  are  regular  visitors  to  the  store.</label>
+<label><input type="radio" name="Q5" value="D"> D. They  are  pets  kept  by  the  store  staff.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q6">
+<span class="qnum">题 6</span>
+<p>A.  It  might  be  a  nuisance  to  the  loyal  shoppers.</p>
+<div class="opts"><label><input type="radio" name="Q6" value="B"> B. It  might  have  been  abandoned  by  its  owner.</label>
+<label><input type="radio" name="Q6" value="C"> C. It  might  be  12  months  old.</label>
+<label><input type="radio" name="Q6" value="D"> D. It  might  have  got  lost.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q7">
+<span class="qnum">题 7</span>
+<p>A.  Feed  the  cats.</p>
+<div class="opts"><label><input type="radio" name="Q7" value="B"> B. Remove  any  store  signs.</label>
+<label><input type="radio" name="Q7" value="C"> C. Sit  in  the  shop  aisles.</label>
+<label><input type="radio" name="Q7" value="D"> D. Bring  in  pets  with  them. 2 https://zhenti.burningvocabulary.cn Section  B Directions:  In  this  section,  you  will  hear  two  long  conversations.  At  the  end  of  each  conversation,  you  will  hear four  questions.  Both  the  conversation  and  the  questions  will  be  spoken  only  once.  After  you  hear  a  question,  you must  choose  the  best  answer  from  the  four  choices  marked  A,  B,  C  and  D.  Then  mark  the  corresponding  letter  on Answer  Sheet  1  with  a  single  line  through  the  centre. Questions  8  to  11  are  based  on  the  conversation  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q8">
+<span class="qnum">题 8</span>
+<p>A.  Sharing  her  room  with  friends.</p>
+<div class="opts"><label><input type="radio" name="Q8" value="B"> B. Cutting  down  her  living  expenses.</label>
+<label><input type="radio" name="Q8" value="C"> C. Living  off  campus.</label>
+<label><input type="radio" name="Q8" value="D"> D. Moving  to  the  city  center.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q9">
+<span class="qnum">题 9</span>
+<p>A.  The  facilities  available.</p>
+<div class="opts"><label><input type="radio" name="Q9" value="B"> B. Various  costs  involved.</label>
+<label><input type="radio" name="Q9" value="C"> C. Changes  in  living  conditions.</label>
+<label><input type="radio" name="Q9" value="D"> D. The  distance  to  her  home:</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q10">
+<span class="qnum">题 10</span>
+<p>A.  Went  through  much  trouble.</p>
+<div class="opts"><label><input type="radio" name="Q10" value="B"> B. Commuted  to  save  money.</label>
+<label><input type="radio" name="Q10" value="C"> C. Studied  on  the  bus.</label>
+<label><input type="radio" name="Q10" value="D"> D. Lived  on  campus.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q11">
+<span class="qnum">题 11</span>
+<p>A.  Discuss  the  matter  with  the  woman’s  mother.</p>
+<div class="opts"><label><input type="radio" name="Q11" value="B"> B. Make  a  decision  within  a  few  days.</label>
+<label><input type="radio" name="Q11" value="C"> C. Try  his  best  to  persuade  his  wife.</label>
+<label><input type="radio" name="Q11" value="D"> D. Weigh  the  benefits  against  the  disadvantages. Questions  12  to  15  are  based  on  the  conversation  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q12">
+<span class="qnum">题 12</span>
+<p>A.  Interviewing  the  man.</p>
+<div class="opts"><label><input type="radio" name="Q12" value="B"> B. Looking  for  Lawrence.</label>
+<label><input type="radio" name="Q12" value="C"> C. Choosing  a  present  for  her  nephew.</label>
+<label><input type="radio" name="Q12" value="D"> D. Helping  the  man  with  his  shopping.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q13">
+<span class="qnum">题 13</span>
+<p>A.  Quite  educational.</p>
+<div class="opts"><label><input type="radio" name="Q13" value="B"> B. Incredibly  popular.</label>
+<label><input type="radio" name="Q13" value="C"> C. Driven  by  batteries.</label>
+<label><input type="radio" name="Q13" value="D"> D. Obviously  childish.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q14">
+<span class="qnum">题 14</span>
+<p>A.  One  he  loves  for  helping  exercise  his  mind.</p>
+<div class="opts"><label><input type="radio" name="Q14" value="B"> B. One  he  can  play  together  with  his  sister.</label>
+<label><input type="radio" name="Q14" value="C"> C. One  he  finds  interesting  and  challenging.</label>
+<label><input type="radio" name="Q14" value="D"> D. One  he  can  play  either  alone  or  in  a  group.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q15">
+<span class="qnum">题 15</span>
+<p>A.  It  has  been  enjoyed  by  kids  for  decades.</p>
+<div class="opts"><label><input type="radio" name="Q15" value="B"> B. It  always  reminds  people  of  times  of  war.</label>
+<label><input type="radio" name="Q15" value="C"> C. It  has  been  played  both  indoors  and  outdoors.</label>
+<label><input type="radio" name="Q15" value="D"> D. It  distinguishes  itself  as  one  of  the  oldest  games. Section  C Directions:  In  this  section,  you  will  hear  three  passages.  At  the  end  of  each  passage,  you  will  hear  three  or  four questions.  Both  the  passage  and  the  questions  will  be  spoken  only  once.  After  you  hear  a  question,  you  must choose  the  best  answer  from  the  four  choices  marked  A,  B,  C  and  D.  Then  mark  the  corresponding  letter  on Answer  Sheet  1  with  a  single  line  through  the  centre. Questions  16  to  18  are  based  on  the  passage  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q16">
+<span class="qnum">题 16</span>
+<p>A.  A  display  of  a  variety  of  products  increases  consumers’  interest.</p>
+<div class="opts"><label><input type="radio" name="Q16" value="B"> B. Too  many  choices  decrease  one’s  desire  to  buy.</label>
+<label><input type="radio" name="Q16" value="C"> C. Fewer  choices  lead  to  lower  customer  satisfaction.</label>
+<label><input type="radio" name="Q16" value="D"> D. Customers  given  more  choices  are  more  likely  to  get  confused. 3 https://zhenti.burningvocabulary.cn</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q17">
+<span class="qnum">题 17</span>
+<p>A.  What  kind  of  display  results  in  more  sales.</p>
+<div class="opts"><label><input type="radio" name="Q17" value="B"> B. What  kind  of  display  creates  more  interest.</label>
+<label><input type="radio" name="Q17" value="C"> C. What  kind  of  display  attracts  a  greater  crowd  of  customers.</label>
+<label><input type="radio" name="Q17" value="D"> D. What  kind  of  display  leads  to  greater  customer  satisfaction.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q18">
+<span class="qnum">题 18</span>
+<p>A.  There  are  situations  where  customers  buy  nothing.</p>
+<div class="opts"><label><input type="radio" name="Q18" value="B"> B. There  are  tricks  to  increase  customer  satisfaction.</label>
+<label><input type="radio" name="Q18" value="C"> C. There  are  ways  to  predict  customer  preferences.</label>
+<label><input type="radio" name="Q18" value="D"> D. There  are  rules  that  motivate  customers  to  buy. Questions  19  to  21  are  based  on  the  passage  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q19">
+<span class="qnum">题 19</span>
+<p>A.  Stressful.</p>
+<div class="opts"><label><input type="radio" name="Q19" value="B"> B. Burdensome.</label>
+<label><input type="radio" name="Q19" value="C"> C. Worthwhile.</label>
+<label><input type="radio" name="Q19" value="D"> D. Energy-boosting.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q20">
+<span class="qnum">题 20</span>
+<p>A.  By  linking  it  with  employees’  salary.</p>
+<div class="opts"><label><input type="radio" name="Q20" value="B"> B. By  taking  it  as  the  New  Year  resolution.</label>
+<label><input type="radio" name="Q20" value="C"> C. By  improving  work  schedules.</label>
+<label><input type="radio" name="Q20" value="D"> D. By  making  it  part  of  the  job.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q21">
+<span class="qnum">题 21</span>
+<p>A.  It  was  very  important  to  their  well-being.</p>
+<div class="opts"><label><input type="radio" name="Q21" value="B"> B. It  had  taken  little  of  their  spare  time.</label>
+<label><input type="radio" name="Q21" value="C"> C. It  was  an  outlet  for  their  personal  fulfillment.</label>
+<label><input type="radio" name="Q21" value="D"> D. It  helped  improve  their  working  environment. Questions  22  to  25  are  based  on  the  passage  you  have  just  heard.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q22">
+<span class="qnum">题 22</span>
+<p>A.  It  amounts  to  2,000  tons  daily.</p>
+<div class="opts"><label><input type="radio" name="Q22" value="B"> B. It  mostly  comes  from  supermarkets.</label>
+<label><input type="radio" name="Q22" value="C"> C. It  is  estimated  at  11%  of  the  UK’s  total  food  supply.</label>
+<label><input type="radio" name="Q22" value="D"> D. It  has  a  lot  to  do  with  independent  luxury  food  suppliers.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q23">
+<span class="qnum">题 23</span>
+<p>A.  It  rents  bicycles  to  deliver  food.</p>
+<div class="opts"><label><input type="radio" name="Q23" value="B"> B. It  sells  sought-after  coffee  beans.</label>
+<label><input type="radio" name="Q23" value="C"> C. It  delivers  luxury  hand-made  food.</label>
+<label><input type="radio" name="Q23" value="D"> D. It  recycles  waste  food  from  the  city.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q24">
+<span class="qnum">题 24</span>
+<p>A.  It  pays  special  attention  to  the  size  and  shape  of  its  products.</p>
+<div class="opts"><label><input type="radio" name="Q24" value="B"> B. It  tries  to  escape  the  constraints  of  the  current  food  system.</label>
+<label><input type="radio" name="Q24" value="C"> C. It  cooperates  closely  with  local  producers.</label>
+<label><input type="radio" name="Q24" value="D"> D. It  aims  to  provide  high-quality  products</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q25">
+<span class="qnum">题 25</span>
+<p>A.  To  ensure  a  regular  supply.</p>
+<div class="opts"><label><input type="radio" name="Q25" value="B"> B. To  maintain  a  unique  menu.</label>
+<label><input type="radio" name="Q25" value="C"> C. To  make  up  for  the  waste  products.</label>
+<label><input type="radio" name="Q25" value="D"> D. To  meet  customers’  urgent  demand. Part   III                                                                                                    Reading    Comprehension                                                                                  (40  minutes) Section  A Directions:  In  this  section,  there  is  a  passage  with  ten  blanks.  You  are  required  to  select  one  word  for  each  blank from  a  list  of  choices  given  in  a  word  bank  following  the  passage.  Read  the  passage  through  carefully  before making  your  choices.  Each  choice  in  the  bank  is  identified  by  a  letter.  Please  mark  the  corresponding  letter  for each  item  on  Answer  Sheet  2  with  a  single  line  through  the  centre.  You  may  not  use  any  of  the  words  in  the  bank more  than  once. Sir  Alfred  Hitchcock  was  an  English  movie  director  and  producer.  Famously    26 to  as  ‘The  Master of  Suspense,’  Hitchcock  is  one  of  the  most  influential  filmmakers  in  the  history  of    27  .  He  was  an extraordinary  director  who  entertained  his  audience  with    28 and  gripping  suspense  movies. His  fascination  with  crime  began  at  an  early  age  when  he  was    29 by  his  father  who  made  him  spend a  few  minutes  inside  a  prison  for  his  misconduct.  Hence,  his  movies  are    30 of  the  guilt  and  innocence  of the  wrongdoer  and  the  victim.  He  had  a  gift  for  creating  stories  that  consisted  of  deceit,  robbery,  murder, corruption,  and  other  criminal    31 with  incredible  plot  twists  in  the  storyline.  The  principal  characters  in 4 https://zhenti.burningvocabulary.cn his  movies  were  often  ordinary  people    32 in  unwanted  and  unavoidable  situations. He  was    33 productive  and  his  amazing  body  of  work  is  considered  fascinating  by  the  critics.  Most of  his  movies  have    34 the  test  of  time  and  are  considered  to  be  masterpieces.  He  is  also  remembered  by other  filmmakers,  for  he  continues  to  inspire  them  to  be  passionate  about  their  work.  He  is  also    35 by people  around  the  world  for  his  entertaining  and  exciting  stories.</label>
+<label><input type="radio" name="Q25" value="A"> A. caught</label>
+<label><input type="radio" name="Q25" value="B"> B. cinema</label>
+<label><input type="radio" name="Q25" value="C"> C. engaging</label>
+<label><input type="radio" name="Q25" value="D"> D. graphically E. highly F. incentive G. instincts H. offences I. punished J. referred K. stood L. symbolic M. tuned N. visually O. worshipped Section  B Directions:  In  this  section,  you  are  going  to  read  a  passage  with  ten  statements  attached  to  it.  Each  statement contains  information  given  in  one  of  the  paragraphs.  Identify  the  paragraph  from  which  the  information  is  derived. You  may  choose  a  paragraph  more  than  once.  Each  paragraph  is  marked  with  a  letter.  Answer  the  questions  by marking  the  corresponding  letter  on  Answer  Sheet  2. Is  juicing  actually  good  for  you?</label>
+<label><input type="radio" name="Q25" value="A"> A. Freshly  juiced  fruit  has  become  a  basic  dietary  item  —  especially  for  busy,  health-conscious  consumers who  can  save  time  on  making  (and  perhaps  even  chewing)  their  food  without  missing  out  on  nutrients. Fruit  juice  also  has  been  linked  to  claims  that  it  can  help  you  both  lose  weight  and  stay  healthy.  All  of which,  of  course,  has  made  it  highly  profitable.  The  global  fruit  and  vegetable  juices  market  was  valued  at $154  billion  in  2016  and  is  expected  to  grow.</label>
+<label><input type="radio" name="Q25" value="B"> B. But  is  juicing  really  as  healthy  as  we  think?  Most  foods  containing  fructose  —  a  naturally  occurring  sugar found  in  all  fruits  and  fruit  juices  —  don’t  seem  to  have  harmful  effects  as  long  as  they’re  not  contributing to  excess  daily  calories.  This  is  because  the  fibre  found  in  whole  fruits  is  intact,  and  the  sugar  is  contained within  the  fruit’s  cells.  It  takes  our  digestive  system  a  while  to  break  these  cells  down  and  for  fructose  to enter  the  bloodstream.</label>
+<label><input type="radio" name="Q25" value="C"> C. But  this  is  not  the  case  with  fruit  juice.  Unlike  whole  fruit,  fruit  juice  has  most  of  the  fibre  removed.  This is  why  the  fructose  in  fruit  juices  counts  as  “free  sugars”  —  which  also  include  honey  and  the  sugars added  to  foods.  It’s  recommended  by  the  World  Health  Organisation  that  adults  have  no  more  than  30g  of added  sugar,  the  equivalent  of  150ml  of  fruit  juice,  per  day.  The  problem  is  that,  with  the  fibre  removed, fruit  juice’s  fructose  is  absorbed  more  quickly.  Sudden  increases  in  blood  sugar  cause  the  release  of  insulin (胰岛素)  to  bring  it  back  down  to  a  stable  level.  Over  time,  this  mechanism  can  wear  out,  increasing  the risk  of  developing  type  2  diabetes.  In  2013,  researchers  analysed  the  health  data  of  100,000  people collected  between  1986  and  2009  and  found  that  fruit  juice  consumption  was  linked  with  increased  risk  of type  2  diabetes.  Another  study  found  a  relationship  between  fruit  juice  and  type  2  diabetes  after  following the  diets  and  diabetes  status  of  more  than  70,000  nurses  over  18  years.  The  researchers  explain  that  the possible  reason  for  this  may  partly  have  been  the  lack  of  the  other  components  found  in  whole  fruit,  like fibre.</label>
+<label><input type="radio" name="Q25" value="D"> D. Juices  containing  vegetables  can  provide  more  nutrients  and  less  sugar  than  juices  made  up  of  just  fruit  — but  they  still  lack  valuable  fibre.  Diets  high  in  fibre  have  been  linked  to  a  lower  risk  of  developing  heart disease,  stroke,  high  blood  pressure  and  diabetes,  and  it’s  recommended  adults  consume  30g  per  day. 5 https://zhenti.burningvocabulary.cn E. Aside  from  the  link  to  type  2  diabetes,  many  studies  agree  that  fruit  juice  is  harmful  if  it  contributes  to  an excess  in  calories.  In  an  analysis  of  155  studies,  John  Sievenpiper,  associate  professor  at  the  University  of Toronto’s  Department  of  Nutritional  Sciences,  set  out  to  understand  if  the  associations  between  sugary  soft drinks  and  health  —  including  risk  of  diabetes  and  heart  disease  —  were  applicable  to  the  food  and  drink we  generally  consume  as  part  of  a  healthy  diet.  He  compared  studies  looking  into  the  effects  of  fructose- containing  sugars  with  control  diets  free  from  or  lower  in  these  sugars.  His  aim?  To  isolate  the  effects  of consuming  too  many  calories  from  the  effects  of  foods  containing  different  sugars. F. He  found  negative  effects  on  blood  sugar  and  insulin  levels  when  food  provided  excess  calories  from sugars,  including  fruit  juice.  However,  when  the  calories  weren’t  in  excess  overall,  there  were  some advantages  to  consuming  whole  fruit  —  and  even  fruit  juice.  Sievenpiper  concludes  that  the  recommended 150ml  of  fruit  juice  per  day,  which  is  an  average  serving,  is  reasonable.  The  paper  concluded  that  foods containing  fructose  may  have  some  small  benefits  for  long-term  blood  sugar  control  when  they  don’t  lead to  over-consumption  of  calories.  But  when  they  do  lead  to  too  many  calories,  they  risk  raising  blood  sugar and  insulin  levels. G. So  while  we  know  that  fruit  juice  can  cause  diabetes  if  it’s  part  of  a  diet  that  has  more  calories  overall,  it’s less  clear  how  juice  affects  the  long-term  health  of  those  who  aren’t  overweight.  But  we  have  a  higher  risk of  consuming  more  than  the  recommended  daily  number  of  calories  (around  2,000  for  women  and  2,500 for  men)  on  the  days  we  drink  juice,  according  to  research.  Numerous  studies  have  shown  that  drinking fruit  juice  doesn’t  make  us  consume  any  less  of  other  foods  throughout  the  day. H. As  it  is  easy  to  consume  large  amounts  of  fruit  juice  quite  quickly,  extra  calories  are  taken  in.  And  extra calories  can  contribute  to  weight  gain.  One  way  we  can  improve  the  effects  of  fruit  juice  on  our  health  is making  sure  we  select  ripe  fruit  to  retain  as  much  of  its  goodness  as  possible,  according  to  Roger  Clemens, professor  of  pharmaceutical  (药物的)  sciences  at  the  University  of  Southern  California. I. Another  reason  for  fruit  juice’s  recent  popularity  is  the  argument  that  it  can  help  to  remove  poisonous  or harmful  substances  from  the  body.  However,  “the  whole  concept  of  a  juice  diet  helping  to  remove poisonous  or  harmful  substances  from  the  body  is  completely  false,”  says  Clemens.  “We  consume compounds  every  day  that  may  be  poisonous  and  our  bodies  do  a  wonderful  job  of  removing  and eliminating  anything  harmful  from  our  bodies.” J. And  juice  isn’t  a  cure-all  for  getting  your  nutrients,  either.  “There  are  a  lot  of  nutrients  contained  in  the parts  of  the  fruits,  such  as  in  apple  skins,  that  are  excluded  when  you  juice  them,”  says  Heather  Ferris,  a professor  of  medicine.  “You  end  up  with  sugary  water  with  some  vitamins.” K. Plus.  she  adds,  it’s  not  an  ideal  way  to  reach  the  advised  ‘five  a  day’.  “People  try  to  get  five  servings  of fruit  and  vegetables  per  day  and  don’t  realise  this  isn’t  just  about  getting  vitamins,”  she  says.  “It’s  also about  reducing  the  amount  of  grain  carbs  (碳水化合物)  and  protein  and  fats  in  our  diet,  and  increasing fibre.”  So  while  fruit  juice  is  better  than  no  fruit  at  all,  there  are  limits.  It  particularly  comes  with  risks when  we  consume  more  than  150ml  of  free  sugars  per  day,  or  when  it  puts  us  over  our  recommended calorie  intake.  It  provides  us  with  vitamins  —  but  fruit  juice  is  far  from  a  quick  fix.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>Fruit  juice  is  different  from  whole  fruit  in  that  it  contains  much  less  fibre.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>Some  people  believe  a  juice  diet  helps  to  rid  our  body  of  harmful  or  poisonous  substances.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>A  lot  of  research  comes  to  the  same  conclusion  that  fruit  juice  does  harm  to  the  human  body  when  it  leads to  surplus  calories.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>The  claimed  health  benefits  of  fruit  and  vegetable  juices  have  rendered  the  industry  very  profitable. 6 https://zhenti.burningvocabulary.cn</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>To  increase  the  benefits  of  fruit  juice  to  our  health,  we’d  better  choose  ripe  fruit  to  make  juice.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Diets  containing  large  amounts  of  fibre  reduce  the  risk  of  heart  disease,  diabetes  and  other  health  hazards.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>According  to  a  research  paper,  drinking  fruit  juice  is  beneficial  on  condition  that  it  is  consumed  in reasonable  amounts.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>One  expert  claims  that  juicing  wastes  a  lot  of  nutrients  contained  in  fruits.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>It  takes  some  time  for  fruit’s  cells  to  be  digested  and  for  fructose  to  be  absorbed.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>A  lot  of  research  has  demonstrated  that  drinking  fruit  juice  does  not  reduce  our  daily  consumption  of  other foods. Section  C Directions:  There  are  2  passages  in  this  section.  Each  passage  is  followed  by  some  questions  or  unfinished statements.  For  each  of  them  there  are  four  choices  marked  A,  B,  C  and  D.  You  should  decide  on  the  best  choice and  mark  the  corresponding  letter  on  Answer  Sheet  2  with  a  single  line  through  the  centre. Passage  One Questions  46  to  50  are  based  on  the  following  passage. We  all  take  a  little  extra  effort  to  look  nice  for  special  occasions.  But  most  of  us  have  conflicting  feelings about  dressing  up  and  feel  guilty  about  taking  the  time  to  focus  on  clothes.  Science  now  suggests  the  right dress  may  give  ourselves  the  extra  edge  in  our  professional  and  personal  lives. We  hear  sayings  like  “dress  for  the  job  you  want;  not  the  job  you  have”.  Most  people  don’t  really  believe in  them,  but  research  into  the  impact  of  clothes  on  behavior  now  suggests  that  there  may  actually  be  a  grain  of truth  in  these  sayings.  Science  says  that  the  clothes  we  wear  affect  our  behavior,  our  mood  and  even  the  way we  interact  with  others  because  of  the  symbolic  meaning  that  we  assign  to  different  types  of  clothing. We  consider  some  clothes  to  be  powerful,  some  to  be  fun,  and  so  on.  We  even  evaluate  people  whom  we have  just  met  based  on  their  clothes.  We  also  evaluate  ourselves  based  on  what  we  are  wearing  because  of  the way  they  make  us  feel.  This  means  that  the  experience  of  wearing  something  affects  our  attitudes  and  our choice  of  behavior. There’s  a  reason  tailored  jackets  are  associated  with  being  ‘dressed  for  success’.  It  seems  that  wearing formal  office  wear  puts  us  in  the  right  frame  of  mind  to  conduct  business.  Wearing  power  clothing  makes  us feel  more  confident  and  even  increases  hormones  needed  for  displaying  dominance.  This  in  turn  helps  us become  better  negotiators  and  abstract  thinkers. While  a  good  suit  works  wonders  for  our  performance  in  the  boardroom,  wearing  formal  wear  isn’t  a great  idea  when  we  want  to  socialize.  Studies  have  found  that  people  tend  to  be  less  open  and  less  able  to relax  when  they  wear  formal  clothes. On  the  other  hand,  a  casual  dress  helps  us  become  more  friendly  and  creative.  These  findings  support  the idea  of  wearing  business  casuals  on  a  Friday;  since  colleagues  are  most  likely  to  take  out  time  to  socialize  on the  last  work  day  of  the  week.  I  mean,  who  wants  to  hang  out  with  people  in  their  suits?</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What  does  science  suggest  the  right  dress  may  do?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. Add  to  our  advantage  in  work  and  life.</label>
+<label><input type="radio" name="Q46" value="B"> B. Enable  us  to  look  a  lot  more  attractive.</label>
+<label><input type="radio" name="Q46" value="C"> C. Help  us  to  enjoy  a  fuller  personal  life.</label>
+<label><input type="radio" name="Q46" value="D"> D. Provide  extra  energy  for  what  we  do. 7 https://zhenti.burningvocabulary.cn</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>Why  does  science  say  the  clothes  one  wears  may  affect  their  interaction  with  others?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. Clothes  usually  represent  one’s  social  and  economic  status</label>
+<label><input type="radio" name="Q47" value="B"> B. Clothes  largely  determine  one’s  likability  by  people  around.</label>
+<label><input type="radio" name="Q47" value="C"> C. Different  types  of  clothing  markedly  reflect  different  personalities.</label>
+<label><input type="radio" name="Q47" value="D"> D. Different  types  of  clothing  convey  different  messages  symbolically.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>How  do  the  clothes  we  wear  sway  our  evaluation  of  ourselves?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. By  exerting  an  effect  on  our  power  of  judgment.</label>
+<label><input type="radio" name="Q48" value="B"> B. By  impacting  how  we  feel  about  ourselves.</label>
+<label><input type="radio" name="Q48" value="C"> C. By  affecting  what  we  take  as  the  basis  for  assessment.</label>
+<label><input type="radio" name="Q48" value="D"> D. By  influencing  our  interpretation  of  symbolic  messages.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>Why  does  the  author  say  tailored  jackets  are  associated  with  being  ‘dressed  for  success’?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. They  are  necessary  for  formal  business  dealings.</label>
+<label><input type="radio" name="Q49" value="B"> B. They  may  help  people  concentrate  on  their  business.</label>
+<label><input type="radio" name="Q49" value="C"> C. They  are  vital  to  keeping  a  dominant  position  in  business  transactions.</label>
+<label><input type="radio" name="Q49" value="D"> D. They  may  enable  people  to  have  the  right  mentality  for  doing  business.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What  are  people  advised  to  do  when  they  want  to  socialize?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. Focus  on  clothing.</label>
+<label><input type="radio" name="Q50" value="B"> B. Wear  a  good  suit.</label>
+<label><input type="radio" name="Q50" value="C"> C. Dress  casually.</label>
+<label><input type="radio" name="Q50" value="D"> D. Look  unusual. Passage  Two Questions  51  to  55  are  based  on  the  following  passage. With  the  rise  of  pop  music,  jazz,  and  electronic  music,  both  opera  and  classical  music  started  to  fade away  from  the  public  eye.  Some  people  are  beginning  to  wonder  whether  opera  and  classical  music  are  still relevant  to  the  modern  world  of  music.  Granted,  you  will  not  typically  see  today’s  teenagers  lending  their  ears to  Bach  anytime  soon,  but  there  are  some  major  indicators  that  both  opera  and  classical  music  are  now  still quite  alive. The  most  major  indicator  of  classical  music’s  importance  in  society  today  is  the  fact  that  much  of  the popular  music  that  is  currently  being  produced  uses  similar  beats,  harmonies,  and  melodies  (旋律)  as  those that  were  used  in  some  of  classical  music’s  best  works.  Even  so,  it  can  be  difficult  for  those  who  do  not  study music  theory  to  see  this  as  an  indicator,  since  it  is  subtle  and  just  shows  the  impact  symphonic  (交响乐的) orchestras  have  had  on  society’s  taste  in  music.</label>
+<label><input type="radio" name="Q50" value="A"> A. better  example  for  the  relevance  of  opera  and  classical  music  can  be  seen  in  the  invention  of  the  rock opera.  Opera,  in  its  simplest  definition,  is  telling  a  story  using  music  as  its  form.  The  art  of  telling  a  story using  music  has  not  faded  in  the  least  bit.  In  fact,  sometimes  actual  orchestras  are  used  for  major  parts  of  the opera  itself.  Some  of  the  world’s  greatest  hits  have  been  parts  of  rock  operas. Fans  of  classical  music  can  also  tell  you  that  there  are  few  types  of  music  that  are  more  expressive.  So,  it should  come  as  no  surprise  to  anyone  that  classical  music  pieces  are  still  used  as  background  music  in  modern movies.  Symphonic  orchestra  compositions  have  also  been  created  solely  for  the  purpose  of  being  included  in major  motion  pictures.  These  are  often  very  well  received  amongst  mainstream  music  fans. 8 https://zhenti.burningvocabulary.cn Classical  music  and  opera  are  the  very  foundation  of  what  our  modern  music  is  based  upon.  Considering the  huge  impact  they  have  had  on  our  current  society,  it  is  without  doubt  that  we  can  expect  them  to  continue to  remain  important  for  centuries  to  come.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What  does  the  author  think  of  classical  music  and  opera  in  today’s  world?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. They  still  make  their  presence  felt.</label>
+<label><input type="radio" name="Q51" value="B"> B. They  have  given  way  to  electronic  music.</label>
+<label><input type="radio" name="Q51" value="C"> C. They  will  not  fade  away  from  the  public  eye.</label>
+<label><input type="radio" name="Q51" value="D"> D. They  are  no  longer  relevant  to  teenagers’  lives.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What  do  we  learn  about  much  of  the  popular  music  currently  produced?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. It  can  be  difficult  for  many  classical  music  fans  to  appreciate.</label>
+<label><input type="radio" name="Q52" value="B"> B. It  can  be  seen  as  an  indicator  of  refinement  on  classical  music.</label>
+<label><input type="radio" name="Q52" value="C"> C. It  caters  to  society’s  taste  in  music  in  a  more  subtle  way  than  classical  music.</label>
+<label><input type="radio" name="Q52" value="D"> D. It  contains  elements  similar  to  those  in  some  masterpieces  of  classical  music.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>Why  does  the  author  mention  the  invention  of  the  rock  opera?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. To  illustrate  how  to  tell  a  story  using  music.</label>
+<label><input type="radio" name="Q53" value="B"> B. To  present  the  simplest  definition  of  opera.</label>
+<label><input type="radio" name="Q53" value="C"> C. To  show  the  relevance  of  opera  and  classical  music.</label>
+<label><input type="radio" name="Q53" value="D"> D. To  justify  the  necessity  of  using  orchestras  in  opera.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>Why  are  classical  music  pieces  still  used  as  background  music  in  modern  movies?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. There  are  few  types  of  music  for  movie  producers  to  choose  from.</label>
+<label><input type="radio" name="Q54" value="B"> B. They  are  considered  to  be  the  most  expressive  type  of  music.</label>
+<label><input type="radio" name="Q54" value="C"> C. They  are  well  received  by  movie  fans  from  all  over  the  world.</label>
+<label><input type="radio" name="Q54" value="D"> D. They  are  essential  for  movies  to  become  the  world’s  greatest  hits.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What  do  we  learn  about  our  modern  music?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. It  could  not  have  come  into  being  without  classical  music  and  opera  as  its  foundation.</label>
+<label><input type="radio" name="Q55" value="B"> B. It  cannot  outcompete  classical  music  and  opera  in  its  impact  on  our  current  society.</label>
+<label><input type="radio" name="Q55" value="C"> C. It  will  not  enjoy  as  much  popularity  as  classical  music  and  opera  among  music  fans.</label>
+<label><input type="radio" name="Q55" value="D"> D. It  might  not  be  able  to  rival  classical  music  and  opera  in  importance  for  centuries  to  come. Part   IV                                                                                                                      Translation                                                                                                                (30  minutes) Directions:  For  this  part,  you  are  allowed  30  minutes  to  translate  a  passage  from  Chinese  into  English.  You should  write  your  answer  on  Answer  Sheet  2. 近年来，中国越来越多的城市着力打造“15 分钟便民生活圈  (convenient  living  circles)”。社区居民 步行15 分钟就能享受到日常所需的公共服务。生活圈内建有便利店、公园、健身场地、图书馆、学校、 社区食堂、诊所等。生活圈的建立能够为居民提供更加便利、舒适、友好、愉悦的生活环境，更好地满 足城市居民多元化的日常生活服务需求，提升居民的生活品质和幸福感。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>

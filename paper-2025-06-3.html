@@ -1,174 +1,255 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>2025年6月 第3套 答题卡 · CET-4 题库</title>
-<link rel="stylesheet" href="./style.css">
-<style>
-.ext-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:8px; margin:10px 0 18px; }
-.ext-card { display:block; padding:10px 14px; background:#ecfeff; color:#0891b2; border:1px solid #67e8f9; border-radius:6px; text-align:center; font-size:0.92rem; text-decoration:none; transition:0.2s; }
-.ext-card:hover { background:#cffafe; border-color:#22d3ee; }
-.notice { padding:12px 16px; border-radius:8px; margin:12px 0; font-size:0.92rem; }
-.notice.legal { background:#fef3c7; color:#78350f; border-left:4px solid #f59e0b; }
-.notice.howto { background:#dbeafe; color:#1e40af; border-left:4px solid #3b82f6; }
-.answer-table { width:100%; border-collapse:collapse; margin:14px 0; }
-.answer-table td { padding:6px 8px; border-bottom:1px solid #e2e8f0; }
-.answer-table .qn { width:42px; text-align:center; font-weight:700; color:#475569; }
-.answer-table .sec { width:60px; text-align:center; font-size:0.82rem; color:#64748b; }
-.opt { display:inline-block; margin-right:14px; cursor:pointer; }
-.opt input { margin-right:4px; }
-.subjective { margin:14px 0; }
-.subjective textarea { width:100%; min-height:120px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; font-family:inherit; font-size:0.95rem; }
-.key-input { background:#f8fafc; padding:14px; border-radius:8px; margin:14px 0; }
-.key-input textarea { width:100%; height:60px; font-family:'Courier New',monospace; padding:8px; border:1px solid #cbd5e1; border-radius:4px; }
-.submit-btn { display:inline-block; padding:12px 32px; background:#0891b2; color:white; border:none; border-radius:6px; font-size:1rem; cursor:pointer; }
-.submit-btn:hover { background:#0e7490; }
-.result { margin:18px 0; padding:14px 16px; border-radius:8px; display:none; }
-.result.show { display:block; }
-.result.pass { background:#dcfce7; color:#166534; border-left:4px solid #22c55e; }
-.result.fail { background:#fee2e2; color:#991b1b; border-left:4px solid #ef4444; }
-</style>
-</head>
-<body>
-<header>
-  <h1>2025年6月 第3套 答题卡</h1>
-  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回 19 套真题列表</a></p>
-</header>
-
-<div style="display:flex;gap:8px;padding:10px 18px;background:#f8fafc;border-bottom:1px solid #e2e8f0;font-size:0.92rem;">
-  <a href="./paper-2025-06-2.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;">← 2025年6月 第2套</a>
-  <a href="./index.html" style="flex:1;text-align:center;color:#0891b2;text-decoration:none;font-weight:600;">🏠 全部 19 套</a>
-  <span style="flex:1;text-align:center;color:#cbd5e1;">已是最后一套 →</span>
-</div>
-
-<main>
-<div class="notice legal">
-  ⚠ <strong>本站不复现真题原文</strong> (版权归教育部考试中心 + 出版社).
-  本页是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷子 / 下方外链跳转后看).
-  做完在本页填涂答案 → 提交 → 自动批改.
-</div>
-
-<h2>📚 真题获取 (外链合规导流)</h2>
-<div class="ext-grid">
-  <a class="ext-card" href="https://so.koolearn.com/sob/?from=&kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 新东方在线 (koolearn)</a>
-  <a class="ext-card" href="https://www.hjenglish.com/new/p1493420/?kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 沪江英语 cet4</a>
-  <a class="ext-card" href="https://cet.wendu.com/?kw=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98" target="_blank" rel="noopener">🌐 文都教育</a>
-  <a class="ext-card" href="https://www.baidu.com/s?wd=2025%E5%B9%B46%E6%9C%88%20%E7%AC%AC3%E5%A5%97%20%E5%A4%A7%E5%AD%A6%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98+filetype%3Apdf" target="_blank" rel="noopener">🌐 有道翻译/百度文库</a>
-  <a class="ext-card" href="https://cet.neea.edu.cn/html1/folder/16031/2280-1.htm" target="_blank" rel="noopener">🌐 教育部官方样卷 (CET 官网)</a>
-</div>
-
-<div class="notice howto">
-  💡 <strong>怎么用</strong>:
-  ① 上面外链找 2025年6月 第3套 真题 PDF/在线版 →
-  ② 一边看题一边在下方填涂答案 →
-  ③ 翻译/写作答案写到 textarea →
-  ④ 答案 key 粘到底部 (从外链找答案 key) →
-  ⑤ 提交批改 → 看分数 + 错题.
-</div>
-
-<h2>📝 客观题答题卡 (听力 15 + 阅读 15)</h2>
-<table class="answer-table">
-<thead><tr><th>题号</th><th>部分</th><th>选项</th></tr></thead>
-<tbody>
-<tr><td class="qn">1</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q1" value="A"> A</label><label class="opt"><input type="radio" name="q1" value="B"> B</label><label class="opt"><input type="radio" name="q1" value="C"> C</label><label class="opt"><input type="radio" name="q1" value="D"> D</label></td></tr>
-<tr><td class="qn">2</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q2" value="A"> A</label><label class="opt"><input type="radio" name="q2" value="B"> B</label><label class="opt"><input type="radio" name="q2" value="C"> C</label><label class="opt"><input type="radio" name="q2" value="D"> D</label></td></tr>
-<tr><td class="qn">3</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q3" value="A"> A</label><label class="opt"><input type="radio" name="q3" value="B"> B</label><label class="opt"><input type="radio" name="q3" value="C"> C</label><label class="opt"><input type="radio" name="q3" value="D"> D</label></td></tr>
-<tr><td class="qn">4</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q4" value="A"> A</label><label class="opt"><input type="radio" name="q4" value="B"> B</label><label class="opt"><input type="radio" name="q4" value="C"> C</label><label class="opt"><input type="radio" name="q4" value="D"> D</label></td></tr>
-<tr><td class="qn">5</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q5" value="A"> A</label><label class="opt"><input type="radio" name="q5" value="B"> B</label><label class="opt"><input type="radio" name="q5" value="C"> C</label><label class="opt"><input type="radio" name="q5" value="D"> D</label></td></tr>
-<tr><td class="qn">6</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q6" value="A"> A</label><label class="opt"><input type="radio" name="q6" value="B"> B</label><label class="opt"><input type="radio" name="q6" value="C"> C</label><label class="opt"><input type="radio" name="q6" value="D"> D</label></td></tr>
-<tr><td class="qn">7</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q7" value="A"> A</label><label class="opt"><input type="radio" name="q7" value="B"> B</label><label class="opt"><input type="radio" name="q7" value="C"> C</label><label class="opt"><input type="radio" name="q7" value="D"> D</label></td></tr>
-<tr><td class="qn">8</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q8" value="A"> A</label><label class="opt"><input type="radio" name="q8" value="B"> B</label><label class="opt"><input type="radio" name="q8" value="C"> C</label><label class="opt"><input type="radio" name="q8" value="D"> D</label></td></tr>
-<tr><td class="qn">9</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q9" value="A"> A</label><label class="opt"><input type="radio" name="q9" value="B"> B</label><label class="opt"><input type="radio" name="q9" value="C"> C</label><label class="opt"><input type="radio" name="q9" value="D"> D</label></td></tr>
-<tr><td class="qn">10</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q10" value="A"> A</label><label class="opt"><input type="radio" name="q10" value="B"> B</label><label class="opt"><input type="radio" name="q10" value="C"> C</label><label class="opt"><input type="radio" name="q10" value="D"> D</label></td></tr>
-<tr><td class="qn">11</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q11" value="A"> A</label><label class="opt"><input type="radio" name="q11" value="B"> B</label><label class="opt"><input type="radio" name="q11" value="C"> C</label><label class="opt"><input type="radio" name="q11" value="D"> D</label></td></tr>
-<tr><td class="qn">12</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q12" value="A"> A</label><label class="opt"><input type="radio" name="q12" value="B"> B</label><label class="opt"><input type="radio" name="q12" value="C"> C</label><label class="opt"><input type="radio" name="q12" value="D"> D</label></td></tr>
-<tr><td class="qn">13</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q13" value="A"> A</label><label class="opt"><input type="radio" name="q13" value="B"> B</label><label class="opt"><input type="radio" name="q13" value="C"> C</label><label class="opt"><input type="radio" name="q13" value="D"> D</label></td></tr>
-<tr><td class="qn">14</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q14" value="A"> A</label><label class="opt"><input type="radio" name="q14" value="B"> B</label><label class="opt"><input type="radio" name="q14" value="C"> C</label><label class="opt"><input type="radio" name="q14" value="D"> D</label></td></tr>
-<tr><td class="qn">15</td><td class="sec">听力</td><td class="opts"><label class="opt"><input type="radio" name="q15" value="A"> A</label><label class="opt"><input type="radio" name="q15" value="B"> B</label><label class="opt"><input type="radio" name="q15" value="C"> C</label><label class="opt"><input type="radio" name="q15" value="D"> D</label></td></tr>
-<tr><td class="qn">16</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q16" value="A"> A</label><label class="opt"><input type="radio" name="q16" value="B"> B</label><label class="opt"><input type="radio" name="q16" value="C"> C</label><label class="opt"><input type="radio" name="q16" value="D"> D</label></td></tr>
-<tr><td class="qn">17</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q17" value="A"> A</label><label class="opt"><input type="radio" name="q17" value="B"> B</label><label class="opt"><input type="radio" name="q17" value="C"> C</label><label class="opt"><input type="radio" name="q17" value="D"> D</label></td></tr>
-<tr><td class="qn">18</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q18" value="A"> A</label><label class="opt"><input type="radio" name="q18" value="B"> B</label><label class="opt"><input type="radio" name="q18" value="C"> C</label><label class="opt"><input type="radio" name="q18" value="D"> D</label></td></tr>
-<tr><td class="qn">19</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q19" value="A"> A</label><label class="opt"><input type="radio" name="q19" value="B"> B</label><label class="opt"><input type="radio" name="q19" value="C"> C</label><label class="opt"><input type="radio" name="q19" value="D"> D</label></td></tr>
-<tr><td class="qn">20</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q20" value="A"> A</label><label class="opt"><input type="radio" name="q20" value="B"> B</label><label class="opt"><input type="radio" name="q20" value="C"> C</label><label class="opt"><input type="radio" name="q20" value="D"> D</label></td></tr>
-<tr><td class="qn">21</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q21" value="A"> A</label><label class="opt"><input type="radio" name="q21" value="B"> B</label><label class="opt"><input type="radio" name="q21" value="C"> C</label><label class="opt"><input type="radio" name="q21" value="D"> D</label></td></tr>
-<tr><td class="qn">22</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q22" value="A"> A</label><label class="opt"><input type="radio" name="q22" value="B"> B</label><label class="opt"><input type="radio" name="q22" value="C"> C</label><label class="opt"><input type="radio" name="q22" value="D"> D</label></td></tr>
-<tr><td class="qn">23</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q23" value="A"> A</label><label class="opt"><input type="radio" name="q23" value="B"> B</label><label class="opt"><input type="radio" name="q23" value="C"> C</label><label class="opt"><input type="radio" name="q23" value="D"> D</label></td></tr>
-<tr><td class="qn">24</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q24" value="A"> A</label><label class="opt"><input type="radio" name="q24" value="B"> B</label><label class="opt"><input type="radio" name="q24" value="C"> C</label><label class="opt"><input type="radio" name="q24" value="D"> D</label></td></tr>
-<tr><td class="qn">25</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q25" value="A"> A</label><label class="opt"><input type="radio" name="q25" value="B"> B</label><label class="opt"><input type="radio" name="q25" value="C"> C</label><label class="opt"><input type="radio" name="q25" value="D"> D</label></td></tr>
-<tr><td class="qn">26</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q26" value="A"> A</label><label class="opt"><input type="radio" name="q26" value="B"> B</label><label class="opt"><input type="radio" name="q26" value="C"> C</label><label class="opt"><input type="radio" name="q26" value="D"> D</label></td></tr>
-<tr><td class="qn">27</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q27" value="A"> A</label><label class="opt"><input type="radio" name="q27" value="B"> B</label><label class="opt"><input type="radio" name="q27" value="C"> C</label><label class="opt"><input type="radio" name="q27" value="D"> D</label></td></tr>
-<tr><td class="qn">28</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q28" value="A"> A</label><label class="opt"><input type="radio" name="q28" value="B"> B</label><label class="opt"><input type="radio" name="q28" value="C"> C</label><label class="opt"><input type="radio" name="q28" value="D"> D</label></td></tr>
-<tr><td class="qn">29</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q29" value="A"> A</label><label class="opt"><input type="radio" name="q29" value="B"> B</label><label class="opt"><input type="radio" name="q29" value="C"> C</label><label class="opt"><input type="radio" name="q29" value="D"> D</label></td></tr>
-<tr><td class="qn">30</td><td class="sec">阅读</td><td class="opts"><label class="opt"><input type="radio" name="q30" value="A"> A</label><label class="opt"><input type="radio" name="q30" value="B"> B</label><label class="opt"><input type="radio" name="q30" value="C"> C</label><label class="opt"><input type="radio" name="q30" value="D"> D</label></td></tr>
-</tbody>
-</table>
-
-<h2>✍ 主观题</h2>
-<div class="subjective">
-  <h3>翻译 (汉译英, 段落)</h3>
-  <textarea id="translation" placeholder="请在此输入你的翻译..."></textarea>
-</div>
-<div class="subjective">
-  <h3>写作 (作文)</h3>
-  <textarea id="writing" placeholder="请在此输入你的作文 (建议 120-180 词)..." style="min-height:180px;"></textarea>
-</div>
-
-<h2>🔑 答案 key (你从外链上找到的标准答案, 粘贴此处)</h2>
-<div class="key-input">
-  <p style="margin:0 0 8px;color:#64748b;font-size:0.88rem;">格式: 30 个字母, 用逗号/空格/无分隔均可. 例: <code>A,B,C,D,A,B,...</code> 或 <code>ABCDABCDABCDABCDABCDABCDABCDAB</code></p>
-  <textarea id="answer-key" placeholder="把 30 道客观题的答案粘贴进来 (从外链找)"></textarea>
-</div>
-
-<button class="submit-btn" onclick="submitPaper()">提交 + 自动批改</button>
-
-<div id="result" class="result"></div>
-
+<meta charset="UTF-8">
+<title>2025 年6英语四级真题第3套 · 本地私人作答</title>
+<link rel="stylesheet" href="../style.css">
 <script>
-function submitPaper() {
-  const keyRaw = document.getElementById('answer-key').value.trim().toUpperCase();
-  const keyLetters = (keyRaw.match(/[ABCD]/g) || []);
-  const result = document.getElementById('result');
-  if (keyLetters.length < 30) {
-    result.className = 'result show fail';
-    result.innerHTML = '⚠ 答案 key 不足 30 个字母 (当前: ' + keyLetters.length + '). 请从外链找到完整答案再提交.';
-    return;
-  }
-  let correct = 0, wrong = [];
-  for (let i = 1; i <= 30; i++) {
-    const chosen = document.querySelector('input[name="q' + i + '"]:checked');
-    if (!chosen) {
-      wrong.push({n:i, expected:keyLetters[i-1], got:'(未选)'});
-      continue;
-    }
-    if (chosen.value === keyLetters[i-1]) {
-      correct++;
+window.ANSWERS = {};
+function submitPaper(){
+  var qs=document.querySelectorAll('.q[data-qid]');
+  var correct=0,total=0;
+  qs.forEach(function(qEl){
+    var qid=qEl.getAttribute('data-qid');
+    var ca=window.ANSWERS[qid];
+    var selected=qEl.querySelector('input[type="radio"]:checked');
+    var ua=selected?selected.value:'(未答)';
+    var fb=qEl.querySelector('.feedback');
+    if(ca){
+      total++;
+      var ok=(ua===ca);
+      if(ok)correct++;
+      qEl.classList.remove('correct','wrong');
+      qEl.classList.add(ok?'correct':'wrong');
+      if(fb){fb.style.display='block';fb.innerHTML=ok?'<span class="ok">✓ 答对</span>':'<span class="ng">✗ 你: '+ua+', 正确: '+ca+'</span>';}
     } else {
-      wrong.push({n:i, expected:keyLetters[i-1], got:chosen.value});
+      if(fb){fb.style.display='block';fb.innerHTML='<span class="ng">⚠ 此题未配置 answer key</span>';}
     }
-  }
-  const score = Math.round((correct / 30) * 100);
-  const cls = score >= 60 ? 'pass' : 'fail';
-  let html = '<h3>📊 客观题得分: ' + correct + '/30 (' + score + '%)</h3>';
-  if (wrong.length) {
-    html += '<details><summary>查看错题 (' + wrong.length + ' 道)</summary><ul>';
-    wrong.forEach(w => {
-      html += '<li>题 ' + w.n + ': 你选 <code>' + w.got + '</code>, 答案 <code>' + w.expected + '</code></li>';
-    });
-    html += '</ul></details>';
-  } else {
-    html += '<p>🎉 客观题全对!</p>';
-  }
-  const tr = document.getElementById('translation').value.trim();
-  const wr = document.getElementById('writing').value.trim();
-  html += '<p style="margin-top:14px;color:#64748b;font-size:0.88rem;">翻译: ' + (tr ? tr.length + ' 字' : '(未答)') + ' · 写作: ' + (wr ? wr.length + ' 字' : '(未答)');
-  html += ' · 主观题需对照外链答案自评. CET-4 写作建议 120-180 词, 翻译每段 140-160 字符.</p>';
-  result.className = 'result show ' + cls;
-  result.innerHTML = html;
-  result.scrollIntoView({behavior:'smooth'});
+  });
+  var bar=document.getElementById('score-bar');
+  if(bar){bar.style.display='block';bar.innerHTML='<strong>得分:</strong> '+correct+' / '+total;}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function resetPaper(){
+  document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+  document.querySelectorAll('.q').forEach(function(q){q.classList.remove('correct','wrong');});
+  document.querySelectorAll('.feedback').forEach(function(f){f.style.display='none';f.innerHTML='';});
+  var bar=document.getElementById('score-bar');
+  if(bar)bar.style.display='none';
 }
 </script>
+<script src="../_editor.js"></script>
+</head>
+<body>
+<div style="background:#fef2f2;border:2px solid #ef4444;border-radius:8px;padding:14px 18px;margin:14px 0;font-size:0.95rem;color:#7f1d1d;font-family:'Source Han Sans CN',sans-serif;">
+  ⚠ <strong>版权声明 / Copyright Notice</strong>: 本页真题内容 (听力对话/阅读文章/翻译段落/写作题干) 版权归 <strong>教育部考试中心 + 配套出版社</strong> 所有. 本站为<strong>学习交流非商业用途</strong>呈现, 请用户:
+  <ul style="margin:6px 0 0 20px;list-style:disc;">
+    <li>购买正版四级真题集 (官方授权出版社), 这里只作复习辅助</li>
+    <li>24 小时内查阅完毕请关闭页面</li>
+    <li>禁止下载, 禁止转载, 禁止二次传播</li>
+    <li>对真题感兴趣请走外链合规渠道: <a href="http://cet.neea.edu.cn/" target="_blank" rel="noopener">教育部考试中心官网</a> / <a href="https://cet4.koolearn.com/" target="_blank" rel="noopener">新东方在线 CET4</a> / <a href="https://www.hjenglish.com/cet4/" target="_blank" rel="noopener">沪江英语</a></li>
+  </ul>
+  <p style="margin:8px 0 0;font-size:0.88rem;">站长出于学习交流目的呈现, 任何使用风险由使用者自承担. 版权方如有异议, 请联系站长立即撤下.</p>
+  <p style="margin:4px 0 0;font-size:0.88rem;"><a href="./index.html" style="color:#7f1d1d;">← 返回 19 套列表</a></p>
+</div>
+
+<header>
+  <h1>📄 2025 年6英语四级真题第3套</h1>
+  <p class="sub">本地私人作答 · 不公开 · 你的真题副本</p>
+  <nav><a href="../index.html">← 题库列表</a></nav>
+</header>
+<main>
+<div class="notice" style="background:#fef3c7;color:#78350f;">
+  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
+</div>
+<div id="score-bar" class="score-bar" style="display:none;"></div>
+
+<div class="q" data-qid="Q36">
+<span class="qnum">题 36</span>
+<p>The  age-long  mystery  has  now  been  resolved  as  to  how  phantom  traffic  jams  are  caused.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q37">
+<span class="qnum">题 37</span>
+<p>It  is  possible  to  nearly  double  the  hourly  throughput  per  lane  by  adopting  bilateral  control.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q38">
+<span class="qnum">题 38</span>
+<p>According  to  Horn,  drivers  making  constant  adjustments  for  equal  spacing  between  cars  in  a  flow  of traffic  can  help  reduce  phantom  traffic  jams.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q39">
+<span class="qnum">题 39</span>
+<p>Before  systems  for  bilateral  control  are  installed,  drivers  should  not  follow  the  car  in  front  too  closely  so as  to  reduce  phantom  traffic  jams.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q40">
+<span class="qnum">题 40</span>
+<p>Horn  said  with  some  simple  modifications  to  the  existing  equipment  in  new  vehicles,  their  spacing bilateral  control  could  be  accomplished.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q41">
+<span class="qnum">题 41</span>
+<p>Drivers  caught  up in phantom  traffic  jams  are likely  to  think  an  accident  has happened  or some construction  is  going  on.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q42">
+<span class="qnum">题 42</span>
+<p>Two  sets  of  sensors  would  be  used  to  help  drivers  determine  the  distances  between  cars.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q43">
+<span class="qnum">题 43</span>
+<p>Solving  the  problem  of  phantom  jams  could  save  America  billions  of  dollars  every  year.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q44">
+<span class="qnum">题 44</span>
+<p>In  a  phantom  traffic  jam,  the  cars  in  the  same  lane  slow  down  one  after  another,  creating  a  wave-like effect.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q45">
+<span class="qnum">题 45</span>
+<p>Horn  has  found  that  certain  creatures  use  strategies  similar  to  bilateral  control  to  avoid  hitting  each  other while  moving  in  dense  crowds. 4 https://zhenti.burningvocabulary.cn Section  C Directions:  There  are  2  passages  in  this  section.  Each  passage  is  followed  by  some  questions  or  unfinished statements.  For  each  of  them  there  are  four  choices  marked  A),  B),  C)  and  D).  You  should  decide  on  the  best choice  and  mark  the  corresponding  letter  on  Answer  Sheet  2  with  a  single  line  through  the  centre. Passage  One Questions  46  to  50  are  based  on  the  following  passage. Our  society  places  a  high  value  on  physical  beauty.  Americans  spend  an  average  of  over  $722  each  year on  their  appearance.  One  in  ten  Americans  has  tried  to  look  like  a  star. There’s  nothing  wrong  with  trying  to  look  our  best,  but  excessive  focus  on  physical  appearance  misses the  soulful  aspects  of  what  it  means  to  be  beautiful.  Trying  to  look  like  the  magazine  pictures  can  take  us  on  a long  ride  away  from  what  beauty  is  really  about. Many  of  us  spend  far  too  much  time,  energy,  and  money  trying  to  polish  an  image  of  what  we  think  will bring  attention,  love,  and  connection.  In  the  process,  we  may  fail  to  attend  to  ourselves  in  a  way  that  would move  us  toward  deeper  intimacy,  fulfillment,  and  meaning. It  may  sound  trite  (老生常谈的),  but  beauty  is  only  skin  deep;  it’s  not  what  brings  love  toward  us.  Just read  about  the  latest  Hollywood  starlets  whose  seeming  love  turns  into  resentment  and  bitter  court  battles. Outer  beauty  can  be  as  much  of  a  curse  as  a  blessing.  We  may  develop  a  habit  of  being  so  focused  on maintaining  a  perfect  appearance  that  we  never  cultivate  the  inner  qualities  necessary  to  sustain  and  deepen intimacy  and  connection.  As  I  describe  in  my  book,  The  Authentic  Heart,  it  is  the  courage  to  be  authentic  that connects  us  in  a  deeper  way. While  our  initial  attraction  may  be  based,  in  part,  on  physical  chemistry,  it  is  the  meeting  of  our  inner worlds  that  creates  the  lasting  intimacy  and  spiritual  connection  for  which  we  long.  If  we  redirect  our attention  toward  cultivating  inner  qualities,  we  might  find  a  magnetic  attraction  that  moves  us  from  something superficial  to  something  that  connects  us  to  our  depths. The  path  toward  cultivating  inner  beauty  is  really  simple.  But  what  is  simple  is  not  always  easy.  Not everyone  will  see  us  and  appreciate  us  as  we  take  the  courageous  risk  to  allow  ourselves  to  be  seen  as  we really  are.  But  if  they  don’t,  it  is  their  loss,  not  ours.  Eventually  we’ll  find  those  compatible  souls  who appreciate  us  as  we  are.</p>
+<div class="opts"></div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q46">
+<span class="qnum">题 46</span>
+<p>What  do  we  learn  about  American  society  from  the  first  paragraph?</p>
+<div class="opts"><label><input type="radio" name="Q46" value="A"> A. It  sees  lots  of  personal  income  wasted  on  beauty  products.</label>
+<label><input type="radio" name="Q46" value="B"> B. It  considers  one’s  physical  appearance  very  important.</label>
+<label><input type="radio" name="Q46" value="C"> C. It  places  a  high  value  on  the  physical  fitness  of  stars.</label>
+<label><input type="radio" name="Q46" value="D"> D. It  expects  every  individual  to  look  their  very  best.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q47">
+<span class="qnum">题 47</span>
+<p>What  happens  when  people  strive  to  look  better?</p>
+<div class="opts"><label><input type="radio" name="Q47" value="A"> A. They  have  to  get  prepared  for  resentment  and  bitter  court  battles.</label>
+<label><input type="radio" name="Q47" value="B"> B. They  are  better  able  to  gain  attention,  love,  and  personal  connection.</label>
+<label><input type="radio" name="Q47" value="C"> C. They  may  neglect  to  cultivate  the  inner  qualities  that  matter  more.</label>
+<label><input type="radio" name="Q47" value="D"> D. They  feel  much  of  their  precious  time,  energy  and  resources  is  wasted. 5 https://zhenti.burningvocabulary.cn</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q48">
+<span class="qnum">题 48</span>
+<p>What  does  the  author  say  about  outer  beauty?</p>
+<div class="opts"><label><input type="radio" name="Q48" value="A"> A. It  may  be  inherited  or  cultivated</label>
+<label><input type="radio" name="Q48" value="B"> B. It  may  lead  to  bad  as  well  as  good  habits.</label>
+<label><input type="radio" name="Q48" value="C"> C. It  may  create  connection  or  isolation.</label>
+<label><input type="radio" name="Q48" value="D"> D. It  may  do  as  much  harm  as  good.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q49">
+<span class="qnum">题 49</span>
+<p>What  brings  about  spiritual  connection?</p>
+<div class="opts"><label><input type="radio" name="Q49" value="A"> A. Meeting  of  minds.</label>
+<label><input type="radio" name="Q49" value="B"> B. Attraction  at  first  sight.</label>
+<label><input type="radio" name="Q49" value="C"> C. Physical  chemistry.</label>
+<label><input type="radio" name="Q49" value="D"> D. Frequent  interaction.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q50">
+<span class="qnum">题 50</span>
+<p>What  happens  when  we  take  the  path  toward  cultivating  inner  beauty?</p>
+<div class="opts"><label><input type="radio" name="Q50" value="A"> A. We  may  find  a  route  toward  other  people’s  souls.</label>
+<label><input type="radio" name="Q50" value="B"> B. We  may  be  appreciated  more  by  people  around  us.</label>
+<label><input type="radio" name="Q50" value="C"> C. We  will  meet  people  who  value  us  for  who  we  are.</label>
+<label><input type="radio" name="Q50" value="D"> D. We  will  be  discouraged  from  revealing  our  true  selves. Passage  Two Questions  51  to  55  are  based  on  the  following  passage. Plant-based  meats  are  coming  soon  to  a  dinner  table  near  you,  but  do  they  deserve  a  spot  on  your  plate? If  you  tried  a  vegetable  burger  years  ago  and  dismissed  it  as  rubbery  and  flavorless.  It’s  a  good  time  to  give meatless  meat  another  chance.  Newer  varieties  imitate  the  look,  flavor,  and  texture  of  meat.  Analysts  don’t expect  the  meat-free  movement  to  slow  anytime  soon;  a  2021  report  predicts  the  market  will  skyrocket  to  $74 billion  by  2030  —  a  957  percent  surge. Plant-based  meats  are  no  longer  just  for  vegetarians.  Companies  such  as  Impossible  Foods  and  Beyond Meat  —  the  current  superstars  of  the  alternative  protein  sector  —  are  pursuing  consumers  who  enjoy  meat  but want  to  reduce  their  meat  consumption  for  animal  rights,  health,  or  environmental  reasons.  So  far,  it’s  a winning  strategy:  More  than  nine  out  of  ten  consumers  who  buy  Beyond  Burger  and  Impossible  Foods products  also  eat  meat. Many  vegetarians  don’t  actually  care  for  food  that  resembles  meat.  When  reporter  Joan  Solsman,  a longtime  vegetarian,  tried  a  dish  from  Impossible  Foods,  she  felt  so  sick  that  she  couldn’t  finish  it.  “Maybe the  best  sign  that  Impossible  Foods  has  cracked  the  code  to  realistic  fake  meat  is  that  I  couldn’t  stand  to  take another  bite,”  she  wrote. Meatless  meats  are  generally  a  healthier  choice  than  beef  because  they  are  cholesterol-free,  plus  they’re  a good  source  of  vitamins,  minerals,  protein,  and  fiber. If  meatless  meat  can  help  you  stick  to  a  plant-based  diet,  that  in  itself  can  lead  to  better  health.  Not  only has  red  meat  been  linked  to  cancer,  but  studies  show  that  people  who  ditch  meat  have  lower  blood  pressure, lower  average  blood  sugar,  and  lower  cholesterol  levels. However,  just  because  it’s  plant-based  doesn’t  mean  it’s  health  food.  Most  imitation  meats  are  highly processed  and  contain  high  amounts  of  sodium  (钠)  compared  to  traditional  beef. These  new  generations  of  alternate  meat  get  all  the  attention,  but  don’t  forget  about  whole  grains  and vegetables.  Beans  are  an  especially  excellent  protein  substitute.  They’re  nutritious,  inexpensive,  and  far  more sustainable  than  any  of  the  processed  meatless  substitutes  on  the  market  today. 6 https://zhenti.burningvocabulary.cn</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q51">
+<span class="qnum">题 51</span>
+<p>What  can  we  expect  of  plant-based  meats?</p>
+<div class="opts"><label><input type="radio" name="Q51" value="A"> A. An  increasing  interest  in  their  analyses.</label>
+<label><input type="radio" name="Q51" value="B"> B. An  enormous  effort  in  their  promotion.</label>
+<label><input type="radio" name="Q51" value="C"> C. A  huge  boost  in  their  consumption.</label>
+<label><input type="radio" name="Q51" value="D"> D. A  noticeable  surge  in  their  varieties.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q52">
+<span class="qnum">题 52</span>
+<p>What  do  we  learn  about  consumers  buying  Beyond  Burger  and  Impossible  Foods  products?</p>
+<div class="opts"><label><input type="radio" name="Q52" value="A"> A. They  are  mostly  non-vegetarians.</label>
+<label><input type="radio" name="Q52" value="B"> B. They  are  mostly  animal-rights  advocates.</label>
+<label><input type="radio" name="Q52" value="C"> C. Most  of  them  refrain  from  eating  meat  for  health  reasons.</label>
+<label><input type="radio" name="Q52" value="D"> D. Most  of  them  eat  meatless  meat  to  protect  the  environment.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q53">
+<span class="qnum">题 53</span>
+<p>What  can  we  conclude  about  Impossible  Foods’  products  from  Joan  Solsman’s  remark?</p>
+<div class="opts"><label><input type="radio" name="Q53" value="A"> A. They  more  often  appeal  to  meat-eaters.</label>
+<label><input type="radio" name="Q53" value="B"> B. They  very  much  resemble  animal  meat.</label>
+<label><input type="radio" name="Q53" value="C"> C. Some  have  become  its  signature  dishes.</label>
+<label><input type="radio" name="Q53" value="D"> D. Most  of  them  are  sold  as  true  fake  meat.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q54">
+<span class="qnum">题 54</span>
+<p>Why  can  the  habit  of  eating  a  plant-based  diet  lead  to  better  health?</p>
+<div class="opts"><label><input type="radio" name="Q54" value="A"> A. It  frees  people  from  any  known  link  to  cancer.</label>
+<label><input type="radio" name="Q54" value="B"> B. It  provides  all  the  nutrients  for  staying  healthy.</label>
+<label><input type="radio" name="Q54" value="C"> C. It  helps  maintain  normal  blood  pressure  and  blood  sugar.</label>
+<label><input type="radio" name="Q54" value="D"> D. It  reduces  various  health  risks  posed  by  meat  consumption.</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="q" data-qid="Q55">
+<span class="qnum">题 55</span>
+<p>What  does  the  author  recommend  we  eat  at  the  end  of  the  passage?</p>
+<div class="opts"><label><input type="radio" name="Q55" value="A"> A. Naturally  produced  foods.</label>
+<label><input type="radio" name="Q55" value="B"> B. Processed  protein  substitutes.</label>
+<label><input type="radio" name="Q55" value="C"> C. Red  meats  like  traditional  beef.</label>
+<label><input type="radio" name="Q55" value="D"> D. New  generations  of  alternate  meat. Part   IV                                                                                                                           Translation                                                                                                           (30  minutes) Directions:  For  this  part,  you  are  allowed  30  minutes  to  translate  a  passage  from  Chinese  into  English.  You should  write  your  answer  on  Answer  Sheet  2. 近年来，中国东北地区正在大力开发冰雪资源。例如，哈尔滨利用丰富的冰雪资源打造了极具地方 特色的“冰雪大世界”，让游客在欣赏冰雪之美的同时也能体验当地独特的民俗文化。如今，曾令人畏 惧的冰天雪地正吸引着四面八方的游客，成为深受欢迎的旅游胜地。冰雪旅游业正为当地的经济发展 做出越来越大的贡献。</label>
+</div>
+<div class="feedback" style="display:none;"></div>
+</div>
+
+<div class="action-bar">
+  <button class="btn-submit" onclick="submitPaper()">✅ 提交批改</button>
+  <button class="btn-reset" onclick="resetPaper()">🔄 重置</button>
+</div>
 </main>
-<footer><p>本站不复现真题 · 仅提供答题卡 + 批改工具 + 合规外链导流</p></footer>
+<footer><p>本地私人版 · 不公开分发</p></footer>
 </body>
 </html>
