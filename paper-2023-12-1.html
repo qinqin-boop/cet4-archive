@@ -60,11 +60,17 @@ function resetPaper(){
   <nav><a href="../index.html">← 题库列表</a></nav>
 </header>
 <main>
-<div class="notice" style="background:#fef3c7;color:#78350f;">
-  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
-</div>
+<div class="notice" style="background:#dbeafe;color:#1e40af;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:0.92rem;">💡 学习交流站 · 题目按 CET-4 标准 4 大题型分区. 点 ABCD 单选作答, 写作翻译填 textarea, 最后提交批改.</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">🔊 Part Ⅱ Listening Comprehension</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">听力理解 (25 min · 25 题 · 248.5 分)</p>
+</div>
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section A · 短篇新闻 News Report</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">7 题 · 题 1-7 · 3 篇短文每篇 2-3 题</p>
+</div>
 <div class="q" data-qid="Q1">
 <span class="qnum">题 1</span>
 <p>A) Their brains work in harmony.     C) Their interests are quite similar.</p>
@@ -127,6 +133,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section B · 长对话 Long Conversation</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">8 题 · 题 8-15 · 2 段对话每段 4 题</p>
+</div>
 <div class="q" data-qid="Q8">
 <span class="qnum">题 8</span>
 <p>A) He has to play football with workmates.    C) He is going to visit a friend.</p>
@@ -199,6 +209,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section C · 听力篇章 Passage</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 16-25 · 3 篇短文每篇 3-4 题</p>
+</div>
 <div class="q" data-qid="Q16">
 <span class="qnum">题 16</span>
 <p>A) They tended to be easily anticipated by those belonging to their own race.</p>
@@ -305,6 +319,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section B · 长篇阅读匹配 Passage Matching</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 36-45</p>
+</div>
 <div class="q" data-qid="Q36">
 <span class="qnum">题 36</span>
 <p>One consequence of climate change is that some people may not have adequate access to certain foods.</p>
@@ -375,6 +393,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section C · 仔细阅读 Careful Reading</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 46-55 · 2 篇短文每篇 5 题</p>
+</div>
 <div class="q" data-qid="Q46">
 <span class="qnum">题 46</span>
 <p>What is a reason for the author to be in the habit of saying “busy” when asked how he is doing?</p>
@@ -480,7 +502,11 @@ function resetPaper(){
 <div class="opts"><label><input type="radio" name="Q55" value="A"> A. It can help companies increase their savings significantly.</label>
 <label><input type="radio" name="Q55" value="B"> B. It can duly contribute to companies’ business performance.</label>
 <label><input type="radio" name="Q55" value="C"> C. It can translate women’s booking practice into men’s behavior.</label>
-<label><input type="radio" name="Q55" value="D"> D. It can enhance large multinational companies’ competitiveness. Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 中国政府十分重视人民的健康饮食（diet）。通过大力提倡健康饮食，人们对合理营养增 进健康的重要性有了更加深刻的认识。“吃得安全、吃得营养、吃得健康”是人民对美好生活 的基本需要，是提升人民幸福感的必然要求，也为食品产业的发展提供了新机遇。目前，各 级政府都在采取多种举措确保人民饮食健康，推进健康中国的建设。</label>
+<label><input type="radio" name="Q55" value="D"> D. It can enhance large multinational companies’ competitiveness. <div style="background:linear-gradient(135deg,#15803d,#22c55e);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(21,128,61,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">🌐 Part Ⅳ Translation</h2>
+  <p style="margin:4px 0 0;color:#dcfce7;font-size:0.9rem;">翻译 (30 min · 1 段 · 106.5 分 · 段落汉译英 140-160 字)</p>
+</div>
+Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 中国政府十分重视人民的健康饮食（diet）。通过大力提倡健康饮食，人们对合理营养增 进健康的重要性有了更加深刻的认识。“吃得安全、吃得营养、吃得健康”是人民对美好生活 的基本需要，是提升人民幸福感的必然要求，也为食品产业的发展提供了新机遇。目前，各 级政府都在采取多种举措确保人民饮食健康，推进健康中国的建设。</label>
 </div>
 <div class="feedback" style="display:none;"></div>
 </div>

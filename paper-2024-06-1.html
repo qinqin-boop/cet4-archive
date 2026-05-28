@@ -60,11 +60,17 @@ function resetPaper(){
   <nav><a href="../index.html">← 题库列表</a></nav>
 </header>
 <main>
-<div class="notice" style="background:#fef3c7;color:#78350f;">
-  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
-</div>
+<div class="notice" style="background:#dbeafe;color:#1e40af;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:0.92rem;">💡 学习交流站 · 题目按 CET-4 标准 4 大题型分区. 点 ABCD 单选作答, 写作翻译填 textarea, 最后提交批改.</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">🔊 Part Ⅱ Listening Comprehension</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">听力理解 (25 min · 25 题 · 248.5 分)</p>
+</div>
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section A · 短篇新闻 News Report</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">7 题 · 题 1-7 · 3 篇短文每篇 2-3 题</p>
+</div>
 <div class="q" data-qid="Q1">
 <span class="qnum">题 1</span>
 <p>A) Due to a fire alarm in their apartments.</p>
@@ -129,6 +135,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section B · 长对话 Long Conversation</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">8 题 · 题 8-15 · 2 段对话每段 4 题</p>
+</div>
 <div class="q" data-qid="Q8">
 <span class="qnum">题 8</span>
 <p>A) He read it somewhere online.        C) He read an article reviewing it.</p>
@@ -195,6 +205,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section C · 听力篇章 Passage</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 16-25 · 3 篇短文每篇 3-4 题</p>
+</div>
 <div class="q" data-qid="Q16">
 <span class="qnum">题 16</span>
 <p>A) Most scenic sites have been closed.    C) Health experts advise going outdoors.</p>
@@ -287,6 +301,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section B · 长篇阅读匹配 Passage Matching</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 36-45</p>
+</div>
 <div class="q" data-qid="Q36">
 <span class="qnum">题 36</span>
 <p>Some people view socializing at the workplace as a chance to develop personal relationships.</p>
@@ -357,6 +375,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section C · 仔细阅读 Careful Reading</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 46-55 · 2 篇短文每篇 5 题</p>
+</div>
 <div class="q" data-qid="Q46">
 <span class="qnum">题 46</span>
 <p>What can we conclude from Lao Zi’s quotation?</p>
@@ -457,7 +479,11 @@ function resetPaper(){
 <div class="opts"><label><input type="radio" name="Q55" value="A"> A. Wishing to solve puzzles enhances one’s reasoning power.</label>
 <label><input type="radio" name="Q55" value="B"> B. Playing number games unexpectedly stimulates one’s memory.</label>
 <label><input type="radio" name="Q55" value="C"> C. Desiring new experiences can help to renovate the brain.</label>
-<label><input type="radio" name="Q55" value="D"> D. Learning new tricks should not be confined to old dogs only. Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 四合院（siheyuan）是中国一种传统的住宅建筑，其特点是房屋建造在一个院子的四周， 将院子合围在中间。四合院通常冬暖夏凉，环境舒适，尤其适合大家庭居住。四合院在中国 各地有多种类型，其中以北京的四合院最为典型。如今，随着现代城市的发展，传统的四合 院已逐渐减少，但因其独特的建筑风格，四合院对中国文化的传承和中国历史的研究具有重 要意义。</label>
+<label><input type="radio" name="Q55" value="D"> D. Learning new tricks should not be confined to old dogs only. <div style="background:linear-gradient(135deg,#15803d,#22c55e);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(21,128,61,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">🌐 Part Ⅳ Translation</h2>
+  <p style="margin:4px 0 0;color:#dcfce7;font-size:0.9rem;">翻译 (30 min · 1 段 · 106.5 分 · 段落汉译英 140-160 字)</p>
+</div>
+Part Ⅳ                        Translation                      (30 minutes) Directions: For this part, you are allowed 30 minutes to translate a passage from Chinese into English. You should write your answer on Answer Sheet 2. 四合院（siheyuan）是中国一种传统的住宅建筑，其特点是房屋建造在一个院子的四周， 将院子合围在中间。四合院通常冬暖夏凉，环境舒适，尤其适合大家庭居住。四合院在中国 各地有多种类型，其中以北京的四合院最为典型。如今，随着现代城市的发展，传统的四合 院已逐渐减少，但因其独特的建筑风格，四合院对中国文化的传承和中国历史的研究具有重 要意义。</label>
 </div>
 <div class="feedback" style="display:none;"></div>
 </div>

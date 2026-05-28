@@ -60,11 +60,17 @@ function resetPaper(){
   <nav><a href="../index.html">← 题库列表</a></nav>
 </header>
 <main>
-<div class="notice" style="background:#fef3c7;color:#78350f;">
-  此页面由 extract.py 从你私人 PDF 抽取生成, 仅在 localhost 访问, 不上传任何公开仓库.
-</div>
+<div class="notice" style="background:#dbeafe;color:#1e40af;padding:10px 14px;border-radius:6px;margin:10px 0;font-size:0.92rem;">💡 学习交流站 · 题目按 CET-4 标准 4 大题型分区. 点 ABCD 单选作答, 写作翻译填 textarea, 最后提交批改.</div>
 <div id="score-bar" class="score-bar" style="display:none;"></div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">🔊 Part Ⅱ Listening Comprehension</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">听力理解 (25 min · 25 题 · 248.5 分)</p>
+</div>
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section A · 短篇新闻 News Report</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">7 题 · 题 1-7 · 3 篇短文每篇 2-3 题</p>
+</div>
 <div class="q" data-qid="Q1">
 <span class="qnum">题 1</span>
 <p>A.  She  is  making  a  special  effort  to  be  recognized.</p>
@@ -135,6 +141,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section B · 长对话 Long Conversation</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">8 题 · 题 8-15 · 2 段对话每段 4 题</p>
+</div>
 <div class="q" data-qid="Q8">
 <span class="qnum">题 8</span>
 <p>A.  Why  the  man  is  so  anxious  to  buy  a  new  phone.</p>
@@ -215,6 +225,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section C · 听力篇章 Passage</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 16-25 · 3 篇短文每篇 3-4 题</p>
+</div>
 <div class="q" data-qid="Q16">
 <span class="qnum">题 16</span>
 <p>A.  Play  outdoors  and  enjoy  themselves.</p>
@@ -323,6 +337,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section B · 长篇阅读匹配 Passage Matching</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 36-45</p>
+</div>
 <div class="q" data-qid="Q36">
 <span class="qnum">题 36</span>
 <p>According  to  a  management  expert,  work-life  balance  is  not  as  simple  as  giving  equal  amounts  of  time  to work  and  personal  life.</p>
@@ -394,6 +412,10 @@ function resetPaper(){
 <div class="feedback" style="display:none;"></div>
 </div>
 
+<div style="background:linear-gradient(135deg,#1e40af,#0e7490);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(30,64,175,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">  Section C · 仔细阅读 Careful Reading</h2>
+  <p style="margin:4px 0 0;color:#dbeafe;font-size:0.9rem;">10 题 · 题 46-55 · 2 篇短文每篇 5 题</p>
+</div>
 <div class="q" data-qid="Q46">
 <span class="qnum">题 46</span>
 <p>What  has  the  author  come  to  realise  since  entering  university?</p>
@@ -499,7 +521,11 @@ function resetPaper(){
 <div class="opts"><label><input type="radio" name="Q55" value="A"> A. Build  rows  of  refrigerated  greenhouses  for  research  on  cacao  seedlings.</label>
 <label><input type="radio" name="Q55" value="B"> B. Gene-edit  cacao  seedlings  for  them  to  withstand  a  drier,  warmer  climate.</label>
 <label><input type="radio" name="Q55" value="C"> C. Produce  chocolates  with  the  latest  gene-editing  technology.</label>
-<label><input type="radio" name="Q55" value="D"> D. Transplant  the  genes  of  tougher  plants  to  cacao  seedlings. Part   IV                                                                                                                    Translation                                                                                                                 (30  minutes) Directions:  For  this  part,  you  are  allowed  30  minutes  to  translate  a  passage  from  Chinese  into  English.  You should  write  your  answer  on  Answer  Sheet  2. 中国政府十分重视环境保护。近年来，中国在减少空气、水和土壤污染上取得了显著成效。为了不 断改善人们的生活环境，中国采取了一系列有效措施，包括大力发展清洁能源，改善公共交通，推广共 享单车，实施垃圾分类。通过这些措施，中国的城市和农村正在绿起来、美起来。中国还积极参与国际 合作，为全球环境保护做出了重要贡献。</label>
+<label><input type="radio" name="Q55" value="D"> D. Transplant  the  genes  of  tougher  plants  to  cacao  seedlings. <div style="background:linear-gradient(135deg,#15803d,#22c55e);color:white;padding:14px 18px;border-radius:8px;margin:24px 0 12px;box-shadow:0 2px 8px rgba(21,128,61,0.2);">
+  <h2 style="margin:0;color:white;font-size:1.25rem;border:none;padding:0;">🌐 Part Ⅳ Translation</h2>
+  <p style="margin:4px 0 0;color:#dcfce7;font-size:0.9rem;">翻译 (30 min · 1 段 · 106.5 分 · 段落汉译英 140-160 字)</p>
+</div>
+Part   IV                                                                                                                    Translation                                                                                                                 (30  minutes) Directions:  For  this  part,  you  are  allowed  30  minutes  to  translate  a  passage  from  Chinese  into  English.  You should  write  your  answer  on  Answer  Sheet  2. 中国政府十分重视环境保护。近年来，中国在减少空气、水和土壤污染上取得了显著成效。为了不 断改善人们的生活环境，中国采取了一系列有效措施，包括大力发展清洁能源，改善公共交通，推广共 享单车，实施垃圾分类。通过这些措施，中国的城市和农村正在绿起来、美起来。中国还积极参与国际 合作，为全球环境保护做出了重要贡献。</label>
 </div>
 <div class="feedback" style="display:none;"></div>
 </div>
