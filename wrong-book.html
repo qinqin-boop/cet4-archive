@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CET-4 错题本 · 统计 + 复盘</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<meta name="description" content="CET-4 答题卡错题本: 按 paper / 题型 / 错题分布统计, 复盘高频考点">
+<link rel="stylesheet" href="./style.css">
+<style>
+.stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin:16px 0; }
+.stat-card {
+  background:linear-gradient(135deg,#fef2f2,#fee2e2);
+  border-left:4px solid #dc2626;
+  border-radius:8px; padding:14px 16px;
+}
+.stat-card .num { font-size:1.6rem; font-weight:700; color:#991b1b; line-height:1.2; }
+.stat-card .label { font-size:0.85rem; color:#7f1d1d; margin-top:4px; }
+.paper-block {
+  background:white; border:1px solid #fecaca; border-radius:10px;
+  padding:14px 16px; margin:14px 0;
+}
+.paper-block h3 { color:#991b1b; margin:0 0 10px; font-size:1.05rem; display:flex; justify-content:space-between; align-items:center; }
+.paper-block .meta { font-size:0.82rem; color:#6b7280; font-weight:400; }
+.wrong-item {
+  background:#fef2f2; border-left:3px solid #ef4444;
+  padding:8px 12px; border-radius:4px; margin:6px 0;
+  font-size:0.9rem; display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+}
+.wrong-item .qnum-tag {
+  background:#dc2626; color:white; padding:2px 10px; border-radius:10px;
+  font-weight:600; font-size:0.85rem;
+}
+.wrong-item .answers { color:#7f1d1d; }
+.wrong-item .answers strong { color:#dc2626; }
+.empty {
+  background:#ecfdf5; border-left:4px solid #10b981;
+  padding:20px; border-radius:8px; text-align:center; color:#047857;
+}
+.empty h3 { color:#047857; margin-bottom:8px; }
+.toolbar { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0; }
+.toolbar button {
+  background:#dc2626; color:white; border:none; padding:8px 14px;
+  border-radius:6px; cursor:pointer; font-size:0.9rem; min-height:40px;
+}
+.toolbar button.secondary { background:#6b7280; }
+.toolbar button.export { background:#0891b2; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📕 CET-4 错题本 · 统计 + 复盘</h1>
+  <p class="sub"><a href="./index.html" style="color:#fff;text-decoration:underline;">← 返回首页</a> · 数据来自本地 localStorage, 不传服务器</p>
+</header>
+<main>
+
+<div id="stats-area"></div>
+<div class="toolbar">
+  <button onclick="exportWrong()" class="export">⬇ 导出 JSON 备份</button>
+  <button onclick="importWrong()" class="secondary">⬆ 导入备份</button>
+  <button onclick="clearAllWrong()">🗑 清空全部错题</button>
+</div>
+<div id="wrong-list-area"></div>
+
+<script>
+function loadWrong(){
+  try{return JSON.parse(localStorage.getItem('cet4_wrong_book')||'{}');}catch(e){return{};}
+}
+function saveWrong(w){
+  try{localStorage.setItem('cet4_wrong_book',JSON.stringify(w));}catch(e){}
+}
+function fmtPaper(pid){return pid.replace(/-/g,'/');}
+function fmtTs(ts){var d=new Date(ts);return d.toLocaleString('zh-CN',{hour12:false});}
+
+function render(){
+  var w=loadWrong();
+  var papers=Object.keys(w).filter(function(k){return (w[k].items||[]).length>0;});
+  var statsArea=document.getElementById('stats-area');
+  var listArea=document.getElementById('wrong-list-area');
+
+  if(papers.length===0){
+    statsArea.innerHTML='<div class="empty"><h3>🎉 还没有错题</h3><p>去做一套 <a href="./index.html">真题答题卡</a>, 提交后错题会自动记录到这里.</p></div>';
+    listArea.innerHTML='';
+    return;
+  }
+
+  var totalWrong=papers.reduce(function(s,p){return s+(w[p].items||[]).length;},0);
+  var totalPapers=papers.length;
+  var avgPerPaper=(totalWrong/totalPapers).toFixed(1);
+  var lastTs=Math.max.apply(null,papers.map(function(p){return w[p].ts||0;}));
+
+  statsArea.innerHTML=
+    '<div class="stat-grid">'+
+    '<div class="stat-card"><div class="num">'+totalWrong+'</div><div class="label">总错题数</div></div>'+
+    '<div class="stat-card"><div class="num">'+totalPapers+'</div><div class="label">涉及 paper 套数</div></div>'+
+    '<div class="stat-card"><div class="num">'+avgPerPaper+'</div><div class="label">平均每套错题</div></div>'+
+    '<div class="stat-card"><div class="num" style="font-size:0.95rem;">'+fmtTs(lastTs)+'</div><div class="label">最近一次提交</div></div>'+
+    '</div>';
+
+  papers.sort(function(a,b){return (w[b].ts||0)-(w[a].ts||0);});
+  var html='';
+  papers.forEach(function(pid){
+    var rec=w[pid];
+    html+='<div class="paper-block"><h3>📝 '+fmtPaper(pid)+' <span class="meta">'+rec.items.length+' 题错 · '+fmtTs(rec.ts)+' · <a href="./paper-'+pid+'.html">回去重做 →</a></span></h3>';
+    rec.items.forEach(function(it){
+      html+='<div class="wrong-item"><span class="qnum-tag">'+(it.stem||it.qid)+'</span><span class="answers">你答: <strong>'+(it.ua||'(未答)')+'</strong> · 正确: <strong>'+(it.ca||'?')+'</strong></span></div>';
+    });
+    html+='</div>';
+  });
+  listArea.innerHTML=html;
+}
+
+function exportWrong(){
+  var data=JSON.stringify({wrong:loadWrong(),progress:JSON.parse(localStorage.getItem('cet4_paper_progress')||'{}'),exported:Date.now()},null,2);
+  var blob=new Blob([data],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url; a.download='cet4-wrong-book-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click(); URL.revokeObjectURL(url);
+}
+
+function importWrong(){
+  var inp=document.createElement('input');
+  inp.type='file'; inp.accept='.json';
+  inp.onchange=function(e){
+    var f=e.target.files[0]; if(!f)return;
+    var fr=new FileReader();
+    fr.onload=function(){
+      try{
+        var d=JSON.parse(fr.result);
+        if(d.wrong){
+          if(!confirm('合并/覆盖现有错题本? (现有 '+Object.keys(loadWrong()).length+' 套, 导入 '+Object.keys(d.wrong).length+' 套)'))return;
+          var merged=Object.assign({},loadWrong(),d.wrong);
+          saveWrong(merged);
+        }
+        if(d.progress){
+          var mergedP=Object.assign({},JSON.parse(localStorage.getItem('cet4_paper_progress')||'{}'),d.progress);
+          localStorage.setItem('cet4_paper_progress',JSON.stringify(mergedP));
+        }
+        alert('导入成功'); render();
+      }catch(err){alert('文件格式错: '+err.message);}
+    };
+    fr.readAsText(f);
+  };
+  inp.click();
+}
+
+function clearAllWrong(){
+  if(!confirm('确定清空全部错题本? 不可恢复 (建议先导出备份).'))return;
+  localStorage.removeItem('cet4_wrong_book');
+  render();
+}
+
+render();
+</script>
+</main>
+<footer style="text-align:center;padding:20px;color:#6b7280;font-size:0.85rem;">
+  <a href="./index.html">← 首页</a> · <a href="./cheat-sheet.html">考前一页纸</a> · <a href="./vocab.html">4544 词速查</a>
+</footer>
+</body>
+</html>

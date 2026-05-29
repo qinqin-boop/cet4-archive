@@ -52,7 +52,7 @@
       }
       // 规则 3: 有错题 → 推回顾
       if(wrongCount>0){
-        reco.push({icon:'❗',title:'错题本: '+wrongCount+' 题待回顾',sub:'已做 '+doneCount+' 套, 错题去 paper 页查看',href:'#wrong-list',color:'#dc2626',action:'showWrong'});
+        reco.push({icon:'❗',title:'错题本: '+wrongCount+' 题待回顾',sub:'已做 '+doneCount+' 套, 点开看统计 + 分布',href:'./wrong-book.html',color:'#dc2626'});
       }
       // 规则 4: 推下一套 paper
       var nextPaper=allPapers.find(function(p){return !papers[p]||!papers[p].submitted;});
@@ -141,6 +141,11 @@
       <h3 style="color:white;">📋 考前一页纸</h3>
       <p class="count" style="color:#fee2e2;">4 题型最核心 + 时间分配 + 最后 10 条</p>
       <p class="desc" style="color:#fed7aa;">可打印带进考场前 · 考前 15 min 翻一下</p>
+    </a>
+    <a class="cat-card" href="./wrong-book.html" style="background:linear-gradient(135deg,#991b1b,#dc2626);color:white;">
+      <h3 style="color:white;">📕 错题本 · 统计复盘</h3>
+      <p class="count" style="color:#fee2e2;">按 paper 分组 + 错题分布 + 导出 JSON 备份</p>
+      <p class="desc" style="color:#fecaca;">提交答题卡自动入库 · 本地存储 · 不传服务器</p>
     </a>
   </div>
 
