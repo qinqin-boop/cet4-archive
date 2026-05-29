@@ -227,3 +227,41 @@ footer {
 .real-paper-link a.exact-link:hover { background: #ffedd5; }
 .real-paper-link .exact-row { margin-top: 8px; }
 .real-paper-link .common-row { margin-top: 8px; font-size: 0.86rem; opacity: 0.85; }
+
+/* v8 移动端二轮适配 (2026-05-29) - 触控目标 ≥44px / 字号放大 / 网格自适应 */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+  main { padding: 16px 12px; }
+  header { padding: 18px 12px; }
+  header h1 { font-size: 1.25rem; line-height: 1.35; }
+  header .sub { font-size: 0.8rem; }
+  header nav a { padding: 8px 12px; margin: 2px; display: inline-block; min-height: 36px; }
+  .container, section { padding: 16px 14px !important; }
+  h2 { font-size: 1.15rem; }
+  h3 { font-size: 1.0rem; }
+  .cat-grid { grid-template-columns: 1fr !important; gap: 12px; }
+  .cat-card { padding: 16px 14px; }
+  .q { padding: 14px 14px; margin: 16px 0; }
+  .q .opts label {
+    padding: 12px 14px; min-height: 44px;
+    display: flex; align-items: center; font-size: 1rem; line-height: 1.4;
+    margin: 6px 0;
+  }
+  .q .opts label input[type="radio"] { transform: scale(1.2); margin-right: 8px; }
+  button, .btn {
+    min-height: 44px; padding: 10px 18px !important;
+    font-size: 0.95rem !important; min-width: 80px;
+  }
+  textarea { min-height: 100px; font-size: 1rem !important; }
+  .exam-date-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .real-paper-link { padding: 12px 12px; font-size: 0.88rem; }
+  .real-paper-link a { padding: 8px 12px; min-height: 36px; display: inline-block; }
+  .feedback { font-size: 0.9rem; padding: 10px 12px; }
+  /* 答题卡顶部分数条防遮挡 */
+  #score-bar { position: sticky; top: 0; z-index: 50; }
+}
+@media (max-width: 380px) {
+  body { font-size: 14.5px; }
+  header h1 { font-size: 1.1rem; }
+  main { padding: 12px 8px; }
+}
