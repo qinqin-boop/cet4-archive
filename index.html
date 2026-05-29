@@ -21,6 +21,65 @@
     ⚠ <strong>本站不复现真题原文</strong> (听力对话/阅读文章/翻译段落 版权归教育部考试中心 + 出版社). 本站是<strong>答题卡 + 批改工具</strong> — 你需要自己有真题 (买正版书 / 学校发的卷 / 通过下方合规外链查看). 做完在答题卡填涂 → 提交 → 自动批改.
   </div>
 
+  <div id="today-reco" style="margin:18px 0;padding:18px;background:linear-gradient(135deg,#fef3c7,#fde68a);border-radius:12px;border-left:5px solid #f59e0b;">
+    <h3 style="margin:0 0 12px;color:#92400e;font-size:1.1rem;">🎯 今日推荐学习路径</h3>
+    <div id="reco-list" style="display:flex;flex-direction:column;gap:8px;font-size:0.93rem;"></div>
+    <p id="reco-note" style="margin:10px 0 0;font-size:0.82rem;color:#78350f;"></p>
+  </div>
+  <script>
+  (function(){
+    try{
+      var reco=[];
+      var papers=JSON.parse(localStorage.getItem('cet4_paper_progress')||'{}');
+      var paperKeys=Object.keys(papers);
+      var doneCount=paperKeys.filter(function(k){return papers[k].submitted;}).length;
+      var wrong=JSON.parse(localStorage.getItem('cet4_wrong_book')||'{}');
+      var wrongCount=Object.keys(wrong).reduce(function(s,k){return s+((wrong[k].items||[]).length);},0);
+      var mastered=JSON.parse(localStorage.getItem('cet4_mastered')||'[]').length;
+      var fav=JSON.parse(localStorage.getItem('cet4_fav')||'[]').length;
+      var today=JSON.parse(localStorage.getItem('cet4_today_'+new Date().toISOString().slice(0,10))||'[]').length;
+      var allPapers=['2022-06-1','2022-06-2','2022-06-3','2022-12-combined','2023-06-1','2023-06-2','2023-06-3','2023-12-1','2023-12-2','2023-12-3','2024-06-1','2024-06-2','2024-06-3','2024-12-1','2024-12-2','2024-12-3','2025-06-1','2025-06-2','2025-06-3'];
+
+      // 规则 1: 没选计划 → 推 study-plan
+      if(!localStorage.getItem('cet4_plan_chosen')&&doneCount===0&&mastered<10){
+        reco.push({icon:'📅',title:'第 1 步: 选备考计划',sub:'4 周冲刺 vs 8 周稳健, 1 min 定档',href:'./study-plan.html',color:'#7c3aed'});
+      }
+      // 规则 2: 今日没刷词 → 推 vocab
+      if(today<30){
+        reco.push({icon:'📚',title:'今日单词: 再刷 '+(30-today)+' 个',sub:'已掌握 '+mastered+'/4544 · 收藏 '+fav,href:'./vocab.html',color:'#0891b2'});
+      } else {
+        reco.push({icon:'✨',title:'今日已刷 '+today+' 词, 继续保持',sub:'已掌握 '+mastered+'/4544',href:'./vocab.html',color:'#059669'});
+      }
+      // 规则 3: 有错题 → 推回顾
+      if(wrongCount>0){
+        reco.push({icon:'❗',title:'错题本: '+wrongCount+' 题待回顾',sub:'已做 '+doneCount+' 套, 错题去 paper 页查看',href:'#wrong-list',color:'#dc2626',action:'showWrong'});
+      }
+      // 规则 4: 推下一套 paper
+      var nextPaper=allPapers.find(function(p){return !papers[p]||!papers[p].submitted;});
+      if(nextPaper){
+        reco.push({icon:'📝',title:'下一套真题: '+nextPaper.replace(/-/g,'/'),sub:'已做 '+doneCount+'/19 套真题',href:'./paper-'+nextPaper+'.html',color:'#3b82f6'});
+      } else if(doneCount===19){
+        reco.push({icon:'🏆',title:'19 套真题全做完!',sub:'回去刷错题 / 看 cheat-sheet 复习',href:'./cheat-sheet.html',color:'#f59e0b'});
+      }
+      // 规则 5: 临近 (无具体日期, 给写作/听力)
+      reco.push({icon:'✍',title:'写作模板速记',sub:'3 段式 + 高频替换词, 考前 30 min 看够',href:'./writing-template.html',color:'#9333ea'});
+
+      var list=document.getElementById('reco-list');
+      reco.slice(0,4).forEach(function(r){
+        var a=document.createElement('a');
+        a.href=r.href; a.style.cssText='display:flex;align-items:center;gap:12px;padding:10px 14px;background:white;border-radius:8px;text-decoration:none;color:#1f2937;border-left:4px solid '+r.color+';transition:transform 0.15s;';
+        a.onmouseover=function(){a.style.transform='translateX(4px)';};
+        a.onmouseout=function(){a.style.transform='';};
+        a.innerHTML='<span style="font-size:1.5rem;">'+r.icon+'</span><span style="flex:1;"><strong style="display:block;color:'+r.color+';">'+r.title+'</strong><span style="font-size:0.83rem;color:#6b7280;">'+r.sub+'</span></span><span style="color:'+r.color+';font-size:1.2rem;">→</span>';
+        list.appendChild(a);
+      });
+      document.getElementById('reco-note').textContent='💡 推荐根据你 localStorage 进度自动算 · 数据不传服务器';
+    }catch(e){
+      document.getElementById('today-reco').style.display='none';
+    }
+  })();
+  </script>
+
   <div id="my-progress" style="margin:18px 0;padding:14px 18px;background:linear-gradient(135deg,#dbeafe,#ecfeff);border-radius:10px;display:none;">
     <h3 style="margin:0 0 8px;color:#1e40af;font-size:1.05rem;">📊 我的学习进度</h3>
     <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:0.92rem;">
