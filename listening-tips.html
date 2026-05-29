@@ -34,6 +34,74 @@
   🎧 听力占 35% (248.5 分). 25 分钟, 25 题. 一次过, 不能重听. 这里讲的是<strong>套路 + 陷阱</strong>, 真题音频走 <a href="./index.html#真题原文">外链</a>.
 </div>
 
+<div id="tts-box" style="background:linear-gradient(135deg,#fefce8,#fef3c7);border:2px solid #f59e0b;border-radius:12px;padding:16px 18px;margin:14px 0;">
+  <h3 style="margin:0 0 8px;color:#92400e;font-size:1.1rem;">📢 听力朗读器 (Edge TTS · 浏览器原生)</h3>
+  <p style="margin:0 0 10px;font-size:0.85rem;color:#78350f;">把<strong>你自己有的</strong>听力原文 (买的正版书 / 学校发的卷) 粘进来, 浏览器朗读. 不存任何版权音频, 全在你本地播放.</p>
+  <textarea id="tts-text" placeholder="例如: According to a recent survey, more than half of college students..." style="width:100%;min-height:120px;padding:10px 12px;border:1px solid #d97706;border-radius:6px;font-size:0.95rem;font-family:Georgia,serif;line-height:1.6;"></textarea>
+  <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+    <label style="font-size:0.88rem;color:#78350f;">语音:
+      <select id="tts-voice" style="padding:4px 8px;border-radius:4px;border:1px solid #d97706;font-size:0.88rem;"></select>
+    </label>
+    <label style="font-size:0.88rem;color:#78350f;">语速:
+      <input type="range" id="tts-rate" min="0.5" max="1.5" step="0.1" value="0.9" style="vertical-align:middle;">
+      <span id="tts-rate-val" style="display:inline-block;min-width:30px;text-align:right;font-weight:600;">0.9x</span>
+    </label>
+    <button id="tts-play" style="background:#d97706;color:white;border:none;padding:8px 18px;border-radius:6px;cursor:pointer;font-size:0.92rem;font-weight:600;min-height:40px;">▶ 朗读</button>
+    <button id="tts-pause" style="background:#a16207;color:white;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:0.92rem;min-height:40px;">⏸ 暂停</button>
+    <button id="tts-stop" style="background:#78350f;color:white;border:none;padding:8px 14px;border-radius:6px;cursor:pointer;font-size:0.92rem;min-height:40px;">■ 停止</button>
+  </div>
+  <p id="tts-status" style="margin:8px 0 0;font-size:0.82rem;color:#a16207;"></p>
+</div>
+<script>
+(function(){
+  if(!('speechSynthesis' in window)){
+    document.getElementById('tts-status').textContent='⚠ 当前浏览器不支持 SpeechSynthesis. 推荐 Edge / Chrome.';
+    return;
+  }
+  var voiceSelect=document.getElementById('tts-voice');
+  var rateInput=document.getElementById('tts-rate');
+  var rateVal=document.getElementById('tts-rate-val');
+  var status=document.getElementById('tts-status');
+  var utter=null;
+  function loadVoices(){
+    var voices=speechSynthesis.getVoices().filter(function(v){return /^en/i.test(v.lang);});
+    voiceSelect.innerHTML='';
+    voices.forEach(function(v,i){
+      var o=document.createElement('option');
+      o.value=i; o.textContent=v.name+' ('+v.lang+')';
+      if(/Aria|Jenny|Guy|en-US/i.test(v.name+v.lang))o.selected=true;
+      voiceSelect.appendChild(o);
+    });
+    window._ttsVoices=voices;
+    if(voices.length===0)status.textContent='⚠ 没找到英文语音, 试试刷新或换 Edge.';
+    else status.textContent='✓ '+voices.length+' 个英文语音可选 · 粘文本点 ▶ 朗读';
+  }
+  speechSynthesis.onvoiceschanged=loadVoices;
+  loadVoices();
+  rateInput.addEventListener('input',function(){rateVal.textContent=rateInput.value+'x';});
+  document.getElementById('tts-play').addEventListener('click',function(){
+    var text=document.getElementById('tts-text').value.trim();
+    if(!text){status.textContent='⚠ 先粘文本';return;}
+    if(speechSynthesis.paused){speechSynthesis.resume();status.textContent='▶ 继续';return;}
+    speechSynthesis.cancel();
+    utter=new SpeechSynthesisUtterance(text);
+    var voices=window._ttsVoices||[];
+    if(voices[voiceSelect.value])utter.voice=voices[voiceSelect.value];
+    utter.rate=parseFloat(rateInput.value);
+    utter.onend=function(){status.textContent='✓ 朗读完毕';};
+    utter.onerror=function(e){status.textContent='⚠ 出错: '+e.error;};
+    speechSynthesis.speak(utter);
+    status.textContent='▶ 朗读中...';
+  });
+  document.getElementById('tts-pause').addEventListener('click',function(){
+    if(speechSynthesis.speaking){speechSynthesis.pause();status.textContent='⏸ 已暂停';}
+  });
+  document.getElementById('tts-stop').addEventListener('click',function(){
+    speechSynthesis.cancel();status.textContent='■ 已停止';
+  });
+})();
+</script>
+
 <div class="tips-section">
 <h2>📐 三个 Section 题型</h2>
 <div class="section-types">
